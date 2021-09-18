@@ -8,6 +8,24 @@ const Container = styled.div`
     background-size: 100% 100%;
     align-items: center;
 
+    @keyframes rotate {
+        0%{ 
+            transform: rotate(0deg); 
+        }
+        25%{
+            transform: rotate(55deg);
+        }
+        50%{
+            transform: rotate(0deg);
+        }
+        75%{
+            transform: rotate(-55deg);
+        }
+        100%{ 
+            transform: rotate(360deg);
+        }
+    } 
+
 .Cabecalho-Reg{
     display: flex;
     flex-direction: row;
@@ -25,6 +43,7 @@ const Container = styled.div`
 }
 
 .Bussola-Req{
+    animation: rotate 2.5s;
     height: 3.5em;
     width: auto;
 }

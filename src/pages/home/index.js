@@ -13,7 +13,7 @@ export default function Home(){
                 <img className="ImagemP1" src="/assets/images/Celular.png" alt=""/>
             </div>
             <div className="Container">
-                <img src="/assets/images/Computador.png" alt=""/>
+                <img className="ImagensFloat"  src="/assets/images/Computador.png" alt=""/>
                 <div className="AgrupandoConteudo"> 
                     <div className="Titulo2"> Sua proteção a um click </div>  
                     <div className="Texto"> amaze é um serviço que busca locais com auto indice de perigo para que nossos usuarios possam 
@@ -27,7 +27,7 @@ export default function Home(){
                     <div className="Texto"> para que vocé esteja sempre seguro, inclusive durante 
                     seus paseios, caminhadas é pelo seu trajeto </div>
                 </div>
-                <img src="/assets/images/Ladrao.png" alt=""/>    
+                <img className="ImagensFloat" src="/assets/images/Ladrao.png" alt=""/>    
             </div>
             <div className="Container2">
                 <div className="AgrupandoTextos"> 

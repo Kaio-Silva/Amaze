@@ -7,6 +7,7 @@ const Container = styled.div`
 
   width: 100%;
 
+  
   .Container{
     display: flex;
     flex-direction: row;
@@ -56,7 +57,25 @@ const Container = styled.div`
       transition: .5s;
   }
 
+  @keyframes  float{
+
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-30px);
+    }
+
+    100%{
+        transform: translatey(0px);
+    } 
+
+  }
+
   .ImagemP1{
+      animation: float 5s ease-in-out infinite;
+
+      transform: translatey(0px);
       width: 35em;
       height: 35em;
   }
@@ -75,7 +94,10 @@ const Container = styled.div`
       height: 70vh;
   }
 
-  img{
+ .ImagensFloat{
+       animation: float 5s ease-in-out infinite;
+
+       transform: translatey(0px);
        width: 30em;
        height: 25em;
   }
@@ -145,10 +167,15 @@ const Container = styled.div`
       height: 15em;
   }
 
+  .BoxInfo:nth-child(1){
+      margin-top: 1em;
+  }
+
   .BoxImagens{
       height: 7em;
       width: 7em;
   }
+
 
   .BoxTitulo{
       font-family: semiBold;

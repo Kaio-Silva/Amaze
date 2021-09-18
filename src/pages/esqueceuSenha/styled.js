@@ -10,6 +10,15 @@ const Container = styled.div`
 
     height: 100vh;
 
+    @keyframes exibir {
+        0%{ 
+            width: 0%; 
+        }
+        100%{ 
+            width: 100%; 
+        }
+    }    
+
     .conteudo{
         display: flex;
         flex-direction: column;
@@ -31,6 +40,7 @@ const Container = styled.div`
     }
 
     hr{
+        animation: exibir 1.5s;
         border: solid 0.1px #E2DEDE;
         width: 100%;
     }
