@@ -22,29 +22,27 @@ const Container = styled.div`
     margin-right:1em;
 
 
-
-    .barra-conteudohdc{
-    width:0.1em;
-    height: 2.3em;
-    background-color: #2ba083;
-}
   .descricao-conteudohdc{
-     padding-right:1.5em;
-     padding-left:1.5em;
+        font-size: 0.8em;
+        height: 1em;
+        width: 1em;
     }
     .descricao-conteudohdce{
-     padding-right:8em;
-     padding-left:1.5em;
+        font-size: 0.8em;
+        height: 1em;
+        width: 1em;
     }
 
+    
     .immg{
-        display:flex;
-        flex-direction:row;
-        margin-left:30em;
+        height: 1em;
+        width: 1em;
+        margin: 0em;
     }
 
     .img1{
-        margin-right:1em;
+        height: 1em;
+        width: 1em;
     }
 
 
@@ -88,6 +86,8 @@ const Container = styled.div`
 }
  
 `
+ 
+
 
 
 
