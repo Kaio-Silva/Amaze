@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from './styled.js'
 import Cabecalho from '../../components/cabecalho/index'
+import "animate.css"
 
 export default function Home(){
     return(

@@ -11,20 +11,24 @@ display:flex;
   font-size:22px ;
 
   @keyframes rotate {
-        0%{ 
-            transform: rotate(0deg); 
-        }
-        25%{
-            transform: rotate(55deg);
-        }
-        50%{
+        0%{
             transform: rotate(0deg);
         }
-        75%{
-            transform: rotate(-55deg);
+
+        25%{
+            transform: rotate(40deg)
         }
-        100%{ 
+
+        50%{
+            transform: rotate(-25deg);
+        }
+
+        75%{
             transform: rotate(360deg);
+        }
+
+        100%{
+            transform: rotate(0deg);
         }
     } 
   
@@ -43,7 +47,8 @@ display:flex;
 }
 
 .img-logohd img{
-    animation: rotate 2.5s;
+    animation: rotate 2.5s normal;
+    animation-delay: 2s;
     height:2.8em;
     width:2.8em;
     margin-right:0.5em;

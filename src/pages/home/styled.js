@@ -32,6 +32,8 @@ const Container = styled.div`
 
   .AgrupandoConteudo{
       height: 13em;
+
+      animation: bounceInLeft 1s normal;
   }
 
   .Titulo{
@@ -85,6 +87,9 @@ const Container = styled.div`
       transform: translatey(0px);
       width: 35em;
       height: 35em;
+
+      animation: bounceInRight 1s normal;
+
   }
 
   .AlinhandoConteudo:nth-child(2){
@@ -99,6 +104,7 @@ const Container = styled.div`
       background-size: 18em;
 
       height: 70vh;
+
   }
 
   .Titulo2{
@@ -164,6 +170,7 @@ const Container = styled.div`
       text-align: center;
       width: 10em;
       height: 15em;
+
   }
 
   .BoxInfo:nth-child(1){
