@@ -1,15 +1,14 @@
-
-
 import styled from "styled-components";
-
 
 
 const Container = styled.div`
 
-  display:flex;
+display:flex;
   flex-direction: column;
   font-family:  regular;  
-  height:100vh;
+  height:auto;
+  color: #24BF99;
+  font-size:22px ;
 
   @keyframes rotate {
         0%{ 
@@ -32,9 +31,8 @@ const Container = styled.div`
 .cabecalho-hd{
     display:flex;
     flex-direction: row;
-    background-color:#6BBAB5;
+    background-color:white;
     justify-content: space-between;
-    box-shadow: 0px  3px 10px  #888888;
     height:4em;
     align-items: center;
     
@@ -74,7 +72,7 @@ const Container = styled.div`
 .barrahd{
     width:0.1em;
     height: 1.3em;
-    background-color: #096C54;
+    background-color: #24BF99;
     margin-right:0.7em;
 }
 
@@ -192,6 +190,14 @@ padding-right: 4em;;
     }
 
 }
+
+
+
+
+
+
+
+
 
 
 `
