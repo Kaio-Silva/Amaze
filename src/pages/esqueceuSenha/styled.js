@@ -111,6 +111,46 @@ const Container = styled.div`
         transition: .5s;
     }
 
+
+    @media (max-width: 1024px) {
+    *{ margin: none;
+       padding: none;
+    }
+
+    .conteudo{
+        
+        width: 20em;
+        height: 14em;
+    }
+
+    .titulo{
+        padding: 0.8em 1em .4em;
+    
+        font-size: 1.1em;
+    }
+
+    .descricao{
+        font-size: 0.8em;
+        line-height: 1.3em;
+
+        padding: 0.5em 1.7em ;
+    }
+
+    input{
+        font-size: 0.8em;
+
+        margin-left: 1.7em;
+        margin-bottom: 1em;
+    }
+
+    button{
+        font-size: .7em;
+
+        padding: 0.4em 2.5em;
+        margin: 0.5em 2em 1em 0em;
+    }
+
+    }
 `
 
 export { Container }

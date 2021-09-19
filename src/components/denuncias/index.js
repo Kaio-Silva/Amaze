@@ -12,10 +12,10 @@ export default function Compd(){
            <div className="descricao-conteudohdce">SP</div>
            <div className="barra-conteudohdc"></div>
            <div className="descricao-conteudohdc">Parque Alto do Rio Bonito</div>
-           <div className="immg">
-            <img className="img1" src="/assets/Images/Group.svg"/>
-            <img className="img" src="/assets/Images/Group (1).svg"/>
-            </div>
+           <div className="alinhando-imagem">
+                <img className="img1" src="/assets/Images/Group.svg"/>
+                <img className="img" src="/assets/Images/Group (1).svg"/>
+           </div>
         </Container>
     )
 }

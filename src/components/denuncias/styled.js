@@ -4,39 +4,22 @@ import styled from 'styled-components'
 const Container = styled.div`
     display:flex;
     flex-direction: row;
-    background-color: #DFF1FB;
-    width:99%;
     justify-content: left;
-    height:3em;
     align-items:center;
+
     font-weight: bold;
     font-size:1em;
-    margin-bottom:1.3em;
+
     border:1px solid black;
     border-radius:0.5em;
-    margin-right:1em;
 
-    @media(max-width:1200px){
-        *{ margin: 0px;}
-     width:50em;
-     background-color: red;
-
-     .immg{ 
-         margin-left:0em;
-    }
-}
-
-
-    @media(max-width:896px){
-     width:30em;
-
-    }
-
+    background-color: #DFF1FB;
+   
+    height:3em;
+    width:99%;
     
-    @media(max-width:556px){
-     width:19em;
-
-    }
+    margin-bottom:1.3em;
+    margin-right:1em;
 
 
 
@@ -63,6 +46,46 @@ const Container = styled.div`
     .img1{
         margin-right:1em;
     }
+
+
+    @media(max-width:1200px){
+        width: 19em;
+
+     *{ 
+         margin: 0px;
+    }
+
+    
+    .barra-conteudohdc{
+        height: 1em;
+        width: 1em;
+    }
+
+  .descricao-conteudohdc{
+        font-size: 0.8em;
+        height: 1em;
+        width: 1em;
+    }
+    .descricao-conteudohdce{
+        font-size: 0.8em;
+        height: 1em;
+        width: 1em;
+    }
+
+    
+    .immg{
+        height: 1em;
+        width: 1em;
+        margin: 0em;
+    }
+
+    .img1{
+    height: 1em;
+    width: 1em;
+    }
+
+
+}
  
 `
 

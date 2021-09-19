@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
 
-  width: 100%;
+    width: 100%;
+
+  .AlinhandoPag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+  }
 
   
-  .Container{
+  .AlinhandoConteudo{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,7 +87,7 @@ const Container = styled.div`
       height: 35em;
   }
 
-  .Container:nth-child(2){
+  .AlinhandoConteudo:nth-child(2){
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -92,14 +99,6 @@ const Container = styled.div`
       background-size: 18em;
 
       height: 70vh;
-  }
-
- .ImagensFloat{
-       animation: float 5s ease-in-out infinite;
-
-       transform: translatey(0px);
-       width: 30em;
-       height: 25em;
   }
 
   .Titulo2{
@@ -152,7 +151,7 @@ const Container = styled.div`
       color: #24BF99;
   }
 
-  .Container:nth-child(5){
+  .AlinhandoConteudo:nth-child(5){
       background-image: none;
       height: 65vh;
   }
@@ -187,6 +186,33 @@ const Container = styled.div`
       font-size: 0.8em;
       line-height: 1.6em;
   }
+
+
+  @media (max-width: 1024px) {
+    *{ margin: none;
+       padding: none;
+    }
+
+    .AlinhandoPag{
+        
+    }
+
+    .AlinhandoConteudo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .AlinhandoConteudo:nth-child(2){
+        display: flex;
+        flex-direction: column;
+    }
+
+    .AlinhandoConteudo:nth-child(5){
+        display: flex;
+        flex-direction: column;
+    }
+
+    }
 `
 
 export { Container }
