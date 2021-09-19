@@ -117,8 +117,7 @@ const Container = styled.div`
        padding: none;
     }
 
-    .conteudo{
-        
+    .conteudo{   
         width: 20em;
         height: 14em;
     }
