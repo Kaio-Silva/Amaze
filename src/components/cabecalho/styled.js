@@ -49,7 +49,6 @@ const Container = styled.div`
 
 .img-logohd img{
     animation: rotate 2.5s normal;
-    animation-delay: 2s;
     height:2.8em;
     width:2.8em;
     margin-right:0.5em;

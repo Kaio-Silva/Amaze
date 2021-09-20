@@ -33,7 +33,7 @@ const Container = styled.div`
   .AgrupandoConteudo{
       height: 13em;
 
-      animation: bounceInLeft 1s normal;
+     
   }
 
   .Titulo{
@@ -87,8 +87,6 @@ const Container = styled.div`
       transform: translatey(0px);
       width: 35em;
       height: 35em;
-
-      animation: bounceInRight 1s normal;
 
   }
 
