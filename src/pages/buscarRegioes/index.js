@@ -12,14 +12,16 @@ function BuscarRegioes() {
         </div>
         <input className="Input-Reg" type="text"/>
       </div>
-      <div className="Conteudo-Reg">
-      <img className="Img-Req1" src="/assets/Images/Img-BuscarRegiões.png" alt=""/>
-        <div className="Textos-Req">
-          <div className="Titulo-Req"> Melhore a segurança do seu Bairro </div>
-          <div className="Descricao-Req"> Junte-se a Amaze, ajude fazendo denuncias de locais perigosos, aumentando a segurança de seu bairro </div>
+      <div className="Alinhando-Centro"> 
+        <div className="Conteudo-Reg">
+        <img className="Img-Req1" src="/assets/Images/Img-BuscarRegiões.png" alt=""/>
+          <div className="Textos-Req">
+            <div className="Titulo-Req"> Melhore a segurança do seu Bairro </div>
+            <div className="Descricao-Req"> Junte-se a Amaze, ajude fazendo denuncias de locais perigosos, aumentando a segurança de seu bairro </div>
+          </div>
+          <img className="Img-Req2" src="/assets/Images/Img-BuscarRegiões.png" alt=""/>
         </div>
-        <img className="Img-Req2" src="/assets/Images/Img-BuscarRegiões.png" alt=""/>
-      </div>
+      </div>  
     </Container>
     
   );
