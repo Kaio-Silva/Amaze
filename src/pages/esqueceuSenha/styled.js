@@ -8,7 +8,7 @@ const Container = styled.div`
 
     background-color: rgba(47, 167, 159, 0.65);
 
-    height: 100vh;
+    height: 90.4vh;
 
     @keyframes exibir {
         0%{ 
@@ -107,7 +107,7 @@ const Container = styled.div`
 
     button:hover{
         cursor: pointer;
-        background-color: rgba(47, 167, 159, 0.86);
+        background-color: rgba(47, 167, 159, 0.75);
         transition: .5s;
     }
 
