@@ -8,6 +8,7 @@ const Container = styled.div`
     background-size: 100% 100%;
     align-items: center;
 
+
     @keyframes rotate {
         0%{ 
             transform: rotate(0deg); 
@@ -68,7 +69,7 @@ const Container = styled.div`
     background-image: url('/assets/images/Buscar.png');
     background-size: 2.5em;
     background-repeat: no-repeat;
-    background-position-x: 42em;
+    background-position-x: 98%;
     background-position-y: center;
     border-width: 0.1em; 
     border-radius: 0.2em;
@@ -83,7 +84,11 @@ const Container = styled.div`
     outline: none;
 }
 
-
+.Alinhando-Centro{
+    display: flex;
+    align-items: center;
+    height: 45em;
+}
 
 .Conteudo-Reg{
     display: flex;
