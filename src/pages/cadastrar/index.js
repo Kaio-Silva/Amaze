@@ -4,6 +4,7 @@ import { Container } from './styled.js';
 
 function Cadastrar() {
   return (
+    
     <Container>
           <div class="fundo">
               <div class="logo">
