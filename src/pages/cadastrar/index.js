@@ -5,7 +5,7 @@ import { Container } from './styled.js';
 function Cadastrar() {
   return (
     <Container>
-          <div class="fundo">
+        <div class="fundo">
               <div class="logo">
                 <img className="Bussola" src="/assets/Images/BussolaPreta.png" alt=""/>
                 <div class="titulo">
@@ -22,14 +22,35 @@ function Cadastrar() {
                   <div class="input">
                       <input placeholder="Insira seu nome"></input>
                   </div>
-                  <div class="titulo-nome">
+                  <div class="titulo-nome" id="suba">
                       <spam>Email</spam>
                   </div>
                   <div class="input">
                       <input placeholder="Insira seu E-mail"></input>
                   </div>
+                  <div class="titulo-nome" id="suba">
+                      <spam>Telefone</spam>
+                  </div>
+                  <div class="input">
+                      <input placeholder="Insira seu telefone"></input>
+                  </div>
+                  <div class="titulo-nome" id="suba">
+                      <spam>Região</spam>
+                  </div>
+                  <div class="input">
+                      <input placeholder="Insira sua região"></input>
+                  </div>
+                  <div class="titulo-nome" id="suba">
+                      <spam>Senha</spam>
+                  </div>
+                  <div class="input">
+                      <input placeholder="Insira sua senha"></input>
+                  </div>
+                  <div calss="mae-botao">
+                        <button class="botao">Concluir Cadastro</button>
+                  </div>
               </div>
-          </div>
+            </div>  
     </Container>
   );
 }
