@@ -31,9 +31,7 @@ const Container = styled.div`
   }
 
   .AgrupandoConteudo{
-      height: 13em;
-
-     
+      height: 13em; 
   }
 
   .Titulo{
@@ -79,6 +77,10 @@ const Container = styled.div`
         transform: translatey(0px);
     } 
 
+  }
+
+  .Imagem{
+      display: none;
   }
 
   .ImagemP1{
@@ -198,13 +200,49 @@ const Container = styled.div`
        padding: none;
     }
 
+    .AgrupandoConteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%; 
+    }
+
     .AlinhandoPag{
-        
+        width: 100%;
     }
 
     .AlinhandoConteudo{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-size: 23em;
+    }
+    .Titulo{
+        font-size: 1.5em;
+        width: 11em;
+    }
+
+    .Descricao{
+        font-size: 0.9em;
+    }
+
+    
+  .Botão{
+        font-size: 0.9em;
+        padding: 1em 6em;
+        margin: 2em 0em;
+    }   
+
+    .Imagem{
+        display: block;
+        width: 23.5em;
+        height: 23.5em;
+    }
+
+    .ImagemP1{
+        display: none;
     }
 
     .AlinhandoConteudo:nth-child(2){
