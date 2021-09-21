@@ -6,8 +6,9 @@ import EsqueceuSenha from './pages/esqueceuSenha';
 import HistoricoDenunc from './pages/historicoDenunc'
 import cadastrar from './pages/cadastrar'
 import {Login} from './pages/login'
-import Relatorio from './pages/relatorioDenuncias'
-import Remover from './pages/removerUsuario'
+import Relatorio from './pages/relatorioDenuncias';
+import Remover from './pages/removerUsuario';
+import Denuncias from './pages/denuncias';
 
 export default function Rotes() {
     return (
@@ -21,6 +22,7 @@ export default function Rotes() {
                 <Route path="/Login" component={Login} />
                 <Route path="/Relatorio" component={Relatorio} />
                 <Route path="/Remover" component={Remover} />
+                <Route path="/Denuncia" component={Denuncias} />
             </Switch>
         </BrowserRouter> 
     )
