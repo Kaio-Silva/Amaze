@@ -8,7 +8,8 @@ export default function Home(){
             <Cabecalho/>
             <div className="AlinhandoPag">  
                 <div className="AlinhandoConteudo">
-                    <div className="AgrupandoConteudo">                    
+                    <div className="AgrupandoConteudo">  
+                    <img className="Imagem" src="/assets/images/Celular.png" alt=""/>                  
                             <div className="Titulo"> A sua segurança é a nossa segurança </div>
                             <div className="Descricao"> Amaze tranquiliza o seu dia a dia. </div>   
                         <button className="Botão"> Criar Conta </button>
