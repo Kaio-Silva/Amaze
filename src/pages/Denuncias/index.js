@@ -1,11 +1,11 @@
 import { Container } from './styled.js';
-import Cabeçalho from '../../components/cabecalho/index';
+import Cabecalho from '../../components/cabecalho';
 
 
 function Denuncias() {
     return(
         <Container>
-            <Cabeçalho/>
+            <Cabecalho/>
             <div className="conteudo">
                 <div className="rua"> Rua José Bonifácio </div>
                 <div className="usuario">

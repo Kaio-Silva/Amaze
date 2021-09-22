@@ -8,7 +8,7 @@ import cadastrar from './pages/cadastrar'
 import {Login} from './pages/login'
 import Relatorio from './pages/relatorioDenuncias';
 import Remover from './pages/removerUsuario';
-import Denuncias from './pages/denuncias';
+import Denuncias from './pages/Denuncias';
 
 export default function Rotes() {
     return (

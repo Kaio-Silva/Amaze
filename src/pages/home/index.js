@@ -21,15 +21,15 @@ export default function Home(){
                     <div className="AgrupandoConteudo"> 
                         <div className="Titulo2"> Sua proteção a um click </div>  
                         <div className="Texto"> amaze é um serviço que busca locais com auto indice de perigo para que nossos usuarios possam 
-                        tomar cuidado é estejam alerta quanto a isso </div>  
+                        tomar cuidado é estejam alerta quanto a isso </div> <hr/> 
                     </div>     
                 </div> 
                 <div className="AlinhandoConteudo"> 
                     <div className="AgrupandoTextos"> 
                         <div className="Texto"> nós começamos este projeto pensando em como proteger 
-                        nossos usuarios de possiveis locais perigosos </div>
+                        nossos usuarios de possiveis locais perigosos </div><hr/> 
                         <div className="Texto"> para que vocé esteja sempre seguro, inclusive durante 
-                        seus paseios, caminhadas é pelo seu trajeto </div>
+                        seus paseios, caminhadas é pelo seu trajeto </div> <hr/> 
                     </div>
                     <img src="/assets/images/Ladrao.png" alt=""/>    
                 </div>

@@ -107,6 +107,25 @@ const Container = styled.div`
 
   }
 
+  .AlinhandoConteudo:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    background-image: url('/assets/images/Triangulo.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 35em;
+
+    width: 100%;
+    height: 82vh;
+  }
+
+  hr{
+      display: none;
+  }
+
   .Titulo2{
       font-family: montserratBold;
       font-size: 2em;
@@ -217,25 +236,48 @@ const Container = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        background-size: 23em;
+        background-position: right;
+        background-position-y: 3em;
+        background-size: 20em;
+
+        height: 92vh;
     }
     .Titulo{
-        font-size: 1.5em;
+        font-size: 1.6em;
         width: 11em;
+        margin-bottom: 0.5em;
     }
 
     .Descricao{
-        font-size: 0.9em;
+        font-size: 1em;
+        font-family: medio;
     }
 
     
   .Botão{
-        font-size: 0.9em;
-        padding: 1em 6em;
-        margin: 2em 0em;
+        font-size: 1em;
+        padding: 1em 6.6em;
+        margin: 1.5em 0em;
     }   
 
+    @keyframes  float2{
+
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100%{
+        transform: translatey(0px);
+    } 
+
+    }
+
     .Imagem{
+        animation: float2 5s ease-in-out infinite;
+
         display: block;
         width: 23.5em;
         height: 23.5em;
@@ -248,12 +290,123 @@ const Container = styled.div`
     .AlinhandoConteudo:nth-child(2){
         display: flex;
         flex-direction: column;
+        background-image: none;
     }
+
+    .AlinhandoConteudo > img{
+        width: 17em;
+        height: 17em;
+    }
+
+    
+  .Titulo2{
+      font-family: semiBold;
+      font-size: 2em;
+      width: 10em;
+      height: 3.5em;
+      text-align: center;
+  }
+
+
+  .Texto{
+      font-family: medio;
+      font-size: 1em;
+      line-height: 1.6em;
+      text-align: center;
+
+      width: 21em;
+  }
+
+  .AgrupandoTextos{
+    display: flex;
+    align-items: center;
+
+    margin-top: 2em;
+  }
+
+  hr{
+      display: block;
+      width: 18em;
+
+      border: 1px solid #737373;
+  }
+
+  img:nth-child(2){
+      display: none;
+  }
+
+  .AlinhandoConteudo:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+
+        height: 30vh;
+  }
+
+  .Container2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+  }
+
+  .MiniTitulo{
+      font-family: semiBold;
+      font-size: 1.5em;
+      width: 10em;
+  }
+
+  .TextBenficios{
+      font-family: medio;
+      font-size: 0.9em;
+      width: 22em;
+  }
+
 
     .AlinhandoConteudo:nth-child(5){
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+
+        background-image: none;
+
+        height: 50vh;
     }
+
+
+    .BoxInfo{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      width: 9em;
+      height: 14em;
+  }
+
+  .BoxInfo:nth-child(1){
+      margin-top: 1em;
+  }
+
+  .BoxImagens{
+      height: 6em;
+      width: 6em;
+  }
+
+
+  .BoxTitulo{
+      font-family: semiBold;
+      font-size: 1em;
+  }
+
+  .BoxDesc{
+      font-family: medio;
+      font-size: 0.8em;
+      line-height: 1.6em;
+  }
+
 
     }
 `
