@@ -9,7 +9,7 @@ import {Login} from './pages/login'
 import Relatorio from './pages/relatorioDenuncias';
 import Remover from './pages/removerUsuario';
 import Denuncias from './pages/Denuncias';
-import teste from './pages/teste'
+import Mapa from './pages/Maps'
 
 export default function Rotes() {
     return (
@@ -24,7 +24,7 @@ export default function Rotes() {
                 <Route path="/Relatorio" component={Relatorio} />
                 <Route path="/Remover" component={Remover} />
                 <Route path="/Denuncia" component={Denuncias} />
-                <Route path="/Teste" component={teste} />
+                <Route path="/Mapa" component={Mapa} />
             </Switch>
         </BrowserRouter> 
     )
