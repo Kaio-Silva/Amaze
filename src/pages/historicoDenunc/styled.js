@@ -179,17 +179,28 @@ padding-right: 4em;;
 
 
 @media(max-width:1200px){
-    #style-2::-webkit-scrollbar-thumb{
-        display: none;
-    }
+    #style-2::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: transparent;
+    
+}
 
-    #style-2::-webkit-scrollbar{
-        display: none;
-    }
+#style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: transparent;
+    
+}
 
-    #style-2::-webkit-scrollbar-track{
-        display: none;
-    }
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 18px;
+	background-color: transparent;
+    border: 3.5px solid transparent;
+  
+}
+
     .elements-desc-cabhd{
         display:none;
     }
