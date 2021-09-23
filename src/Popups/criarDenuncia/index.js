@@ -1,0 +1,103 @@
+import { Container } from './styled'
+
+export default function p4(){
+    return(
+        <Container>
+          <div className="abox">
+             <div className="cabecalho">
+
+                 <div className="le">
+                     <div className="img"><img src="/assets/images/bussolaverde.svg" alt=""/></div>
+                     <div className="amz">Amaze</div>
+                 </div>
+
+                 <div className="ld"><img src="/assets/images/Fechar 5.png" alt=""/></div>
+             </div>
+
+
+             <div className="forms">
+
+                   <div className="titulo-form">Criar Denúncia</div>
+
+                   <div className="form1">
+                      <label><input placeholder="Digite o nome da rua" className="f1"/></label> 
+                  </div> 
+
+                  <div className="form2">
+                      <label><input placeholder="Digite o nome do bairro" className="f2"/></label> 
+                  </div> 
+
+                  <div className="teext">
+                      <label><textarea placeholder="Descreva a ocorrência" className="txt"/></label> 
+                  </div> 
+
+             </div>
+
+             <div className="checks">
+                 <div className="l1">
+                   <label> <input className="ty" name="actmnt" type="radio" value="Furto" />Furto </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Latrocínio" /> Latrocínio  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Homicídio" />Homicídio </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Sequestro" />Sequestro </label>
+                </div>
+
+
+                <div className="l2">
+                   <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" />Feminicídio </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" /> Tráfic  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Estupro" />Estupro </label>
+                </div>
+
+
+                <div className="botao">
+                    <button>Concretizar Denúncia</button>
+                </div>
+
+
+             </div>
+
+
+             <div className="taxas">
+                <div className="tituloco">Taxa de perigo</div>
+
+                <div className="cores">
+
+                    <div className="bloco">
+                        <div className="cor"></div>
+                        <div className="indice">Perigoso</div>
+                        <div className="qtddenunc">+20 denúncias</div>
+                    </div>
+
+                    <div className="bloco">
+                        <div className="cor2"></div>
+                        <div className="indice">Cuidado</div>
+                        <div className="qtddenunc">+10 denúncias</div>
+                    </div>
+
+                    <div className="bloco">
+                        <div className="cor3"></div>
+                        <div className="indice">Alerta</div>
+                        <div className="qtddenunc">+5 denúncias</div>
+                    </div>
+
+                    <div className="bloco">
+                        <div className="cor4"></div>
+                        <div className="indice">Passivo</div>
+                        <div className="qtddenunc">+Sem denúncias</div>
+                    </div>
+
+                </div>
+
+
+             </div>
+
+
+
+          </div>
+
+
+
+
+        </Container>
+    )
+}  
