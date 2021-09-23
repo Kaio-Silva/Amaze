@@ -69,9 +69,13 @@ const Container = styled.div`
 }
 
 .elements-desc-cabhd{
-    font-weight:bold;
-    font-size:1em;
-    padding-right:0.9em
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.9em
+}
+
+.elements-desc-cabhd:hover{
+    cursor: pointer;
 }
 
 .barrahd{
@@ -183,7 +187,7 @@ padding-right: 4em;;
 
 @media(max-width:1200px){
     .cabecalho-hd{
-        width: 16em;
+        width: 100%;
     }
     .logo-cabecalhohd{
         padding-left: 0.7em;
@@ -209,7 +213,7 @@ padding-right: 4em;;
     }
     
     .descricao-cabecalhohd{
-        padding-right: 0em;
+        padding-right: 1.2em;
     }
         .barrahd{
         display: none;

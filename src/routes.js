@@ -9,7 +9,7 @@ import {Login} from './pages/login'
 import Relatorio from './pages/relatorioDenuncias';
 import Remover from './pages/removerUsuario';
 import Denuncias from './pages/Denuncias';
-import Mapa from './pages/Maps'
+import Mapa from './pages/Mapa'
 
 export default function Rotes() {
     return (

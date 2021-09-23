@@ -193,12 +193,16 @@ const Container = styled.div`
   }
 
   .BoxInfo:nth-child(1){
-      margin-top: 1em;
+      margin-top: 1.5em;
   }
 
   .BoxImagens{
       height: 7em;
       width: 7em;
+  }
+
+  .BoxImagens:nth-child(1){
+      margin-bottom: 1em;
   }
 
 
@@ -207,9 +211,13 @@ const Container = styled.div`
       font-size: 1.2em;
   }
 
+  .BoxTitulo:nth-child(2){
+      margin-bottom: 1em;
+  }
+
   .BoxDesc{
       font-family: regular;
-      font-size: 0.8em;
+      font-size: 0.9em;
       line-height: 1.6em;
   }
 
