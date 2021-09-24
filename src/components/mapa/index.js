@@ -33,5 +33,6 @@ export default function mapa(){
         <Container> 
             <div id="map"></div>           
         </Container>
-    )
+    ) 
+    
 }
