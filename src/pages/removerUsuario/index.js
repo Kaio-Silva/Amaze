@@ -1,11 +1,11 @@
 import { Pagina } from "./styled"
-import Esquerda from '../../components/esquerda';
+import MenuLateral from "../../components/Menu";
 
 
 export default function pagina() {
     return (
         <Pagina>
-            <Esquerda />
+            <MenuLateral />
             <div className="direita">
                 <div className="topo"> <input className="escreva"/> </div>
 

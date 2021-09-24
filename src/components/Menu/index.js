@@ -1,9 +1,9 @@
-import { Esquerda } from "./styled"
+import { Menu } from './styled.js'
 
 
-export default function esquerda() {
+export default function MenuLateral(){
     return (
-        <Esquerda>
+        <Menu>
             <div className="cabeçalho">
                 <div className="imagem"> <img src="/assets/Images/BussolaPequena.png"  /> </div>
                 <div className="empressa"> Amaze </div>
@@ -22,6 +22,6 @@ export default function esquerda() {
                     <div className="ABA2"> Usuario </div>
                 </div>
             </div>
-        </Esquerda>
+        </Menu>
     )
 }

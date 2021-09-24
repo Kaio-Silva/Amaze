@@ -1,11 +1,11 @@
 import { Denuncias } from './styled';
-import Esquerda from '../../components/esquerda';
+import MenuLateral from '../../components/Menu';
 
 
 export default function denuncias() {
     return (
         <Denuncias>
-            <Esquerda />
+            <MenuLateral />
             <div className="conteudo">
                 <div className="topo"> <input className="escreva"/> </div>
 

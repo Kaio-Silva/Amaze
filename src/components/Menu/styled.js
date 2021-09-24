@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-const Esquerda = styled.div`
+const Menu = styled.div`
     background-color: #011640;
     height: 100vh;
     width: 20vw;
@@ -44,4 +44,4 @@ const Esquerda = styled.div`
 
 
 
-export {Esquerda}
+export { Menu }

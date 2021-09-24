@@ -5,6 +5,11 @@ const Pagina = styled.div`
     display: flex;
     flex-direction: row;
 
+
+    .direita{
+        height: 100%;
+    }
+
     .topo {
         padding: 0.4em 20em .5em 15em;
         background-color: #fff;
@@ -20,7 +25,7 @@ const Pagina = styled.div`
     }
 
     .baixo {
-        height: 90vh;
+        height: 100vh;
         overflow: auto;
         background-color: #B8BABF;
     }

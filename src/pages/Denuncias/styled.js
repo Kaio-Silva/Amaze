@@ -35,7 +35,6 @@ const Container = styled.div`
     .informações {
         padding-left: 7em;
         width: 20em;
-        box-sizing: border-box;
     }
 
     .autor{
@@ -82,7 +81,7 @@ const Container = styled.div`
     .botões {
         display: flex;
         flex-direction: row;
-        padding: 3em 0em 5em 42em;
+        align-items: flex-end;
     }
 
     .botão1 {
