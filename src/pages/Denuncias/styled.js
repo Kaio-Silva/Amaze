@@ -10,6 +10,7 @@ const Container = styled.div`
     .usuario {
         background-color: #24BF99;
         /*height: 88.4vh;*/
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
 
     .rua {
@@ -28,10 +29,13 @@ const Container = styled.div`
         color: white;
         font-size: 1.3em;
         font-family: regular;
+        padding-top: 2em;
     }
 
     .informações {
         padding-left: 7em;
+        width: 20em;
+        box-sizing: border-box;
     }
 
     .autor{
@@ -47,19 +51,27 @@ const Container = styled.div`
         height: 1em;
     }
 
-    .descrição{
+    .descriçao{
         display: flex;
         flex-direction: column;
+        width: 15em;
+    }
+
+    .descricaoA{
+        display: flex;
+        flex-direction: column;
+        width: 15em;
     }
 
     descriçao {
+        width: 15em;
         font-size: 2em;
     }
 
     .Data{
         display: flex;
         flex-direction: row;
-        padding-right: 8em;
+        /*padding-right: 8em;*/
     }
 
     b{

@@ -11,17 +11,17 @@ function Denuncias() {
                 <div className="usuario">
                     <div className="row">
                         <div className="informações">
-                            <div className="autor A"> <b>Autor: </b> Yudji doido </div>
-                            <div className="delito A"> <b>Delito: </b> Assalto </div>
+                            <div className="autor A"> <div>Autor: </div> Yudji doido </div>
+                            <div className="delito A"> <div>Delito: </div> Assalto </div>
                             <div className="avaliação A"> <img src="/assets/Images/aval.png"/> </div>
-                            <div className="descrição A">
-                                <b>Descrição: </b>
-                                <div className="descriçao">
-                                    aiaiaiauiuiaiaiaiauiuiaiuiauiauiuaiauiauiujgdvhqwdvgqyuigdf qyufvbhaevfhQWEFVQWYeurfwyqegfwyegfuasegfuiasgfhsabvflshiILGBIYovdfilydv
+                            <div className="descriçãoA">
+                                <div>Descrição: </div>
+                                <div className="descricao">
+                                    aiaiaiauiuiaiaiaiauiuiaiuiauiauiuaiauiauiujgdvhqwdvgqyuigdfqyufvbhaevfhQWEFVQWYeurfwyqegfwyegfuasegfuiasgfhsabvflshiILGBIYovdfilydv
                                 </div>
                             </div>
                         </div>
-                        <div className="Data"><b>Data:</b> 20/09/2021 </div>
+                        <div className="Data"><div>Data:</div> 20/09/2021 </div>
                     </div>
                     <div className="botões">
                         <div className="botão1"> <button> Avaliar Denuncia </button> </div>
