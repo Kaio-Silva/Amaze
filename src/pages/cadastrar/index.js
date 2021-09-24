@@ -5,7 +5,6 @@ import { Container } from './styled.js';
 function Cadastrar() {
   return (
     <Container>
-        <div class="fundo">
               <div class="logo">
                 <img className="Bussola" src="/assets/Images/BussolaPreta.png" alt=""/>
                 <div class="titulo">
@@ -50,7 +49,6 @@ function Cadastrar() {
                         <button class="botao">Concluir Cadastro</button>
                   </div>
               </div>
-            </div>  
     </Container>
   );
 }
