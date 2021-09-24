@@ -69,9 +69,13 @@ const Container = styled.div`
 }
 
 .elements-desc-cabhd{
-    font-weight:bold;
-    font-size:1em;
-    padding-right:0.9em
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.9em
+}
+
+.elements-desc-cabhd:hover{
+    cursor: pointer;
 }
 
 .barrahd{
@@ -83,9 +87,9 @@ const Container = styled.div`
 
 
 .escrita-logohd{
-font-size:1.3em;
-font-weight:bold;
-margin-bottom:0.1em;
+font-size: 1.3em;
+font-family: semiBold;
+margin-bottom: 0.1em;
 }
 
 
@@ -182,6 +186,24 @@ padding-right: 4em;;
 
 
 @media(max-width:1200px){
+    .cabecalho-hd{
+        width: 100%;
+    }
+    .logo-cabecalhohd{
+        padding-left: 0.7em;
+    }
+
+    .img-logohd img{
+        height: 2.1em;
+        width: 2.1em;
+    }
+
+    
+    .escrita-logohd{
+        font-size: 1em;
+        margin-bottom: 0.1em;
+    }
+
     .elements-desc-cabhd{
         display:none;
     }
@@ -189,8 +211,11 @@ padding-right: 4em;;
     .menubutt{
         display: block;
     }
-
-    .barrahd{
+    
+    .descricao-cabecalhohd{
+        padding-right: 1.2em;
+    }
+        .barrahd{
         display: none;
     }
 

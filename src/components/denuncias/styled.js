@@ -61,7 +61,7 @@ const Container = styled.div`
 
 
     @media(max-width:1200px){
-      
+       
         width: 50em;
 
     .alinhando-imagem{
@@ -129,14 +129,14 @@ const Container = styled.div`
         margin-right:2em;
     }
     .barra-conteudohdc{
-        display:none;
+        display: none;
     }
 
     }
 
     
     @media(max-width:556px){
-     width:19em;
+        width: 100%;
 
      .alinhando-imagem{
         margin-left:0.5em;
@@ -153,38 +153,34 @@ const Container = styled.div`
     }
 
      .descricao-conteudohdc{
-        font-size: 0.8em;
+        font-size: 0.7em;
         height: 1em;
         width: 11em;
         padding:0.3em;
     }
 
     .descricao-conteudohdc1{
-        font-size: 0.8em;
+        font-size: 0.7em;
         height: 1em;
         width: 7em;
         padding:0.3em;
     }
 
     .descricao-conteudohdcc{
-        font-size: 0.8em;
+        font-size: 0.7em;
         height: 1em;
         width: 13em;
         padding:0.3em;
         width:2em
     }
     .descricao-conteudohdce{
-        font-size: 0.8em;
+        font-size: 0.7em;
         height: 1em;
         width: 0em;
         padding:0em;
         margin-left:2.4em;
         margin-right:1.9em;
     }
-    .barra-conteudohdc{
-        display:none;
-    }
-
 
     }
 

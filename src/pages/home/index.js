@@ -8,7 +8,8 @@ export default function Home(){
             <Cabecalho/>
             <div className="AlinhandoPag">  
                 <div className="AlinhandoConteudo">
-                    <div className="AgrupandoConteudo">                    
+                    <div className="AgrupandoConteudo">  
+                    <img className="Imagem" src="/assets/images/Celular.png" alt=""/>                  
                             <div className="Titulo"> A sua segurança é a nossa segurança </div>
                             <div className="Descricao"> Amaze tranquiliza o seu dia a dia. </div>   
                         <button className="Botão"> Criar Conta </button>
@@ -19,16 +20,16 @@ export default function Home(){
                     <img src="/assets/images/Computador.png" alt=""/>
                     <div className="AgrupandoConteudo"> 
                         <div className="Titulo2"> Sua proteção a um click </div>  
-                        <div className="Texto"> amaze é um serviço que busca locais com auto indice de perigo para que nossos usuarios possam 
-                        tomar cuidado é estejam alerta quanto a isso </div>  
+                        <div className="Texto"> Amaze é um serviço que busca locais com auto indice de perigo para que nossos usuarios possam 
+                        tomar cuidado é estejam alerta quanto a isso </div> <hr/> 
                     </div>     
                 </div> 
                 <div className="AlinhandoConteudo"> 
                     <div className="AgrupandoTextos"> 
-                        <div className="Texto"> nós começamos este projeto pensando em como proteger 
-                        nossos usuarios de possiveis locais perigosos </div>
-                        <div className="Texto"> para que vocé esteja sempre seguro, inclusive durante 
-                        seus paseios, caminhadas é pelo seu trajeto </div>
+                        <div className="Texto"> Nós começamos este projeto pensando em como proteger 
+                        nossos usuarios de possiveis locais perigosos </div><hr/> 
+                        <div className="Texto"> Para que vocé esteja sempre seguro, inclusive durante 
+                        seus paseios, caminhadas é pelo seu trajeto </div> <hr/> 
                     </div>
                     <img src="/assets/images/Ladrao.png" alt=""/>    
                 </div>
