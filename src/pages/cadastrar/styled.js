@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 const Container = styled.div`
    
+background-image: url('/assets/images/Frame 77 (1).png');
+background-size:cover;
+
+
 
   .fundo{
    height:50em;
@@ -85,7 +89,7 @@ const Container = styled.div`
     padding-top:0.8em;
 }
 @media (max-width: 1024px) {
-    height: 100vh;
+    height: 115vh;
     background-image: url('/assets/images/Img-Fundo-Cadastrar.png');
     background-size: 100% 100%;
 
@@ -93,7 +97,7 @@ const Container = styled.div`
         width: 19em;
         height: 38em;;
         margin-left: 2em;
-        margin-top:-9em;
+        margin-top: 2em;
         box-shadow: 0em 0em 0.7em 0.3em rgba(0, 0, 0, 0.25);
         border-radius:3%;
     }
