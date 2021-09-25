@@ -1,15 +1,12 @@
-import react from 'react'
 import { Container } from './styled'
+import Logo from '../logo'
 
-export default function cabecalho(){
+export default function Cabecalho(){
+
     return(
   <Container>
     <div className="cabecalho-hd">
-
-        <div className="logo-cabecalhohd">
-           <div className="img-logohd">  <img src="/assets/Images/BussolaVerde.png" alt=""/>   </div>
-           <div className="escrita-logohd">Amaze</div>
-        </div>
+        <Logo/> 
         <div className="descricao-cabecalhohd">
         <div className="menubutt"><img src="/assets/Images/menubutt.svg" alt=""/></div>
             <div className="elements-desc-cabhd">Home</div>

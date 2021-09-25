@@ -2,10 +2,22 @@ import styled from 'styled-components'
 
 
 const Menu = styled.div`
-    background-color: #011640;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     width: 20vw;
+    
+
     color: white;
+    background-color: #011640;
+
+    position: sticky;
+    top: 0;
+
+    img{
+        height: 2.2em;
+        width: 2.2em;
+    }
 
     .cabeçalho {
         display: flex;
@@ -22,9 +34,13 @@ const Menu = styled.div`
     .relatorio {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        padding: 2.5em 2em 0em;
+
+        margin: 3.5em 2em 1em;
         font-size: 1em;
+    }
+
+    .relatorio:hover{
+        cursor: pointer;
     }
 
     .a {
@@ -37,8 +53,12 @@ const Menu = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 1em 2em;
+        margin: 1.5em 2.2em;
         font-size: 1em;
+    }
+
+    .remover:hover{
+        cursor: pointer;
     }
 `
 
