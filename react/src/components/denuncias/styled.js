@@ -22,6 +22,13 @@ const Container = styled.div`
     margin-right:1em;
 
 
+    button{
+        background-color:transparent;
+        border:none;
+        width:3em;
+        display: block;
+    } 
+
 
     .barra-conteudohdc{
         align-items: center;
