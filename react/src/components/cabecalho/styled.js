@@ -8,7 +8,8 @@ const Container = styled.div`
   flex-direction: column;
   font-family:  regular;  
   height:auto;
-  color: #24BF99;
+  color: ${props => props.cor === "white" ? 'white' 
+                                          : props.cor === "black" ? 'black' : '#24BF99'};
   font-size:22px ;
 
   @keyframes rotate {
@@ -66,6 +67,7 @@ const Container = styled.div`
     display:flex;
     flex-direction:row;
     padding-right: 2.9em;
+    padding-top: 1em;
 }
 
 .elements-desc-cabhd{
@@ -81,7 +83,8 @@ const Container = styled.div`
 .barrahd{
     width:0.1em;
     height: 1.3em;
-    background-color: #24BF99;
+    background-color: ${props => props.cor === "white" ? 'white' 
+                                             : props.cor === "black" ? 'black' : '#24BF99'};
     margin-right:0.7em;
 }
 

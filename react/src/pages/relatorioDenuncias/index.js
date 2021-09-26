@@ -12,9 +12,9 @@ export default function denuncias() {
                 <div className="baixo">
                     <div className="informações">
                         <div className="info1">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
+                            <div className="cont i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="cont i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descriçao i"> <div className="b">Descrição:</div> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>
@@ -22,9 +22,12 @@ export default function denuncias() {
                         </div>
 
                         <div className="info2">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> ahhhhhhhhhhhhhhhhhh </div>
+                            <div className="data i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="região i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descrição i">
+                                <div className="b">Descrição:</div>
+                                <div className="desc"> akakakakkakakkakakkakak </div>
+                            </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>
@@ -34,9 +37,9 @@ export default function denuncias() {
 
                     <div className="informações">
                         <div className="info1">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
+                            <div className="data i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="região i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descrição i"> <div className="b">Descrição:</div> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>
@@ -44,9 +47,9 @@ export default function denuncias() {
                         </div>
 
                         <div className="info2">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> ahhhhhhhhhhhhhhhhhh </div>
+                            <div className="data i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="região i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descrição i"> <div className="b">Descrição:</div> ahhhhhhhhhhhhhhhhhh </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>
@@ -56,9 +59,9 @@ export default function denuncias() {
 
                     <div className="informações">
                         <div className="info1">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
+                            <div className="data i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="região i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descrição i"> <div className="b">Descrição:</div> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>
@@ -66,9 +69,9 @@ export default function denuncias() {
                         </div>
 
                         <div className="info2">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> ahhhhhhhhhhhhhhhhhh </div>
+                            <div className="data i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="região i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descrição i"> <div className="b">Descrição:</div> ahhhhhhhhhhhhhhhhhh </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>
@@ -78,9 +81,9 @@ export default function denuncias() {
 
                     <div className="informações">
                         <div className="info1">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
+                            <div className="data i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="região i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descrição i"> <div className="b">Descrição:</div> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>
@@ -88,9 +91,9 @@ export default function denuncias() {
                         </div>
 
                         <div className="info2">
-                            <div className="data i"> <b>Data:</b> 14/08/2021 </div>
-                            <div className="região i"> <b>Região:</b> Parque Alto do Rio Bonito </div>
-                            <div className="descrição i"> <b>Descrição:</b> ahhhhhhhhhhhhhhhhhh </div>
+                            <div className="data i"> <div className="b">Data:</div> 14/08/2021 </div>
+                            <div className="região i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
+                            <div className="descrição i"> <div className="b">Descrição:</div> ahhhhhhhhhhhhhhhhhh </div>
                             <div className="imagens">
                                 <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png"/> </div>
                                 <div className="imagem2"> <img src="/assets/Images/Aprovar3.png"/> </div>

@@ -2,10 +2,10 @@ import { Container } from './styled'
 import Comp from "../../components/denuncias/index"
 import Cabecalho from '../../components/cabecalho'
 
-export default function paghd(){
+export default function paghd(props){
     return(
         <Container>
-          <Cabecalho />
+          <Cabecalho cor="black"/>
            <div className="conteudo-hd">
             <div className="registros-denuncias-hd">
                 <div className="barra-inicialhd">

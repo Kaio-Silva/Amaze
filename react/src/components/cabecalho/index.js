@@ -1,12 +1,12 @@
 import { Container } from './styled'
 import Logo from '../logo'
 
-export default function Cabecalho(){
+export default function Cabecalho(props){
 
     return(
-  <Container>
+  <Container cor={props.cor}>
     <div className="cabecalho-hd">
-        <Logo/> 
+        <Logo cor={props.cor}/> 
         <div className="descricao-cabecalhohd">
         <div className="menubutt"><img src="/assets/Images/menubutt.svg" alt=""/></div>
             <div className="elements-desc-cabhd">Home</div>

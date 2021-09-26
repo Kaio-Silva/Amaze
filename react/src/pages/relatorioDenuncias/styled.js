@@ -63,8 +63,6 @@ const Denuncias = styled.div`
         border-radius: 2em;
         padding: 1em 0em 15em 1.2em;
         margin: 2em 2em;
-        /*padding: 2em 1.5em 2em 2em;*/
-        /*margin: 5em 45em 0em 10em;*/
         width: 14.5em;
         min-height: 5em;
         max-height: 14vh;
@@ -75,14 +73,12 @@ const Denuncias = styled.div`
         border-radius: 2em;
         padding: 1em 0em 1.7em 1.2em;
         margin: 2em 12em;
-        /*padding: 2em 1.5em 2em 2em;
-        margin: 5em 45em 0em 10em;*/
         width: 14.5em;
         min-height: 14vh;
         background-color: #fff;
     }
 
-    .descrição {
+    .descriçao {
         width: 12em;
     }
 
@@ -98,6 +94,21 @@ const Denuncias = styled.div`
     .imagem1 {
         padding-left: 0.8em;
         padding-right: 7em;
+    }
+
+    .b {
+        font-family: semiBold;
+        font-size: 0.9em;
+    }
+
+    .desc {
+        word-break: break-all;
+        width: auto;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: row;
     }
 
     //lembrar de botart a imagem de pesquisa

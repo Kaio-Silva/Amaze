@@ -62,28 +62,6 @@ const Container = styled.div`
     cursor: pointer;
 }
 
-.Input-Reg{
-    font-family: regular;
-    font-size: 1em;
-
-    background-image: url('/assets/images/Buscar.png');
-    background-size: 2.5em;
-    background-repeat: no-repeat;
-    background-position-x: 98%;
-    background-position-y: center;
-    border-width: 0.1em; 
-    border-radius: 0.2em;
-    width: 60%;
-
-    margin-right: 8em;
-    padding: 1em;
-}
-
-.Input-Reg:focus{
-    background-image: none;
-    outline: none;
-}
-
 .Alinhando-Centro{
     display: flex;
     align-items: center;

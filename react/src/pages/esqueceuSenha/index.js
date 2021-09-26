@@ -3,10 +3,10 @@ import React from 'react'
 import { Container } from './styled.js';
 import Cabecalho from '../../components/cabecalho/index'
 
-function BuscarRegioes() {
+function BuscarRegioes(props) {
   return (
     <div className="container">
-      <Cabecalho/>
+      <Cabecalho cor=""/>
       <Container>
         <div className="conteudo">
           <div className="titulo"> Encontre sua conta </div>
