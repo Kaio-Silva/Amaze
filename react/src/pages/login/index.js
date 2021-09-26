@@ -1,16 +1,13 @@
 import { Container } from './styled'
+import Logo from '../../components/logo'
 
-
-function Login (){
+function Login (props){
     return(
         <Container>
         <div className='conteudo2'>
             <div className= 'login'>
                 <div className = 'pt1'>
-                    <img className="Bussola" src="/assets/Images/BussolaPreta.png" alt=""/>
-                    <div classNome= 'title'>
-                      <div classnome= 'texto'>Amaze</div>
-                    </div>
+                    <Logo cor="black" direction="column"/>
                     <div classNome= 'text1'>
                       <div classnome= 'texto'>Faça sua segurança com a amaze, se torne um de nos</div>
                      </div>

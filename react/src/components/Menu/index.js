@@ -6,7 +6,7 @@ import Logo from '../logo'
 export default function MenuLateral(){
     return (
         <Menu>
-            <Logo />
+            <Logo cor="white"/>
             <div className="relatorio">
                 <img src="/assets/Images/DocsBranco1.png" alt=""/>
                 <div className="ABA a">

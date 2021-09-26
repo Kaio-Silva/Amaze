@@ -1,16 +1,15 @@
 import React from 'react'
+import { Pesquisa } from '../../components/inputs/styled.js';
+import Logo from '../../components/logo/index.js';
 
 import { Container } from './styled.js';
 
-function BuscarRegioes() {
+function BuscarRegioes(props) {
   return (
     <Container>
       <div className="Cabecalho-Reg">
-        <div className="Logo-Reg">
-          <img className="Bussola-Req" src="/assets/Images/BussolaPreta.png" alt=""/>
-          <div className="Nome-Req"> Amaze </div>
-        </div>
-        <input className="Input-Reg" type="text"/>
+        <Logo cor="black"/>
+        <Pesquisa type="text"/>
       </div>
       <div className="Alinhando-Centro"> 
         <div className="Conteudo-Reg">

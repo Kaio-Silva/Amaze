@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
    
 background-image: url('/assets/images/Frame 77 (1).png');
-background-size:cover;
+background-size: 100% 100%;
 
 
 
@@ -38,11 +38,12 @@ background-size:cover;
 }
 .cadastro-inputs{
     width:30em;
-    height:48em;
+    height:47em;
     background-color:#fff;
     margin-left:27em;
+    margin-bottom: 1em;
     padding: 2em 3em;
-    box-shadow: 0.5em 0.8em 0.5em 0.1em rgba(0, 0, 0, 0.25);
+    box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
 }
 .titulo-dentro spam{
     font-family: medio;
@@ -60,7 +61,11 @@ background-size:cover;
     background-color:#6BBAB5;
     font-family: semiBold;
     color:#fff;
+}
+
+.botao:hover{
     cursor:pointer;
+    background-color: rgba(87, 166, 161, 1);
 }
 .titulo-nome spam{
     font-family: medio;
@@ -89,27 +94,20 @@ background-size:cover;
     padding-top:0.8em;
 }
 @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 115vh;
     background-image: url('/assets/images/Img-Fundo-Cadastrar.png');
     background-size: 100% 100%;
 
     .cadastro-inputs{
         width: 19em;
-        height: 38em;;
-        margin-left: 2em;
+        height: 38em;
         margin-top: 2em;
+        margin-left: 0em;
         box-shadow: 0em 0em 0.7em 0.3em rgba(0, 0, 0, 0.25);
         border-radius:3%;
-    }
-   .logo img{
-       width:2.8em;]
-   }
-   .logo{
-    margin-top:2em;
-   }
-
-    .logo{
-        margin-left: 8em;
     }
     
     .botao{

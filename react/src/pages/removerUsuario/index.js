@@ -1,6 +1,7 @@
 import { Pagina } from "./styled"
 import MenuLateral from "../../components/Menu";
 import Usuario from "../../components/usuario";
+import { Pesquisa } from "../../components/inputs/styled";
 
 
 export default function pagina() {
@@ -8,7 +9,7 @@ export default function pagina() {
         <Pagina>
             <MenuLateral />
             <div className="direita">
-                <div className="topo"> <input className="escreva"/> </div>
+                <Pesquisa />
                 <div className="baixo">
                    <Usuario />
                    <Usuario />

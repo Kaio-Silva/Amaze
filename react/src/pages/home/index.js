@@ -2,10 +2,10 @@ import React from 'react';
 import { Container } from './styled.js'
 import Cabecalho from '../../components/cabecalho/index'
 
-export default function Home(){
+export default function Home(props){
     return(
         <Container> 
-            <Cabecalho/>
+            <Cabecalho cor=""/>
             <div className="AlinhandoPag">  
                 <div className="AlinhandoConteudo">
                     <div className="AgrupandoConteudo">  

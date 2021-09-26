@@ -9,7 +9,7 @@ const Pagina = styled.div`
     font-size: 1em;
 
     height: 100vh;
-    min-width: 100%;
+    min-width: 100vw;
 
     span{
         font-family: semiBold;
@@ -35,6 +35,12 @@ const Pagina = styled.div`
         font-size: 1.1em;
     }
 
+    .direita{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .baixo {
         display: flex;
         flex-direction: column;
@@ -45,6 +51,7 @@ const Pagina = styled.div`
         padding: 4em 0em;
 
         height: 90.35vh;
+        min-width: 80vw;
 
         overflow-y: scroll;
     }

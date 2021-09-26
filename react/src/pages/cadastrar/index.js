@@ -1,16 +1,13 @@
 import React from 'react'
 
+import Logo from '../../components/logo/index.js';
+
 import { Container } from './styled.js';
 
-function Cadastrar() {
+function Cadastrar(props) {
   return (
     <Container>
-              <div class="logo">
-                <img className="Bussola" src="/assets/Images/BussolaPreta.png" alt=""/>
-                <div class="titulo">
-                    <spam>Amaze</spam>
-                </div>
-              </div>
+              <Logo cor="black"/>
               <div class="cadastro-inputs">
                   <div class="titulo-dentro">
                       <spam>Cadastro</spam>

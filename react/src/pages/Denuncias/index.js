@@ -2,10 +2,10 @@ import { Container } from './styled.js';
 import Cabecalho from '../../components/cabecalho';
 
 
-function Denuncias() {
+function Denuncias(props) {
     return(
         <Container>
-        <Cabecalho/>
+        <Cabecalho cor=""/>
             <div className="conteudo">
                 <div className="rua"> Rua José Bonifácio </div>
                 <div className="usuario">

@@ -1,7 +1,7 @@
 import { Container } from './styled'
+import Logo from '../../components/logo'
 
-
-function loginAdm (){
+function loginAdm (props){
     return(
         <Container>
 
@@ -9,8 +9,7 @@ function loginAdm (){
 
    <div className= 'login'>
        <div className = 'pt1'>
-   <img className="Bussola" src="/assets/Images/BussolaBranca.png" alt=""/>
-   <div classnome= 'texto'>Amaze</div>
+   <Logo cor="white" direction="column"/>
    <div classnome= 'texto'>Faça sua segurança com a 
    amaze, se torne um de nos</div>
 
