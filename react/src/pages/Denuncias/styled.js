@@ -9,7 +9,6 @@ const Container = styled.div`
 
     .usuario {
         background-color: #24BF99;
-        /*height: 88.4vh;*/
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
 
@@ -38,8 +37,9 @@ const Container = styled.div`
     }
 
     .informações {
-        padding-left: 7em;
-        width: 20em;
+        padding-left: 10em;
+        width: 22em;
+        padding-right: 1em;
     }
 
     .autor{
@@ -47,7 +47,10 @@ const Container = styled.div`
     }
 
     .A {
+        display: flex;
+        flex-direction: row;
         padding-top: 1em;
+        width: auto;
     }
 
     img {
@@ -55,38 +58,35 @@ const Container = styled.div`
         height: 1em;
     }
 
-    .descriçao{
+    .Descricao{
         display: flex;
         flex-direction: column;
-        width: 15em;
     }
 
-    .descricaoA{
-        display: flex;
-        flex-direction: column;
-        width: 15em;
-    }
-
-    descriçao {
-        width: 15em;
-        font-size: 2em;
+    .descricao {
+        font-family: medio;
+        word-break: break-all;
+        width: 31em;
+        padding-top: 0.8em;
     }
 
     .Data{
         display: flex;
         flex-direction: row;
-        /*padding-right: 8em;*/
+        justify-content: flex-end;
+        padding-left: 18em;
     }
 
-    b{
-        font-size: 1.1em;
-        padding-right: 0.2em;
+    .b{
+        padding-right: 0.7em;
+        font-family: semiBold;
     }
 
     .botões {
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 5em;
     }
 
     .botão1 {

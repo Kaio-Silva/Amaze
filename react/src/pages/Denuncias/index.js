@@ -15,17 +15,17 @@ function Denuncias(props) {
                 <div className="usuario">
                     <div className="row">
                         <div className="informações">
-                            <div className="autor A"> <div>Autor: </div> Yudji doido </div>
-                            <div className="delito A"> <div>Delito: </div> Assalto </div>
+                            <div className="autor A"> <div className="b">Autor: </div> Yudji doido </div>
+                            <div className="delito A"> <div className="b">Delito: </div> Assalto </div>
                             <div className="avaliação A"> <img src="/assets/Images/aval.png"/> </div>
-                            <div className="descriçãoA">
+                            <div className="Descricao">
                                 <div>Descrição: </div>
                                 <div className="descricao">
                                     aiaiaiauiuiaiaiaiauiuiaiuiauiauiuaiauiauiujgdvhqwdvgqyuigdfqyufvbhaevfhQWEFVQWYeurfwyqegfwyegfuasegfuiasgfhsabvflshiILGBIYovdfilydv
                                 </div>
                             </div>
                         </div>
-                        <div className="Data"><div>Data:</div> 20/09/2021 </div>
+                        <div className="Data"><div className="b">Data:</div> 20/09/2021 </div>
                     </div>
                     <div className="botões">
                         <div className="botão1"> <button onClick={() => SetAvalie(true)}> Avaliar Denuncia </button> </div>
