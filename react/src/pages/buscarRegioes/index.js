@@ -1,5 +1,5 @@
 import React from 'react'
-import { Pesquisa } from '../../components/inputs/styled.js';
+import { Pesquisa } from "../../components/inputs/styled";
 import Logo from '../../components/logo/index.js';
 
 import { Container } from './styled.js';
@@ -9,7 +9,7 @@ function BuscarRegioes(props) {
     <Container>
       <div className="Cabecalho-Reg">
         <Logo cor="black"/>
-        <Pesquisa type="text"/>
+        <Pesquisa input="usar"/>
       </div>
       <div className="Alinhando-Centro"> 
         <div className="Conteudo-Reg">

@@ -5,7 +5,7 @@ import Cabecalho from '../../components/cabecalho/index'
 export default function Home(props){
     return(
         <Container> 
-            <Cabecalho cor=""/>
+            <Cabecalho cor="" titulo="block" input="" home="" contatenos="usar" buscar="usar" criar="" login="usar" historico="usar"/>
             <div className="AlinhandoPag">  
                 <div className="AlinhandoConteudo">
                     <div className="AgrupandoConteudo">  

@@ -33,6 +33,7 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 90%;
+    height: 4em;
 
     margin-top: 1.5em;
 }

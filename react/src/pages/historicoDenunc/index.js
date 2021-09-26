@@ -5,7 +5,7 @@ import Cabecalho from '../../components/cabecalho'
 export default function paghd(props){
     return(
         <Container>
-          <Cabecalho cor="black"/>
+          <Cabecalho cor="black" titulo="block"/>
            <div className="conteudo-hd">
             <div className="registros-denuncias-hd">
                 <div className="barra-inicialhd">

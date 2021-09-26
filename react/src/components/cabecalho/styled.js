@@ -10,7 +10,10 @@ const Container = styled.div`
   height:auto;
   color: ${props => props.cor === "white" ? 'white' 
                                           : props.cor === "black" ? 'black' : '#24BF99'};
+
   font-size:22px ;
+
+  height: 4.5em;
 
   @keyframes rotate {
         0%{
@@ -66,17 +69,86 @@ const Container = styled.div`
 .descricao-cabecalhohd{
     display:flex;
     flex-direction:row;
+    align-items: center;
+    justify-content: end;
     padding-right: 2.9em;
     padding-top: 1em;
+
+    width: 70%;
 }
 
-.elements-desc-cabhd{
+.elements-desc-cabhd1{
+    display: ${props => props.home === "usar" ? "block" : "none"};
     font-family: semiBold;
     font-size: 0.9em;
     margin-right:0.9em
 }
 
-.elements-desc-cabhd:hover{
+.elements-desc-cabhd1:hover{
+    cursor: pointer;
+}
+
+
+.elements-desc-cabhd2{
+    display: ${props => props.contatenos === "usar" ? "block" : "none"};
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.9em
+}
+
+.elements-desc-cabhd2:hover{
+    cursor: pointer;
+}
+
+
+.elements-desc-cabhd3{
+    display: ${props => props.buscar === "usar" ? "block" : "none"};
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.9em
+}
+
+.elements-desc-cabhd3:hover{
+    cursor: pointer;
+}
+
+
+.elements-desc-cabhd4{
+    display: ${props => props.criar === "usar" ? "block" : "none"};
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.3em;
+
+    width: 10.5em;
+}
+
+.elements-desc-cabhd4:hover{
+    cursor: pointer;
+}
+
+.elements-desc-cabhd5{
+    display: ${props => props.historico === "usar" ? "block" : "none"};
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.9em;
+
+    width: 5em;
+}
+
+.elements-desc-cabhd5:hover{
+    cursor: pointer;
+}
+
+.elements-desc-cabhd6{
+    display: ${props => props.login === "usar" ? "block" : "none"};
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.9em;
+
+    width: 5em;
+}
+
+.elements-desc-cabhd6:hover{
     cursor: pointer;
 }
 
@@ -189,22 +261,12 @@ padding-right: 4em;;
 
 
 @media(max-width:1200px){
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+
     .cabecalho-hd{
         width: 100%;
-    }
-    .logo-cabecalhohd{
-        padding-left: 0.7em;
-    }
-
-    .img-logohd img{
-        height: 2.1em;
-        width: 2.1em;
-    }
-
-    
-    .escrita-logohd{
-        font-size: 1em;
-        margin-bottom: 0.1em;
     }
 
     .elements-desc-cabhd{
@@ -213,6 +275,8 @@ padding-right: 4em;;
 
     .menubutt{
         display: block;
+        margin-top: .3em;
+        margin-left: 0.2em;
     }
     
     .descricao-cabecalhohd{

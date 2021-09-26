@@ -1,13 +1,13 @@
 import { Denuncias } from './styled';
-import MenuLateral from '../../components/Menu';
-
+import MenuLateral from "../../components/Menu";
+import { Pesquisa } from '../../components/inputs/styled';
 
 export default function denuncias() {
     return (
         <Denuncias>
             <MenuLateral />
             <div className="conteudo">
-                <div className="topo"> <input className="escreva"/> </div>
+                <Pesquisa input="usar" tamanho="medio"/>
 
                 <div className="baixo">
                     <div className="informações">

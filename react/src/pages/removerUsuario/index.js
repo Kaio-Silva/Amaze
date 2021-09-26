@@ -9,7 +9,7 @@ export default function pagina() {
         <Pagina>
             <MenuLateral />
             <div className="direita">
-                <Pesquisa />
+                <Pesquisa input="usar" tamanho="medio"/>
                 <div className="baixo">
                    <Usuario />
                    <Usuario />

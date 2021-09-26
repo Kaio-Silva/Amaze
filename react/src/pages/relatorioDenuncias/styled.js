@@ -5,9 +5,18 @@ const Denuncias = styled.div`
     display: flex;
     flex-direction: row;
 
+    font-family: regular;
+    font-size: 1em;
+
     .topo {
         padding: 0.4em 20em .5em 15em;
         background-color: #fff;
+    }
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .escreva {
@@ -32,6 +41,7 @@ const Denuncias = styled.div`
         background-position: 41.3em 16em;
         background-attachment: fixed;
 
+        width: 80vw;
         height: 90vh;
         overflow: auto;
     }

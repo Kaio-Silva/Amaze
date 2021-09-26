@@ -7,7 +7,7 @@ const Container = styled.div`
 
 
     #map{
-        height: 86.8vh;
+        height: 85.2vh;
     }
 
     .ButtonMap{

@@ -59,8 +59,16 @@ const Container = styled.div`
   }
 
   @media (max-width: 1024px) {
+      padding-left: 1em;
       .texto{
-          display: none;
+        display: ${ props => props.titulo === "block" ? "block" : "none"};
+        font-size: 1.5em;
+      }
+
+      .img-logohd{
+          margin-right: 0.2em;
+          height: 2.5em;
+          width: 2.5em;
       }
   }
 
