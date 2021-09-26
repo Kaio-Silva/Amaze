@@ -4,8 +4,15 @@ import styled from 'styled-components'
 const Container = styled.div`
 display: flex;
 justify-content: center;
-margin-top: 7em;
-background-color: transparent;
+align-items: center;
+background-color: rgba(0,0,0,0.2);
+height: 100vh;
+width: 100%;
+position: fixed;
+top:0;
+left:0;
+font-family: regular ;
+
 
 .amz{
     margin-left:0.3em;
@@ -21,9 +28,17 @@ background-color: transparent;
     margin-top:0.5em;
 }
 
-
+.img img{
+    width:4.5em;
+    height: 4.5em;
+}
 .ld{
     margin-right:1.2em;
+    
+}
+
+.ld img{
+    cursor: pointer;
 }
 
 
@@ -74,6 +89,7 @@ margin-bottom:1.3em;
 .l1{
     display: flex;
     flex-direction: row;
+    margin-right: 0.6em;
 }
 
 .l1 label{
@@ -93,17 +109,19 @@ margin-bottom:1.3em;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 1.5em;
 }
 
 
 .abox{
     background-color: white;
     box-shadow:  0px  1px 10px  #888888;
-    border-radius: 1em;
+    border-radius: 0.3em;
     width:30%;
-    height:33em;
+    height:37em;
     display:flex;
     flex-direction: column;
+    position:relative;
 }
 
 .checks{
@@ -112,6 +130,7 @@ margin-bottom:1.3em;
    flex-direction: column;
    text-align: center;
    align-items: center;
+  
 }
 
 .ty{
@@ -163,6 +182,16 @@ opacity: 1;
 background-color: white;
 color: black;
 } 
+
+
+textarea::placeholder{
+    font-family:regular;
+}
+
+input::placeholder{
+    font-family:regular;
+}
+
 
 `
 

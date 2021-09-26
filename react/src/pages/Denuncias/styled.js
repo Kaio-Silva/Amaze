@@ -13,6 +13,11 @@ const Container = styled.div`
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     }
 
+    .botao1 button{
+        background-color: transparent;
+        border: none;
+    }
+
     .rua {
         display: flex;
         flex-direction: column;
