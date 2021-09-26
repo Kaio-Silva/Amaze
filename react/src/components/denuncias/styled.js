@@ -39,11 +39,15 @@ const Container = styled.div`
   .descricao-conteudohdc{
      padding-right:1.5em;
      padding-left:1.5em;
+
+     text-overflow: ellipsis;
     }
 
     .descricao-conteudohdc1{
      padding-right:1.5em;
      padding-left:1.5em;
+
+
     }
 
     .descricao-conteudohdcc{
