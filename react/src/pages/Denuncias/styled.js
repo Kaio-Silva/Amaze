@@ -84,7 +84,7 @@ const Container = styled.div`
         justify-content: flex-end;
         /*padding-right: 12em;
         padding-top: 2em;*/
-        padding: 2em 12em 2em 0em;
+        padding: 2em 12em 3em 0em;
     }
 
     .botão1 {
