@@ -7,12 +7,11 @@ const Menu = styled.div`
 
     width: 20vw;
     
-
-    color: white;
     background-color: #011640;
 
     position: sticky;
     top: 0;
+
 
     img{
         height: 2.2em;
@@ -36,7 +35,6 @@ const Menu = styled.div`
         flex-direction: row;
 
         margin: 3.5em 2em 1em;
-        font-size: 1em;
     }
 
     .relatorio:hover{
@@ -58,6 +56,21 @@ const Menu = styled.div`
     }
 
     .remover:hover{
+        cursor: pointer;
+    }
+
+    
+    .link{
+        font-family: regular;
+        font-size: 0.9em;
+        color: white;
+
+        text-decoration: none;
+
+        width: 3em;
+        margin-left: 0.7em;
+    }
+    .link:hover{
         cursor: pointer;
     }
 `

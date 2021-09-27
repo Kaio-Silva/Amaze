@@ -32,10 +32,11 @@ const Container = styled.div`
 .cabecalho-hd{
     display:flex;
     flex-direction: row;
+  
     background-color:#6BBAB5;
     justify-content: space-between;
-    box-shadow: 0px  3px 10px  #888888;
-    height:4em;
+    background-color: #6BBAB5;
+    height:4.5em;
     align-items: center;
     
 }
@@ -97,7 +98,6 @@ margin-bottom:0.1em;
 
 .titulo-conteudohd{
 font-size: 1.5em;
-background-color: #DFF1FB ;
 width:20em;
 }
 
@@ -117,7 +117,7 @@ width:20em;
 .barra-inicialhd{
 display:flex;
 flex-direction:row;
-background-color: #DFF1FB;
+background-color: rgba(107, 186, 181, 0.4);
 width:90em;
 height:3.7em;
 align-items:center;

@@ -9,7 +9,7 @@ const Pagina = styled.div`
     font-size: 1em;
 
     height: 100vh;
-    min-width: 100vw;
+    max-width: 100vw;
 
     span{
         font-family: semiBold;
@@ -50,7 +50,7 @@ const Pagina = styled.div`
 
         padding: 4em 0em;
 
-        min-height: 90.35vh;
+        min-height: 90vh;
         min-width: 80vw;
 
         overflow-y: scroll;

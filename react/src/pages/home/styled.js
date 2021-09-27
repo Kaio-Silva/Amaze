@@ -15,6 +15,18 @@ const Container = styled.div`
   }
 
   
+  .link{
+        font-family: regular;
+        font-size: 0.9em;
+        color: ${props => props.cor === "white" ? 'white' 
+                                             : props.cor === "black" ? 'black' : '#24BF99'};
+
+        text-decoration: none;
+    }
+    .link:hover{
+        cursor: pointer;
+    }
+  
   .AlinhandoConteudo{
     display: flex;
     flex-direction: row;

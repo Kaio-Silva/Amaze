@@ -1,4 +1,5 @@
 import { Container } from './styled'
+import { Link } from 'react-router-dom';
 import Logo from '../../components/logo'
 
 function loginAdm (props){
@@ -24,8 +25,7 @@ function loginAdm (props){
         <div className='nm_senha'>Senha</div>
         <input className="Input-Reg" type="text"/>
         <div>
-        <div className="enter"
-        ><button>Log in</button></div>
+            <Link className="link" to="/Relatorio"><div className="enter"><button>Log in</button></div></Link>
         </div>
     </div>
     </div>

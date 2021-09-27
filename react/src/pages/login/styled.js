@@ -11,6 +11,17 @@ const Container = styled.div`
 
     height: 100vh;
 
+    .link{
+        font-family: regular;
+        font-size: 0.9em;
+        color: black;
+
+        text-decoration: none;
+    }
+    .link:hover{
+        cursor: pointer;
+    }
+
    .pt1{
        background-color: #24BF99;
        display: flex;
@@ -86,6 +97,9 @@ const Container = styled.div`
        width: 300px;
        border:none;
        margin-top: 20px;
+   }
+   button:hover{
+       cursor: pointer;
    }
 
 .senha input{

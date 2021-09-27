@@ -37,6 +37,19 @@ const Container = styled.div`
         }
     } 
   
+    .link{
+        font-family: regular;
+        font-size: 0.9em;
+        color: ${props => props.cor === "white" ? 'white' 
+                                             : props.cor === "black" ? 'black' : '#24BF99'};
+
+        text-decoration: none;
+    }
+    .link:hover{
+        cursor: pointer;
+    }
+
+
 .cabecalho-hd{
     display:flex;
     flex-direction: row;
@@ -163,11 +176,11 @@ const Container = styled.div`
     cursor: pointer;
 }
 
-.barrahd{
-    width:0.1em;
+.barraCabecalho{
+    width: .05em;
     height: 1.3em;
-    background-color: ${props => props.cor === "white" ? 'white' 
-                                             : props.cor === "black" ? 'black' : '#24BF99'};
+    background-color: ${props => props.cor === "white" ? "white" 
+                                             : props.cor === "black" ? "black" : "#24BF99"};
     margin-right:0.7em;
 }
 

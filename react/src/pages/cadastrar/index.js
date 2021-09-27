@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Logo from '../../components/logo/index.js';
+import { Link } from 'react-router-dom';
 
 import { Container } from './styled.js';
 
@@ -43,7 +44,7 @@ function Cadastrar(props) {
                       <input placeholder="Insira sua senha"></input>
                   </div>
                   <div calss="mae-botao">
-                        <button class="botao">Concluir Cadastro</button>
+                      <Link className="link" to="/Login"><button class="botao">Concluir Cadastro</button></Link>
                   </div>
               </div>
     </Container>

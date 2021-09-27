@@ -1,4 +1,5 @@
 import { Container } from './styled'
+import { Link } from 'react-router-dom';
 import Logo from '../../components/logo'
 
 function Login (props){
@@ -7,7 +8,7 @@ function Login (props){
         <div className='conteudo2'>
             <div className= 'login'>
                 <div className = 'pt1'>
-                    <Logo cor="black" direction="column"/>
+                    <Logo cor="black" direction="column" link="false"/>
                     <div classNome= 'text1'>
                       <div classnome= 'texto'>Faça sua segurança com a amaze, se torne um de nos</div>
                      </div>
@@ -26,11 +27,11 @@ function Login (props){
                     </div>
                     <div className='ptcadastro'>
                         
-                        <div className='esqueceu'><Link to="/EsqueceuSenha">Esqueceu Senha</Link></div>
-                        <div className='cadastre'><Link to="/EsqueceuSenha">Cadastre-se</Link></div>
+                        <div className='esqueceu'><Link className="link" to="/EsqueceuSenha">Esqueceu Senha</Link></div>
+                        <div className='cadastre'><Link className="link" to="/cadastro"> Cadastre-se </Link></div>
                     </div>
                     
-                    <div classNome= 'botao'><button>Log In</button></div>
+                    <Link className="link" to="/home"><div classNome= 'botao'><button>Log In</button></div></Link>
                     
                 </div>
             </div>

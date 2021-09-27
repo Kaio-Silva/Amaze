@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from './styled.js'
+import { Link } from 'react-router-dom';
 import Cabecalho from '../../components/cabecalho/index'
 
 export default function Home(props){
@@ -12,7 +13,7 @@ export default function Home(props){
                     <img className="Imagem" src="/assets/images/Celular.png" alt=""/>                  
                             <div className="Titulo"> A sua segurança é a nossa segurança </div>
                             <div className="Descricao"> Amaze tranquiliza o seu dia a dia. </div>   
-                        <button className="Botão"> Criar Conta </button>
+                            <Link className="link" to="/cadastro"><button className="Botão"> Criar Conta </button></Link>
                     </div>
                     <img className="ImagemP1" src="/assets/images/Celular.png" alt=""/>
                 </div>

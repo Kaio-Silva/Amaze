@@ -58,6 +58,18 @@ const Container = styled.div`
     cursor: pointer;
   }
 
+  
+  .link{
+        font-family: regular;
+        font-size: 0.9em;
+        color: black;
+
+        text-decoration: none;
+    }
+    .link:hover{
+        cursor: pointer;
+    }
+
   @media (max-width: 1024px) {
       padding-left: 1em;
       .texto{

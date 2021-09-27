@@ -44,7 +44,7 @@ const Denuncias = styled.div`
         background-attachment: fixed;
 
         width: 80vw;
-        height: 92.4vh;
+        height: 90vh;
         overflow-x: hidden;
     }
 

@@ -7,6 +7,20 @@ background-size: 100% 100%;
 
 
 
+
+    .link{
+        font-family: regular;
+        font-size: 0.9em;
+        color: ${props => props.cor === "white" ? 'white' 
+                                             : props.cor === "black" ? 'black' : '#24BF99'};
+
+        text-decoration: none;
+    }
+    .link:hover{
+        cursor: pointer;
+    }
+
+
   .fundo{
    height:50em;
    background-color:#6BBAB5;

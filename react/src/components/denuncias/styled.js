@@ -10,10 +10,9 @@ const Container = styled.div`
     font-weight: bold;
     font-size:1em;
 
-    border:1px solid black;
     border-radius:0.5em;
 
-    background-color: #DFF1FB;
+    background-color: rgba(107, 186, 181, 0.4);
    
     height:3em;
     width:99%;
@@ -31,10 +30,9 @@ const Container = styled.div`
 
 
     .barra-conteudohdc{
-        align-items: center;
     width:0.1em;
     height: 2.3em;
-    background-color: #2ba083;
+    background-color: black;
 }
   .descricao-conteudohdc{
      padding-right:1.5em;
