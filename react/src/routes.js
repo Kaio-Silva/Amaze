@@ -12,7 +12,6 @@ import Denuncias from './pages/Denuncias';
 import Mapa from './pages/Mapa'
 import { loginAdm } from './pages/loginAdm';
 import Error from './pages/error';
-import Link from './pages/links';
 
 
 export default function Rotes() {
