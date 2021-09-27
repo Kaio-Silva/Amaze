@@ -4,13 +4,15 @@ import styled from 'styled-components'
 const Denuncias = styled.div`
     display: flex;
     flex-direction: row;
-
     font-family: regular;
     font-size: 1em;
 
-    .topo {
-        padding: 0.4em 20em .5em 15em;
-        background-color: #fff;
+    .alinhando {
+        display: flex;
+        flex-direction: row;
+
+        padding-top: 4em;
+        padding-left: 6em;
     }
 
     .conteudo{
@@ -62,66 +64,6 @@ const Denuncias = styled.div`
     {
         background-color: #D9E2F3;
     }
-
-    .informações {
-        display: flex;
-        flex-direction: row;
-        padding-left: 5em;
-    }
-
-    .info1 {
-        border-radius: 2em;
-        padding: 1em 0em 15em 1.2em;
-        margin: 2em 2em;
-        width: 14.5em;
-        min-height: 5em;
-        max-height: 14vh;
-        background-color: #fff;
-    }
-
-    .info2 {
-        border-radius: 2em;
-        padding: 1em 0em 1.7em 1.2em;
-        margin: 2em 12em;
-        width: 14.5em;
-        min-height: 14vh;
-        background-color: #fff;
-    }
-
-    .descriçao {
-        width: 12em;
-    }
-
-    .imagens {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .i {
-        padding-bottom: 1em;
-    }
-
-    .imagem1 {
-        padding-left: 0.8em;
-        padding-right: 7em;
-    }
-
-    .b {
-        font-family: semiBold;
-        font-size: 0.9em;
-    }
-
-    .desc {
-        word-break: break-all;
-        width: auto;
-    }
-
-    .cont {
-        display: flex;
-        flex-direction: row;
-    }
-
-    //lembrar de botart a imagem de pesquisa
 `
 
 
