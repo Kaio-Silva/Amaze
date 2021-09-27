@@ -6,7 +6,7 @@ import Cabecalho from '../../components/cabecalho/index'
 function BuscarRegioes(props) {
   return (
     <div className="container">
-      <Cabecalho cor=""/>
+      <Cabecalho cor="black" titulo="block" input="" home="" contatenos="" buscar="" criar="" login="usar" historico="" cadastrar="usar"/>
       <Container>
         <div className="conteudo">
           <div className="titulo"> Encontre sua conta </div>

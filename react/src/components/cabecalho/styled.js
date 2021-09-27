@@ -152,6 +152,17 @@ const Container = styled.div`
     cursor: pointer;
 }
 
+.elements-desc-cabhd7{
+    display: ${props => props.cadastrar === "usar" ? "block" : "none"};
+    font-family: semiBold;
+    font-size: 0.9em;
+    margin-right:0.9em
+}
+
+.elements-desc-cabhd7:hover{
+    cursor: pointer;
+}
+
 .barrahd{
     width:0.1em;
     height: 1.3em;

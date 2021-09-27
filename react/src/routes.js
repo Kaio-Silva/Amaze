@@ -12,13 +12,15 @@ import Denuncias from './pages/Denuncias';
 import Mapa from './pages/Mapa'
 import { loginAdm } from './pages/loginAdm';
 import Error from './pages/error';
+import Link from './pages/links';
 
 
 export default function Rotes() {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route  path="/"  exact={true}  component={Home} />   
+                <Route  path="/"  exact={true}  component={Link} />   
+                <Route  path="/home" component={Home} />   
                 <Route  path="/Buscar" component={BuscarRegioes} /> 
                 <Route  path="/EsqueceuSenha" component={EsqueceuSenha} /> 
                 <Route path="/HistoricoDenunc" component={HistoricoDenunc} />
