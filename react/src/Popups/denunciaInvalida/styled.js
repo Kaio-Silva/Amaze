@@ -17,7 +17,7 @@ textarea::placeholder{
     text-align:left;
     padding-top:1em;
     padding-left:1em;
-    
+    font-family: regular;
 }
 
 textarea{
@@ -95,6 +95,12 @@ outline: none;
 }
 
 
+@media(max-width:1316px)
+{
+    .abox{
+     width:23.5em;
+    }
+}
 `
 
 

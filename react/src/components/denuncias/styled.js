@@ -25,7 +25,7 @@ const Container = styled.div`
     button{
         background-color:transparent;
         border:none;
-        width:3em;
+        width:2em;
         display: block;
     } 
 
@@ -192,6 +192,7 @@ const Container = styled.div`
         margin-left:2.4em;
         margin-right:1.9em;
     }
+    
 
     }
 

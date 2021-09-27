@@ -135,7 +135,7 @@ textarea::placeholder{
 }
 
 .checks{
-    margin-left:1em;
+    
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -254,6 +254,21 @@ opacity: 1;
 .qtddenunc{
     margin-left: 2em;
     color: black;
+}
+
+@media(max-width:1310px){
+
+    .abox{
+        width:25em;
+    }
+
+
+    .checks{
+     margin-left: 0em;
+    }
+
+
+
 }
 
 

@@ -47,6 +47,7 @@ font-family: regular ;
     flex-direction: row;
     align-items: center;
     margin-left:1.2em;
+    width:18em;
 }
 
 .forms{
@@ -125,7 +126,7 @@ margin-bottom:1.3em;
 }
 
 .checks{
-    margin-left:1em;
+    
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -188,6 +189,13 @@ input::placeholder{
     font-family:regular;
 }
 
+
+@media(max-width:1272px)
+{
+    .abox{
+        width:23.7em;
+    }
+}
 
 `
 

@@ -106,7 +106,7 @@ width:20em;
 .registros-denuncias-hd{
     display:flex;
     flex-direction: column;
-    width:93.5%;
+    width:94.5%;
     height:37em;
     align-items:center;
     box-shadow: 3px 3px 15px #888888;
@@ -186,6 +186,7 @@ padding-right: 4em;;
     
 }
 
+
 #style-2::-webkit-scrollbar
 {
 	width: 12px;
@@ -215,6 +216,14 @@ padding-right: 4em;;
 
 }
 
+
+@media(max-width:390px){
+
+    .registros-denuncias-hd{
+    width:26em;
+}
+
+}
 
 `
 
