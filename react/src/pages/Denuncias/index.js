@@ -9,7 +9,7 @@ function Denuncias(props) {
     const[report,SetReport] = useState(false)
     return(
         <Container>
-        <Cabecalho cor=""/>
+        <Cabecalho cor=""  cor="" home="usar" contatenos="" buscar="usar" criar="" login="usar" historico=""/>
             <div className="conteudo">
                 <div className="rua"> Rua José Bonifácio </div>
                 <div className="usuario">

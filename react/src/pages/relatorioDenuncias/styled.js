@@ -44,8 +44,8 @@ const Denuncias = styled.div`
         background-attachment: fixed;
 
         width: 80vw;
-        height: 90vh;
-        overflow: auto;
+        height: 92.4vh;
+        overflow-x: hidden;
     }
 
     .baixo::-webkit-scrollbar-track
