@@ -7,7 +7,9 @@ const Container = styled.div`
 
     #map{
         min-height: 85.2vh;
+    
     }
+ 
 
     .ButtonMap{
         background-image: url('/assets/images/ButtonMap.svg');

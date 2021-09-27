@@ -1,7 +1,10 @@
+
 import { Container } from './styled'
 
-export default function p4(){
-    return(
+
+export default function p4(props){
+    
+    return(props.value) ?(
         <Container>
           <div className="abox">
              <div className="cabecalho">
@@ -11,7 +14,7 @@ export default function p4(){
                      <div className="amz">Amaze</div>
                  </div>
 
-                 <div className="ld"><img src="/assets/images/Fechar 5.png" alt=""/></div>
+                 <div className="ld"><button onClick={() => props.func(false)}><img src="/assets/images/Fechar 5.png" alt=""/></button></div>
              </div>
 
 
@@ -97,7 +100,7 @@ export default function p4(){
 
 
 
-
+          { props.children}
         </Container>
-    )
+    ) : "";
 }  

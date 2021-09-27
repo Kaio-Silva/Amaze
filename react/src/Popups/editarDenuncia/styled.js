@@ -178,10 +178,6 @@ opacity: 1;
     margin-top: 1.5em;
 }
 
-.botao button:hover{
-background-color: white;
-color: black;
-} 
 
 
 textarea::placeholder{

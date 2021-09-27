@@ -1,6 +1,6 @@
 import { Container } from './styled'
 import Logo from '../../components/logo'
-
+import { Link } from 'react-router-dom';
 function Login (props){
     return(
         <Container>
