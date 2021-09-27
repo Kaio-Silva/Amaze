@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from './styled.js'
 
 import { Loader } from '@googlemaps/js-api-loader';
+import Comp from "../../Popups/criarDenuncia/index"
 
 
-export default function mapa(){
-
+export default function Mapa(){
+const[pop,SetPop]=useState(false);
+console.log(pop)
   let map;
-
+  
   const loader = new Loader({
     apiKey: "AIzaSyDaD4hq5gjkDX1FUWpkjZQXmEYrHzTmtRk",
     version: "weekly",
@@ -31,7 +33,8 @@ export default function mapa(){
     return(
         <Container> 
             <div id="map"></div>
-            <button className="ButtonMap"/>          
+            <button onClick={ () => SetPop(true)} className="ButtonMap"/>      
+            <Comp value={pop} func={SetPop} />    
         </Container>
     ) 
     

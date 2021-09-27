@@ -72,6 +72,13 @@ font-family: regular ;
  text-align:center
 }
 
+@media(max-width:1316px)
+{
+    .abox{
+        width: 25em;
+    }
+}
+
 
 `
 

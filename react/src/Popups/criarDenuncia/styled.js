@@ -3,11 +3,15 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 display: flex;
-justify-content: center;
-
-background-color: transparent;
-color:#24BF99;
-
+justify-content: left;
+align-items: center;
+background-color: rgba(0,0,0,0.2);
+height: 100vh;
+width: 100%;
+position: fixed;
+top:0;
+left:0;
+font-family: regular;
 
 .amz{
     margin-left:0.3em;
@@ -27,6 +31,12 @@ color:#24BF99;
 
 .ld{
     margin-right:1.2em;
+}
+
+.ld button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -57,6 +67,7 @@ border-radius: 0.5em;
 width:95%;
 height:2.5em;
 margin-bottom:0.9em;
+font-family: regular;
 }
 
 .form2 input{
@@ -65,6 +76,7 @@ border-radius: 0.5em;
 width:95%;
 height:2.5em;
 margin-bottom:1.3em;
+font-family: regular;
 }
 
 .teext textarea{
@@ -77,6 +89,7 @@ margin-bottom:1.3em;
 
 textarea::placeholder{
     color:#24BF99;
+    font-family: regular;
 }
 
 
@@ -113,15 +126,16 @@ textarea::placeholder{
 .abox{
     background-color: white;
     box-shadow:  0px  1px 10px  #888888;
-    border-radius: 1em;
+    border-radius: 0.5em;
     width:30%;
     height:100vh;
     display:flex;
     flex-direction: column;
+    position: relative;
 }
 
 .checks{
-    margin-left:1em;
+    
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -240,6 +254,21 @@ opacity: 1;
 .qtddenunc{
     margin-left: 2em;
     color: black;
+}
+
+@media(max-width:1310px){
+
+    .abox{
+        width:25em;
+    }
+
+
+    .checks{
+     margin-left: 0em;
+    }
+
+
+
 }
 
 
