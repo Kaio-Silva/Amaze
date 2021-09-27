@@ -104,6 +104,7 @@ const Container = styled.div`
 }
 
 @media (max-width: 1024px) {
+    
     *{ margin: none;
        padding: none;
     }
@@ -115,36 +116,26 @@ const Container = styled.div`
     .Cabecalho-Reg{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         margin: 1em 1em;
         align-items: flex-start;
-        width: none
-    }
-
-    .Logo-Reg{
-        margin-bottom: 1.9em;
-    }
+        width: none;
+        height: 8em;
+    }   
     
-    .Bussola-Req{
-        height: 3em;
-        width: auto;
+    .Buscar{
+        margin-left: 1em;
     }
-    
-    .Nome-Req{
-        font-size: 1.5em;
-    }
-    
-    .Input-Reg{
-        background-size: 2em;
-        background-position-x: 22.5em;
-        width: 100%;
-        padding: 0.7em 0em;
-    }
-    
     
     .Conteudo-Reg{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    .Alinhando-Centro{
+    display: flex;
+    justify-content: center;
     }
     
     .Textos-Req{

@@ -329,7 +329,7 @@ padding-right: 4em;;
     .descricao-cabecalhohd{
         padding-right: 1.2em;
     }
-        .barrahd{
+        .barraCabecalho{
         display: none;
     }
 

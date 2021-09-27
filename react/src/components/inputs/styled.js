@@ -12,7 +12,7 @@ const Pesquisa = styled.input`
     background-position-y: center;
     border-width: 0.1em; 
     border-radius: 0.2em;
-    width: ${props => props.tamanho === "grande" ? "80%" : "60%"};
+    width: ${props => props.tamanho === "grande" ? "90%" : "60%"};
     height: 2.2em;
 
     margin-right: 5em;
@@ -36,7 +36,7 @@ const Pesquisa = styled.input`
 
         background-size: 1.5em;
 
-        width: 13em;
+        width: ${props => props.tamanho === "grande" ? "90%" : "13em"};
         height: 2.5em;
     }
 `

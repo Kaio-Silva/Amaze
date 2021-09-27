@@ -8,7 +8,7 @@ function Login (props){
         <div className='conteudo2'>
             <div className= 'login'>
                 <div className = 'pt1'>
-                    <Logo cor="black" direction="column" link="false"/>
+                    <Logo cor="black" direction="column" />
                     <div classNome= 'text1'>
                       <div classnome= 'texto'>Faça sua segurança com a amaze, se torne um de nos</div>
                      </div>
