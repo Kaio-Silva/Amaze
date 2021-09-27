@@ -1,5 +1,5 @@
 import { Container } from './styled'
-
+import { Link } from 'react-router-dom';
 
 function Login (){
     return(
@@ -8,11 +8,11 @@ function Login (){
             <div className= 'login'>
                 <div className = 'pt1'>
                     <img className="Bussola" src="/assets/Images/BussolaPreta.png" alt=""/>
-                    <div classNome= 'title'>
-                      <div classnome= 'texto'>Amaze</div>
+                    <div className= 'title'>
+                      <div className= 'texto'>Amaze</div>
                     </div>
-                    <div classNome= 'text1'>
-                      <div classnome= 'texto'>Faça sua segurança com a amaze, se torne um de nos</div>
+                    <div className= 'text1'>
+                      <div className= 'texto1'>Faça sua segurança com a amaze, se torne um de nos</div>
                      </div>
                      
 
@@ -27,8 +27,12 @@ function Login (){
                         <div className='nm_senha'>Senha</div>
                         <input className="Input-Reg" type="text"/>
                     </div>
-                    <div className='eaqueci'>Esqueci Senha</div>
-                    <div className='eaqueci'>Cadastrar-se</div>
+                    <div className='ptcadastro'>
+                        
+                        <div className='esqueceu'><Link to="/EsqueceuSenha">Esqueceu Senha</Link></div>
+                        <div className='cadastre'><Link to="/EsqueceuSenha">Cadastre-se</Link></div>
+                    </div>
+                    
                     <div classNome= 'botao'><button>Log In</button></div>
                     
                 </div>

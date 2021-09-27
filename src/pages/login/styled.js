@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 const Container = styled.div`
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,7 +19,15 @@ const Container = styled.div`
        height: 100%;
        width: 33%;
        justify-content: center;
+       
    }
+   .texto{
+    font-family:extraBold;
+   }
+   .texto1{
+    font-family:light;
+   }
+
 
    .conteudo1{
        background-color: #24BF99;
@@ -30,11 +39,12 @@ const Container = styled.div`
    }
 
    .login{
+       
         background-color: white;
         display: flex;
         align-items: center;
         flex-direction: row;
-        height: 50%;
+        height: 65%;
         width: 80%;
         
        
@@ -47,7 +57,7 @@ const Container = styled.div`
         background-color: white;
         align-items: center;
         height: 100%;
-        width: 50%;
+        width: 70%;
         justify-content: center;
        
    }
@@ -72,9 +82,45 @@ const Container = styled.div`
    button {
        color: white;
        background-color: #24BF99;
-       height: 30px;
-       width: 200px;
+       height: 40px;
+       width: 300px;
+       border:none;
+       margin-top: 20px;
    }
+
+.senha input{
+    height: 40px;
+    width: 300px;
+}
+
+.senha {
+    height: 60px;
+}
+
+.email input{
+    height: 40px;
+    width: 300px;
+}
+.ptcadastro {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.esqueceu {
+    padding-right: 115px;
+}
+
+.esqueceu > Link{
+    color: black;
+    text-decoration: none;
+}
+
+.nm_login{
+    font-family: semiBold;
+    margin-bottom: 20px;
+}
+
 
 `
 
