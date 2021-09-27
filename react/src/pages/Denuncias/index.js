@@ -9,7 +9,7 @@ function Denuncias(props) {
     const[report,SetReport] = useState(false)
     return(
         <Container>
-        <Cabecalho cor=""  cor="" home="usar" contatenos="" buscar="usar" criar="" login="usar" historico=""/>
+        <Cabecalho  cor="" home="usar" contatenos="" buscar="usar" criar="" login="usar" historico=""/>
             <div className="conteudo">
                 <div className="rua"> Rua José Bonifácio </div>
                 <div className="usuario">
@@ -23,11 +23,11 @@ function Denuncias(props) {
                                 <div className="b">Delito: </div>
                                 <div> Assalto </div>
                             </div>
-                            <div className="avaliação A"> <img src="/assets/Images/aval.png"/> </div>
+                            <div className="avaliação A"> <img src="/assets/Images/aval.png" alt="" /> </div>
                             <div className="Descricao">
                                 <div className="b">Descrição: </div>
                                 <div className="descricao">
-                                    aiaiaiauiuiaiaiaiauiuiaiuiauiauiuaiauiauiujgdvhqwdvgqyuigdfqyufvbhaevfhQWEFVQWYeurfwyqegfwyegfuasegfuiasgfhsabvflshiILGBIYovdfilydv
+                                   
                                 </div>
                             </div>
                         </div>
