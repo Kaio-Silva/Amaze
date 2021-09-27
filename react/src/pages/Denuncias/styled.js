@@ -39,11 +39,6 @@ const Container = styled.div`
     .informações {
         padding-left: 10em;
         width: 22em;
-        padding-right: 1em;
-    }
-
-    .autor{
-        padding-top: 3em;
     }
 
     .A {
@@ -64,6 +59,7 @@ const Container = styled.div`
     }
 
     .descricao {
+        font-size: 1em;
         font-family: medio;
         word-break: break-all;
         width: 31em;
@@ -86,7 +82,9 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        padding-right: 5em;
+        /*padding-right: 12em;
+        padding-top: 2em;*/
+        padding: 2em 12em 3em 0em;
     }
 
     .botão1 {
