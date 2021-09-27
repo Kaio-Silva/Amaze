@@ -284,6 +284,29 @@ padding-right: 4em;;
         display:none;
     }
 
+
+    .elements-desc-cabhd1{
+        display: none;
+    }
+    .elements-desc-cabhd2{
+        display: none;
+    }
+    .elements-desc-cabhd3{
+        display: none;
+    }
+    .elements-desc-cabhd4{
+        display: none;
+    }
+    .elements-desc-cabhd5{
+        display: none;
+    }
+    .elements-desc-cabhd6{
+        display: none;
+    }
+    .elements-desc-cabhd7{
+        display: none;
+    }
+
     .menubutt{
         display: block;
         margin-top: .3em;
