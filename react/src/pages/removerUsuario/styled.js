@@ -50,7 +50,7 @@ const Pagina = styled.div`
 
         padding: 4em 0em;
 
-        height: 90.35vh;
+        min-height: 90.35vh;
         min-width: 80vw;
 
         overflow-y: scroll;

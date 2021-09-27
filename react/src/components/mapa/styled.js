@@ -5,9 +5,8 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-
     #map{
-        height: 85.2vh;
+        min-height: 85.2vh;
     }
 
     .ButtonMap{
