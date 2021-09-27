@@ -10,6 +10,12 @@ const Container = styled.div`
     .usuario {
         background-color: #24BF99;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
     }
 
     .botao1 button{
@@ -33,11 +39,11 @@ const Container = styled.div`
         color: white;
         font-size: 1.3em;
         font-family: regular;
-        padding-top: 2em;
+        padding-top: 1%;
     }
 
     .informações {
-        padding-left: 10em;
+        /*padding-left: 10em;*/
         width: 22em;
     }
 
@@ -59,7 +65,7 @@ const Container = styled.div`
     }
 
     .descricao {
-        font-size: 1em;
+        font-size: 100%;
         font-family: medio;
         word-break: break-all;
         width: 31em;
@@ -70,7 +76,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        padding-left: 18em;
+        padding-left: 3em;
     }
 
     .b{
@@ -81,10 +87,10 @@ const Container = styled.div`
     .botões {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        /*padding-right: 12em;
-        padding-top: 2em;*/
-        padding: 2em 12em 3em 0em;
+        /*justify-content: flex-end;*/
+        padding-right: 12em;
+        /*padding-top: 2em;*/
+        padding: 2em 0em 3em 0em;
     }
 
     .botão1 {
