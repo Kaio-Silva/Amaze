@@ -1,6 +1,6 @@
 import {  BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from './pages/home';
+import Home from './pages';
 import BuscarRegioes from './pages/buscarRegioes';
 import EsqueceuSenha from './pages/esqueceuSenha';
 import HistoricoDenunc from './pages/historicoDenunc'
