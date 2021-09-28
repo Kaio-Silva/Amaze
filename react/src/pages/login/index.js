@@ -27,7 +27,7 @@ function Login (props){
                             <Link className="link" to="/EsqueceuSenha"> Esqueceu Senha </Link>
                             <Link className="link" to="/cadastro"> Cadastre-se </Link>
                         </div> 
-                        <Link  to="/"><Button className="ajustarBotao" tamanho="grande"> Log in </Button></Link>
+                        <Link  to="/"><Button className="ajustarBotao" tamanho="grande" cor="verde"> Log in </Button></Link>
                     </div>
                 </div>
             </div>

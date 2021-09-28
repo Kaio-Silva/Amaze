@@ -22,18 +22,32 @@ const Card = styled.div`
     .b {
         font-family: semiBold;
         font-size: 0.9em;
+        padding-right: 0.5em;
     }
 
 
     .imagens {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+
+        width: 90%;
     }
 
-    .imagem1 {
-        padding-left: 0.8em;
-        padding-right: 8em;
+    .botoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
     }
+
+    .botoes:hover{
+        cursor: pointer;
+    }
+
 
 
 

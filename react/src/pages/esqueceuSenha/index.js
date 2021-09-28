@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Padrao } from '../../components/inputs/styled.js';
+
 import { Container } from './styled.js';
 import Cabecalho from '../../components/cabecalho/index'
 
@@ -11,8 +13,10 @@ function BuscarRegioes(props) {
         <div className="conteudo">
           <div className="titulo"> Encontre sua conta </div>
           <hr/>
-          <div className="descricao"> Insira seu numero para podermos te enviar um SMS com sua senha </div>
-          <input type="text" placeholder="Insira seu numero"/>
+          <div className="alinharDesc">
+            <div className="descricao"> Insira seu numero para podermos te enviar um SMS com sua senha </div>
+            <Padrao className="ajustarInput" placeholder="Insira seu numero" />
+          </div>  
           <hr/>
           <div className="button"><button> Enviar </button></div>
         </div>

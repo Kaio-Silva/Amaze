@@ -45,6 +45,12 @@ const Container = styled.div`
         width: 100%;
     }
 
+    .alinharDesc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .descricao{
         font-family: medio;
         font-size: 1em;
@@ -52,37 +58,15 @@ const Container = styled.div`
         line-height: 1.3em;
 
         padding: 1.5em 2.1em ;
-
-        
-        height: 8em;
     }
 
-    input{
-        font-family: medio;
-        font-size: 1em;
-        color: #3D3D3D;
 
-        border: solid 1px #E2DEDE;  
-        border-radius: 0.3em;
+    .ajustarInput{
+        width: 90%;
 
-        padding: 0.8em 1em;
-        margin-left: 2.3em;
-        margin-bottom: 2em;
-        width: 80%;
+
+        margin-bottom: 1.5em;
     }
-
-    input::placeholder{
-        font-size: 1em;
-        color: rgba(0, 0, 0, 0.4);
-    }
-
-    input:focus{
-        outline: none;
-    }
-
-    input:focus::-webkit-input-placeholder {
-    color: transparent;
- }
 
     .button{
         display: flex;
@@ -102,7 +86,7 @@ const Container = styled.div`
         border-radius: 0.3em;
 
         padding: 0.4em 2.5em;
-        margin: 0.5em 2em 1em 0em;
+        margin: 1em 1em 0em 0em;
     }
 
     button:hover{

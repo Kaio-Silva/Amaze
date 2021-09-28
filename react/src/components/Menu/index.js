@@ -7,7 +7,7 @@ import Logo from '../logo'
 export default function MenuLateral(props){
     return (
         <Menu>
-            <Logo cor="white"/>
+            <Logo cor="white" tamanho="medio"/>
             <div className="relatorio">
                 <img src="/assets/Images/DocsBranco1.png" alt=""/>
                 <Link className="link" to="/Relatorio"> Relatorio Denuncias </Link>

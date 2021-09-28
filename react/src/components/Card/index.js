@@ -8,8 +8,8 @@ export default function denuncias() {
                 <div className="cont i"> <div className="b">Região:</div> Parque Alto do Rio Bonito </div>
                 <div className="descriçao i"> <div className="b">Descrição:</div> Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa </div>
                 <div className="imagens">
-                    <div className="imagem1"> <img src="/assets/Images/CancelarDenuncia3.png" alt=""/> </div>
-                    <div className="imagem2"> <img src="/assets/Images/Aprovar3.png" alt=""/> </div>
+                    <button className="botoes"> <img src="/assets/Images/CancelarDenuncia3.png" alt=""/> </button>
+                    <button className="botoes"> <img src="/assets/Images/Aprovar3.png" alt=""/> </button>
                 </div>
             </div>
         </Card>

@@ -12,7 +12,7 @@ const Button = styled.button`
 
       width: ${ props => props.tamanho === "grande" ? "100%" : "50%" };
 
-      background-color: #24BF99;
+      background-color: ${ props => props.cor === "verde" ? "#24BF99" : "#011640"};
 
       &:hover{
           cursor: pointer;
