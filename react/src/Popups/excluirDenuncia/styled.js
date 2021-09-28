@@ -96,6 +96,20 @@ outline: none;
     height:4em;
 }
 
+@media(max-width:1364px){
+    .abox{
+        width:25em;
+    }
+}
+
+@media(max-width:556px)
+{
+    .img{
+        margin-left: 10.5em;
+        margin-bottom: 3em;
+    }
+}
+
 
 `
 

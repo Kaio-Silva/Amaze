@@ -256,19 +256,26 @@ opacity: 1;
     color: black;
 }
 
-@media(max-width:1310px){
+@media(max-width:1280px){
 
     .abox{
         width:25em;
     }
 
+    .taxas{
+        margin-left:1.5em;
+    }
 
     .checks{
      margin-left: 0em;
     }
 
+}
 
-
+@media(max-width:387px){
+    .taxas{
+        margin-left: 1em;
+    }
 }
 
 
