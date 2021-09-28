@@ -47,7 +47,7 @@ export default function p4(props){
 
                 <div className="l2">
                    <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" />Feminicídio </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" /> Tráfic  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" /> Trafico  </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Estupro" />Estupro </label>
                 </div>
 
