@@ -1,3 +1,4 @@
+
 import styled from 'styled-components'
 
 
@@ -10,9 +11,10 @@ const Container = styled.div`
     font-weight: bold;
     font-size:1em;
 
+    border:1px solid black;
     border-radius:0.5em;
 
-    background-color: rgba(107, 186, 181, 0.4);
+    background-color: #DFF1FB;
    
     height:3em;
     width:99%;
@@ -30,9 +32,10 @@ const Container = styled.div`
 
 
     .barra-conteudohdc{
+        align-items: center;
     width:0.1em;
     height: 2.3em;
-    background-color: black;
+    background-color: #2ba083;
 }
   .descricao-conteudohdc{
      padding-right:1.5em;
@@ -66,6 +69,11 @@ const Container = styled.div`
 
     .img1{
         margin-right:1em;
+    }
+
+    button{
+        margin-right:0.6em;
+        cursor: pointer;
     }
 
 
@@ -149,6 +157,10 @@ const Container = styled.div`
 
      .alinhando-imagem{
         margin-left:0.5em;
+    }
+
+    button{
+        margin:0;
     }
 
     .img1{
