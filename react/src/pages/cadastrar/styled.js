@@ -25,13 +25,13 @@ const Container = styled.div`
        font-size: 1.1em;
        color: rgba(0, 0, 0, 0,8);
        margin-right: 0.8em;
-       margin-bottom: 1em;
+       margin-bottom: 2em;
     }
 
 
 .cadastro-inputs{
     width:30em;
-    height:44em;
+    height:46em;
     background-color:#fff;
     margin-left:27em;
     margin-bottom: 1em;
