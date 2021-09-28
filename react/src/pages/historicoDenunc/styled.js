@@ -222,6 +222,11 @@ padding-right: 4em;;
     .registros-denuncias-hd{
     width:26em;
 }
+.denuc{
+    margin-left:2em;
+}
+
+
 
 }
 

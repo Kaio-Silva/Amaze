@@ -14,7 +14,7 @@ const Container = styled.div`
     border:1px solid black;
     border-radius:0.5em;
 
-    background-color: #DFF1FB;
+    background-color: rgba(107, 186, 181, 0.4);
    
     height:3em;
     width:99%;
