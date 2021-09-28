@@ -1,42 +1,37 @@
 import { Container } from './styled'
 import { Link } from 'react-router-dom';
 import Logo from '../../components/logo'
+import { Padrao } from '../../components/inputs/styled';
+import { Button } from '../../components/botoes/styled';
 
 function Login (props){
     return(
         <Container>
-        <div className='conteudo2'>
-            <div className= 'login'>
-                <div className = 'pt1'>
-                    <Logo cor="black" direction="column" />
-                    <div classNome= 'text1'>
-                      <div classnome= 'texto'>Faça sua segurança com a amaze, se torne um de nos</div>
-                     </div>
-                     
-
+            <div className="BoxLogin">
+                <div className="ConteudoAmaze">
+                    <Logo direction="column" cor="black" titulo="block" tamanho="grande"/>
+                    <div className="DescLogin">Faça sua segurança com a Amaze, se torne um de nos</div>
                 </div>
-                <div className= 'pt2'>
-                    <div className='nm_login'>Log in</div>
-                    <div className= 'email'>
-                        <div className= 'nm_email'> E-mail</div>
-                        <input className="Input-Reg" type="text"/>
+                <div className="ConteudoLogin">
+                    <div className="TituloLogin"> Log in </div>
+                    <div className="FormLogin">
+                        <div className="Inputs">                        
+                            <div className="Titulo">Email</div>
+                            <Padrao placeholder="Insira seu email"/>
+                        </div>
+                        <div className="Inputs">                        
+                            <div className="Titulo">Senha</div>
+                            <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha"/>
+                        </div>
+                        <div className="alinhandoLinks">
+                            <Link className="link" to="/EsqueceuSenha"> Esqueceu Senha </Link>
+                            <Link className="link" to="/cadastro"> Cadastre-se </Link>
+                        </div> 
+                        <Link  to="/"><Button className="ajustarBotao" tamanho="grande"> Log in </Button></Link>
                     </div>
-                    <div className='senha'>
-                        <div className='nm_senha'>Senha</div>
-                        <input className="Input-Reg" type="text"/>
-                    </div>
-                    <div className='ptcadastro'>
-                        
-                        <div className='esqueceu'><Link className="link" to="/EsqueceuSenha">Esqueceu Senha</Link></div>
-                        <div className='cadastre'><Link className="link" to="/cadastro"> Cadastre-se </Link></div>
-                    </div>
-                    
-                    <Link className="link" to="/home"><div classNome= 'botao'><button>Log In</button></div></Link>
-                    
                 </div>
             </div>
-        </div>
-</Container>
+        </Container>
     )
 }
 

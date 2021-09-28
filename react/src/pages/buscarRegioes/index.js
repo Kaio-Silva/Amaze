@@ -8,8 +8,8 @@ function BuscarRegioes(props) {
   return (
     <Container>
       <div className="Cabecalho-Reg">
-        <Logo cor="black" titulo="block"/>
-        <Pesquisa className="Buscar" input="usar" tamanho="grande"/>
+        <Logo cor="black" titulo="block" tamanho="grande"/>
+        <Pesquisa className="Buscar" input="usar" tamanho="medio"/>
       </div>
       <div className="Alinhando-Centro"> 
         <div className="Conteudo-Reg">

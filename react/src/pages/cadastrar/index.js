@@ -3,46 +3,35 @@ import React from 'react'
 import Logo from '../../components/logo/index.js';
 import { Link } from 'react-router-dom';
 
+import { Padrao } from '../../components/inputs/styled.js';
+
 import { Container } from './styled.js';
 
 function Cadastrar(props) {
   return (
     <Container>
-              <Logo cor="black"/>
+              <Logo cor="black" tamanho="grande"/>
               <div class="cadastro-inputs">
-                  <div class="titulo-dentro">
-                      <spam>Cadastro</spam>
-                  </div>
-                  <div class="titulo-nome">
-                      <spam>Nome Completo</spam>
-                  </div>
-                  <div class="input">
-                      <input placeholder="Insira seu nome"></input>
-                  </div>
-                  <div class="titulo-nome" id="suba">
-                      <spam>Email</spam>
-                  </div>
-                  <div class="input">
-                      <input placeholder="Insira seu E-mail"></input>
-                  </div>
-                  <div class="titulo-nome" id="suba">
-                      <spam>Telefone</spam>
-                  </div>
-                  <div class="input">
-                      <input placeholder="Insira seu telefone"></input>
-                  </div>
-                  <div class="titulo-nome" id="suba">
-                      <spam>Região</spam>
-                  </div>
-                  <div class="input">
-                      <input placeholder="Insira sua região"></input>
-                  </div>
-                  <div class="titulo-nome" id="suba">
-                      <spam>Senha</spam>
-                  </div>
-                  <div class="input">
-                      <input placeholder="Insira sua senha"></input>
-                  </div>
+                 <div className="Inputs">                        
+                    <div className="Titulo">Nome Completo</div>
+                    <Padrao placeholder="Insira seu nome"/>
+                 </div>
+                 <div className="Inputs">                        
+                    <div className="Titulo">Email</div>
+                    <Padrao placeholder="Insira seu email"/>
+                 </div>
+                 <div className="Inputs">                        
+                    <div className="Titulo">Telefone</div>
+                    <Padrao placeholder="Insira seu telefone"/>
+                 </div>
+                 <div className="Inputs">                        
+                    <div className="Titulo">Região</div>
+                    <Padrao placeholder="Insira sua região"/>
+                 </div>
+                 <div className="Inputs">                        
+                    <div className="Titulo">Senha</div>
+                    <Padrao placeholder="Insira seu senha"/>
+                 </div>          
                   <div calss="mae-botao">
                       <Link className="link" to="/Login"><button class="botao">Concluir Cadastro</button></Link>
                   </div>

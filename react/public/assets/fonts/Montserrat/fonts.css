@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: RelugarItalic;
+  src: local(font10), url("./Montserrat-Italic.ttf") format('truetype');
+}
+
+@font-face {
   font-family: extraLight;
   src: local(font4), url("./Montserrat-ExtraLight.ttf") format('truetype');
 }

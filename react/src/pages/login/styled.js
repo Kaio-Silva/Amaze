@@ -8,6 +8,10 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
+    background-image: url('/assets/images/login_fundo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
 
     height: 100vh;
 
@@ -22,120 +26,86 @@ const Container = styled.div`
         cursor: pointer;
     }
 
-   .pt1{
-       background-color: #24BF99;
+    .BoxLogin{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: 80%;
+        height: 80vh;
+
+        box-shadow:0em 0em 1em 0.2em rgba(0, 0, 0, 0.25);
+
+        background-color: white;
+    }
+
+    .ConteudoAmaze{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #24BF99;
+
+        width: 33%;
+        height: 100%;
+    }
+
+   .DescLogin{
+       font-family: RelugarItalic;
+       font-size: 1.1em;
+
+       width: 16em;
+       padding-left: 2em;
+       padding-top: 1em;
+   }
+
+   .ConteudoLogin{
        display: flex;
-       align-items: center;
        flex-direction: column;
-       height: 100%;
-       width: 33%;
-       justify-content: center;
-       
+       align-items: center;
+       justify-content: space-between;
+
+       height: 53%;
+       width: 67%;
    }
-   .texto{
-    font-family:extraBold;
+
+   .TituloLogin{
+       font-family: semiBold;
+       font-size: 1.1em;
    }
-   .texto1{
-    font-family:light;
+
+   .FormLogin{
+       width: 55%;
+   }
+
+   .Inputs{
+       margin-top: 1em;
+       margin-bottom: .8em;
+   }
+
+   .senha::placeholder{
+    letter-spacing: 0px;
+    }
+
+   .Titulo{
+       font-family: medio;
+       font-size: 1em;
+       margin-left: 1.5em;
+       margin-bottom: 0.6em;
    }
 
 
-   .conteudo1{
-       background-color: #24BF99;
+   .alinhandoLinks{
        display: flex;
        align-items: center;
-       flex-direction: column;
-       height: 100%;
+       justify-content: space-between;
        width: 100%;
    }
 
-   .login{
-       
-        background-color: white;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        height: 65%;
-        width: 80%;
-        
-       
-        box-shadow: 0.1em 0.10em 0.4em 0.6em rgba(0, 0, 0, 0.25);
+   .ajustarBotao{
+       margin-top: 1em;
    }
-
-   .pt2{
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        align-items: center;
-        height: 100%;
-        width: 70%;
-        justify-content: center;
-       
-   }
-
-   .conteudo2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        background-image: url('/assets/images/login_fundo.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-
-        height: 100%;
-         width: 100%;
-   }
- 
-   .text1{
-   
-   }
-   button {
-       color: white;
-       background-color: #24BF99;
-       height: 40px;
-       width: 300px;
-       border:none;
-       margin-top: 20px;
-   }
-   button:hover{
-       cursor: pointer;
-   }
-
-.senha input{
-    height: 40px;
-    width: 300px;
-}
-
-.senha {
-    height: 60px;
-}
-
-.email input{
-    height: 40px;
-    width: 300px;
-}
-.ptcadastro {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-}
-
-.esqueceu {
-    padding-right: 115px;
-}
-
-.esqueceu > Link{
-    color: black;
-    text-decoration: none;
-}
-
-.nm_login{
-    font-family: semiBold;
-    margin-bottom: 20px;
-}
-
-
 `
 
 export { Container }

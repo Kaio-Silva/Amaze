@@ -38,8 +38,11 @@ const Container = styled.div`
 
 .img-logohd{
     animation: rotate 2.5s normal;
-    height: 3.3em;
-    width: 3.3em;
+    height: ${props => props.tamanho === "grande" ? "5em" 
+                                                  : props.tamanho === "medio" ? "3.7em" : "3.3em"};
+
+    width: ${props => props.tamanho === "grande" ? "5em" 
+                                                  : props.tamanho === "medio" ? "3.7em" : "3.3em"};
     margin-right:0.5em;
     content: url(${props => props.cor === "white" ? '/assets/Images/BussolaBranca.png' : props.cor === "black" ? '/assets/Images/BussolaPreta.png' : '/assets/Images/BussolaVerde.png'})}
 
@@ -49,7 +52,8 @@ const Container = styled.div`
 
   .texto{
     font-family: medio;
-    font-size: 1.5em;
+    font-size: ${props => props.tamanho === "grande" ? "2em" 
+                                                  : props.tamanho === "medio" ? "1.5em" : "1em"};
     color: ${props => props.cor === "white" ? 'white' 
                                              : props.cor === "black" ? 'black' : '#24BF99'}
   }

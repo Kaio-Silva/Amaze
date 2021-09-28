@@ -39,6 +39,30 @@ const Pesquisa = styled.input`
         width: ${props => props.tamanho === "grande" ? "90%" : "13em"};
         height: 2.5em;
     }
+
+
+    
 `
 
-export { Pesquisa }
+    const Padrao = styled.input`
+            font-family: regular;
+            font-size: .85em;
+
+            border-radius: 2px;
+            border: 1px solid #C4C4C4;
+
+            padding: 1.5em 1em;
+
+            outline: none;
+
+            letter-spacing: ${props => props.Type === "senha" ? ".3em" : "0em"};
+
+
+            width: 100%;
+
+            &:focus::-webkit-input-placeholder {
+            color: transparent;
+            }
+    `
+
+export { Pesquisa, Padrao }

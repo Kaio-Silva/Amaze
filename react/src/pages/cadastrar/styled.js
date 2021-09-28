@@ -52,7 +52,7 @@ background-size: 100% 100%;
 }
 .cadastro-inputs{
     width:30em;
-    height:47em;
+    height:44em;
     background-color:#fff;
     margin-left:27em;
     margin-bottom: 1em;
@@ -64,49 +64,41 @@ background-size: 100% 100%;
     font-size: 1.4em;
 
 }
+
+   .Inputs{
+       margin-top: 1em;
+       margin-bottom: 1.5em;
+   }
+
+   .Titulo{
+       font-family: medio;
+       font-size: 1em;
+       margin-left: 1.5em;
+       margin-bottom: 0.6em;
+   }
+
 .mae-botao{
     width:10em;
     height:6em;
 }
 .botao{
-    width:28.8em;
+    width:22.5em;
     height:3.5em;
     border:none;
     background-color:#6BBAB5;
     font-family: semiBold;
+    font-size: 1.2em;
     color:#fff;
 }
 
 .botao:hover{
     cursor:pointer;
     background-color: rgba(87, 166, 161, 1);
+    transition: 1.5s;
 }
-.titulo-nome spam{
-    font-family: medio;
-    font-size:0.9em;
-}
-.titulo-nome {
-    padding-top:2em;
-    margin-left:0.8em;
-}
-.input input{
-    height:4em;
-    width: 100%;
-    font-family: regular;
-    font-size: 0.8em;
-    color: #3D3D3D;
 
-    border: solid 2px #E2DEDE;  
-    border-radius: 0.3em;
 
-    padding: 0.8em 1em;
-   
-    margin-bottom: 2em;
-    width: 100%;
-}
-.input{
-    padding-top:0.8em;
-}
+
 @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
