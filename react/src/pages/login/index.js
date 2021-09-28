@@ -7,9 +7,10 @@ import { Button } from '../../components/botoes/styled';
 function Login (props){
     return(
         <Container>
+            <Logo ambos="false" direction="column" cor="black" titulo="" tamanho="medio"/>
             <div className="BoxLogin">
                 <div className="ConteudoAmaze">
-                    <Logo direction="column" cor="black" titulo="block" tamanho="grande"/>
+                    <Logo direction="column" cor="black" titulo="" tamanho="grande"/>
                     <div className="DescLogin">Faça sua segurança com a Amaze, se torne um de nos</div>
                 </div>
                 <div className="ConteudoLogin">

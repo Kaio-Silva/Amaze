@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Logo from '../../components/logo/index.js';
+import { Button } from '../../components/botoes/styled';
 import { Link } from 'react-router-dom';
 
 import { Padrao } from '../../components/inputs/styled.js';
@@ -10,8 +11,9 @@ import { Container } from './styled.js';
 function Cadastrar(props) {
   return (
     <Container>
-              <Logo cor="black" tamanho="grande"/>
+              <div className="ajustarLogo"><Logo cor="black" tamanho="grande"/></div>
               <div class="cadastro-inputs">
+                 <div className="TituloCadastro"> Cadastro </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Nome Completo</div>
                     <Padrao placeholder="Insira seu nome"/>
@@ -32,8 +34,8 @@ function Cadastrar(props) {
                     <div className="Titulo">Senha</div>
                     <Padrao placeholder="Insira seu senha"/>
                  </div>          
-                  <div calss="mae-botao">
-                      <Link className="link" to="/Login"><button class="botao">Concluir Cadastro</button></Link>
+                  <div className="mae-botao">
+                      <Link className="link" to="/Login"><Button className="ajustarBotao" cor=""> Concluir Cadastro </Button></Link>
                   </div>
               </div>
     </Container>

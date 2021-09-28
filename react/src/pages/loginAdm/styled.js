@@ -108,6 +108,61 @@ const Container = styled.div`
    .ajustarBotao{
        margin-top: 1em;
    }
+
+   @media (max-width: 1024px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('/assets/images/LoginAdmReps.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        .LogoResponsiva{
+            display: block;
+        }
+
+        .BoxLogin{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            height: 60%;
+
+            border-radius: 1em;
+            margin-top: 3em;
+        }
+
+        .ConteudoAmaze{
+            display: none;
+        }
+
+        .ConteudoLogin{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 80%;
+        }
+
+        .TituloLogin{
+            margin-bottom: 1.5em;
+        }
+
+        .FormLogin{
+            height: 65%;
+            width: 100%;
+        }
+
+        .Titulo{
+            font-size: 0.9em;
+        }
+
+
+        .ajustarBotao{
+            margin-top: 1.5em;
+            font-size: 0.9em;
+        }
+   }
 `
 
 export { Container }

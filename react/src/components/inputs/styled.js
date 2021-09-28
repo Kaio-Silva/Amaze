@@ -63,6 +63,15 @@ const Pesquisa = styled.input`
             &:focus::-webkit-input-placeholder {
             color: transparent;
             }
+
+            @media (max-width: 1024px){
+                font-size: 0.9em;
+                padding: 1.1em 1em;
+
+                &::-webkit-input-placeholder {
+                font-size: 0.9em;
+            }
+            }
     `
 
 export { Pesquisa, Padrao }

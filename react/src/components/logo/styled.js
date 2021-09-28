@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 
 const Container = styled.div`
-    display: flex;
+    display: ${props => props.ambos === "false" ? "none" : "flex" };
     flex-direction: ${props => props.direction === "column" ? 'column' : 'row'};
     align-items: center;
     padding-left: 2.2em;
@@ -75,6 +75,7 @@ const Container = styled.div`
     }
 
   @media (max-width: 1024px) {
+      display: ${props => props.ambos & "false" ? "flex" : "flex" };
       padding-left: 1em;
       .texto{
         display: ${ props => props.titulo === "block" ? "block" : "none"};
@@ -83,8 +84,11 @@ const Container = styled.div`
 
       .img-logohd{
           margin-right: 0.2em;
-          height: 2.5em;
-          width: 2.5em;
+          height: ${props => props.tamanho === "grande" ? "3.5em" 
+                                                  : props.tamanho === "medio" ? "3.1em" : "2.8em"};
+
+          width: ${props => props.tamanho === "grande" ? "3.5em" 
+                                                  : props.tamanho === "medio" ? "3.1em" : "2.8em"};
       }
   }
 
