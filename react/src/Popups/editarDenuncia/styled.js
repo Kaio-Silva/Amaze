@@ -47,7 +47,10 @@ font-family: regular ;
     flex-direction: row;
     align-items: center;
     margin-left:1.2em;
-    width:18em;
+    width:21em;
+}
+.img{
+    width:5em;
 }
 
 .forms{
@@ -190,11 +193,22 @@ input::placeholder{
 }
 
 
+
 @media(max-width:1272px)
 {
     .abox{
-        width:23.7em;
+        width:24em;
     }
+
+    .cabecalho{
+        align-items: center;
+    }
+
+    .img{
+        margin-bottom: 3em;
+    }
+
+   
 }
 
 `
