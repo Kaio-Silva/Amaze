@@ -18,11 +18,6 @@ const Container = styled.div`
         height: 70vh;
     }
 
-    .botao1 button{
-        background-color: transparent;
-        border: none;
-    }
-
     .rua {
         display: flex;
         flex-direction: column;
@@ -39,12 +34,11 @@ const Container = styled.div`
         color: white;
         font-size: 1.3em;
         font-family: regular;
-        padding-top: 1%;
+        /*padding-top: 5%;*/
     }
 
-    .informações {
-        /*padding-left: 10em;*/
-        width: 22em;
+    .informacoes {
+        width: 34em;
     }
 
     .A {
@@ -76,21 +70,23 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        padding-left: 3em;
+        /*padding-left: 3em;*/
     }
 
     .b{
+        font-size: 1.2em;
         padding-right: 0.7em;
         font-family: semiBold;
+    }
+
+    .c {
+        font-size: 1.1em;
     }
 
     .botões {
         display: flex;
         flex-direction: row;
-        /*justify-content: flex-end;*/
-        padding-right: 12em;
-        /*padding-top: 2em;*/
-        padding: 2em 0em 3em 0em;
+        padding: 2em 0em 3em 22em;
     }
 
     .botão1 {
@@ -103,6 +99,58 @@ const Container = styled.div`
         border-radius: 0.5em;
         font-size: 1.3em;
         background-color: white;
+    }
+
+    .avaliacao {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    @media (max-width: 1024px) {
+
+        .rua {
+            font-size: 1.4em;
+            padding: 0.8em 0em;
+        }
+
+        .informacoes {
+            width: 10em;
+        }
+
+        .usuario {
+            height: auto;
+            width: auto;
+        }
+
+        .descricao {
+            width: 23em;
+        }
+
+        .T {
+            font-size: 18px;
+            font-family: semiBold;
+        }
+
+        .c {
+            font-size: 18px/*0.8em*/;
+        }
+
+        button {
+            width: max-content;
+            padding: 0.8em 1.3em;
+            font-size: 0.9em;
+        }
+
+        .botões {
+            display: flex;
+            flex-direction: row;
+            padding: 2em 0em 3em 2em;
+            /*padding-left: initial;*/
+        }
+
+        .descricao {
+            font-size: 15px;
+        }
     }
 `
 

@@ -14,24 +14,27 @@ function Denuncias(props) {
                 <div className="rua"> Rua José Bonifácio </div>
                 <div className="usuario">
                     <div className="row">
-                        <div className="informações">
+                        <div className="informacoes">
                             <div className="autor A">
-                                <div className="b">Autor: </div> 
-                                <div> Yudji doido </div>
+                                <div className="T b">Autor: </div> 
+                                <div className="Autor c"> Yudji doido </div>
                             </div>
                             <div className="delito A"> 
-                                <div className="b">Delito: </div>
-                                <div> Assalto </div>
+                                <div className="T b">Delito: </div>
+                                <div className="Delito c"> Assalto </div>
                             </div>
-                            <div className="avaliação A"> <img src="/assets/Images/aval.png" alt="" /> </div>
+                            <div className="avaliacao"> <img src="/assets/Images/aval.png" alt="" /> </div>
                             <div className="Descricao">
-                                <div className="b">Descrição: </div>
-                                <div className="descricao">
-                                   
+                                <div className="desc b">Descrição: </div>
+                                <div className="descricao c">
+                                    aiaiaiauiuiaiaiaiauiuiaiuiauiauiuaiauiauiujgdvhqwdvgqyuigdf qyufvbhaevfhQWEFVQWYeurfwyqegfwyegfuasegfuiasgfhsabvflshiILGBIYovdfilydv
                                 </div>
                             </div>
                         </div>
-                        <div className="Data A"><div className="b">Data:</div> 20/09/2021 </div>
+                        <div className="Data A">
+                            <div className="T b">Data:</div>
+                            <div className="data c"> 20/09/2021 </div>
+                        </div>
                     </div>
                     <div className="botões">
                         <div className="botão1"> <button onClick={() => SetAvalie(true)}> Avaliar Denuncia </button> </div>
