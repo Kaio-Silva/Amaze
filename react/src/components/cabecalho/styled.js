@@ -323,7 +323,7 @@ padding-right: 4em;;
     .menubutt{
         display: block;
         margin-top: .3em;
-        margin-left: 0.2em;
+        margin-left: 0;
     }
     
     .descricao-cabecalhohd{
@@ -336,7 +336,12 @@ padding-right: 4em;;
 }
 
 
+@media(max-width:390px){
+    .cabecalho-hd{
+        width: 19em;
+    }
 
+}
 
 
 
