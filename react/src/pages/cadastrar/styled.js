@@ -28,20 +28,26 @@ const Container = styled.div`
        margin-bottom: 2em;
     }
 
+    .conteudo{
+       display: flex;
+       justify-content: center;
+    }
+
 
 .cadastro-inputs{
     width:30em;
-    height:46em;
+    height:41em;
+    margin:0em;
     background-color:#fff;
-    margin-left:27em;
-    margin-bottom: 1em;
-    padding: 2em 3em;
+    padding: 1em 2em;
     box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
 }
 
+
+
    .Inputs{
-       margin-top: 1em;
-       margin-bottom: 1.5em;
+       margin-top: 0.5em;
+       margin-bottom: 0.8em;
    }
 
    .Titulo{

@@ -11,8 +11,9 @@ import { Container } from './styled.js';
 function Cadastrar(props) {
   return (
     <Container>
-              <div className="ajustarLogo"><Logo cor="black" tamanho="grande"/></div>
-              <div class="cadastro-inputs">
+          <div className="ajustarLogo"><Logo cor="black" tamanho="grande"/></div>
+            <div className="conteudo">
+              <div className="cadastro-inputs">
                  <div className="TituloCadastro"> Cadastro </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Nome Completo</div>
@@ -38,6 +39,7 @@ function Cadastrar(props) {
                       <Link className="link" to="/Login"><Button className="ajustarBotao" cor=""> Concluir Cadastro </Button></Link>
                   </div>
               </div>
+            </div>
     </Container>
   );
 }
