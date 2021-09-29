@@ -186,7 +186,6 @@ padding-right: 4em;;
     
 }
 
-
 #style-2::-webkit-scrollbar
 {
 	width: 12px;
@@ -221,9 +220,10 @@ padding-right: 4em;;
 
     .registros-denuncias-hd{
     width:26em;
+    margin-left:2.5em;
 }
 .denuc{
-    margin-left:2em;
+    margin-left:1em;
 }
 
 
