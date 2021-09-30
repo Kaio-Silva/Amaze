@@ -5,15 +5,15 @@ import BuscarRegioes from './pages/buscarRegioes';
 import EsqueceuSenha from './pages/esqueceuSenha';
 import HistoricoDenunc from './pages/historicoDenunc'
 import cadastrar from './pages/cadastrar'
-import { Login } from './pages/login'
+import { Login }  from './pages/login'
 import Relatorio from './pages/relatorioDenuncias';
 import Remover from './pages/removerUsuario';
 import Denuncias from './pages/Denuncias';
 import Mapa from './pages/Mapa'
 import loginAdm from './pages/loginAdm';
 import Error from './pages/error';
-import Pop from './Popups/menu/index'
 
+import Contatnos from './pages/contateNos';
 
 export default function Rotes() {
     return (
@@ -30,8 +30,9 @@ export default function Rotes() {
                 <Route path="/Denuncia" component={Denuncias} />
                 <Route path="/Mapa" component={Mapa} />
                 <Route path="/LoginAdm" component={loginAdm} />
+                <Route path="/Contatnos" component={Contatnos} />
                 <Route path="/*" component={Error} />
-                <Route path="/Pop" component={Pop} />
+                
             </Switch>
         </BrowserRouter> 
     )
