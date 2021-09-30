@@ -92,6 +92,10 @@ const Container = styled.div`
       }
   }
 
+  @media(max-width:1031px){
+    width: 5em;
+  }
+
 `
 
 export { Container }

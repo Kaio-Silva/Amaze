@@ -73,6 +73,10 @@ const Denuncias = styled.div`
             overflow-y: auto;
             width: 80vh;
         }
+
+        .Pesquisa {
+            display: none;
+        }
     }
 `
 

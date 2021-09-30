@@ -74,15 +74,32 @@ const Menu = styled.div`
         cursor: pointer;
     }
 
-    @media (max-width: 1024px) {
+    /*.inp {
+        display: none;
+    }*/
 
+    @media (max-width: 1024px) {
         flex-direction: row;
         width: 100vw;
-        height: 20vh;
+        height: 12vh;
+        background-image: url(/assets/Images/MenuBranco.svg);
+        background-repeat: no-repeat;
+        background-position: 23em 2.1em;
+        background-size: 2.2em;
 
         .relatorio {display: none;}
 
-        .remover {display: none}
+        .remover {display: none;}
+
+        .logo {width: none;}
+
+        .inp {
+            padding: 1.5em 5em 0em 0em;
+        }
+
+        input {
+            font-size: 1.4em;
+        }
     }
 `
 
