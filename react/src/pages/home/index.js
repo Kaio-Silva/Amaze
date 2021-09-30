@@ -27,9 +27,9 @@ export default function Home(props){
                 </div> 
                 <div className="AlinhandoConteudo"> 
                     <div className="AgrupandoTextos"> 
-                        <div className="Texto"> Nós começamos este projeto pensando em como proteger 
+                        <div className="Texto2"> Nós começamos este projeto pensando em como proteger 
                         nossos usuarios de possiveis locais perigosos </div><hr/> 
-                        <div className="Texto"> Para que vocé esteja sempre seguro, inclusive durante 
+                        <div className="Texto2"> Para que vocé esteja sempre seguro, inclusive durante 
                         seus paseios, caminhadas é pelo seu trajeto </div> <hr/> 
                     </div>
                     <img src="/assets/images/Ladrao.png" alt=""/>    

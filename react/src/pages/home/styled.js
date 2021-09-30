@@ -48,24 +48,27 @@ const Container = styled.div`
 
   .Titulo{
       font-family: montserratBold;
-      font-size: 2em;
+      font-size: 2.4em;
       width: 12em;
-      height: 2.8em;
+      height: 2.7em;
+      margin-left: 5%;
   }
 
   .Descricao{
       font-family: regular;
-      font-size: 1.1em;
+      font-size: 1.2em;
       height: 3em;
+      margin-left: 7%;
   }
 
   .Botão{
       font-family: semiBold;
-      font-size: 1.1em;
+      font-size: 1.3em;
       color: white;
+      margin-left: 5%;
 
       border: none;
-      padding: 0.7em 2.5em;
+      padding: 0.7em 2.8em;
 
       background-color: #24BF99;
   }
@@ -145,20 +148,32 @@ const Container = styled.div`
       height: 3.5em;
   }
 
-  .Texto{
-      font-family: regular;
-      font-size: 1em;
+
+  .Texto2{
+      font-family: semiBold;
+      font-size: 1.4em;
       line-height: 1.6em;
 
-      width: 21em;
+      width: 15.2em;
+     
+    
+  }
+
+  .Texto{
+      font-family: semiBold;
+      font-size: 1.4em;
+      line-height: 1.6em;
+
+      width: 19em;
+    
   }
 
   .AgrupandoTextos{
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-
-      height: 12em;
+      height: 14em;
+      
   }
 
   .Container2{
@@ -178,7 +193,7 @@ const Container = styled.div`
 
   .TextBenficios{
       font-family: regular;
-      font-size: 1em;
+      font-size: 1.2em;
       line-height: 1.6em;
       width: 32em;
   }
