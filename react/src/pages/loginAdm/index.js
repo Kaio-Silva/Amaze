@@ -7,7 +7,7 @@ import { Button } from '../../components/botoes/styled';
 export default function LoginAdm(props){
     return(
         <Container>
-             <Logo ambos="false" direction="column" cor="white" titulo="" tamanho="medio"/>
+            <Logo ambos="false" direction="column" cor="white" titulo="" tamanho="medio"/>
             <div className="BoxLogin">
                 <div className="ConteudoAmaze">
                     <Logo direction="column" cor="white" titulo="block" tamanho="grande"/>

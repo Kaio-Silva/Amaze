@@ -7,8 +7,6 @@ const Card = styled.div`
     .info1 {
         border-radius: 2em;
         padding: 1em 0em 15em 1.2em;
-        /*margin: 2em 2em;*/
-        margin-right: 15em;
         width: 15.5em;
         min-height: 5em;
         max-height: 14vh;
@@ -72,8 +70,9 @@ const Card = styled.div`
         flex-direction: row;
     }
 
-    @media (max-width: 435px) {
-        /*width: 50vw;*/
+    @media (max-width: 1024px) {
+        margin: 1.5em 0em;
+        width: 17em;
     }
 `
 
