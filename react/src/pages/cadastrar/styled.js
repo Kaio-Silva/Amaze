@@ -74,6 +74,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 128vh;
+    width: 70vw;
     background-image: url('/assets/images/CadastroReps.png');
     background-size: 100% 100%;
 
