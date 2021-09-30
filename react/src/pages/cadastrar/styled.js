@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    
+    height: 100vh;
     background-image: url('/assets/images/Frame 77 (1).png');
     background-size: 100% 100%;
 
@@ -34,16 +34,14 @@ const Container = styled.div`
     }
 
 
-.cadastro-inputs{
-    width:30em;
-    height:41em;
-    margin:0em;
-    background-color:#fff;
-    padding: 1em 2em;
-    box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
-}
-
-
+    .cadastro-inputs{
+        width: 37%;
+        height: 85%;
+        margin:0em;
+        background-color:#fff;
+        padding: 1em 2em;
+        box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
+    }
 
    .Inputs{
        margin-top: 0.5em;
@@ -73,8 +71,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 128vh;
-    width: 70vw;
+    height: 100vh;
     background-image: url('/assets/images/CadastroReps.png');
     background-size: 100% 100%;
 
@@ -83,12 +80,16 @@ const Container = styled.div`
         margin-left: 3em;
     }
 
+    .conteudo{
+        width: 80%;
+    }
+
     .cadastro-inputs{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 88%;
-        height: 82%;
+        width: 100%;
+        height: 92%;
         margin-top: 2em;
         margin-left: 0em;
         padding: 2em 1.5em;
@@ -114,6 +115,7 @@ const Container = styled.div`
         width: 100%;
     }
   
+
 }
 
 `
