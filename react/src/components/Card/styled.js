@@ -71,6 +71,10 @@ const Card = styled.div`
         display: flex;
         flex-direction: row;
     }
+
+    @media (max-width: 435px) {
+        /*width: 50vw;*/
+    }
 `
 
 export {Card}

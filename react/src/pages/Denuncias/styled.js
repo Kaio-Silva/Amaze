@@ -99,14 +99,20 @@ const Container = styled.div`
         border-radius: 0.5em;
         font-size: 1.3em;
         background-color: white;
+        cursor: pointer;
     }
+
+    button:hover {
+        transform: scale(1.1);
+        transition: all 0.5s;
+      } 
 
     .avaliacao {
         padding-top: 1em;
         padding-bottom: 1em;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
 
         .rua {
             font-size: 1.4em;

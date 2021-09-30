@@ -73,6 +73,17 @@ const Menu = styled.div`
     .link:hover{
         cursor: pointer;
     }
+
+    @media (max-width: 1024px) {
+
+        flex-direction: row;
+        width: 100vw;
+        height: 20vh;
+
+        .relatorio {display: none;}
+
+        .remover {display: none}
+    }
 `
 
 

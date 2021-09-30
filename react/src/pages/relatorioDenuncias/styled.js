@@ -64,6 +64,16 @@ const Denuncias = styled.div`
     {
         background-color: #D9E2F3;
     }
+
+    @media (max-width: 430px) {
+        display: flex;
+        flex-direction: column;
+
+        .baixo {
+            overflow-y: auto;
+            width: 80vh;
+        }
+    }
 `
 
 
