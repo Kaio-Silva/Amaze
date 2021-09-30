@@ -12,6 +12,7 @@ import Denuncias from './pages/Denuncias';
 import Mapa from './pages/Mapa'
 import loginAdm from './pages/loginAdm';
 import Error from './pages/error';
+import Pop from './Popups/menu/index'
 
 
 export default function Rotes() {
@@ -30,6 +31,7 @@ export default function Rotes() {
                 <Route path="/Mapa" component={Mapa} />
                 <Route path="/LoginAdm" component={loginAdm} />
                 <Route path="/*" component={Error} />
+                <Route path="/Pop" component={Pop} />
             </Switch>
         </BrowserRouter> 
     )
