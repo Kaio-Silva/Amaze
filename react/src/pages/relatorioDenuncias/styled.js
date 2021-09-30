@@ -82,7 +82,7 @@ const Denuncias = styled.div`
             flex-direction: column;
             align-items: center;
 
-            background-position: center;
+            background-image: none;
 
             width: 100vw;
         }

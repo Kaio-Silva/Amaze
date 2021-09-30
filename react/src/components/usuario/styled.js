@@ -49,6 +49,36 @@ const Container = styled.div`
     .imagem:hover{
         cursor: pointer;
     }
+
+    @media(max-width: 1024px) {
+        width: 70%;
+        border-radius: 3em;
+
+        .alinhandoInformacoes{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            height: 18em;
+        }
+
+        .informacoes{
+            padding: 0em .5em;
+            max-width: 100%;
+        }
+
+        .informacoes:nth-child(1){
+            padding-top: 1.5em;
+        }
+
+        .textos{
+            margin: 0em;
+        }
+
+        .alinhandoImg{
+            margin-left: .7em;
+            width: 93%;
+        }
+    }
 `
 
 export { Container }

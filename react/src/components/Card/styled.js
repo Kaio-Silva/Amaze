@@ -73,6 +73,8 @@ const Card = styled.div`
     @media (max-width: 1024px) {
         margin: 1.5em 0em;
         width: 17em;
+
+        border-radius: 3em;
     }
 `
 
