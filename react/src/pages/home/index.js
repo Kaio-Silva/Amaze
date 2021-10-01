@@ -20,41 +20,41 @@ export default function Home(props){
                 <div className="AlinhandoConteudo">
                     <img src="/assets/images/Computador.png" alt=""/>
                     <div className="AgrupandoConteudo"> 
-                        <div className="Titulo2"> Sua proteção a um click </div>  
-                        <div className="Texto"> Amaze é um serviço que busca locais com auto indice de perigo para que nossos usuarios possam 
-                        tomar cuidado é estejam alerta quanto a isso </div> <hr/> 
+                        <div className="Titulo2"> Sua proteção em um click </div>  
+                        <div className="Texto"> Amaze é um serviço que busca locais com auto índice de perigo, para que nossos usuários possam 
+                        tomar cuidado e estejam alerta quanto a isso. </div> <hr/> 
                     </div>     
                 </div> 
                 <div className="AlinhandoConteudo"> 
                     <div className="AgrupandoTextos"> 
-                        <div className="Texto2"> Nós começamos este projeto pensando em como proteger 
-                        nossos usuarios de possiveis locais perigosos </div><hr/> 
-                        <div className="Texto2"> Para que vocé esteja sempre seguro, inclusive durante 
-                        seus paseios, caminhadas é pelo seu trajeto </div> <hr/> 
+                        <div className="Texto2"> Nós começamos este projeto, pensando em como proteger 
+                        nossos usuários de possiveis locais perigosos. </div><hr/> 
+                        <div className="Texto2"> Para que você esteja sempre seguro, inclusive durante 
+                        seus passeios, caminhadas e trajetos. </div> <hr/> 
                     </div>
                     <img src="/assets/images/Ladrao.png" alt=""/>    
                 </div>
                 <div className="Container2">
                     <div className="AgrupandoTextos"> 
-                        <div className="MiniTitulo"> Beneficios </div>
-                        <div className="TextBenficios"> Amaze é uma empresa que busca fornecer a melhor experiência para seus usuários, veja alguns dos nossos <span> beneficios :</span></div>
+                        <div className="MiniTitulo"> Benefícios </div>
+                        <div className="TextBenficios"> Amaze é uma empresa que busca fornecer a melhor experiência para seus usuários, veja alguns dos nossos <span> benefícios :</span></div>
                     </div>
                 </div>
                 <div className="AlinhandoConteudo">
                     <div className="BoxInfo">
                         <img className="BoxImagens" src="/assets/images/Child.svg" alt=""/>
                         <div className="BoxTitulo"> Proteção </div>
-                        <div className="BoxDesc"> Amaze te protege inclusive em seus momentos de descanso </div>
+                        <div className="BoxDesc"> Amaze te protege em todos os momentos.</div>
                     </div>
                     <div className="BoxInfo">
                         <img className="BoxImagens" src="/assets/images/LadraoBox.svg" alt=""/>
                         <div className="BoxTitulo"> Funcionamento </div>
-                        <div className="BoxDesc"> Nosso serviço funciona por 24 horas por dia </div>
+                        <div className="BoxDesc"> Nosso serviço funciona por 24 horas por dia. </div>
                     </div>
                     <div className="BoxInfo">
                         <img className="BoxImagens" src="/assets/images/Map.svg" alt=""/>
                         <div className="BoxTitulo"> Mapa </div>
-                        <div className="BoxDesc"> Amaze é um serviço que cobre o brasil inteiro </div>
+                        <div className="BoxDesc"> Amaze é um serviço que cobre o brasil inteiro. </div>
                     </div>
                 </div>
               </div>   
