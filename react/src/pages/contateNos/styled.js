@@ -8,7 +8,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    background-image: url('/assets/images/fundo_adm.png');
+    background-color: #6BBAB5;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     
@@ -45,7 +45,7 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
 
-        background-color: #0FA882;
+        background-color: #2FA79F;
 
         width: 33%;
         height: 100%;
@@ -107,6 +107,7 @@ const Container = styled.div`
 
    .ajustarBotao{
        margin-top: 1em;
+       border-radius: 50px;
    }
 
    @media (max-width: 1024px){
