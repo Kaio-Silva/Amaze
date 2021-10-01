@@ -105,6 +105,25 @@ color: ${props => props.background === 'white' ? 'black'
                                                              :'white'};     
 }
 
+.cadastro{
+    display:${props => props.cadastro ==='usar' ?'block'
+                                              :'none'};
+padding-bottom:0.5em ;
+font-size: 0.8em;
+color: ${props => props.background === 'white' ? 'black'
+                                                             :'white'};   
+}
+
+
+.hist{
+    display:${props => props.historicop ==='usar' ?'block'
+                                              :'none'};
+padding-bottom:0.5em ;
+font-size: 0.8em;
+color: ${props => props.background === 'white' ? 'black'
+                                                             :'white'}; 
+}
+
 
 .relatDenunc{
 display:${props => props.relatDenunc ==='usar' ?'block'

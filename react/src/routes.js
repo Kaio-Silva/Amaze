@@ -13,7 +13,7 @@ import Mapa from './pages/Mapa'
 import loginAdm from './pages/loginAdm';
 import Error from './pages/error';
 
-import Contatnos from './pages/contateNos';
+import Contatenos from './pages/contateNos';
 
 export default function Rotes() {
     return (
@@ -30,7 +30,7 @@ export default function Rotes() {
                 <Route path="/Denuncia" component={Denuncias} />
                 <Route path="/Mapa" component={Mapa} />
                 <Route path="/LoginAdm" component={loginAdm} />
-                <Route path="/Contatnos" component={Contatnos} />
+                <Route path="/Contatenos" component={Contatenos} />
                 <Route path="/*" component={Error} />
                 
             </Switch>
