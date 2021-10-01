@@ -47,7 +47,7 @@ export default function Home(props){
                         <div className="BoxDesc"> Amaze te protege em todos os momentos.</div>
                     </div>
                     <div className="BoxInfo">
-                        <img className="BoxImagens" src="/assets/images/LadraoBox.svg" alt=""/>
+                        <img className="BoxImagens" src="/assets/images/LadraoBox.png" alt=""/>
                         <div className="BoxTitulo"> Funcionamento </div>
                         <div className="BoxDesc"> Nosso serviço funciona por 24 horas por dia. </div>
                     </div>

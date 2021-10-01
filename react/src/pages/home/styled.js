@@ -167,12 +167,14 @@ const Container = styled.div`
       width: 19em;
     
   }
+  
 
   .AgrupandoTextos{
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       height: 14em;
+      
       
   }
 
@@ -223,6 +225,14 @@ const Container = styled.div`
       margin-top: 1.5em;
   }
 
+  .BoxImagens1{
+      height: 7em;
+      width: 7em;
+  }
+  .BoxImagens2{
+      height: 7em;
+      width: 7em;
+  }
   .BoxImagens{
       height: 7em;
       width: 7em;
