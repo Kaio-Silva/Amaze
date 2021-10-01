@@ -32,7 +32,7 @@ export default function Home(props){
                         <div className="Texto2"> Para que você esteja sempre seguro, inclusive durante 
                         seus passeios, caminhadas e trajetos. </div> <hr/> 
                     </div>
-                    <img src="/assets/images/Ladrao.png" alt=""/>    
+                    <img className="imageLadrao" src="/assets/images/Ladrao.png" alt=""/>    
                 </div>
                 <div className="Container2">
                     <div className="AgrupandoTextos"> 
@@ -47,7 +47,7 @@ export default function Home(props){
                         <div className="BoxDesc"> Amaze te protege em todos os momentos.</div>
                     </div>
                     <div className="BoxInfo">
-                        <img className="BoxImagens" src="/assets/images/LadraoBox.png" alt=""/>
+                        <img className="BoxImagens" src="/assets/images/Bandido.png" alt=""/>
                         <div className="BoxTitulo"> Funcionamento </div>
                         <div className="BoxDesc"> Nosso serviço funciona por 24 horas por dia. </div>
                     </div>

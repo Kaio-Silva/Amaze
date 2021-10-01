@@ -174,8 +174,14 @@ const Container = styled.div`
       flex-direction: column;
       justify-content: space-around;
       height: 14em;
-      
-      
+  }
+
+  .imageLadrao{
+      height: auto;
+      width: 23.5em;
+
+      margin-bottom: 8%;
+      margin-right: 5%;
   }
 
   .Container2{
