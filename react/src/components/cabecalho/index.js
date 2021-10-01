@@ -11,8 +11,11 @@ export default function Cabecalho(props){
   <Container cor={props.cor} titulo={props.titulo} tamanho={props.tamanho} input={props.input} home={props.home} contatenos={props.contatenos} 
              buscar={props.buscar} criar={props.criar} historico={props.historico} login={props.login} cadastrar={props.cadastrar} >
     <div className="cabecalho-hd">
+
+    <Pop trigger={po} setTrigger={setPo}   background="white" home={props.homep} login={props.loginp} contact={props.contatenosp} buscregion={props.buscarp} relatDenunc={props.relatp} removeUser={props.removep} histp={props.histp} cadastro={props.cadastrop} ></Pop>
+
         <Logo cor={props.cor} titulo={props.titulo} tamanho="medio"/> 
-        <div className="descricao-cabecalhohd">
+        <div className="descricao-cabecalhohd"> 
             <Pesquisa input={props.input} tamanho={props.tamanho}/>
             <div className="menubutt"><button onClick={() => setPo(true)}><img src="/assets/Images/menubutt.svg" alt=""/></button></div>
             <Link className="link" to="/cadastro"><div className="elements-desc-cabhd7">Cadastrar-se</div></Link>
@@ -26,9 +29,6 @@ export default function Cabecalho(props){
         </div>
 
     </div>
-    <Pop trigger={po} setTrigger={setPo}   background="white" home="usar" login="usar" contact="usar" buscregion="usar" relatDenunc="" removeUser="" >
-          
-          </Pop>
 </Container>
     )
 }
