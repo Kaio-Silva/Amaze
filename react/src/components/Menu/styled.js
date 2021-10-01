@@ -13,6 +13,10 @@ const Menu = styled.div`
     top: 0;
 
 
+    .MenuPesq{
+        display: none;
+    }
+
     img{
         height: 2.2em;
         width: 2.2em;
@@ -74,18 +78,20 @@ const Menu = styled.div`
         cursor: pointer;
     }
 
-    /*.inp {
-        display: none;
-    }*/
 
     @media (max-width: 1024px) {
         flex-direction: row;
-        width: 100vw;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
         height: 12vh;
-        background-image: url(/assets/Images/MenuBranco.svg);
-        background-repeat: no-repeat;
-        background-position: 23em 2.1em;
-        background-size: 2.2em;
+
+        .MenuPesq{
+            display: block;
+            margin-top: 0.6em;
+            height: 3em;
+            width: 45%;
+        }
 
         .relatorio {display: none;}
 
@@ -93,16 +99,18 @@ const Menu = styled.div`
 
         .logo {width: none;}
 
-        .inp {
-            padding: 1.5em 5em 0em 0em;
-        }
+        
+    }
+`
 
-        input {
-            font-size: 1.4em;
-        }
+const MenuResp = styled.img`
+    display: none;
+
+    @media (max-width: 1024px) {
+        display: block;
+        margin: 0em 0.5em;
     }
 `
 
 
-
-export { Menu }
+export { Menu, MenuResp }

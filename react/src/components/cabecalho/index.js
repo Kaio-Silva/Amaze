@@ -2,9 +2,11 @@ import { Container } from './styled'
 import Logo from '../logo'
 import { Link } from 'react-router-dom';
 import { Pesquisa } from '../inputs/styled'
+import { useState } from 'react';
+import Pop from '../../Popups/menu'
 
 export default function Cabecalho(props){
-
+    const [po,setPo] = useState(false)
     return(
   <Container cor={props.cor} titulo={props.titulo} tamanho={props.tamanho} input={props.input} home={props.home} contatenos={props.contatenos} 
              buscar={props.buscar} criar={props.criar} historico={props.historico} login={props.login} cadastrar={props.cadastrar} >
@@ -12,7 +14,7 @@ export default function Cabecalho(props){
         <Logo cor={props.cor} titulo={props.titulo} tamanho="medio"/> 
         <div className="descricao-cabecalhohd">
             <Pesquisa input={props.input} tamanho={props.tamanho}/>
-            <div className="menubutt"><img src="/assets/Images/menubutt.svg" alt=""/></div>
+            <div className="menubutt"><button onClick={() => setPo(true)}><img src="/assets/Images/menubutt.svg" alt=""/></button></div>
             <Link className="link" to="/cadastro"><div className="elements-desc-cabhd7">Cadastrar-se</div></Link>
             <Link className="link" to="/HistoricoDenunc"><div className="elements-desc-cabhd5">Historico</div></Link>
             <Link className="link" to="/"><div className="elements-desc-cabhd1">Home</div></Link>
@@ -24,6 +26,9 @@ export default function Cabecalho(props){
         </div>
 
     </div>
+    <Pop trigger={po} setTrigger={setPo}   background="white" home="usar" login="usar" contact="usar" buscregion="usar" relatDenunc="" removeUser="" >
+          
+          </Pop>
 </Container>
     )
 }

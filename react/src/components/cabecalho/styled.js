@@ -15,6 +15,11 @@ const Container = styled.div`
 
   height: 4.5em;
 
+  button{
+      background-color: transparent;
+      border: none;
+  }
+
   @keyframes rotate {
         0%{
             transform: rotate(0deg);

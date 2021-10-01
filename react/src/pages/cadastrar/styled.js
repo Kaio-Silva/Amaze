@@ -75,11 +75,6 @@ const Container = styled.div`
     background-image: url('/assets/images/CadastroReps.png');
     background-size: 100% 100%;
 
-
-    .ajustarLogo{
-        margin-left: 3em;
-    }
-
     .conteudo{
         width: 80%;
     }

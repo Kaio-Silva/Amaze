@@ -9,7 +9,7 @@ export default function denuncias(props) {
         <Denuncias>
             <MenuLateral />
             <div className="conteudo">
-                <Pesquisa input="usar" tamanho="medio"/>
+                <Pesquisa className="Pesquisar" input="usar" tamanho="medio"/>
                 <div className="baixo">
                     <div className="alinhando">
                         <Card />

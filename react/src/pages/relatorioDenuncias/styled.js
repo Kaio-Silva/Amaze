@@ -10,15 +10,17 @@ const Denuncias = styled.div`
     .alinhando {
         display: flex;
         flex-direction: row;
-
+        justify-content: space-between;
         padding-top: 4em;
-        padding-left: 6em;
+        width: 80%;
     }
 
     .conteudo{
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        width: 100%;
     }
 
     .escreva {
@@ -37,13 +39,15 @@ const Denuncias = styled.div`
     }
 
     .baixo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: #B8BABF;
         background-image: url(/assets/Images/DocsAzul1.png);
         background-repeat: no-repeat;
-        background-position: 41.3em 16em;
-        background-attachment: fixed;
+        background-position: center;
 
-        width: 80vw;
+        width: 100%;
         height: 90vh;
         overflow-x: hidden;
     }
@@ -65,17 +69,38 @@ const Denuncias = styled.div`
         background-color: #D9E2F3;
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 1024px) {
         display: flex;
         flex-direction: column;
 
-        .baixo {
-            overflow-y: auto;
-            width: 80vh;
+        .conteudo{
+            width: 100vw;
         }
 
-        .Pesquisa {
-            display: none;
+        .baixo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background-image: none;
+
+            width: 100vw;
+        }
+
+        .baixo::-webkit-scrollbar
+        {
+            width: 0em;
+        }
+
+        .alinhando{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0em;
+        }
+
+        .Pesquisar{
+            display:  none;
         }
     }
 `
