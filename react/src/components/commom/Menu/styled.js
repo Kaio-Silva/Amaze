@@ -12,6 +12,11 @@ const Menu = styled.div`
     position: sticky;
     top: 0;
 
+    button{
+        background-color: transparent;
+        border: none;
+    }
+
 
     .MenuPesq{
         display: none;

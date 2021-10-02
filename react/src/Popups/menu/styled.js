@@ -6,9 +6,9 @@ display: flex;
 justify-content: right;
 align-items: top;
 background-color: rgba(0,0,0,0.2);
-height: 100vh;
+height: 100vh !important;
 width: 100%;
-position: fixed;
+position: fixed; 
 top:0;
 left:0;
 
