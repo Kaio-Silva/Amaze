@@ -76,6 +76,11 @@ const Container = styled.div`
     margin-right:0.5em;
 }
 
+button{
+    background-color: transparent;
+    border: none;
+}
+
 
 .logo-cabecalhohd{
     display:flex;
@@ -134,7 +139,7 @@ const Container = styled.div`
 .elements-desc-cabhd4{
     display: ${props => props.criar === "usar" ? "block" : "none"};
     font-family: semiBold;
-    font-size: 0.9em;
+    font-size: 1.3em;
     margin-right:0.3em;
 
     width: 10.5em;
