@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -15,17 +15,19 @@ const Container = styled.div`
 
     height: 100vh;
 
+    .cabecalho {
+        justify-content:left;
+        width:100%;
+    }
+
     .link{
         font-family: regular;
         font-size: 0.9em;
-        color: black;
+        color: #0FA882;
 
         text-decoration: none;
     }
-    .link:hover{
-        cursor: pointer;
-    }
-
+    
     .BoxLogin{
         display: flex;
         flex-direction: row;
@@ -56,7 +58,6 @@ const Container = styled.div`
        font-size: 1.1em;
 
        color: white;
-
        width: 16em;
        padding-left: 2em;
        padding-top: 1em;
@@ -73,12 +74,17 @@ const Container = styled.div`
    }
 
    .TituloLogin{
-       font-family: semiBold;
-       font-size: 1.1em;
+   
+height:16px;
+top:150px;
+left: 234px;
+font-size: 2em;
+color: #0FA882;
    }
 
    .FormLogin{
        width: 55%;
+      
    }
 
    .Inputs{
@@ -86,53 +92,29 @@ const Container = styled.div`
        margin-bottom: .8em;
    }
 
-   .senha::placeholder{
-    letter-spacing: 0px;
-    }
-
-   .Titulo{
-       font-family: medio;
-       font-size: 1em;
-       margin-left: 1.5em;
-       margin-bottom: 0.6em;
-   }
-
-
-   .alinhandoLinks{
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       width: 100%;
-   }
 
    .ajustarBotao{
-       margin-top: 1em;
-       border-radius: 50px;
+       margin-top: 2em;
+       border-radius: 120px;
+       width:114px; 
+       height:55px;
+     
+     
+
+   }
+   .botao {
+      
+       text-align: right;
    }
 
    @media (max-width: 1024px){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url('/assets/images/LoginAdmReps.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        
 
         .LogoResponsiva{
             display: block;
         }
 
-        .BoxLogin{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            height: 60%;
-
-            border-radius: 1em;
-            margin-top: 3em;
-        }
-
+    
         .ConteudoAmaze{
             display: none;
         }
@@ -158,11 +140,6 @@ const Container = styled.div`
             font-size: 0.9em;
         }
 
-
-        .ajustarBotao{
-            margin-top: 1.5em;
-            font-size: 0.9em;
-        }
    }
 `
 
