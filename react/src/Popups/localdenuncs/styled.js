@@ -2,15 +2,28 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 display: flex;
-background-color: transparent;
-height:100vh;
-
+justify-content: right;
+align-items: center;
+background-color: rgba(0,0,0,0.2);
+height: 100vh;
+width: 100%;
+position: fixed;
+top:0;
+left:0;
+font-family: regular;
 .abox{
     box-shadow:  0px  1px 10px  #888888;
     width:35%;
     height:100%;
+    background-color: white;
 }
 
+
+button{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
 .denuncs{
     
     overflow-y: auto;
