@@ -55,8 +55,8 @@ const Container = styled.div`
   }
 
   .Descricao{
-      font-family: regular;
-      font-size: 1.2em;
+      font-family: medio;
+      font-size: 1.3em;
       height: 3em;
       margin-left: 7%;
   }
@@ -150,18 +150,18 @@ const Container = styled.div`
 
 
   .Texto2{
-      font-family: semiBold;
-      font-size: 1.4em;
+      font-family: medio;
+      font-size: 1.3em;
       line-height: 1.6em;
 
       width: 15.2em;
      
-    
+      margin-bottom: 0.5em;
   }
 
   .Texto{
-      font-family: semiBold;
-      font-size: 1.4em;
+      font-family: medio;
+      font-size: 1.3em;
       line-height: 1.6em;
 
       width: 19em;
@@ -200,7 +200,7 @@ const Container = styled.div`
   }
 
   .TextBenficios{
-      font-family: regular;
+      font-family: medio;
       font-size: 1.2em;
       line-height: 1.6em;
       width: 32em;
@@ -225,10 +225,6 @@ const Container = styled.div`
       width: 10em;
       height: 15em;
 
-  }
-
-  .BoxInfo:nth-child(1){
-      margin-top: 1.5em;
   }
 
   .BoxImagens1{
@@ -259,9 +255,14 @@ const Container = styled.div`
   }
 
   .BoxDesc{
-      font-family: regular;
+      font-family: medio;
       font-size: 0.9em;
       line-height: 1.6em;
+      width: 15em;
+  }
+
+  .BoxDesc:nth-child(1){
+      width: 1vw;
   }
 
 

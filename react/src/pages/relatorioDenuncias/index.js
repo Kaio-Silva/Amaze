@@ -1,7 +1,7 @@
 import { Denuncias } from './styled';
-import MenuLateral from "../../components/Menu";
-import { Pesquisa } from '../../components/inputs/styled';
-import Card  from "../../components/Card";
+import MenuLateral from "../../components/commom/Menu";
+import { Pesquisa } from '../../components/styled/inputs.js';
+import Card  from "../../components/commom/Card";
 
 
 export default function denuncias(props) {

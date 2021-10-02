@@ -1,8 +1,8 @@
 import { Container } from './styled'
 import { Link } from 'react-router-dom';
-import Logo from '../../components/logo'
-import { Padrao } from '../../components/inputs/styled';
-import { Button } from '../../components/botoes/styled';
+import Logo from '../../components/commom/logo'
+import { Padrao } from '../../components/styled/inputs.js';
+import { Button } from '../../components/styled/botoes';
 
 export default function Contatnos(props){
     return(

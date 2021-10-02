@@ -31,6 +31,7 @@ const Container = styled.div`
     .conteudo{
        display: flex;
        justify-content: center;
+       height: 100%;
     }
 
 
@@ -110,8 +111,47 @@ const Container = styled.div`
         width: 100%;
     }
   
-
 }
+
+    @media(max-width: 1920px) {
+
+        .TituloCadastro{
+            font-size: 1.5em;
+            margin-top: 1.7em;
+            margin-left: 0.5em;
+        }
+
+        .cadastro-inputs{
+            height: 86%;
+        }
+
+        .Inputs{
+            margin-top: 1.5em;
+            margin-bottom: 2em;
+        }
+
+        .Titulo{
+            font-size: 1.2em;
+        }
+
+        .padrao{
+            font-size: 1.1em;
+            padding: 1.3em 1em;
+        }
+
+        .padrao::-webkit-input-placeholder {
+            font-size: 1.1em;
+        }
+
+        .mae-botao{
+            margin-top: 3em;
+        }
+
+        .ajustarBotao{
+            font-size: 1.2em;
+        }
+    }
+
 
 `
 

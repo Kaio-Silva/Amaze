@@ -1,6 +1,6 @@
 import { Container } from './styled'
-import Comp from "../../components/denuncias/index"
-import Cabecalho from '../../components/cabecalho'
+import Comp from "../../components/commom/denuncias/index"
+import Cabecalho from '../../components/commom/cabecalho'
 
 export default function paghd(props){
     return(
@@ -14,6 +14,10 @@ export default function paghd(props){
                 <div className="boxhd-scrool">
                   <div className="denuc"id="style-2">
                   <div class="force-overflow"></div>
+                    <Comp/>
+                    <Comp/>
+                    <Comp/>
+                    <Comp/>
                     <Comp/>
                     <Comp/>
                     <Comp/>

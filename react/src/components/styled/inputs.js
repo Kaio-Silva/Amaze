@@ -71,7 +71,7 @@ const Pesquisa = styled.input`
                 &::-webkit-input-placeholder {
                 font-size: 0.9em;
             }
-            }
+        }
     `
 
 export { Pesquisa, Padrao }

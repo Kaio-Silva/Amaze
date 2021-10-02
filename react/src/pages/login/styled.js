@@ -70,7 +70,6 @@ const Container = styled.div`
        align-items: center;
        justify-content: space-between;
 
-       height: 53%;
        width: 67%;
    }
 
@@ -168,6 +167,43 @@ const Container = styled.div`
             font-size: 0.9em;
         }
    }
+
+
+   @media(min-width: 1920px){
+
+        .DescLogin{
+            font-size: 1.3em;
+        }
+
+        .TituloLogin{
+            font-size: 1.5em;
+            margin-bottom: 3em;
+        }
+
+        .Titulo{
+            font-size: 1.3em;
+        }
+
+        .Padrao{
+            font-size: 1.3em;
+            padding: 1.2em 1.5em;
+        }
+
+        .senha{
+            font-size: 1.3em;
+            padding: 1.2em 1.5em;
+        }
+
+        .link{
+            font-size: 1.1em;
+        }
+
+        .ajustarBotao{
+            margin-top: 3em;
+            font-size: 1.3em;
+        }
+   }
+
 `
 
 export { Container }

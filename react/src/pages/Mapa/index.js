@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from './styled.js'
-import Cabecalho from '../../components/cabecalho'
-import Mapa from '../../components/mapa'
+import Cabecalho from '../../components/commom/cabecalho'
+import Mapa from '../../components/commom/mapa'
 
 export default function Map(props){
     return(

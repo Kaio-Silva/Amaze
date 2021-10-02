@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Padrao } from '../../components/inputs/styled.js';
+import { Padrao } from '../../components/styled/inputs.js';
 
 import { Container } from './styled.js';
-import Cabecalho from '../../components/cabecalho/index'
+import Cabecalho from '../../components/commom/cabecalho/index.js'
 
 function BuscarRegioes(props) {
   return (

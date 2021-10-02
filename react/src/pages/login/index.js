@@ -1,8 +1,8 @@
 import { Container } from './styled'
 import { Link } from 'react-router-dom';
-import Logo from '../../components/logo'
-import { Padrao } from '../../components/inputs/styled';
-import { Button } from '../../components/botoes/styled';
+import Logo from '../../components/commom/logo'
+import { Padrao } from '../../components/styled/inputs.js';
+import { Button } from '../../components/styled/botoes.js';
 
 function Login (props){
     return(
@@ -18,7 +18,7 @@ function Login (props){
                     <div className="FormLogin">
                         <div className="Inputs">                        
                             <div className="Titulo">Email</div>
-                            <Padrao placeholder="Insira seu email"/>
+                            <Padrao className="Padrao" placeholder="Insira seu email"/>
                         </div>
                         <div className="Inputs">                        
                             <div className="Titulo">Senha</div>

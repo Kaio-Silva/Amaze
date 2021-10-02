@@ -77,7 +77,7 @@ const Container = styled.div`
 
     button{
         font-family: semiBold;
-        font-size: 0.9em;
+        font-size: 1em;
         color: white;
 
         background-color: #2FA79F;
@@ -96,41 +96,51 @@ const Container = styled.div`
     }
 
 
-    @media (max-width: 1024px) {
+    @media (max-width: 660px) {
     *{ margin: none;
        padding: none;
     }
 
     .conteudo{   
-        width: 20em;
-        height: 14em;
+        width: 90%;
+        height: 37%;
     }
 
     .titulo{
-        padding: 0.8em 1em .4em;
+        padding: 1em 0.7em 0.4em;
     
         font-size: 1.1em;
     }
 
+    .alinharDesc{
+        align-items: flex-start;
+        margin-left: 1em;
+    }
+
     .descricao{
-        font-size: 0.8em;
+        font-size: 0.84em;
         line-height: 1.3em;
 
-        padding: 0.5em 1.7em ;
+        padding: 1.2em 0.5em;
     }
 
     input{
         font-size: 0.8em;
 
-        margin-left: 1.7em;
         margin-bottom: 1em;
     }
 
-    button{
-        font-size: .7em;
+    .button{
+        justify-content: center;
+    }
 
-        padding: 0.4em 2.5em;
-        margin: 0.5em 2em 1em 0em;
+    button{
+        font-size: .85em;
+
+        width: 90%;
+
+        padding: 0.5em 2.5em;
+        margin: 0.3em 0.9em;
     }
 
     }

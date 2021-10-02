@@ -1,8 +1,8 @@
 import { Container } from './styled.js';
-import Cabecalho from '../../components/cabecalho';
+import Cabecalho from '../../components/commom/cabecalho';
 import { useState } from 'react';
 import Popavalie from '../../Popups/avalieDenuncia/index'
-import Popreport from '../../Popups/denunciaInvalida/index'
+import Popreport from '../../Popups/denunciaInvalida'
 
 function Denuncias(props) {
     const[avalie, SetAvalie] = useState(false)

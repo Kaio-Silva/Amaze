@@ -1,7 +1,7 @@
 import { Container } from './styled'
 import { useState } from 'react';
-import Pop from "../../Popups/excluirDenuncia"
-import Pedit from "../../Popups/editarDenuncia"
+import Pop from "../../../Popups/excluirDenuncia"
+import Pedit from "../../../Popups/editarDenuncia"
 
 export default function Compd(){
     const [po,setPo] = useState(false)

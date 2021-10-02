@@ -341,19 +341,6 @@ padding-right: 4em;;
 }
 
 
-@media(max-width:390px){
-    .cabecalho-hd{
-        width: 19em;
-    }
-
-}
-
-
-
-
-
-
-
 `
 
 

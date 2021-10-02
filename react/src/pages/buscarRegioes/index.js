@@ -1,6 +1,6 @@
 import React from 'react'
-import { Pesquisa } from "../../components/inputs/styled";
-import Logo from '../../components/logo/index.js';
+import { Pesquisa } from "../../components/styled/inputs.js";
+import Logo from '../../components/commom/logo/index.js';
 
 import { Container } from './styled.js';
 

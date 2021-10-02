@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from './styled.js'
 import { Link } from 'react-router-dom';
-import Cabecalho from '../../components/cabecalho/index'
+import Cabecalho from '../../components/commom/cabecalho/index'
 
 export default function Home(props){
     return(

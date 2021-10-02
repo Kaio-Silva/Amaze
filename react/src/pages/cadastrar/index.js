@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Logo from '../../components/logo/index.js';
-import { Button } from '../../components/botoes/styled';
+import Logo from '../../components/commom/logo/index.js';
+import { Button } from '../../components/styled/botoes';
 import { Link } from 'react-router-dom';
 
-import { Padrao } from '../../components/inputs/styled.js';
+import { Padrao } from '../../components/styled/inputs.js';
 
 import { Container } from './styled.js';
 
@@ -17,23 +17,23 @@ function Cadastrar(props) {
                  <div className="TituloCadastro"> Cadastro </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Nome Completo</div>
-                    <Padrao placeholder="Insira seu nome"/>
+                    <Padrao className="padrao" placeholder="Insira seu nome"/>
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Email</div>
-                    <Padrao placeholder="Insira seu email"/>
+                    <Padrao className="padrao"  placeholder="Insira seu email"/>
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Telefone</div>
-                    <Padrao placeholder="Insira seu telefone"/>
+                    <Padrao  className="padrao" placeholder="Insira seu telefone"/>
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Região</div>
-                    <Padrao placeholder="Insira sua região"/>
+                    <Padrao className="padrao"  placeholder="Insira sua região"/>
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Senha</div>
-                    <Padrao placeholder="Insira seu senha"/>
+                    <Padrao className="padrao"  placeholder="Insira seu senha"/>
                  </div>          
                   <div className="mae-botao">
                       <Link className="link" to="/Login"><Button className="ajustarBotao" cor=""> Concluir Cadastro </Button></Link>

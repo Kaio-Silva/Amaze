@@ -3,7 +3,7 @@ import React from 'react'
 import { Menu, MenuResp } from './styled.js'
 import { Link } from 'react-router-dom';
 import Logo from '../logo'
-import { Pesquisa } from '../inputs/styled.js';
+import { Pesquisa } from '../../styled/inputs.js';
 
 export default function MenuLateral(props){
     return (

@@ -218,13 +218,24 @@ padding-right: 4em;;
 
 @media(max-width:390px){
 
+    .titulo-conteudohd{
+        font-size: 1.3em;
+    }
+
     .registros-denuncias-hd{
-    width:26em;
-    margin-left:2.5em;
-}
-.denuc{
-    margin-left:1em;
-}
+        width: 90%;
+        height: 76vh;
+
+        box-shadow: 3px 3px 11px #888888;
+    }
+    .denuc{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0.9em;
+
+        height: 99%;
+    }
 
 
 

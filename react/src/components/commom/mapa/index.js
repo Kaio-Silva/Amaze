@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container } from './styled.js'
 
 import { Loader } from '@googlemaps/js-api-loader';
-import Comp from "../../Popups/criarDenuncia/index"
+import Comp from "../../../Popups/criarDenuncia/index"
 
 
 export default function Mapa(){
