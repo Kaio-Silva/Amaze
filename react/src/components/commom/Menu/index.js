@@ -4,7 +4,7 @@ import { Menu, MenuResp } from './styled.js'
 import { Link } from 'react-router-dom';
 import Logo from '../logo'
 import { Pesquisa } from '../../styled/inputs.js';
-import Comp from '../../../Popups/commom/menu'
+import Comp from '../../../Popups/menu'
 
 export default function MenuLateral(props){
     const[pop,SetPop] = useState(false)
