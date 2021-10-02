@@ -11,7 +11,6 @@ export default function Contatenos(props){
             <div className="cabecalho"><Logo direction="center" cor="white" titulo="block" tamanho="grande"/></div>
             <div className="BoxLogin">
                 <div className="ConteudoLogin">
-                    
                     <div className="TituloLogin"> Contate-nos </div>
                     <div className="FormLogin" >
                         <div className="Inputs">                        
@@ -38,7 +37,11 @@ export default function Contatenos(props){
                     <div className="DescLogin">E-mail: Amazenegocios@gmail.com</div>
                     <div className="DescLogin">Contato: +55 11 99999-9001</div>
 
-                    <img className="facebook" src="/assets/images/" alt=""/>
+                    <div className="imagens">
+                    <img className="E-mail" src="/assets/images/E-mail 1.png" alt=""/>
+                    <img className="Facebook" src="/assets/images/Facebook 1.png" alt=""/>
+                    <img className="Telefone" src="/assets/images/Telefone 1.png" alt=""/>
+                    </div>
                     
                 </div>
             </div>

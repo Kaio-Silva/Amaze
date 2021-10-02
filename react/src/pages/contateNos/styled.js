@@ -102,6 +102,10 @@ color: #0FA882;
      
 
    }
+   .imagens
+   {
+    flex-direction: row;
+   }
    .botao {
       
        text-align: right;
