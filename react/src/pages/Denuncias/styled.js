@@ -48,7 +48,7 @@ const Container = styled.div`
         width: auto;
     }
 
-    img {
+    .avaliaco img {
         width: auto;
         height: 1em;
     }
@@ -83,7 +83,7 @@ const Container = styled.div`
         font-size: 1.1em;
     }
 
-    .botões {
+    .botoes {
         display: flex;
         flex-direction: row;
         padding: 2em 0em 3em 22em;
@@ -93,7 +93,7 @@ const Container = styled.div`
         padding-right: 1em;
     }
 
-    button {
+     .botoes button {
         padding: 0.5em 1.5em;
         border: none;
         border-radius: 0.5em;
@@ -102,7 +102,7 @@ const Container = styled.div`
         cursor: pointer;
     }
 
-    button:hover {
+    .botoes button:hover {
         transform: scale(1.1);
         transition: all 0.5s;
       } 
@@ -117,6 +117,10 @@ const Container = styled.div`
         .rua {
             font-size: 1.4em;
             padding: 0.8em 0em;
+        }
+
+        .texto{
+            display: block;
         }
 
         .informacoes {
@@ -141,13 +145,13 @@ const Container = styled.div`
             font-size: 18px/*0.8em*/;
         }
 
-        button {
+        .botoes button {
             width: max-content;
             padding: 0.8em 1.3em;
             font-size: 0.9em;
         }
 
-        .botões {
+        .botoes {
             display: flex;
             flex-direction: row;
             padding: 2em 0em 3em 2em;

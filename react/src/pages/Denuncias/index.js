@@ -9,7 +9,7 @@ function Denuncias(props) {
     const[report,SetReport] = useState(false)
     return(
         <Container>
-        <Cabecalho  cor="" home="usar" contatenos="" buscar="usar" criar="" login="usar" historico=""/>
+        <Cabecalho  cor="" home="usar" contatenos="" buscar="usar" criar="" login="usar" historico="" homep="usar" loginp="usar" buscarp="usar"/>
             <div className="conteudo">
                 <div className="rua"> Rua José Bonifácio </div>
                 <div className="usuario">
@@ -36,7 +36,7 @@ function Denuncias(props) {
                             <div className="data c"> 20/09/2021 </div>
                         </div>
                     </div>
-                    <div className="botões">
+                    <div className="botoes">
                         <div className="botão1"> <button onClick={() => SetAvalie(true)}> Avaliar Denuncia </button> </div>
                         <div className="botão2"> <button onClick={() => SetReport(true)}> Reportar Denuncia </button> </div>
                     </div>

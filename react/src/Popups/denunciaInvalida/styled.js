@@ -93,7 +93,10 @@ outline: none;
     width:3.5em;
     height:3.5em;
 }
-
+button{
+    background-color: transparent;
+    border: none;
+}
 
 @media(max-width:1316px)
 {

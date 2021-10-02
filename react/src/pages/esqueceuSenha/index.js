@@ -8,7 +8,7 @@ import Cabecalho from '../../components/commom/cabecalho/index.js'
 function BuscarRegioes(props) {
   return (
     <div className="container">
-      <Cabecalho cor="black" titulo="block" input="" home="" contatenos="" buscar="" criar="" login="usar" historico="" cadastrar="usar"/>
+      <Cabecalho cor="black" titulo="block" input="" home="" contatenos="" buscar="" criar="" login="usar" historico="" cadastrar="usar" loginp="usar" cadastrop="usar" />
       <Container>
         <div className="conteudo">
           <div className="titulo"> Encontre sua conta </div>

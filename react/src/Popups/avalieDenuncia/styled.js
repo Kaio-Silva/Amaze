@@ -44,6 +44,10 @@ font-family: regular ;
     height:3.5em;
 }
 
+button{
+    background-color: transparent;
+    border: none;
+}
 
 .titulo{
     text-align: center;
