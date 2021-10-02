@@ -159,6 +159,16 @@ const Container = styled.div`
       margin-bottom: 0.5em;
   }
 
+  .Texto3{
+      font-family: medio;
+      font-size: 1.3em;
+      line-height: 1.6em;
+
+      width: 15.2em;
+     
+      margin-bottom: 0.5em;
+  }
+
   .Texto{
       font-family: medio;
       font-size: 1.3em;
@@ -277,6 +287,7 @@ const Container = styled.div`
         align-items: center;
         width: 100%;
         height: 100%; 
+        
     }
 
     .AlinhandoPag{
@@ -328,7 +339,7 @@ const Container = styled.div`
     }
 
     .Imagem{
-        animation: float2 5s ease-in-out infinite;
+       
 
         display: block;
         width: 23.5em;
@@ -343,6 +354,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         background-image: none;
+        margin-top: 5em;
     }
 
     .AlinhandoConteudo > img{
@@ -367,6 +379,25 @@ const Container = styled.div`
       text-align: center;
 
       width: 21em;
+      margin-bottom: 1em;
+  }
+  .Texto2 {
+      font-family: medio;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    width: 15.2em;
+    margin-bottom: 0.5em;
+    margin-top: 10em;
+  }
+  .Texto3{
+      font-family: medio;
+      font-size: 1.3em;
+      line-height: 1.6em;
+
+      width: 15.2em;
+     
+      margin-bottom: 0.5em;
+      
   }
 
   .AgrupandoTextos{
@@ -408,12 +439,15 @@ const Container = styled.div`
       font-family: semiBold;
       font-size: 1.5em;
       width: 10em;
+      margin-top:14em;
+
   }
 
   .TextBenficios{
       font-family: medio;
       font-size: 0.9em;
       width: 22em;
+     margin-bottom: 7em;
   }
 
 
@@ -421,10 +455,10 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: center;
-
         background-image: none;
 
         height: 50vh;
+        margin-top: 5em;
     }
 
 
@@ -434,7 +468,7 @@ const Container = styled.div`
       justify-content: space-around;
       align-items: center;
       text-align: center;
-      width: 9em;
+      width: 12em;
       height: 14em;
   }
 
@@ -456,7 +490,7 @@ const Container = styled.div`
   .BoxDesc{
       font-family: medio;
       font-size: 0.8em;
-      line-height: 1.6em;
+      line-height: 1em;
   }
 
 

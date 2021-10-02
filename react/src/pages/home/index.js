@@ -29,7 +29,7 @@ export default function Home(props){
                     <div className="AgrupandoTextos"> 
                         <div className="Texto2"> Nós começamos este projeto, pensando em como proteger 
                         nossos usuários de possiveis locais perigosos. </div><hr/> 
-                        <div className="Texto2"> Para que você esteja sempre seguro, inclusive durante 
+                        <div className="Texto3"> Para que você esteja sempre seguro, inclusive durante 
                         seus passeios, caminhadas e trajetos. </div> <hr/> 
                     </div>
                     <img className="imageLadrao" src="/assets/images/Ladrao.png" alt=""/>    
