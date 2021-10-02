@@ -256,6 +256,14 @@ opacity: 1;
     color: black;
 }
 
+input{
+    outline:none;
+}
+
+textarea{
+    outline: none;
+}
+
 @media(max-width:1280px){
 
     .abox{
