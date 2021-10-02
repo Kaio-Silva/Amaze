@@ -73,9 +73,7 @@ const Denuncias = styled.div`
         display: flex;
         flex-direction: column;
 
-        .conteudo{
-            width: 100vw;
-        }
+        
 
         .baixo {
             display: flex;

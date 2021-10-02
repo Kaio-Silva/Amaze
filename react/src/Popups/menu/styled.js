@@ -53,11 +53,11 @@ button{
    
 }
 
-.conteudo{
+.conteudop{
     display: flex;
     flex-direction: column;
     text-align: left;
-    
+    width:8em;
 }
 
 .img{
@@ -127,9 +127,11 @@ color: ${props => props.background === 'white' ? 'black'
 
 .relatDenunc{
 display:${props => props.relatDenunc ==='usar' ?'block'
-                                              :'none'};
+                                           :'none'};
+ width:14em;  
 padding-bottom:0.5em ;
-font-size: 0.8em;
+padding-top:0.8em ;
+font-size: 1em;
 color: ${props => props.background === 'white' ? 'black'
                                                              :'white'};     
 }
@@ -137,8 +139,9 @@ color: ${props => props.background === 'white' ? 'black'
 .removeUser{
 display:${props => props.removeUser ==='usar' ?'block'
                                               :'none'};
+ width:14em;  
 padding-bottom:0.5em ;
-font-size: 0.8em;
+font-size: 1em;
 color: ${props => props.background === 'white' ? 'black'
                                                              :'white'};     
 }

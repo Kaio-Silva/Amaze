@@ -10,7 +10,7 @@ export default function Menu(props){
                     <div className="oi"><button onClick={() => props.setTrigger(false)}><img className ="img"src="/assets/images/xpreto.png" alt=""/></button></div>
                 </div>
 
-                <div className="conteudo">
+                <div className="conteudop">
                    <Link className="link" to="/"><div className="home">Home</div></Link>
                    <Link className="link" to="/Contatenos"><div className="contatnos">Contate-Nos</div></Link>
                    <Link className="link" to="/Buscar"> <div className="buscregion">Buscar Regiao</div></Link>

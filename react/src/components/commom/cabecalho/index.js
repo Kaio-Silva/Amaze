@@ -9,7 +9,7 @@ export default function Cabecalho(props){
     const [po,setPo] = useState(false)
     return(
   <Container cor={props.cor} titulo={props.titulo} tamanho={props.tamanho} input={props.input} home={props.home} contatenos={props.contatenos} 
-             buscar={props.buscar} criar={props.criar} historico={props.historico} login={props.login} cadastrar={props.cadastrar} >
+             buscar={props.buscar} criar={props.criar} historico={props.historico} login={props.login} cadastrar={props.cadastrar} background={props.background} >
     <div className="cabecalho-hd">
 
     <Pop trigger={po} setTrigger={setPo}   background="white" home={props.homep} login={props.loginp} contact={props.contatenosp} buscregion={props.buscarp} relatDenunc={props.relatp} removeUser={props.removep} histp={props.histp} cadastro={props.cadastrop} ></Pop>

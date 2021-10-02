@@ -21,7 +21,7 @@ export default function MenuLateral(props){
                 <img src="/assets/Images/Denuncias1.png" alt=""/>
                 <Link className="link" to="/Remover" > Remover Usuario </Link>
             </div>
-            <Comp trigger={pop} setTrigger={SetPop}   background="" home="usar" login="usar" />
+            <Comp trigger={pop} setTrigger={SetPop}   background="" home="" login="" relatDenunc="usar" removeUser="usar" />
         </Menu>
     )
 }
