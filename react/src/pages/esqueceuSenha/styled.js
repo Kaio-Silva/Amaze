@@ -103,7 +103,7 @@ const Container = styled.div`
 
     .conteudo{   
         width: 90%;
-        height: 37%;
+        height: 43%;
     }
 
     .titulo{
