@@ -20,6 +20,13 @@ z-index: 1;
     right: 1.5em;
     bottom: 0.3em;
 }
+   
+.amz{
+    margin-left:0.3em;
+    margin-bottom: 0.3em;
+    font-size:1.4em;
+    color:#24BF99;
+}
 
 .cabecalho{
     display: flex;
