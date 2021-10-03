@@ -79,7 +79,7 @@ const Container = styled.div`
 
     @media(max-width:1200px){
        
-        width: 90%;
+        width: 99%;
 
     .alinhando-imagem{
         margin-left:1em;
@@ -109,8 +109,8 @@ const Container = styled.div`
 
 
 }
-@media(max-width:896px){
-     width: 90%;
+@media(max-width:913px){
+     width: 100%;
 
      margin: 0.5em 0em;
      padding: 0.5em;

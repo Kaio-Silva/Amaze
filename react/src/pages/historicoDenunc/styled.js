@@ -201,6 +201,10 @@ padding-right: 4em;;
   
 }
 
+.denuc{
+    margin-left: 1em;
+}
+
     .elements-desc-cabhd{
         display:none;
     }
@@ -214,7 +218,11 @@ padding-right: 4em;;
     }
 
 }
-
+@media(max-width:554px){
+.denuc{
+    margin-left: 2em;
+}
+}
 
 @media(max-width:390px){
 
