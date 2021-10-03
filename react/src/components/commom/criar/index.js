@@ -3,14 +3,14 @@
 import { Container } from './styled'
 import Logo from '../logo';
 
-export default function p4(props){
+export default function p4(){
     
     return(
         <Container>
           <div className="abox">
              <div className="cabecalho">
                  <div className="logo"><Logo cor="verde" tamanho="medio"/></div>
-                 <div className="ld"><button onClick={() => props.func(false)}><img src="/assets/images/Fechar 5.png" alt=""/></button></div>
+                 <div className="ld"><button><img src="/assets/images/Fechar 5.png" alt=""/></button></div>
              </div>
 
 
@@ -103,8 +103,6 @@ export default function p4(props){
           </div>
 
 
-
-          { props.children}
         </Container>
     ) 
 }  
