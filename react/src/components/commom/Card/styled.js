@@ -2,16 +2,17 @@ import styled from 'styled-components'
 
 
 const Card = styled.div`
-
-
-    .info1 {
         border-radius: 2em;
         padding: 1em 0em 15em 1.2em;
         width: 15.5em;
         min-height: 5em;
         max-height: 14vh;
         background-color: #fff;
-    }
+
+        &:hover{
+            cursor: pointer;
+        }
+ 
 
     .i {
         padding-bottom: 1em;
@@ -30,6 +31,8 @@ const Card = styled.div`
         justify-content: space-between;
 
         width: 90%;
+
+        margin-top: 1.8em;
     }
 
     .botoes{

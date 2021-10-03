@@ -1,9 +1,8 @@
 
-
 import { Container } from './styled'
 import Logo from '../../components/commom/logo';
 
-export default function p4(props){
+export default function criarDenunc(props){
     
     return(props.value) ?(
         <Container>

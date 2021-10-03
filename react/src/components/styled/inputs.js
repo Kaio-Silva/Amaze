@@ -46,12 +46,13 @@ const Pesquisa = styled.input`
 
     const Padrao = styled.input`
             font-family: regular;
-            font-size: .85em;
+            font-size: .8em;
+            color: ${props => props.cor === "verde" ? "#24BF99" : ""};
 
             border-radius: 2px;
-            border: 1px solid #C4C4C4;
+            border: 1px solid ${props => props.cor === "verde" ? "#24BF99" : "#C4C4C4"};
 
-            padding: 1.5em 1em;
+            padding: 1.2em 1em;
 
             outline: none;
 
@@ -59,6 +60,10 @@ const Pesquisa = styled.input`
 
 
             width: 100%;
+
+            &::-webkit-input-placeholder {
+                color: ${props => props.cor === "verde" ? "#24BF99" : ""};
+            }   
 
             &:focus::-webkit-input-placeholder {
             color: transparent;
@@ -72,6 +77,15 @@ const Pesquisa = styled.input`
                 font-size: 0.9em;
             }
         }
+
+        @media (min-width: 1920px){
+                font-size: 1em;
+                padding: 1em 1em;
+
+                &::-webkit-input-placeholder {
+                font-size: 1em;
+            }
+        }    
     `
 
 export { Pesquisa, Padrao }

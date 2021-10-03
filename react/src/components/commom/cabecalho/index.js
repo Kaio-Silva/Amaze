@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Pesquisa } from '../../styled/inputs.js'
 import { useState } from 'react';
 import Pop from '../../../Popups/menu'
-import Criar from '../../../Popups/criarDenuncia'
+import Criar from '../../../Popups/criarDenunc'
 export default function Cabecalho(props){
     const [po,setPo] = useState(false)
     const [cri, SetCri] = useState(false)

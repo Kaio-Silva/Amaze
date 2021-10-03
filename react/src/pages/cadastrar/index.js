@@ -17,7 +17,7 @@ function Cadastrar(props) {
                  <div className="TituloCadastro"> Cadastro </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Nome Completo</div>
-                    <Padrao className="padrao" placeholder="Insira seu nome"/>
+                    <Padrao className="padrao" placeholder="Insira seu nome" />
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Email</div>

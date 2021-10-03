@@ -55,12 +55,12 @@ input::placeholder{
     margin-top:1em;
     margin-bottom: 1em;
     font-family: semiBold;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 input{
     font-family: regular;
-    font-size: 1em;
+    font-size: .9em;
 
     padding: .7em .7em;
 }
@@ -83,7 +83,7 @@ input{
     width:95%;
     height:2.5em;
 
-    margin-bottom:1em;
+    margin-bottom:1.3em;
 }
 
 .teext textarea{
@@ -103,13 +103,13 @@ input{
 
 textarea::placeholder{
     font-family: regular;
-    font-size: 1em;
+    font-size: 0.9em;
     color:#24BF99;
 }
 
 
 label{
-    font-size: .9em;
+    font-size: 0.6em;
 }
 
 
@@ -192,14 +192,14 @@ label{
 
 .botao button{
     font-family: medio;
-    font-size: 1em;
+    font-size: 0.8em;
     color: white;
     background-color:#24BF99;   
 
     border-radius: 1.5em;
     border:none;
 
-    padding: 0.7em 2em;
+    padding: 0.5em 1.6em;
 }
 
 .botao > button:hover{
@@ -219,7 +219,7 @@ label{
 
 .tituloco{
     font-family: semiBold;
-    font-size: 1.1em;
+    font-size: .9em;
     margin-top: 1.6em;
     margin-bottom: 0.7em;
 }
@@ -238,9 +238,8 @@ label{
     justify-content: space-between;
 
     margin-left: .7em;
-    margin-bottom: .3em;
 
-    width: 20em;
+    width: 12em;
 }
 
 .ajustarTaxas{
@@ -282,14 +281,14 @@ label{
 
 .indice{
     font-family: medio;
-    font-size: 1em;
+    font-size: .7em;
 
     margin-left: 0.7em;
 }
 
 .qtddenunc{
     font-family: medio;
-    font-size: 1em;
+    font-size: .7em;
 }
 
 input{
@@ -319,11 +318,14 @@ textarea{
 @media(max-width:387px){
     .logo{
         position: relative;
-        right: 0.2em;
+        right: 0.5em;
     }
-    
+    .taxas{
+        margin-left: 1em;
+    }
 }
 
 `
+
 
 export { Container }

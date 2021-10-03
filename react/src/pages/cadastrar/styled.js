@@ -37,7 +37,7 @@ const Container = styled.div`
 
     .cadastro-inputs{
         width: 37%;
-        height: 85%;
+        height: 88%;
         margin:0em;
         background-color:#fff;
         padding: 1em 2em;
@@ -51,7 +51,7 @@ const Container = styled.div`
 
    .Titulo{
        font-family: medio;
-       font-size: 1em;
+       font-size: .9em;
        margin-left: 1.5em;
        margin-bottom: 0.6em;
    }
