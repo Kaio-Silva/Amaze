@@ -79,6 +79,10 @@ const Container = styled.div`
     .conteudo{
         width: 80%;
     }
+    .TituloCadastro{
+            margin-bottom: 0.6em;
+        }
+
 
     .cadastro-inputs{
         display: flex;
@@ -86,7 +90,7 @@ const Container = styled.div`
         align-items: center;
         width: 100%;
         height: 92%;
-        margin-top: 2em;
+        margin-top: 1em;
         margin-left: 0em;
         padding: 2em 1.5em;
         box-shadow: 0em 0em 0.7em 0.3em rgba(0, 0, 0, 0.25);
@@ -99,7 +103,8 @@ const Container = styled.div`
     }
 
     .Titulo{
-        font-size: 0.9em;
+        font-size: 0.8em;
+
     }
 
     .mae-botao{
@@ -109,11 +114,12 @@ const Container = styled.div`
 
     .ajustarBotao{
         width: 100%;
+        font-size:0.8em;
     }
   
 }
 
-    @media(max-width: 1920px) {
+    @media(min-width: 1920px) {
 
         .TituloCadastro{
             font-size: 1.5em;

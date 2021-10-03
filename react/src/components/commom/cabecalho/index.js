@@ -24,7 +24,7 @@ export default function Cabecalho(props){
             <Link className="link" to="/cadastro"> <div className="elements-desc-cabhd7"> Cadastrar-se </div> </Link>
             <Link className="link" to="/HistoricoDenunc"><div className="elements-desc-cabhd5"> Histórico </div> </Link>
             <Link className="link" to="/"> <div className="elements-desc-cabhd1"> Home </div> </Link>
-            <Link className="link" to="/*"> <div className="elements-desc-cabhd2"> Contate-nos </div> </Link>
+            <Link className="link" to="/Contatenos"> <div className="elements-desc-cabhd2"> Contate-nos </div> </Link>
             <Link className="link" to="/Buscar"> <div className="elements-desc-cabhd3"> Buscar Região </div> </Link>
             <button onClick={() =>  SetCri(true)}><div className="elements-desc-cabhd4"> Criar Denuncia </div></button> 
             <div className="barraCabecalho"> </div>

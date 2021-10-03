@@ -5,9 +5,13 @@ import Mapa from '../../components/commom/mapa'
 
 export default function Map(props){
     return(
-        <Container> 
-            <Cabecalho cor="black" input="usar" tamanho=""  home="" historico="" contatenos="" buscar="" criar="usar" login="usar"/>
-            <Mapa />
-        </Container>
+        <div>
+         <Cabecalho cor="black" input="usar" tamanho=""  home="" historico="" contatenos="" buscar="" criar="usar" login="usar"/>
+          <Container> 
+            
+            <div><Mapa /></div>
+          </Container>
+          </div>
+        
     )
 }

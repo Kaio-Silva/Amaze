@@ -65,8 +65,8 @@ const Pesquisa = styled.input`
             }
 
             @media (max-width: 1024px){
-                font-size: 0.9em;
-                padding: 1.1em 1em;
+                font-size: 0.8em;
+                padding: 1em 1em;
 
                 &::-webkit-input-placeholder {
                 font-size: 0.9em;
