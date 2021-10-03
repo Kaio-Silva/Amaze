@@ -13,7 +13,7 @@ export default function Cabecalho(props){
              buscar={props.buscar} criar={props.criar} historico={props.historico} login={props.login} cadastrar={props.cadastrar} background={props.background} >
     <div className="cabecalho-hd">
 
-    <Pop trigger={po} setTrigger={setPo}   background="white" home={props.homep} login={props.loginp} contact={props.contatenosp} buscregion={props.buscarp} relatDenunc={props.relatp} removeUser={props.removep} histp={props.histp} cadastro={props.cadastrop} ></Pop>
+    <Pop trigger={po} setTrigger={setPo}   background="white" home={props.homep} login={props.loginp} contact={props.contatenosp} buscregion={props.buscarp} relatDenunc={props.relatp} removeUser={props.removep} histp={props.histp} cadastro={props.cadastrop} criar={props.criarp} ></Pop>
     <Criar value={cri} func={SetCri}/>
         <Logo className="logo" cor={props.cor} titulo={props.titulo} tamanho="medio"/> 
         <div className="descricao-cabecalhohd"> 

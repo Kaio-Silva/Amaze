@@ -11,7 +11,7 @@ width: 100%;
 position: fixed; 
 top:0;
 left:0;
-
+z-index:1;
 
 
 button{
@@ -87,6 +87,16 @@ font-size: 0.8em;
 color: ${props => props.background === 'white' ? 'black'
                                                              :'white'};     
 }
+
+.criar{
+display:${props => props.criar ==='usar' ?'block'
+                                           :'none'};
+padding-bottom:0.5em ;
+font-size: 0.8em;
+color: ${props => props.background === 'white' ? 'black'
+                                                             :'white'};     
+}
+
 
 .buscregion{
 display:${props => props.buscregion ==='usar' ?'block'
