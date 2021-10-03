@@ -354,7 +354,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         background-image: none;
-        margin-top: 5em;
+        margin-top: 10em;
     }
 
     .AlinhandoConteudo > img{
@@ -378,24 +378,26 @@ const Container = styled.div`
       line-height: 1.6em;
       text-align: center;
 
-      width: 21em;
+      width: 18em;
       margin-bottom: 1em;
   }
   .Texto2 {
       font-family: medio;
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.6em;
+
+    text-align: center;
     width: 15.2em;
     margin-bottom: 0.5em;
-    margin-top: 10em;
+    margin-top: 14em;
   }
   .Texto3{
       font-family: medio;
-      font-size: 1.3em;
+      font-size: 1em;
       line-height: 1.6em;
 
+      text-align: center;
       width: 15.2em;
-     
       margin-bottom: 0.5em;
       
   }
@@ -453,12 +455,12 @@ const Container = styled.div`
 
     .AlinhandoConteudo:nth-child(5){
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         background-image: none;
 
         height: 50vh;
-        margin-top: 5em;
+        margin-top: 10em;
     }
 
 
@@ -470,6 +472,8 @@ const Container = styled.div`
       text-align: center;
       width: 12em;
       height: 14em;
+
+      padding-top: 14em;
   }
 
   .BoxInfo:nth-child(1){
@@ -477,19 +481,19 @@ const Container = styled.div`
   }
 
   .BoxImagens{
-      height: 6em;
-      width: 6em;
+      height: 7em;
+      width: 7em;
   }
 
 
   .BoxTitulo{
       font-family: semiBold;
-      font-size: 1em;
+      font-size: 1.1em;
   }
 
   .BoxDesc{
       font-family: medio;
-      font-size: 0.8em;
+      font-size: 0.9em;
       line-height: 1em;
   }
 
