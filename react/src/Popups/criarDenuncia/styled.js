@@ -12,7 +12,7 @@ position: fixed;
 top:0;
 left:0;
 font-family: regular;
-
+    
 .amz{
     margin-left:0.3em;
     margin-bottom: 0.3em;
