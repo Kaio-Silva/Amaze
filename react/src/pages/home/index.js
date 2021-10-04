@@ -5,7 +5,7 @@ import Cabecalho from '../../components/commom/cabecalho/index'
 
 export default function Home(props){
     return(
-        <Container> 
+        <Container>
             <Cabecalho cor="" titulo="block" input="" home="" contatenos="usar" contatenosp="usar" buscar="usar" buscarp="usar" criar="" login="usar" loginp="usar" historico="usar" histp="usar"/>
             <div className="AlinhandoPag">  
                 <div className="AlinhandoConteudo">
@@ -57,7 +57,7 @@ export default function Home(props){
                         <div className="BoxDesc"> Amaze é um serviço que cobre o brasil inteiro. </div>
                     </div>
                 </div>
-              </div>   
+              </div>
         </Container>
     )
 }

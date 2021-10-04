@@ -277,6 +277,8 @@ const Container = styled.div`
 
 
   @media (max-width: 1024px) {
+      background-color: #24BF99;
+
     *{ margin: none;
        padding: none;
     }
@@ -291,7 +293,17 @@ const Container = styled.div`
     }
 
     .AlinhandoPag{
-        width: 100%;
+        /*width: 100%;*/
+        width: 24em;
+        align-self: center;
+        height: auto;
+        background-color: #fff;
+        border-radius: 0.8em;
+        box-shadow: 10px;
+
+        padding-bottom: 22em;
+        margin-top: 0%;
+        margin-bottom: 2em;
     }
 
     .AlinhandoConteudo{
