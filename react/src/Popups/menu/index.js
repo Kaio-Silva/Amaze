@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Menu(props){
     return(props.trigger) ?(
-            <Container background={props.background}  home={props.home} login={props.login} contact={props.contact} buscregion={props.buscregion} relatDenunc={props.relatDenunc} removeUser={props.removeUser} historicop={props.histp} cadastro={props.cadastro} >
+            <Container background={props.background}  home={props.home} login={props.login} contact={props.contact} buscregion={props.buscregion} relatDenunc={props.relatDenunc} removeUser={props.removeUser} historicop={props.histp} cadastro={props.cadastro} criar={props.criar} >
                 <div className="abox">
                 <div className="cab">
                     <div className="oi"><button onClick={() => props.setTrigger(false)}><img className ="img"src="/assets/images/xpreto.png" alt=""/></button></div>
@@ -19,6 +19,7 @@ export default function Menu(props){
                    <Link className="link" to="/HistoricoDenunc"> <div className="hist">Histórico Denúncias</div></Link>
                    <Link className="link" to="/cadastro"> <div className="cadastro">Cadastrar-se</div></Link>
                    <Link className="link" to="/Remover"><div className="removeUser">Remover Usuário</div></Link>
+                   <Link className="link" to="/Criar"><div className="criar">Criar Denúncia</div></Link>
                 </div>
 
 

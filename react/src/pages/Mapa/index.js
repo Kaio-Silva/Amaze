@@ -4,14 +4,10 @@ import Cabecalho from '../../components/commom/cabecalho'
 import Mapa from '../../components/commom/mapa'
 
 export default function Map(props){
-    return(
-        <div>
-         <Cabecalho cor="black" input="usar" tamanho=""  home="" historico="" contatenos="" buscar="" criar="usar" login="usar"/>
+    return(       
           <Container> 
-            
-            <div><Mapa /></div>
+              <Cabecalho cor="black" input="usar" tamanho=""  home="" historico="" contatenos="" buscar="" criar="usar" login="usar" loginp="usar" contatenosp="usar" histp="usar" cadastrop="usar" criarp="usar"/>
+              <Mapa />
           </Container>
-          </div>
-        
     )
 }

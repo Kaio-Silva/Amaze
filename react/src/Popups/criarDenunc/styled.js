@@ -12,29 +12,13 @@ position: fixed;
 top:0;
 left:0;
 font-family: regular;
-color:#24BF99;
+z-index: 1;
 
 
-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.texto{
-    display: block;
-}
-
-.ajustarTaxas{
-    display: flex;
-    flex-direction: row;
-}
-
-.amz{
-    margin-left:0.3em;
-    margin-bottom: 0.3em;
-    font-size:1.4em;
-    color:#24BF99;
+.logo{
+    position: relative;
+    right: 1.5em;
+    bottom: 0.3em;
 }
 
 .cabecalho{
@@ -50,16 +34,16 @@ button{
     margin-right:1.2em;
 }
 
-
-.le{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left:1.2em;
+.ld button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
+
+
+
 input::placeholder{
     color:#24BF99;
-    font-family: regular;
 }
 
 
@@ -70,44 +54,67 @@ input::placeholder{
 .titulo-form{
     margin-top:1em;
     margin-bottom: 1em;
-    font-size: 1.4em;
+    font-family: semiBold;
+    font-size: 1em;
+}
+
+input{
     font-family: regular;
-    color: black;
+    font-size: .9em;
+
+    padding: .7em .7em;
 }
 
 .form1 input{
-border: 1px solid #24BF99;
-border-radius: 0.5em;
-width:95%;
-height:2.5em;
-margin-bottom:0.9em;
+    border: 1px solid #24BF99;
+    border-radius: 0.5em;
+
+    width:95%;
+    height:2.5em;
+
+    margin-bottom:0.9em;
+    
 }
 
 .form2 input{
     border: 1px solid #24BF99;
-border-radius: 0.5em;
-width:95%;
-height:2.5em;
-margin-bottom:1.3em;
+    border-radius: 0.5em;
+    
+    width:95%;
+    height:2.5em;
+
+    margin-bottom:1.3em;
 }
 
 .teext textarea{
-    width:95%;
-    height:9em;
+    font-family: regular;
+    font-size: 1em;
+    
     border-radius: 0.5em;
     border: 1px solid #24BF99;
+
     resize: none;
-    font-family: regular;
+
+    padding: .7em .7em;
+
+    width:95%;
+    height:9em;
 }
 
 textarea::placeholder{
+    font-family: regular;
+    font-size: 0.9em;
     color:#24BF99;
 }
 
 
+label{
+    font-size: 0.6em;
+}
+
 
 .teext {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .l1{
@@ -138,15 +145,16 @@ textarea::placeholder{
 .abox{
     background-color: white;
     box-shadow:  0px  1px 10px  #888888;
-    border-radius: 1em;
+    border-radius: 0.5em;
     width:30%;
     height:100vh;
     display:flex;
     flex-direction: column;
+    position: relative;
 }
 
 .checks{
-    margin-left:1em;
+    
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -162,47 +170,56 @@ textarea::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .ty:before{
-content: '';
-position:absolute;
-background-color: white;
-height: 8px;
-width: 8px;
-border-radius: 1.2em;
-margin-left: 0%.2em;
-opacity:0;
+    content: '';
+    position:absolute;
+    background-color: white;
+    height: 8px;
+    width: 8px;
+    border-radius: 1.2em;
+    margin-left: 0%.2em;
+    opacity:0;
 }
 .ty:checked:before{
-opacity: 1;
+    opacity: 1;
+}
 
+.ty:hover{
+    cursor: pointer;
 }
 
 .botao button{
-    width:240px;
-    height:38px;
+    font-family: medio;
+    font-size: 0.8em;
+    color: white;
+    background-color:#24BF99;   
+
     border-radius: 1.5em;
     border:none;
-    color: white;
-    background-color:#24BF99;;
-    font-size: 1em;
+
+    padding: 0.5em 1.6em;
+}
+
+.botao > button:hover{
+    cursor: pointer;
 }
 
 .botao{
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
 .taxas{
     display: flex;
     flex-direction: column;
-    margin-left:3em ;
+
+    margin-left: 1em ;
 }
 
 .tituloco{
-    color: black;
-    font-size: 1.3em;
+    font-family: semiBold;
+    font-size: .9em;
     margin-top: 1.6em;
     margin-bottom: 0.7em;
 }
@@ -217,17 +234,25 @@ opacity: 1;
 .bloco{
     display: flex;
     flex-direction: row;
-    margin-left: 1.9em;
     align-items:center;
+    justify-content: space-between;
+
+    margin-left: .7em;
+
+    width: 12em;
 }
 
+.ajustarTaxas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 .cor{
     width:26px;
     height: 11px;
     background-color: red;
     border-radius: 16px;
-    margin-right: 0.7em;
 }
 
 
@@ -236,7 +261,6 @@ opacity: 1;
     height: 11px;
     background-color: #FFA800;
     border-radius: 16px;
-    margin-right: 0.7em;
 }
 
 
@@ -245,7 +269,6 @@ opacity: 1;
     height: 11px;
     background-color:#FAFF00;
     border-radius: 16px;
-    margin-right: 0.7em;
 }
 
 
@@ -254,25 +277,35 @@ opacity: 1;
     height: 11px;
     background-color:#14FF00;
     border-radius: 16px;
-    margin-right: 0.7em;
 }
 
 .indice{
-    color: black;
-    font-size: 1em;
+    font-family: medio;
+    font-size: .7em;
+
+    margin-left: 0.7em;
 }
 
 .qtddenunc{
-    margin-left: 2em;
-    color: black;
+    font-family: medio;
+    font-size: .7em;
 }
 
-@media(max-width:1024px){
+input{
+    outline:none;
+}
+
+textarea{
+    outline: none;
+}
+
+@media(max-width:1280px){
+
     .abox{
         width:25em;
-}
+    }
 
-.taxas{
+    .taxas{
         margin-left:1.5em;
     }
 
@@ -280,10 +313,17 @@ opacity: 1;
      margin-left: 0em;
     }
 
-
 }
 
-
+@media(max-width:387px){
+    .logo{
+        position: relative;
+        right: 0.5em;
+    }
+    .taxas{
+        margin-left: 1em;
+    }
+}
 
 `
 
