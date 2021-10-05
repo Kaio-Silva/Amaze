@@ -304,6 +304,7 @@ const Container = styled.div`
         padding-bottom: 22em;
         margin-top: 0%;
         margin-bottom: 2em;
+        box-shadow: 0em 0em .4em .2em grey;
     }
 
     .AlinhandoConteudo{
