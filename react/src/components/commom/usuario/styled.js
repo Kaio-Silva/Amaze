@@ -14,6 +14,12 @@ const Container = styled.div`
 
     margin: 0.7em;
 
+
+    span{
+        font-family: semiBold;
+        margin-right: .5em;
+    }
+
     .alinhandoInformacoes{
         display: flex;
         flex-direction: row;

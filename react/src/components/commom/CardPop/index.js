@@ -3,8 +3,8 @@ import { Container } from './styled'
 export default function Card(){
     return(
       <Container>
-          <div className="nm">Nome: <div>Kaique</div> </div>
-          <div className="motivo">Motivo:<div>Assalto</div> </div>
+          <div className="nm"> Autor: <span> Kaique </span> </div>
+          <div className="motivo">Motivo: <span> O que foi relatado não é coerente </span> </div>
       </Container>
     )
 }

@@ -22,7 +22,8 @@ console.log(denu)
     center: {  
       lat: -23.7300074,
       lng: -46.6970212 },
-    zoom: 15
+      zoom: 15,
+      disableDefaultUI: true
   };
 
   loader.load().then((google) => {

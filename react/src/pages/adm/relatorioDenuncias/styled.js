@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
 
-const Denuncias = styled.div`
+const Container = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     font-family: regular;
     font-size: 1em;
+
 
     .alinhando {
         display: flex;
@@ -15,27 +17,8 @@ const Denuncias = styled.div`
         width: 80%;
     }
 
-    .conteudo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        width: 100%;
-    }
-
-    .escreva {
-        background-image: url('/assets/images/Buscar.png');
-        background-repeat: no-repeat;
-        background-position: 28em 0.3em;
-    }
-
-    .escreva {
-        padding: 0.7em;
-        border-radius: 0.4em;
-        padding-bottom: 0.5em;
-        width: 30em;
-        outline: none;
-        font-size: 1.1em;
+    .Pesquisar{
+        margin-top: .6em;
     }
 
     .baixo{
@@ -43,13 +26,13 @@ const Denuncias = styled.div`
         flex-direction: column;
         align-items: center;
         background-color: #B8BABF;
-        background-image: url(/assets/Images/DocsAzul1.png);
+        background-image: url("/assets/Images/DocsAzul1.png");
         background-repeat: no-repeat;
         background-position: center;
 
         width: 100%;
-        height: 90vh;
-        overflow-x: hidden;
+        height: 90.9vh;
+        overflow-y: scroll;
     }
 
     .baixo::-webkit-scrollbar-track
@@ -104,4 +87,4 @@ const Denuncias = styled.div`
 `
 
 
-export {Denuncias}
+export {Container}

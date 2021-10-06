@@ -3,15 +3,28 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-height:5em;
-text-align: left;
-width:80%;
-background-color: white;
-border-radius: 0.6em;
-margin-top:0.3em;
-margin-bottom:0.3em;
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+   
+    font-family: semiBold;
+    font-size: 1em;
+    text-align: left;
+    
+    border-radius: 0.6em;
+
+    margin-top:0.3em;
+    margin-bottom:0.3em;
+
+    width:80%;
+
+
+span{
+    font-family: regular;
+
+    margin-left: .5em;
+}
 
 
 .nm{

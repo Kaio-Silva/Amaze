@@ -1,8 +1,8 @@
 import { Container } from './styled'
 import { Link } from 'react-router-dom';
-import Logo from '../../components/commom/logo'
-import { Padrao } from '../../components/styled/inputs.js';
-import { Button } from '../../components/styled/botoes';
+import Logo from '../../../components/commom/logo'
+import { Padrao } from '../../../components/styled/inputs.js';
+import { Button } from '../../../components/styled/botoes';
 
 export default function LoginAdm(props){
     return(
@@ -24,7 +24,7 @@ export default function LoginAdm(props){
                             <div className="Titulo">Senha</div>
                             <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha"/>
                         </div>
-                        <Link  to="/Relatorio"><Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button></Link>
+                        <Link  to="/adm/realtorio"><Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button></Link>
                     </div>
                 </div>
             </div>

@@ -14,8 +14,8 @@ function BuscarRegioes(props) {
           <div className="titulo"> Encontre sua conta </div>
           <hr/>
           <div className="alinharDesc">
-            <div className="descricao"> Insira seu numero para podermos te enviar um SMS com sua senha </div>
-            <Padrao className="ajustarInput" placeholder="Insira seu numero" />
+            <div className="descricao"> Insira seu email para podermos te enviar uma notifiação para você receber a sua senha </div>
+            <Padrao className="ajustarInput" placeholder="Insira seu email" />
           </div>  
           <hr/>
           <div className="button"><button> Enviar </button></div>

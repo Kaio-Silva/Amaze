@@ -1,14 +1,11 @@
-import { Denuncias } from './styled';
-import MenuLateral from "../../components/commom/Menu";
-import { Pesquisa } from '../../components/styled/inputs.js';
-import Card  from "../../components/commom/Card";
+import { Pesquisa } from '../../../components/styled/inputs.js';
+import Card  from "../../../components/commom/Card";
+import { Container } from './styled';
 
 
-export default function denuncias(props) {
+export default function Denuncias(props) {
     return (
-        <Denuncias>
-            <MenuLateral />
-            <div className="conteudo">
+            <Container>
                 <Pesquisa className="Pesquisar" input="usar" tamanho="medio"/>
                 <div className="baixo">
                     <div className="alinhando">
@@ -40,7 +37,6 @@ export default function denuncias(props) {
                         <Card autor="Beatriz Santos" qtd="20" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
                     </div>
                 </div>
-            </div>
-        </Denuncias>
+        </Container>
     )
 }

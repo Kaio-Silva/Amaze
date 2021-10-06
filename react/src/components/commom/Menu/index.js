@@ -15,11 +15,11 @@ export default function MenuLateral(props){
             <div><button onClick={() => SetPop(true)}><MenuResp src="/assets/Images/MenuBranco.svg" alt="" /></button></div>
             <div className="relatorio">
                 <img src="/assets/Images/DocsBranco1.png" alt=""/>
-                <Link className="link" to="/Relatorio"> Relatorio Denuncias </Link>
+                <Link className="link" to="/adm/realtorio"> Relatorio Denuncias </Link>
             </div>
             <div className="remover">
                 <img src="/assets/Images/Denuncias1.png" alt=""/>
-                <Link className="link" to="/Remover" > Remover Usuario </Link>
+                <Link className="link" to="/adm/remover" > Remover Usuario </Link>
             </div>
             <Comp trigger={pop} setTrigger={SetPop}   background="" home="" login="" relatDenunc="usar" removeUser="usar" />
         </Menu>

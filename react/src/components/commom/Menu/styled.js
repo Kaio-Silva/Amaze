@@ -5,6 +5,8 @@ const Menu = styled.div`
     display: flex;
     flex-direction: column;
 
+    font-family: regular;
+
     width: 20vw;
     
     background-color: #011640;

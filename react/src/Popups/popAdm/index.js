@@ -4,7 +4,7 @@ export default function P8(props){
     return(props.trigger === true)?(
       <Container>
         <div className="abox">
-          <div className="cabecalho"><button onClick={() => props.SetTrigger(false)}><img src="/assets/images/xbranco.png"/></button></div>
+          <div className="cabecalho"><button onClick={() => props.SetTrigger(false)}><img src="/assets/images/xbranco.png" alt=""/></button></div>
           <div className="conteudo" id="style-2">
             <Card/>
             <Card/>
