@@ -294,7 +294,7 @@ const Container = styled.div`
 
     .AlinhandoPag{
         /*width: 100%;*/
-        width: 24em;
+        width: 90%;
         align-self: center;
         height: auto;
         background-color: #fff;
@@ -316,7 +316,7 @@ const Container = styled.div`
         background-position-y: 3em;
         background-size: 20em;
 
-        height: 92vh;
+        /*height: 92vh;*/
     }
     .Titulo{
         font-size: 1.6em;
@@ -391,7 +391,7 @@ const Container = styled.div`
       line-height: 1.6em;
       text-align: center;
 
-      width: 18em;
+      width: 75%;
       margin-bottom: 1em;
   }
   .Texto2 {
@@ -400,9 +400,10 @@ const Container = styled.div`
     line-height: 1.6em;
 
     text-align: center;
-    width: 15.2em;
+    width: 70%;
     margin-bottom: 0.5em;
-    margin-top: 14em;
+    margin-top: 3%;
+    /*margin-top: 14em;*/
   }
   .Texto3{
       font-family: medio;
@@ -410,7 +411,7 @@ const Container = styled.div`
       line-height: 1.6em;
 
       text-align: center;
-      width: 15.2em;
+      width: 65%;
       margin-bottom: 0.5em;
       
   }
@@ -439,7 +440,9 @@ const Container = styled.div`
         align-items: center;
         background-image: none;
 
-        height: 30vh;
+        height: auto;
+        padding-top: 15%;
+        /*height: 30vh;*/
   }
 
   .Container2{
@@ -454,7 +457,7 @@ const Container = styled.div`
       font-family: semiBold;
       font-size: 1.5em;
       width: 10em;
-      margin-top:14em;
+      /*margin-top:14em;*/
 
   }
 
@@ -472,8 +475,8 @@ const Container = styled.div`
         justify-content: center;
         background-image: none;
 
-        height: 50vh;
-        margin-top: 10em;
+        /*height: 50vh;*/
+        /*margin-top: 10em;*/
     }
 
 
