@@ -32,10 +32,10 @@ export default function Contatenos(props){
                 </div>
                 <div className="ConteudoAmaze">
                     
-                    <div className="DescLogin">Informações</div>
-                    <div className="DescLogin">Local: Av. Coronel de Freitas Costa  463</div>
-                    <div className="DescLogin">E-mail: Amazenegocios@gmail.com</div>
-                    <div className="DescLogin">Contato: +55 11 99999-9001</div>
+                    <div className="DescLoginA">Informações</div>
+                    <div className="DescLoginB">Local: Av. Coronel de Freitas Costa  463</div>
+                    <div className="DescLoginC">E-mail: Amazenegocios@gmail.com</div>
+                    <div className="DescLoginD">Contato: +55 11 99999-9001</div>
 
                     <div className="imagens">
                     <img className="E-mail" src="/assets/images/E-mail 1.png" alt=""/>
