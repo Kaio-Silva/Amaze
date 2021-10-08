@@ -14,12 +14,13 @@ export default function Contatenos(props){
                     <div className="TituloLogin"> Contate-nos </div>
                     <div className="FormLogin" >
                         <div className="Inputs">                        
-                            <Padrao  placeholder="Nome Completo"  />
+                            <Padrao  placeholder="Nome Completo" tamanho="large" cor="verde"  />
                         </div>
-                        <div className="Inputs">                   
-                            <Padrao placeholder="E-mail" />
+                        <div className="InputsA">                   
+                            <Padrao  placeholder="E-mail" tamanho="" />
+                            <Padrao placeholder="Telefone"/>
                         </div>
-                        <div className="Inputs">                    
+                        <div className="InputsB">                    
                             <Padrao placeholder="Telefone"/>
                         </div>
                         <div className="Inputs">                     

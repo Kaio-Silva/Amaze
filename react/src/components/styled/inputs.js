@@ -59,7 +59,8 @@ const Pesquisa = styled.input`
             letter-spacing: ${props => props.Type === "senha" ? ".3em" : "0em"};
 
 
-            width: 100%;
+            width: ${props => props.tamanho === "large" ? "436px" 
+                                    :props.tamanho === "medio" ? "283px" : "209px"};
 
             &::-webkit-input-placeholder {
                 color: ${props => props.cor === "verde" ? "#24BF99" : ""};
