@@ -5,9 +5,9 @@ import { Container } from './styled'
 
 export default function Logo(props){
     return(    
-        <Container cor={props.cor} direction={props.direction} titulo={props.titulo} tamanho={props.tamanho} ambos={props.ambos}>
-           <Link className="link" to="/"><img  className="img-logohd" src="/assets/Images/BussolaVerde.png" alt=""/></Link>
-           <Link className="link" to="/"><div className="texto"> Amaze </div></Link>
+        <Container cor={props.cor} direction={props.direction} titulo={props.titulo} tamanho={props.tamanho} ambos={props.ambos} tela={props.tela}>
+           <Link className="link" to={props => props.home === "true" ? "/adm" : "/"} ><img  className="img-logohd" src="/assets/Images/BussolaVerde.png" alt=""/></Link>
+           <Link className="link" to={props => props.home === "true" ? "/adm" : "/"} ><div className="texto"> Amaze </div></Link>
         </Container>
     )
 }
