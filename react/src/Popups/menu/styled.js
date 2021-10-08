@@ -159,6 +159,9 @@ color: ${props => props.background === 'white' ? 'black'
 
 @media(max-width:1024px){
     width: 100%;
+    justify-content: right;
+    align-items: top;
+   
 }
 
 `
