@@ -59,7 +59,7 @@ const Container = styled.div`
 .cabecalho-hd{
     display:flex;
     flex-direction: row;
-    background-color:red;
+    background-color:white;
     justify-content: space-between;
     height:4em;
     align-items: center;
