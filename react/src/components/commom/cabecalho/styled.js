@@ -97,8 +97,7 @@ button{
     justify-content: end;
     padding-right: 2.9em;
     padding-top: 1em;
-
-    width: 70%;
+    
 }
 
 .elements-desc-cabhd1{
