@@ -162,6 +162,10 @@ color: ${props => props.background === 'white' ? 'black'
     justify-content: right;
     align-items: top;
    
+    .abox{
+        margin-right: 1em;
+        margin-top: 1em;
+    }
 }
 
 `
