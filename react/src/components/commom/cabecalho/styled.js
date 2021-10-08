@@ -10,6 +10,7 @@ const Container = styled.div`
   height:auto;
   color: ${props => props.cor === "white" ? 'white' 
                                           : props.cor === "black" ? 'black' : '#24BF99'};
+                                          
 
   font-size:22px ;
 
@@ -58,7 +59,7 @@ const Container = styled.div`
 .cabecalho-hd{
     display:flex;
     flex-direction: row;
-    background-color:white;
+    background-color:red;
     justify-content: space-between;
     height:4em;
     align-items: center;
