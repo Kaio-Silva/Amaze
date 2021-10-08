@@ -333,11 +333,11 @@ padding-right: 4em;;
     .menubutt{
         display: block;
         margin-top: .3em;
-        margin-left: 0;
+        margin-left: 0em;
     }
     
     .descricao-cabecalhohd{
-        padding-right: 1.2em;
+        padding-right: 0.5em;
     }
         .barraCabecalho{
         display: none;
