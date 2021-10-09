@@ -294,7 +294,7 @@ const Container = styled.div`
 
     .AlinhandoPag{
         /*width: 100%;*/
-        width: 90%;
+        width: 85%;
         align-self: center;
         height: auto;
         background-color: #fff;
@@ -302,8 +302,8 @@ const Container = styled.div`
         box-shadow: 10px;
 
         padding-bottom: 22em;
-        margin-top: 0%;
-        margin-bottom: 2em;
+        margin-top: 5%;
+        margin-bottom: 5%;
         box-shadow: 0em 0em .4em .2em grey;
     }
 
@@ -368,6 +368,7 @@ const Container = styled.div`
         flex-direction: column;
         background-image: none;
         margin-top: 10em;
+        height: auto;
     }
 
     .AlinhandoConteudo > img{
@@ -401,9 +402,8 @@ const Container = styled.div`
 
     text-align: center;
     width: 70%;
-    margin-bottom: 0.5em;
-    margin-top: 3%;
-    /*margin-top: 14em;*/
+    margin-bottom: 2%;
+    margin-top: 5%;
   }
   .Texto3{
       font-family: medio;
@@ -419,8 +419,6 @@ const Container = styled.div`
   .AgrupandoTextos{
     display: flex;
     align-items: center;
-
-    margin-top: 2em;
   }
 
   hr{
@@ -438,11 +436,12 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: none;
         background-image: none;
 
         height: auto;
-        padding-top: 15%;
-        /*height: 30vh;*/
+        padding-bottom: 10%;
+
   }
 
   .Container2{
@@ -464,7 +463,7 @@ const Container = styled.div`
   .TextBenficios{
       font-family: medio;
       font-size: 0.9em;
-      width: 22em;
+      width: 90%;
      margin-bottom: 7em;
   }
 
@@ -483,17 +482,17 @@ const Container = styled.div`
     .BoxInfo{
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      /*justify-content: space-around;*/
       align-items: center;
       text-align: center;
       width: 12em;
       height: 14em;
 
-      padding-top: 14em;
+      padding-top: 8%;
   }
 
   .BoxInfo:nth-child(1){
-      margin-top: 1em;
+      margin-top: 14%;
   }
 
   .BoxImagens{
