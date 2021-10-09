@@ -97,7 +97,6 @@ button{
     justify-content: end;
     padding-right: 2.9em;
     padding-top: 1em;
-    
 }
 
 .elements-desc-cabhd1{
@@ -301,6 +300,7 @@ padding-right: 4em;;
     display: block;
     flex-direction: row;
     justify-content: center;
+  
     
     .but{
         display: none;
@@ -344,9 +344,11 @@ padding-right: 4em;;
     }
     
     .descricao-cabecalhohd{
-        padding-right: 1em;
         display: flex;  
+        padding-right: 1.5em;
     }
+
+
         .barraCabecalho{
         display: none;
     }
