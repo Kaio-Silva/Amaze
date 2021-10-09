@@ -292,12 +292,19 @@ padding-right: 4em;;
     overflow-y: auto;
     height:30em;
 }
+.but{
+        display:block;
+    }
 
 
 @media(max-width:1200px){
     display: block;
     flex-direction: row;
     justify-content: center;
+    
+    .but{
+        display: none;
+    }
 
     .cabecalho-hd{
         width: 100%;
