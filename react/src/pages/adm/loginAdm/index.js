@@ -24,12 +24,10 @@ export default function LoginAdm(props){
                             <div className="Titulo">Senha</div>
                             <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha"/>
                         </div>
-                        <Link  to="/adm/realtorio"><Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button></Link>
+                        <Link to="/adm"><Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button></Link>
                     </div>
                 </div>
             </div>
         </Container>
     )
 }
-
-

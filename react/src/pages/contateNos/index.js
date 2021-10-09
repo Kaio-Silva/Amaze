@@ -14,12 +14,13 @@ export default function Contatenos(props){
                     <div className="TituloLogin"> Contate-nos </div>
                     <div className="FormLogin" >
                         <div className="Inputs">                        
-                            <Padrao  placeholder="Nome Completo"  />
+                            <Padrao  placeholder="Nome Completo" tamanho="large" cor="verde"  />
                         </div>
-                        <div className="Inputs">                   
-                            <Padrao placeholder="E-mail" />
+                        <div className="InputsA">                   
+                            <Padrao  placeholder="E-mail" tamanho="" />
+                            <Padrao placeholder="Telefone"/>
                         </div>
-                        <div className="Inputs">                    
+                        <div className="InputsB">                    
                             <Padrao placeholder="Telefone"/>
                         </div>
                         <div className="Inputs">                     
@@ -32,10 +33,10 @@ export default function Contatenos(props){
                 </div>
                 <div className="ConteudoAmaze">
                     
-                    <div className="DescLogin">Informações</div>
-                    <div className="DescLogin">Local: Av. Coronel de Freitas Costa  463</div>
-                    <div className="DescLogin">E-mail: Amazenegocios@gmail.com</div>
-                    <div className="DescLogin">Contato: +55 11 99999-9001</div>
+                    <div className="DescLoginA">Informações</div>
+                    <div className="DescLoginB">Local: Av. Coronel de Freitas Costa  463</div>
+                    <div className="DescLoginC">E-mail: Amazenegocios@gmail.com</div>
+                    <div className="DescLoginD">Contato: +55 11 99999-9001</div>
 
                     <div className="imagens">
                     <img className="E-mail" src="/assets/images/E-mail 1.png" alt=""/>

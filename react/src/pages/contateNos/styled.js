@@ -41,6 +41,14 @@ const Container = styled.div`
         background-color: white;
     }
 
+    .E-mail{
+        margin-right: 3%;
+    }
+
+    .Facebook{
+        margin-right: 4%;
+    }
+
     .ConteudoAmaze{
         display: flex;
         flex-direction: column;
@@ -48,19 +56,48 @@ const Container = styled.div`
         justify-content: center;
 
         background-color: #2FA79F;
+       
 
-        width: 33%;
+        width: 40%;
         height: 100%;
     }
 
-   .DescLogin{
+   .DescLoginA{
+       font-family: extraBold;
+       font-size: 1.2em;
+       color: white;
+       width: 16em;
+       padding-left: 4em;
+       margin-top: 0em;
+       margin-bottom: 5em;
+       margin-left:2.4em;
+   }
+   .DescLoginB{
        font-family: RelugarItalic;
        font-size: 1.1em;
 
        color: white;
-       width: 16em;
-       padding-left: 2em;
-       padding-top: 1em;
+       width: 19.4em;
+       padding-left: 0em;
+       padding-top: 0em;
+   }
+   .DescLoginC{
+       font-family: RelugarItalic;
+       font-size: 1.1em;
+
+       color: white;
+       width: 19.4em;
+       padding-left: 0em;
+       padding-top: 2em;
+   }
+   .DescLoginD{
+       font-family: RelugarItalic;
+       font-size: 1.1em;
+
+       color: white;
+       width:19.4em;
+       padding-left: 0em;
+       padding-top: 2em;
    }
 
    .ConteudoLogin{
@@ -69,17 +106,18 @@ const Container = styled.div`
        align-items: center;
        justify-content: space-between;
 
-       height: 53%;
+     
        width: 67%;
    }
 
    .TituloLogin{
    
-height:16px;
-top:150px;
+
+top:3em;
 left: 234px;
 font-size: 2em;
 color: #0FA882;
+
    }
 
    .FormLogin{
@@ -105,6 +143,9 @@ color: #0FA882;
    .imagens
    {
     flex-direction: row;
+    width: 15em;
+    margin-left: 10em;
+    margin-top: 1em;
    }
    .botao {
       

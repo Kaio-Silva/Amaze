@@ -24,14 +24,13 @@ export default function Rotes() {
                 <Route path="/HistoricoDenunc" component={HistoricoDenunc} />
                 <Route path="/cadastro" component={cadastrar} />
                 <Route path="/Login" component={Login} />
-                <Route path="/adm/realtorio" component={Adm} />
+                <Route path="/adm" component={Adm} />
                 <Route path="/loginAdm" component={LoginAdm} />
                 <Route path="/Denuncia" component={Denuncias} />
                 <Route path="/Mapa" component={Mapa} />
                 <Route path="/Criar" component={Criar} />
                 <Route path="/Contatenos" component={Contatenos} />
-                <Route path="/*" component={Error} />
-                
+                <Route path="/*" component={Error} />   
             </Switch>
         </BrowserRouter> 
     )

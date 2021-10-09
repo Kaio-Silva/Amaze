@@ -9,13 +9,13 @@ import Comp from '../../../Popups/menu'
 export default function MenuLateral(props){
     const[pop,SetPop] = useState(false)
     return (
-        <Menu>
-            <Logo className="logo" cor="white" tamanho="medio"/>
+        <Menu tela={props.tela}>
+            <Logo className="logo" cor="white" tamanho="medio" tela="true"/>
             <Pesquisa className="MenuPesq" input="usar" tamanho=""/>
             <div><button onClick={() => SetPop(true)}><MenuResp src="/assets/Images/MenuBranco.svg" alt="" /></button></div>
             <div className="relatorio">
                 <img src="/assets/Images/DocsBranco1.png" alt=""/>
-                <Link className="link" to="/adm/realtorio"> Relatorio Denuncias </Link>
+                <Link className="link" to="/adm/relatorio"> Relatorio Denuncias </Link>
             </div>
             <div className="remover">
                 <img src="/assets/Images/Denuncias1.png" alt=""/>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 display: flex;
-justify-content: right;
+justify-content: center;
 align-items: top;
 background-color: rgba(0,0,0,0.2);
 height: 100vh;
@@ -50,6 +50,7 @@ button{
     padding: 0.8em;
     background-color: ${props => props.background === 'white' ? 'white'
                                                                       :'#011640'};
+    margin-left: 6.6em;
                                                       
    
 }
@@ -156,6 +157,8 @@ font-size: 1em;
 color: ${props => props.background === 'white' ? 'black'
                                                              :'white'};     
 }
+
+
 
 `
 

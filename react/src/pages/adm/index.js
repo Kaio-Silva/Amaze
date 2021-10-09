@@ -4,6 +4,7 @@ import MenuLateral from '../../components/commom/Menu';
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import Relatorio from './relatorioDenuncias'
 import Remover from './removerUsuario'
+import HomeAdm from './home'
 
 
 export default function Adm(){
@@ -13,8 +14,9 @@ export default function Adm(){
                 <MenuLateral/>
                 <Conteudo>
                         <Switch>
-                            <Route path="/adm/realtorio" exact={true} component={Relatorio} />
+                            <Route path="/adm/relatorio" exact={true} component={Relatorio} />
                             <Route path="/adm/remover" exact={true} component={Remover} />
+                            <Route path="/adm" exact={true} component={HomeAdm} />
                         </Switch>
                 </Conteudo>
             </BrowserRouter>

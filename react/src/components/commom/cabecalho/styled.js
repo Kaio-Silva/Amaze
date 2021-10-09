@@ -10,6 +10,7 @@ const Container = styled.div`
   height:auto;
   color: ${props => props.cor === "white" ? 'white' 
                                           : props.cor === "black" ? 'black' : '#24BF99'};
+                                          
 
   font-size:22px ;
 
@@ -96,8 +97,6 @@ button{
     justify-content: end;
     padding-right: 2.9em;
     padding-top: 1em;
-
-    width: 70%;
 }
 
 .elements-desc-cabhd1{
@@ -292,12 +291,20 @@ padding-right: 4em;;
     overflow-y: auto;
     height:30em;
 }
+.but{
+        display:block;
+    }
 
 
 @media(max-width:1200px){
     display: block;
     flex-direction: row;
     justify-content: center;
+  
+    
+    .but{
+        display: none;
+    }
 
     .cabecalho-hd{
         width: 100%;
@@ -333,12 +340,15 @@ padding-right: 4em;;
     .menubutt{
         display: block;
         margin-top: .3em;
-        margin-left: 0;
+        margin-left: 0em;
     }
     
     .descricao-cabecalhohd{
-        padding-right: 1.2em;
+        display: flex;  
+        padding-right: 1.5em;
     }
+
+
         .barraCabecalho{
         display: none;
     }
