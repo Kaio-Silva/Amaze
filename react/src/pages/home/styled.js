@@ -282,7 +282,7 @@ const Container = styled.div`
       width: 1vw;
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 600px) {
     background-color: #24BF99;
 
         *{ margin: none;
@@ -299,7 +299,7 @@ const Container = styled.div`
         }
 
         .AlinhandoPag{
-            /*width: 100%;*/
+            width: 100%;
             width: 85%;
             align-self: center;
             height: auto;
@@ -322,12 +322,12 @@ const Container = styled.div`
             background-position-y: 3em;
             background-size: 18em;
 
-            /*height: 92vh;*/
+
         }
         .Titulo{
-            font-size: 1.6em;
+            font-size: 1.5em;
             width: 11em;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.7em;
         }
 
         .Descricao{
@@ -361,8 +361,8 @@ const Container = styled.div`
             animation: float 5s ease-in-out infinite;
 
             display: block;
-            width: 22em;
-            height: 22em;
+            width: 21em;
+            height: 21em;
         }
 
         .ImagemP1{
@@ -378,8 +378,8 @@ const Container = styled.div`
         }
 
         .AlinhandoConteudo > img{
-            width: 17em;
-            height: 17em;
+            width: 15em;
+            height: 15em;
         }
 
 
@@ -490,7 +490,6 @@ const Container = styled.div`
         .BoxInfo{
         display: flex;
         flex-direction: column;
-        /*justify-content: space-around;*/
         align-items: center;
         text-align: center;
         width: 12em;
@@ -504,8 +503,8 @@ const Container = styled.div`
         }
 
         .BoxImagens{
-        height: 7em;
-        width: 7em;
+        height: 5.5em;
+        width: 5.5em;
         }
 
 
@@ -524,246 +523,6 @@ const Container = styled.div`
     
   }
 
-
-  @media (min-width: 1024px) {
-      background-color: #24BF99;
-
-    *{ margin: none;
-       padding: none;
-    }
-
-    .AgrupandoConteudo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 100%; 
-        
-    }
-
-    .AlinhandoPag{
-        /*width: 100%;*/
-        width: 85%;
-        align-self: center;
-        height: auto;
-        background-color: #fff;
-        border-radius: 0.8em;
-        box-shadow: 10px;
-
-        padding-bottom: 22em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        box-shadow: 0em 0em .4em .2em grey;
-    }
-
-    .AlinhandoConteudo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        background-position: right;
-        background-position-y: 3em;
-        background-size: 20em;
-
-        /*height: 92vh;*/
-    }
-    .Titulo{
-        font-size: 1.6em;
-        width: 11em;
-        margin-bottom: 0.5em;
-    }
-
-    .Descricao{
-        font-size: 1em;
-        font-family: medio;
-    }
-
-    
-  .Botão{
-        font-size: 1em;
-        padding: 1em 6.6em;
-        margin: 1.5em 0em;
-    }   
-
-    @keyframes  float2{
-
-    0% {
-        transform: translatey(0px);
-    }
-    50% {
-        transform: translatey(-20px);
-    }
-
-    100%{
-        transform: translatey(0px);
-    } 
-
-    }
-
-    .Imagem{
-        animation: float 5s ease-in-out infinite;
-
-        display: block;
-        width: 23.5em;
-        height: 23.5em;
-    }
-
-    .ImagemP1{
-        display: none;
-    }
-
-    .AlinhandoConteudo:nth-child(2){
-        display: flex;
-        flex-direction: column;
-        background-image: none;
-        margin-top: 10em;
-        height: auto;
-    }
-
-    .AlinhandoConteudo > img{
-        width: 17em;
-        height: 17em;
-    }
-
-    
-  .Titulo2{
-      font-family: semiBold;
-      font-size: 2em;
-      width: 10em;
-      height: 3.5em;
-      text-align: center;
-  }
-
-
-  .Texto{
-      font-family: medio;
-      font-size: 1em;
-      line-height: 1.6em;
-      text-align: center;
-
-      width: 75%;
-      margin-bottom: 1em;
-  }
-  .Texto2 {
-      font-family: medio;
-    font-size: 1em;
-    line-height: 1.6em;
-
-    text-align: center;
-    width: 70%;
-    margin-bottom: 2%;
-    margin-top: 5%;
-  }
-  .Texto3{
-      font-family: medio;
-      font-size: 1em;
-      line-height: 1.6em;
-
-      text-align: center;
-      width: 65%;
-      margin-bottom: 0.5em;
-      
-  }
-
-  .AgrupandoTextos{
-    display: flex;
-    align-items: center;
-  }
-
-  hr{
-      display: block;
-      width: 18em;
-
-      border: 1px solid #737373;
-  }
-
-  img:nth-child(2){
-      display: none;
-  }
-
-  .AlinhandoConteudo:nth-child(3){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: none;
-        background-image: none;
-
-        height: auto;
-        padding-bottom: 10%;
-
-  }
-
-  .Container2{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-  }
-  
-
-  .MiniTitulo{
-      font-family: semiBold;
-      font-size: 1.5em;
-      width: 10em;
-      /*margin-top:14em;*/
-
-  }
-
-  .TextBenficios{
-      font-family: medio;
-      font-size: 0.9em;
-      width: 90%;
-     margin-bottom: 7em;
-  }
-
-
-    .AlinhandoConteudo:nth-child(5){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-image: none;
-
-        /*height: 50vh;*/
-        /*margin-top: 10em;*/
-    }
-
-
-    .BoxInfo{
-      display: flex;
-      flex-direction: column;
-      /*justify-content: space-around;*/
-      align-items: center;
-      text-align: center;
-      width: 12em;
-      height: 14em;
-
-      padding-top: 8%;
-  }
-
-  .BoxInfo:nth-child(1){
-      margin-top: 14%;
-  }
-
-  .BoxImagens{
-      height: 7em;
-      width: 7em;
-  }
-
-
-  .BoxTitulo{
-      font-family: semiBold;
-      font-size: 1.1em;
-  }
-
-  .BoxDesc{
-      font-family: medio;
-      font-size: 0.9em;
-      line-height: 1em;
-  }
-
-
-}
 `
 
 export { Container }

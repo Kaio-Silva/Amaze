@@ -24,7 +24,7 @@ const Container = styled.div`
         background-position: center;
 
         width: 100%;
-        height: 93.2vh;
+        min-height: 90.9vh;
         overflow-y: scroll;
     }
 

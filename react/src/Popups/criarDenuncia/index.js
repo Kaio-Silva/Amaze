@@ -1,7 +1,7 @@
-
-
 import { Container } from './styled'
 import Logo from '../../components/commom/logo';
+import { Padrao, Textarea } from '../../components/styled/inputs.js';
+
 
 export default function p4(props){
     
@@ -18,23 +18,26 @@ export default function p4(props){
 
                    <div className="titulo-form">Criar Denúncia</div>
 
-                   <div className="form1">
-                      <label><input placeholder="Digite o nome da rua" className="f1"/></label> 
+                   <div className="inputs">
+                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%"/>
                   </div> 
 
-                  <div className="form2">
-                      <label><input placeholder="Digite o nome do bairro" className="f2"/></label> 
+                   <div className="inputs">
+                      <Padrao className="ajustarInput" placeholder="Digite o nome da rua" cor="verde"tamanho="100%"/>
                   </div> 
 
-                  <div className="teext">
-                      <label><textarea placeholder="Descreva a ocorrência" className="txt"/></label> 
+                  <div className="inputs">
+                      <Padrao className="ajustarInput" placeholder="Digite o nome do bairro" cor="verde"tamanho="100%"/>
+                  </div> 
+
+                  <div className="inputs">
+                      <Textarea  placeholder="Descreva a ocorrência" cor="verde"tamanho="100%"/>
                   </div> 
 
              </div>
 
              <div className="checks">
                  <div className="l1">
-                   <label> <input className="ty" name="actmnt" type="radio" value="Furto" />Furto </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Latrocínio" /> Latrocínio  </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Homicídio" />Homicídio </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Sequestro" />Sequestro </label>
@@ -42,6 +45,7 @@ export default function p4(props){
 
 
                 <div className="l2">
+                   <label> <input className="ty" name="actmnt" type="radio" value="Furto" />Furto </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" />Feminicídio </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" /> Trafico  </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Estupro" />Estupro </label>
