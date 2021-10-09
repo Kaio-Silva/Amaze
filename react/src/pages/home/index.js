@@ -35,7 +35,7 @@ export default function Home(props){
                     <img className="imageLadrao" src="/assets/images/Ladrao.png" alt=""/>    
                 </div>
                 <div className="Container2">
-                    <div className="AgrupandoTextos"> 
+                    <div className="AgrupandoTextos2"> 
                         <div className="MiniTitulo"> Benefícios </div>
                         <div className="TextBenficios"> Amaze é uma empresa que busca fornecer a melhor experiência para seus usuários, veja alguns dos nossos <span> benefícios :</span></div>
                     </div>

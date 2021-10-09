@@ -18,11 +18,11 @@ function Login (props){
                     <div className="FormLogin">
                         <div className="Inputs">                        
                             <div className="Titulo">Email</div>
-                            <Padrao className="Padrao" placeholder="Insira seu email"/>
+                            <Padrao className="Padrao" placeholder="Insira seu email" tamanho="100%"/>
                         </div>
                         <div className="Inputs">                        
                             <div className="Titulo">Senha</div>
-                            <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha"/>
+                            <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha" tamanho="100%"/>
                         </div>
                         <div className="alinhandoLinks">
                             <Link className="link" to="/EsqueceuSenha"> Esqueceu Senha </Link>

@@ -226,6 +226,11 @@ padding-right: 4em;;
 
 @media(max-width:390px){
 
+    .descricao-cabecalhohd{
+        padding-right: 1em;
+        padding-top: .8em;
+    }
+
     .titulo-conteudohd{
         font-size: 1.3em;
     }

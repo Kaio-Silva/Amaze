@@ -54,13 +54,16 @@ const Pesquisa = styled.input`
 
             padding: 1.2em 1em;
 
+            width: 100%;
+
             outline: none;
 
             letter-spacing: ${props => props.Type === "senha" ? ".3em" : "0em"};
 
 
             width: ${props => props.tamanho === "large" ? "436px" 
-                                    :props.tamanho === "medio" ? "283px" : "209px"};
+                                    :props.tamanho === "medio" ? "283px" 
+                                                               :props.tamanho === "100%" ? "100%" : "209px"};
 
             &::-webkit-input-placeholder {
                 color: ${props => props.cor === "verde" ? "#24BF99" : ""};
@@ -70,19 +73,30 @@ const Pesquisa = styled.input`
             color: transparent;
             }
 
+            @media (max-width: 390px){
+                font-size: 0.8em;
+                padding: 1em 1em;
+                width: 100%;
+
+                &::-webkit-input-placeholder {
+                font-size: 0.9em;
+                }
+            }
+
 
             @media (max-width: 1024px){
                 font-size: 0.8em;
-                padding: 1em 1em;
+                width: 100%;
 
                 &::-webkit-input-placeholder {
                 font-size: 0.9em;
             }
         }
 
-        @media (max-width: 1440px){
+        @media (min-width: 1440px){
                 font-size: 1em;
                 padding: 1em 1em;
+                width: 100%;
 
                 &::-webkit-input-placeholder {
                 font-size: 1em;
@@ -92,6 +106,7 @@ const Pesquisa = styled.input`
         @media (min-width: 1920px){
                 font-size: 1em;
                 padding: 1em 1em;
+                width: 100%;
 
                 &::-webkit-input-placeholder {
                 font-size: 1em;

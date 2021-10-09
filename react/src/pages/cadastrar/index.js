@@ -17,23 +17,23 @@ function Cadastrar(props) {
                  <div className="TituloCadastro"> Cadastro </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Nome Completo</div>
-                    <Padrao className="padrao" placeholder="Insira seu nome" />
+                    <Padrao className="padrao" placeholder="Insira seu nome"  tamanho="100%" />
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Email</div>
-                    <Padrao className="padrao"  placeholder="Insira seu email"/>
+                    <Padrao className="padrao"  placeholder="Insira seu email" tamanho="100%" />
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Telefone</div>
-                    <Padrao  className="padrao" placeholder="Insira seu telefone"/>
+                    <Padrao  className="padrao" placeholder="Insira seu telefone" tamanho="100%" />
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Região</div>
-                    <Padrao className="padrao"  placeholder="Insira sua região"/>
+                    <Padrao className="padrao"  placeholder="Insira sua região" tamanho="100%" />
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Senha</div>
-                    <Padrao className="padrao"  placeholder="Insira seu senha"/>
+                    <Padrao className="padrao"  placeholder="Insira seu senha" tamanho="100%" />
                  </div>          
                   <div className="mae-botao">
                       <Link className="link" to="/Login"><Button className="ajustarBotao" cor=""> Concluir Cadastro </Button></Link>

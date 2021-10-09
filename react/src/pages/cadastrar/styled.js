@@ -31,13 +31,12 @@ const Container = styled.div`
     .conteudo{
        display: flex;
        justify-content: center;
-       height: 100%;
     }
 
 
     .cadastro-inputs{
         width: 37%;
-        height: 88%;
+        height: 85%;
         margin:0em;
         background-color:#fff;
         padding: 1em 2em;
@@ -45,7 +44,6 @@ const Container = styled.div`
     }
 
    .Inputs{
-       margin-top: 0.5em;
        margin-bottom: 0.8em;
    }
 
@@ -67,9 +65,63 @@ const Container = styled.div`
     }
 
 
+    @media (max-width: 390px) {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('/assets/images/CadastroReps.png');
+    background-size: 100% 100%;
+
+    .conteudo{
+        width: 80%;
+        height: 90%;
+    }
+    .TituloCadastro{
+        height: 3em;
+        }
+
+
+    .cadastro-inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 92%;
+        margin-top: 1em;
+        margin-left: 0em;
+        padding: 2em 1.5em;
+        box-shadow: 0em 0em 0.7em 0.3em rgba(0, 0, 0, 0.25);
+        border-radius: 1em;
+    }
+
+    .Inputs{
+        margin-bottom: 0.5em;
+        width: 100%;
+    }
+
+    .Titulo{
+        font-size: 0.8em;
+    }
+
+    .mae-botao{
+        margin-top: 1.4em;
+        width: 100%;
+    }
+
+    .ajustarBotao{
+        width: 100%;
+        font-size:0.8em;
+    }
+  
+}
+
+
+
 @media (max-width: 1440px) {
     .Inputs{
-        margin-bottom: 2em;
+        margin-bottom: 1.5em;
     }
 
 }
@@ -131,7 +183,7 @@ const Container = styled.div`
 
         .TituloCadastro{
             font-size: 1.5em;
-            margin-top: 1.7em;
+            margin-top: 1em;
             margin-left: 0.5em;
         }
 
@@ -140,8 +192,7 @@ const Container = styled.div`
         }
 
         .Inputs{
-            margin-top: 1.5em;
-            margin-bottom: 2em;
+            margin-bottom: 1.2em;
         }
 
         .Titulo{
