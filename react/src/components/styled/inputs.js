@@ -69,12 +69,22 @@ const Pesquisa = styled.input`
             color: transparent;
             }
 
+
             @media (max-width: 1024px){
                 font-size: 0.8em;
                 padding: 1em 1em;
 
                 &::-webkit-input-placeholder {
                 font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 1440px){
+                font-size: 1em;
+                padding: 1em 1em;
+
+                &::-webkit-input-placeholder {
+                font-size: 1em;
             }
         }
 

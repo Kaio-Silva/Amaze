@@ -67,6 +67,14 @@ const Container = styled.div`
     }
 
 
+@media (max-width: 1440px) {
+    .Inputs{
+        margin-bottom: 2em;
+    }
+
+}
+
+
 @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
