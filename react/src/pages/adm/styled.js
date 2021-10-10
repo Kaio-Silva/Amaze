@@ -5,6 +5,11 @@ const Container = styled.div`
     flex-direction: row;
     width: 100%;
     height: 100vh;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
 ` 
 
 const Conteudo = styled.div`
@@ -14,4 +19,6 @@ const Conteudo = styled.div`
         min-height: 80vh;
         width: 100%;
 `
+
+
 export { Container, Conteudo }
