@@ -15,10 +15,10 @@ export default function Menu(props){
                    <Link className="link" to="/Contatenos"><div className="contatnos">Contate-Nos</div></Link>
                    <Link className="link" to="/Buscar"> <div className="buscregion">Buscar Região</div></Link>
                    <Link className="link" to="/Login"> <div className="login">Login</div></Link>
-                   <Link className="link" to="/Relatorio"> <div className="relatDenunc">Relatório de Denúncias</div></Link>
+                   <Link className="link" to="/adm/relatorio"> <div className="relatDenunc">Relatório de Denúncias</div></Link>
                    <Link className="link" to="/HistoricoDenunc"> <div className="hist">Histórico Denúncias</div></Link>
                    <Link className="link" to="/cadastro"> <div className="cadastro">Cadastrar-se</div></Link>
-                   <Link className="link" to="/Remover"><div className="removeUser">Remover Usuário</div></Link>
+                   <Link className="link" to="/adm/remover"><div className="removeUser">Remover Usuário</div></Link>
                    <Link className="link" to="/Criar"><div className="criar">Criar Denúncia</div></Link>
                 </div>
 
