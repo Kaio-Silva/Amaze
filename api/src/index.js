@@ -13,10 +13,24 @@ app.post('/usuario', async(req,resp) =>{
       let regiao = req.body.ds_regiao;
       let senha = req.body.ds_senha;
       let ativo = true;
-     
-    
+      
 
-      let inserir={
+      let arrouba = email.includes('@')
+    
+      if(arrouba === false)
+      return resp.send({erro:'O email Precisa do caracter @'})
+
+      if(email.length < 12)
+       return resp.send({erro:'O email Precisa de no mínimo 12 caracteres'})
+
+       if(senha.length < 10)
+       return resp.send({erro:'A senha precisa ter no mínimo 10 caracteres'})
+
+       if(telefone.length < 14 || telefone.length >14)
+       return resp.send({erro:'O número de telefone está inválido'})
+    
+      
+       let inserir={
           nm_usuario:usuario,
           ds_email:email,
           nr_telefone:telefone,
@@ -42,6 +56,34 @@ app.get('/usuario',async (req,resp) =>{
     }
 })
 
+
+app.delete('/usuario/:id', async (req,resp) =>{
+
+  let id = req.params.id
+ 
+     let del = await db.infob_amz_tbusuario.destroy({
+       where:{id_usuario: id}
+      })
+      resp.sendStatus(200)
+ 
+})
+
+app.put('/usuario/:id', async(req,resp) =>{
+  let id= req.params.id
+
+  let senha = req.body.ds_senha;
+
+  let alterar = db.infob_amz_tbusuario.update({
+    ds_senha:senha
+  },
+  {
+    where: {id_usuario: id}
+  })
+
+  resp.sendStatus(200)
+
+
+})
 
 
 
