@@ -176,7 +176,7 @@ opacity: 1;
     color: white;
     background-color: black;
     font-size: 1em;
-}
+} /*mexer no botao cagado amanha*/
 
 .botao{
     margin-top: 1.5em;

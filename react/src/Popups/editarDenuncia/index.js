@@ -1,4 +1,6 @@
 import { Container } from './styled'
+import { Padrao } from '../../components/styled/inputs.js';
+import { Textarea } from '../../components/styled/inputs.js';
 
 export default function p4(props){
     return(props.edit) ?(
@@ -20,15 +22,15 @@ export default function p4(props){
                    <div className="titulo-form">Editar Denúncia</div>
 
                    <div className="form1">
-                      <label><input placeholder="Rua júlio silvino" className="f1"/></label> 
+                      <label><Padrao placeholder="Rua júlio silvino"/></label> 
                   </div> 
 
                   <div className="form2">
-                      <label><input placeholder="Parque alto rio Bonito" className="f2"/></label> 
+                      <label><Padrao placeholder="Parque alto rio Bonito"/></label> 
                   </div> 
 
                   <div className="teext">
-                      <label><textarea placeholder="Rua júlio silvino" className="txt"/></label> 
+                      <label><Textarea placeholder="Rua júlio silvino" className="txt"/></label> 
                   </div> 
 
              </div>
