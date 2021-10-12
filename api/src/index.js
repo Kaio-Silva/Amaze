@@ -330,15 +330,18 @@ try{
     })
 
 
-    app.delete('/ReporteDenu/:id',async(req,resp) =>{
-     let id = req.params.id;
-
+    app.delete('/ReporteDenu',async(req,resp) =>{
+      try{
+     let confirm = req.query.ds_confirmado;
+     
      let del = await db.infob_amz_tbreporte_denuncia.destroy({
-       where: {id_reporte_denuncia:id}
+       where: {ds_confirmado:confirm}
      })
 
      resp.sendStatus(200)
-
+    }catch(e){
+      resp.send(e.toString())
+    }
     })
 
 
