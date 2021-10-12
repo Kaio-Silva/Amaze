@@ -48,4 +48,22 @@ const Redondo = styled.button`
 
 `
 
-export { Button, Redondo}
+const Botao = styled.button`
+    width: 5em;
+    height:38px;
+    border-radius: 1.5em;
+    border: 1px solid black;
+    color: white;
+    font-size: 1em;
+    background-color: black;
+
+      &:hover{
+          cursor: pointer;
+          background-color: black;
+          transition: .5s;
+      }
+
+
+`
+
+export { Button, Redondo, Botao }

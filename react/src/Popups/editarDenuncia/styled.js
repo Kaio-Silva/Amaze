@@ -168,21 +168,11 @@ opacity: 1;
 
 }
 
-.botao button{
-    width:240px;
-    height:38px;
-    border-radius: 1.5em;
-    border: 1px solid black;
-    color: white;
+
+.botao button {
     background-color: black;
-    font-size: 1em;
-} /*mexer no botao cagado amanha*/
-
-.botao{
-    margin-top: 1.5em;
+    width: 240px;
 }
-
-
 
 textarea::placeholder{
     font-family:regular;

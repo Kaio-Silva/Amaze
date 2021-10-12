@@ -1,6 +1,7 @@
 import { Container } from './styled'
 import { Padrao } from '../../components/styled/inputs.js';
 import { Textarea } from '../../components/styled/inputs.js';
+import { Botao } from '../../components/styled/botoes';
 
 export default function p4(props){
     return(props.edit) ?(
@@ -52,7 +53,7 @@ export default function p4(props){
 
 
                 <div className="botao">
-                    <button>Concretizar Denúncia</button>
+                    <Botao className="botao">Concretizar Denúncia</Botao>
                 </div>
 
                 { props.children}
