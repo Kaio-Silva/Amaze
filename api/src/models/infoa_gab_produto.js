@@ -53,6 +53,10 @@ export default class infoa_gab_produto extends Model {
     img_quartenaria: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    qtd_parcelas: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     sequelize,

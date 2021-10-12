@@ -68,6 +68,20 @@ let email = req.query.email;
 })
 
 
+// get TOTAL
+app.get('/usuariototal',async (req,resp) =>{
+
+      try{
+           let consulta = await db.infob_amz_tbusuario.findAll({ order:[['id_usuario']] });
+           resp.send(consulta)
+      }catch(e){
+          resp.send(e.toString())
+      }
+  })
+  
+
+
+
 app.delete('/usuario', async (req,resp) =>{
 try{
   let ativo = req.query.ativo;
@@ -174,6 +188,7 @@ try{
 }
 })
 
+// Todas as denúncias do sistema
 app.get('/denunciatotal', async(req,resp) =>{
   try{
        let consulta = await db.infob_amz_tbdenuncia.findAll()
@@ -185,7 +200,7 @@ app.get('/denunciatotal', async(req,resp) =>{
   }
   })
   
-
+// Vai alterar uma deúncia que já foi feita
   app.put('/denuncia/:id', async(req,resp) =>{
     try{
       let id = req.params.id
@@ -223,6 +238,7 @@ app.get('/denunciatotal', async(req,resp) =>{
     }
   })
 
+  // vai deletar uma denúncia que já foi eita
   app.delete('/denuncia/:id', async (req,resp) =>{
     try{
       let id = req.params.id;
@@ -237,6 +253,81 @@ app.get('/denunciatotal', async(req,resp) =>{
      
     })
 
+
+    //Tabela reporte Denúncia
+
+
+  //irá listar todos os reportes que uma denúncia recebeu
+  app.get('/ReporteDenunc', async(req,resp) =>{
+    let iddenu = req.query.id;
+
+    let consulta = await db.infob_amz_tbreporte_denuncia.findAll({
+      where:{id_denuncia:iddenu}
+    }) 
+
+    resp.send(consulta)
+  })
+
+//Get total
+  app.get('/ReporteDenuncia', async(req,resp) =>{
+try{
+    let consulta = await db.infob_amz_tbreporte_denuncia.findAll() 
+    resp.send(consulta)
+}catch(e){
+  resp.send(e.ToString())
+}
+  })
+
+
+
+  //irá reportar uma denúncia falsa
+  app.post('/ReporteDenunc',async(req,resp) =>{
+    try{
+       let idusu = req.body.id_usuario
+       let iddenu = req.body.id_denuncia
+       let data = req.body.dt_reporte
+       let motivo = req.body.ds_motivo_reporte
+       let confirmado = true
+      
+
+      let inserir = {
+        id_usuario:idusu,
+        id_denuncia:iddenu,
+        dt_reporte:data,
+        ds_motivo_reporte:motivo,
+        ds_confirmado:confirmado
+      }
+
+
+      let inserting = await db.infob_amz_tbreporte_denuncia.create(inserir)
+      resp.send(inserting)
+    }catch(e){
+       resp.send('lascou')
+    }
+
+  })
+
+
+  app.put('/Reportefalse/:id', async(req,resp) =>{
+    try{
+      let id= req.params.id
+      
+      let confirmado= req.body.ds_confirmado;
+      console.log(confirmado)
+      let alterar = await db.infob_amz_tbreporte_denuncia.update({
+        ds_confirmado:confirmado
+      },
+      {
+        where: {id_reporte_denuncia: id}
+      })
+    
+      resp.sendStatus(200)
+      }catch(e){
+       resp.send(e.ToString())
+      }
+    
+    
+    })
 
 
 
