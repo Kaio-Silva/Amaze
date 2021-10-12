@@ -330,6 +330,18 @@ try{
     })
 
 
+    app.delete('/ReporteDenu/:id',async(req,resp) =>{
+     let id = req.params.id;
+
+     let del = await db.infob_amz_tbreporte_denuncia.destroy({
+       where: {id_reporte_denuncia:id}
+     })
+
+     resp.sendStatus(200)
+
+    })
+
+
 
 app.listen(process.env.PORT,
 
