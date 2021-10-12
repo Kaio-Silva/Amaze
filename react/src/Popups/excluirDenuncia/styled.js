@@ -78,7 +78,6 @@ outline: none;
     border: none;
     width:140px;
     height:50px;
-    border-radius: 0.5em;
     color:white;
     font-size: 1em;
 }

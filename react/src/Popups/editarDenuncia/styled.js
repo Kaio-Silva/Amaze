@@ -65,7 +65,7 @@ font-family: regular ;
 
 .form1 input{
 border: 1px solid black;
-border-radius: 0.5em;
+border-radius: none;
 width:95%;
 height:2.5em;
 margin-bottom:0.9em;
@@ -73,7 +73,7 @@ margin-bottom:0.9em;
 
 .form2 input{
 border: 1px solid black;
-border-radius: 0.5em;
+border-radius: none;
 width:95%;
 height:2.5em;
 margin-bottom:1.3em;
@@ -82,7 +82,7 @@ margin-bottom:1.3em;
 .teext textarea{
     width:95%;
     height:9em;
-    border-radius: 0.5em;
+    border-radius: none;
     border: 1px solid black;
 }
 
