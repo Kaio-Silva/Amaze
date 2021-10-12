@@ -5,3 +5,19 @@
 body{
     margin: 0px;
 }
+
+::-webkit-scrollbar-track
+{
+	background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgb(28, 236, 184);
+}

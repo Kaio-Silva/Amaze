@@ -8,7 +8,7 @@ const Container = styled.div`
 
     background-color: rgba(47, 167, 159, 0.65);
 
-    height: 90.4vh;
+    height: 85.1vh;
 
     @keyframes exibir {
         0%{ 
@@ -68,33 +68,31 @@ const Container = styled.div`
         margin-bottom: 1.5em;
     }
 
-    .button{
-        display: flex;
-        justify-content: flex-end;
-
-        width: 100%;
+    .Botao{
+        font-size: .8em;
+        text-align: end;
+        width: 95%;
     }
 
-    button{
-        font-family: semiBold;
-        font-size: 1em;
-        color: white;
+    .Botao > button{
+        width: 25%;
+        padding: .7em;
 
-        background-color: #2FA79F;
-
-        border: none;
-        border-radius: 0.3em;
-
-        padding: 0.4em 2.5em;
-        margin: 1em 1em 0em 0em;
+        margin-top: .8em;
     }
 
-    button:hover{
-        cursor: pointer;
-        background-color: rgba(47, 167, 159, 0.75);
-        transition: .5s;
+
+    @media(max-width: 1280px){
+        height: 89.3vh;
     }
 
+    @media(min-width: 1440px){
+        height: 87.6vh;
+    }
+
+    @media(min-width: 1920px){
+        height: 89.9vh;
+    }
 
     @media (max-width: 660px) {
     *{ margin: none;
@@ -103,7 +101,7 @@ const Container = styled.div`
 
     .conteudo{   
         width: 90%;
-        height: 43%;
+        height: 46%;
     }
 
     .titulo{
@@ -130,17 +128,17 @@ const Container = styled.div`
         margin-bottom: 1em;
     }
 
-    .button{
-        justify-content: center;
+    .Botao{
+        font-size: .8em;
+        text-align: end;
+        width: 95%;
     }
 
-    button{
-        font-size: .85em;
+    .Botao > button{
+        width: 95%;
+        padding: .7em;
 
-        width: 90%;
-
-        padding: 0.5em 2.5em;
-        margin: 0.3em 0.9em;
+        margin-top: 0em;
     }
 
     }

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Padrao } from '../../components/styled/inputs.js';
+import { Button } from '../../components/styled/botoes'
 
 import { Container } from './styled.js';
 import Cabecalho from '../../components/commom/cabecalho/index.js'
@@ -18,7 +19,7 @@ function BuscarRegioes(props) {
             <Padrao className="ajustarInput" placeholder="Insira seu email" />
           </div>  
           <hr/>
-          <div className="button"><button> Enviar </button></div>
+          <div className="Botao"><Button> Enviar </Button></div>
         </div>
       </Container>
     </div>

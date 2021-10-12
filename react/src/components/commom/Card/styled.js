@@ -3,10 +3,9 @@ import styled from 'styled-components'
 
 const Card = styled.div`
         border-radius: 2em;
-        padding: 1em 0em 15em 1.2em;
+        padding: 1.2em;
         width: 15.5em;
-        min-height: 5em;
-        max-height: 14vh;
+        min-height: 15em;
         background-color: #fff;
 
         &:hover{
@@ -30,7 +29,6 @@ const Card = styled.div`
         flex-direction: row;
         justify-content: space-between;
 
-        width: 90%;
 
         margin-top: 1.8em;
     }
@@ -78,6 +76,7 @@ const Card = styled.div`
         width: 17em;
 
         border-radius: 3em;
+
     }
 `
 

@@ -11,6 +11,16 @@ const NotFound = styled.div`
     width: 100vw; 
     height: 100vh;
     background-color: #f7f9fb;
+
+    @media(max-width: 1024px){
+        
+        & > img{
+            width: 100vw; 
+            height: 100vh;
+
+            background-size: 100%;
+        }
+    }
 `
 
 

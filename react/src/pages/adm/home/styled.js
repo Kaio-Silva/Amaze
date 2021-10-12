@@ -56,8 +56,6 @@ const Container = styled.div`
             flex-direction: column;
             align-items: center;
 
-            background-image: none;
-
             width: 100vw;
         }
 

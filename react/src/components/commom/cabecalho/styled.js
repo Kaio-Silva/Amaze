@@ -124,7 +124,7 @@ button{
 
 
 .elements-desc-cabhd3{
-    display: ${props => props.buscar === "usar" ? "block" : "none"};
+    display: ${props => props.mapa === "usar" ? "block" : "none"};
     font-family: semiBold;
     font-size: 0.9em;
     margin-right:0.9em

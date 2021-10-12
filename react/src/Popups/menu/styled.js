@@ -99,8 +99,8 @@ color: ${props => props.background === 'white' ? 'black'
 }
 
 
-.buscregion{
-display:${props => props.buscregion ==='usar' ?'block'
+.mapa{
+display:${props => props.mapa ==='usar' ?'block'
                                               :'none'};
 padding-bottom:0.5em ;
 font-size: 0.8em;

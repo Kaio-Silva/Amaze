@@ -67,6 +67,8 @@ const Container = styled.div`
             background-image: none;
 
             width: 100vw;
+
+            padding: 2em 0em;
         }
 
         .baixo::-webkit-scrollbar

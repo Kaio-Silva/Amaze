@@ -199,14 +199,14 @@ opacity: 1;
 .taxas{
     display: flex;
     flex-direction: column;
-    margin-left: 3em ;
+    margin-left: 1em ;
 }
 
 .tituloco{
     color: black;
     font-size: 1.3em;
-    margin-top: 1.6em;
-    margin-bottom: 0.7em;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
 }
 
 

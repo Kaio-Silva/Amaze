@@ -59,6 +59,7 @@ const Container = styled.div`
     @media(max-width: 1024px) {
         width: 70%;
         border-radius: 3em;
+        padding: .5em;
 
         .alinhandoInformacoes{
             display: flex;
@@ -81,8 +82,7 @@ const Container = styled.div`
         }
 
         .alinhandoImg{
-            margin-left: .7em;
-            width: 93%;
+            width: 100%;
         }
     }
 `

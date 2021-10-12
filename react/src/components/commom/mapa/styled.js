@@ -6,8 +6,7 @@ const Container = styled.div`
     flex-direction: column;
 
     #map{
-        min-height: 85.2vh;
-    
+        height: 85.2vh;
     }
  
 
@@ -26,12 +25,26 @@ const Container = styled.div`
         height: 4.5em;
 
         position: absolute;
-        bottom: 22em;
+        bottom: 45%;
     }
 
     .ButtonMap:hover{
         cursor: pointer;
     }
+
+    
+    @media(max-width: 1280px){
+        #map{ height: 89.3vh;}
+    }
+
+    @media(min-width: 1440px){
+        #map{height: 87.6vh;}
+    }
+
+    @media(min-width: 1920px){
+        #map{height: 89.9vh;}
+    }
+
 `
 
 export { Container }

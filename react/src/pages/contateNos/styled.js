@@ -11,21 +11,18 @@ const Container = styled.div`
     background-color: #6BBAB5;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
+    color: white;
     
 
     height: 100vh;
 
-    .cabecalho {
-        justify-content:left;
-        width:100%;
-    }
+    .Logo {
+        display: flex;
+        align-items: flex-start;
+        width: 98%;
 
-    .link{
-        font-family: regular;
-        font-size: 0.9em;
-        color: #0FA882;
-
-        text-decoration: none;
+        margin-bottom: 1.5em;
     }
     
     .BoxLogin{
@@ -41,65 +38,64 @@ const Container = styled.div`
         background-color: white;
     }
 
-    .E-mail{
-        margin-right: 3%;
-    }
-
-    .Facebook{
-        margin-right: 4%;
-    }
 
     .ConteudoAmaze{
         display: flex;
         flex-direction: column;
+
         align-items: center;
         justify-content: center;
-
         background-color: #2FA79F;
        
+        font-family: regular;
 
         width: 40%;
         height: 100%;
     }
 
+    .AlinharConteudo{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: space-between;
+
+        height: 70%;
+    }
+
    .DescLoginA{
-       font-family: extraBold;
+       font-family: semiBold;
        font-size: 1.2em;
        color: white;
+
+       text-align: center;
+
        width: 16em;
-       padding-left: 4em;
-       margin-top: 0em;
-       margin-bottom: 5em;
-       margin-left:2.4em;
-   }
-   .DescLoginB{
-       font-family: RelugarItalic;
-       font-size: 1.1em;
-
-       color: white;
-       width: 19.4em;
-       padding-left: 0em;
-       padding-top: 0em;
-   }
-   .DescLoginC{
-       font-family: RelugarItalic;
-       font-size: 1.1em;
-
-       color: white;
-       width: 19.4em;
-       padding-left: 0em;
-       padding-top: 2em;
-   }
-   .DescLoginD{
-       font-family: RelugarItalic;
-       font-size: 1.1em;
-
-       color: white;
-       width:19.4em;
-       padding-left: 0em;
-       padding-top: 2em;
+       margin-bottom: 2em;
    }
 
+   span{
+       font-family: medio;
+       margin-right: .5em;
+   }
+
+   .Alinhar{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+
+       width: 90%;
+
+       margin: 0em 1em;
+   }
+
+   .Descricao{
+       display: flex;
+       align-items: center;
+       width: 88%;
+   }
+   
    .ConteudoLogin{
        display: flex;
        flex-direction: column;
@@ -111,54 +107,71 @@ const Container = styled.div`
    }
 
    .TituloLogin{
-   
-
-top:3em;
-left: 234px;
-font-size: 2em;
-color: #0FA882;
-
+    margin-bottom: 1.5em;
+    font-family: medio;
+    font-size: 1.5em;
+    color: #0FA882;
    }
 
    .FormLogin{
-       width: 55%;
-      
+       width: 85%;
    }
 
+   .AlinhandoInputs{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+   }
+
+    .input{
+        width: 22em;
+    }
+
    .Inputs{
-       margin-top: 1em;
-       margin-bottom: .8em;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+
+       height: 18em;
+   }
+
+   .TextArea{
+       height: 12em;
    }
 
 
    .ajustarBotao{
-       margin-top: 2em;
-       border-radius: 120px;
-       width:114px; 
-       height:55px;
-     
-     
-
+    margin-top: .5em;
+    padding: .7em 0em;
+    width: 8em;
+    font-size: .9em;
    }
-   .imagens
-   {
+   .imagens{
     flex-direction: row;
     width: 15em;
     margin-left: 10em;
     margin-top: 1em;
    }
-   .botao {
-      
+
+   .botao {   
        text-align: right;
    }
 
    @media (max-width: 1024px){
-        
+        justify-content: space-around;
 
-        .LogoResponsiva{
-            display: block;
+        .Logo{
+            justify-content: center;
         }
 
+        .BoxLogin{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            border-radius: .5em;
+            height: 70%;
+        }
     
         .ConteudoAmaze{
             display: none;
@@ -167,22 +180,42 @@ color: #0FA882;
         .ConteudoLogin{
             display: flex;
             align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 80%;
+            justify-content: space-between;
+            height: 15%;
+            width: 85%;
         }
 
         .TituloLogin{
-            margin-bottom: 1.5em;
+           font-size: .9em;
+           margin-bottom: 0em;
+           margin-top: 2em;
         }
 
         .FormLogin{
-            height: 65%;
+            height: 5%;
+            width: 100%;
+        }
+
+        .Inputs{
+            height: 19em;
+        }
+
+        .AlinhandoInputs{
+            flex-direction: column;
+            height: 5.61em;
+        }
+
+        .input{
             width: 100%;
         }
 
         .Titulo{
             font-size: 0.9em;
+        }
+
+        .ajustarBotao{
+            margin-top: 2em;
+            width: 100%;
         }
 
    }
