@@ -14,7 +14,6 @@ app.post('/usuario', async(req,resp) =>{
       let usuario = req.body.nm_usuario;
       let email = req.body.ds_email;
       let telefone = req.body.nr_telefone;
-      let regiao = req.body.ds_regiao;
       let senha = req.body.ds_senha;
       let ativo = false;
       
@@ -38,7 +37,6 @@ app.post('/usuario', async(req,resp) =>{
           nm_usuario:usuario,
           ds_email:email,
           nr_telefone:telefone,
-          ds_regiao:regiao,
           ds_senha:senha,
           bt_ativo: ativo
       }
@@ -287,7 +285,7 @@ try{
        let iddenu = req.body.id_denuncia
        let data = req.body.dt_reporte
        let motivo = req.body.ds_motivo_reporte
-       let confirmado = true
+       let confirmado = false
       
 
       let inserir = {
