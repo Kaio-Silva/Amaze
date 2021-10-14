@@ -175,7 +175,7 @@ const Container = styled.div`
             align-items: center;
 
             border-radius: .5em;
-            height: 70%;
+            height: 73%;
         }
     
         .ConteudoAmaze{
@@ -202,12 +202,12 @@ const Container = styled.div`
         }
 
         .Inputs{
-            height: 19em;
+            height: 21em;
         }
 
         .AlinhandoInputs{
             flex-direction: column;
-            height: 5.61em;
+            height: 6.7em;
         }
 
         .input{
