@@ -2,7 +2,7 @@
 
 import { Container } from './styled'
 import Logo from '../logo';
-
+import { Link } from 'react-router-dom'
 export default function p4(){
     
     return(
@@ -10,7 +10,7 @@ export default function p4(){
           <div className="abox">
              <div className="cabecalho">
                  <div className="logo"><Logo cor="verde" tamanho="medio"/></div>
-                 <div className="ld"><button><img src="/assets/images/Fechar 5.png" alt=""/></button></div>
+                 <div className="ld"><Link to="/Mapa"><img src="/assets/images/Fechar 5.png" alt=""/></Link></div>
              </div>
 
 

@@ -104,8 +104,16 @@ outline: none;
 @media(max-width:556px)
 {
     .img{
-        margin-left: 10.5em;
+        margin-left: 8.5em;
         margin-bottom: 3em;
+    }
+
+    .abox{
+        width:21em;
+    }
+
+    .titulo{
+        font-size: 1.2em;
     }
 }
 

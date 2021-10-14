@@ -192,13 +192,18 @@ input::placeholder{
 
     .cabecalho{
         align-items: center;
-    }
+    }  
+}
+
+@media(max-width:600px)
+{
+    .abox{
+        width:23.4em;
+    } 
 
     .img{
-        margin-bottom: 3em;
+        margin-bottom:3em;
     }
-
-   
 }
 
 `
