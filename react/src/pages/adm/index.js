@@ -11,7 +11,7 @@ export default function Adm(){
     return(
         <Container>
             <BrowserRouter>
-                <MenuLateral/>
+                <MenuLateral home="true"/>
                 <Conteudo>
                         <Switch>
                             <Route path="/adm/relatorio" exact={true} component={Relatorio} />

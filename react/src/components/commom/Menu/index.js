@@ -10,7 +10,7 @@ export default function MenuLateral(props){
     const[pop,SetPop] = useState(false)
     return (
         <Menu tela={props.tela}>
-            <Logo className="logo" cor="white" tamanho="medio" tela="true"/>
+            <Logo className="logo" cor="white" tamanho="medio" tela="true" home={props.home}/>
             <Pesquisa className="MenuPesq" input="usar" tamanho=""/>
             <div><button onClick={() => SetPop(true)}><MenuResp src="/assets/Images/MenuBranco.svg" alt="" /></button></div>
             <div className="relatorio">
