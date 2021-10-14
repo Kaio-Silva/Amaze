@@ -75,7 +75,7 @@ const Container = styled.div`
 
    .TituloLogin{
        font-family: semiBold;
-       font-size: 1.1em;
+       font-size: 1.7em;
    }
 
    .FormLogin{

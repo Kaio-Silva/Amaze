@@ -25,7 +25,7 @@ function Login (props){
                             <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha" tamanho="100%"/>
                         </div>
                         <div className="alinhandoLinks">
-                            <Link className="link" to="/EsqueceuSenha"> Esqueceu Senha </Link>
+                            <Link className="link" to="/EsqueceuSenha"> Esqueceu a Senha? </Link>
                             <Link className="link" to="/cadastro"> Cadastre-se </Link>
                         </div> 
                         <Link  to="/"><Button className="ajustarBotao" tamanho="grande" cor="verde"> Log in </Button></Link>

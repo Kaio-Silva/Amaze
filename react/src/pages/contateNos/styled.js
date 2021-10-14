@@ -22,7 +22,7 @@ const Container = styled.div`
         align-items: flex-start;
         width: 98%;
 
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
     }
     
     .BoxLogin{
@@ -36,6 +36,7 @@ const Container = styled.div`
         box-shadow:0em 0em 1em 0.2em rgba(0, 0, 0, 0.25);
 
         background-color: white;
+        
     }
 
 
@@ -125,8 +126,13 @@ const Container = styled.div`
 
     .input{
         width: 22em;
+        margin-right:1em;
     }
 
+    .tamanho{
+        width:23em;
+    }
+    
    .Inputs{
        display: flex;
        flex-direction: column;
@@ -163,7 +169,7 @@ const Container = styled.div`
         .Logo{
             justify-content: center;
         }
-
+        
         .BoxLogin{
             display: flex;
             flex-direction: column;
@@ -207,6 +213,9 @@ const Container = styled.div`
 
         .input{
             width: 100%;
+        }
+        .tamanho{
+            width:100%;
         }
 
         .Titulo{
