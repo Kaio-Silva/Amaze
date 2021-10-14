@@ -8,7 +8,7 @@ const Container = styled.div`
     justify-content: left;
     align-items:center;
 
-    font-weight: bold;
+    font-family:semiBold;
     font-size:1em;
 
     border:1px solid black;
@@ -40,25 +40,24 @@ const Container = styled.div`
   .descricao-conteudohdc{
      padding-right:1.5em;
      padding-left:1.5em;
-
-     text-overflow: ellipsis;
+    font-size:1em;
     }
 
     .descricao-conteudohdc1{
      padding-right:1.5em;
      padding-left:1.5em;
-
-
     }
 
     .descricao-conteudohdcc{
      padding-right:1.5em;
      padding-left:1.5em;
+     font-size:12.8px;
     }
 
     .descricao-conteudohdce{
      padding-right:8em;
      padding-left:1.5em;
+     font-size: 12.8px;
     }
 
      .alinhando-imagem{
@@ -75,6 +74,12 @@ const Container = styled.div`
         margin-right:0.6em;
         cursor: pointer;
     }
+
+    @media(max-width:1350px){
+       width: 98%;
+       margin-right:0em;    
+    }
+
 
 
     @media(max-width:1200px){

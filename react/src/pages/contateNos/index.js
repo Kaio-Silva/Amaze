@@ -17,7 +17,7 @@ export default function Contatenos(props){
                             <Padrao  placeholder="Nome" tamanho="100%" cor="verde"/> 
                             <div className="AlinhandoInputs">             
                                 <Padrao  className="input" placeholder="E-mail" cor="verde"/>
-                                <Padrao className="input"className="tamanho" placeholder="Telefone" cor="verde"/> 
+                                <Padrao className="input" placeholder="Telefone" cor="verde"/> 
                             </div>                     
                             <Textarea className="TextArea" placeholder="Mensagem" tamanho="100%" cor="verde"/>
                         </div>

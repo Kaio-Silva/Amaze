@@ -125,8 +125,7 @@ const Container = styled.div`
    }
 
     .input{
-        width: 22em;
-        margin-right:1em;
+        width:49.2%;
     }
 
     .tamanho{
@@ -176,7 +175,7 @@ const Container = styled.div`
             align-items: center;
 
             border-radius: .5em;
-            height: 70%;
+            height: 73%;
         }
     
         .ConteudoAmaze{
@@ -203,12 +202,12 @@ const Container = styled.div`
         }
 
         .Inputs{
-            height: 19em;
+            height: 21em;
         }
 
         .AlinhandoInputs{
             flex-direction: column;
-            height: 5.61em;
+            height: 6.7em;
         }
 
         .input{
@@ -228,6 +227,13 @@ const Container = styled.div`
         }
 
    }
+
+   @media(min-width:1400px){
+     .Inputs{
+         height:21em;
+     }
+   }
+
 `
 
 export { Container }
