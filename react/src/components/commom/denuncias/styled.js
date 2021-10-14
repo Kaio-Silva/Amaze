@@ -76,13 +76,13 @@ const Container = styled.div`
     }
 
     @media(max-width:1350px){
-       width: 98%;
-       margin-right:0em;    
+       width: 70em;
+       margin-right:1em;    
     }
 
 
 
-    @media(max-width:1200px){
+    @media(max-width:1240px){
        
         width: 99%;
 

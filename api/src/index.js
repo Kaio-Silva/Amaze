@@ -173,6 +173,9 @@ app.post('/denuncia', async(req,resp) =>{
       ds_tipo_denuncia:tipo
     }
 
+    let oi = 12;
+    console.log(isNaN(oi))
+
      let inserting = await db.infob_amz_tbdenuncia.create(inserir);
      resp.send(inserting)
     }catch(e){

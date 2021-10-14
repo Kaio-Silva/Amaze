@@ -178,6 +178,8 @@ padding-right: 4em;;
 }
 
 
+
+
 @media(max-width:1000px){
     #style-2::-webkit-scrollbar-track
 {
