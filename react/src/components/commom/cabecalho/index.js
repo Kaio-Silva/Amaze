@@ -5,9 +5,13 @@ import { Pesquisa } from '../../styled/inputs.js'
 import { useState } from 'react';
 import Pop from '../../../Popups/menu'
 import Criar from '../../../Popups/criarDenunc'
+
+
 export default function Cabecalho(props){
     const [po,setPo] = useState(false)
     const [cri, SetCri] = useState(false)
+
+
     return(
   <Container cor={props.cor} titulo={props.titulo} tamanho={props.tamanho} input={props.input} home={props.home} contatenos={props.contatenos} 
              mapa={props.mapa} criar={props.criar} historico={props.historico} login={props.login} cadastrar={props.cadastrar} background={props.background} >

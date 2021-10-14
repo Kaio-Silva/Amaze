@@ -28,22 +28,6 @@ const Container = styled.div`
         overflow-y: scroll;
     }
 
-    .baixo::-webkit-scrollbar-track
-    {
-        /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
-        background-color: #F5F5F5;
-    }
-
-    .baixo::-webkit-scrollbar
-    {
-        width: 1em;
-        background-color: #F5F5F5;
-    }
-
-    .baixo::-webkit-scrollbar-thumb
-    {
-        background-color: #D9E2F3;
-    }
 
     @media (max-width: 1024px) {
         display: flex;
