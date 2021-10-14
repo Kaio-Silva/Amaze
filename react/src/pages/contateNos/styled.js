@@ -125,8 +125,7 @@ const Container = styled.div`
    }
 
     .input{
-        width: 22em;
-        margin-right:1em;
+        width:49.2%;
     }
 
     .tamanho{
@@ -228,6 +227,13 @@ const Container = styled.div`
         }
 
    }
+
+   @media(min-width:1400px){
+     .Inputs{
+         height:21em;
+     }
+   }
+
 `
 
 export { Container }
