@@ -19,14 +19,19 @@ app.post('/usuario', async(req,resp) =>{
       
 
       let arrouba = email.includes('@')
+
+      let especial = senha.includes('#' || '@' || '$' || '&' || '%' || '*' || '.')
     
       if(arrouba === false)
       return resp.send({erro:'O email Precisa do caracter @'})
 
+      if(especial === false)
+      return resp.send({erro:'a senha precisar ter no mínimo 1 caractere especial'})
+
       if(email.length < 12)
        return resp.send({erro:'O email Precisa de no mínimo 12 caracteres'})
 
-       if(senha.length < 10)
+       if(senha.length < 5)
        return resp.send({erro:'A senha precisa ter no mínimo 10 caracteres'})
 
        if(telefone.length < 14 || telefone.length >14)
@@ -99,6 +104,12 @@ app.put('/usuario/:id', async(req,resp) =>{
   let id= req.params.id
 
   let senha = req.body.ds_senha;
+
+  if(senha.length < 5)
+     return resp.send({erro:'A senha precisa ter no mínimo 10 caracteres'})
+
+  if(especial === false)
+        return resp.send({erro:'a senha precisar ter no mínimo 1 caractere especial'})
 
   let alterar = db.infob_amz_tbusuario.update({
     ds_senha:senha
