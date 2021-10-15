@@ -199,12 +199,24 @@ input::placeholder{
 {
     .abox{
         width:23.4em;
-    } 
+    }
+
+    .cabecalho{
+        height: 6em;
+    }
+
+    .le{
+        height:5em;
+    }
 
     .img{
-        margin-bottom:3em;
+       height:5em
     }
+    
 }
+
+
+
 
 `
 
