@@ -13,6 +13,12 @@ const Container = styled.div`
         margin-top: .6em;
     }
 
+    .align{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
     .baixo{
         display: flex;
         flex-direction: column;
@@ -24,7 +30,7 @@ const Container = styled.div`
         background-position: center;
 
         width: 100%;
-        min-height: 90.9vh;
+        height: 90.9vh;
         overflow-y: scroll;
     }
 

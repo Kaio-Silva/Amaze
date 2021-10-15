@@ -15,8 +15,8 @@ const Pesquisa = styled.input`
     width: ${props => props.tamanho === "grande" ? "90%" : "60%"};
     height: 2.2em;
 
-    margin-right: 5em;
-    margin-bottom: 1em;
+    
+    margin-bottom: 1.2em;
     margin-top: 1em;
     padding: 0.8em;
 
