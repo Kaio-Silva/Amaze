@@ -5,6 +5,7 @@ const Container = styled.div`
     flex-direction: row;
     width: 100%;
     height: 100vh;
+    background-color:#B8BABF;
 
     @media (max-width: 1024px) {
         display: flex;
