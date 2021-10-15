@@ -35,30 +35,26 @@ export default function Mapa(){
     loader.load().then((google) => {
       const map = new google.maps.Map(document.getElementById("map"), mapOptions)
 
-      map.addListener("click", (mapsMouseEvent) => {
+      map.addListener('click' , (mapsMouseEvent) => {
         let loc = mapsMouseEvent.latLng.toJSON();
-
-
-
-        let pin = new google.maps.Marker({
-          position: loc,
-          map: map,
-          optimized: false,
-          icon: "/assets/images/pinMap.png",
-        });
-
-        pin.addListener("click", () => {
-          map.panTo(pin.getPosition());
-          setLoc(loc);
-          setPop(true);
-        });
-
+        pin.setPosition(loc);
       });
 
+      let pin = new google.maps.Marker({
+             position: loc,
+             map: map,
+             optimized: false,
+             icon: "/assets/images/pinMap.png",
+           });
+
+             pin.addListener("click", () => {
+             map.panTo(pin.getPosition());
+             setLoc(loc);
+             setPop(true);
+           });
     });
 
   }, [])
-
 
   
     return(
