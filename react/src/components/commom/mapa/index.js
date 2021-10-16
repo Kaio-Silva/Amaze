@@ -28,31 +28,80 @@ export default function Mapa(){
         lat: -23.7300074,
         lng: -46.6970212 },
         zoom: 15,
-        disableDefaultUI: true
+        
+        styles: [
+            {
+              "featureType": "administrative",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "labels.icon",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "transit",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "geometry.fill",
+              "stylers": [
+                {
+                  "saturation": 100
+                }
+              ]
+            }
+          ]
     };
     
 
+    
     loader.load().then((google) => {
       const map = new google.maps.Map(document.getElementById("map"), mapOptions)
 
-      map.addListener('click' , (mapsMouseEvent) => {
-        let loc = mapsMouseEvent.latLng.toJSON();
-        pin.setPosition(loc);
+      var pin = new google.maps.Marker({
+        position: mapOptions,
+        map: map,
+        optimized: false,
+        icon: "/assets/images/pinMap.png",
       });
 
-      let pin = new google.maps.Marker({
-             position: loc,
-             map: map,
-             optimized: false,
-             icon: "/assets/images/pinMap.png",
+
+      map.addListener('click', function(e) {
+        var loc = e.latLng.toJSON();
+
+            pin.addListener("click", () => {
+              map.panTo(pin.getPosition());
+              setLoc(loc);
+              setPop(true);
            });
 
-             pin.addListener("click", () => {
-             map.panTo(pin.getPosition());
-             setLoc(loc);
-             setPop(true);
-           });
+       pin.setPosition(loc);
+
     });
+  });
 
   }, [])
 
