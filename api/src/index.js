@@ -1,9 +1,26 @@
 import db from './db.js';
 import express from 'express'
 import cors from 'cors'
+import axios from 'axios'
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+
+
+app.get('/geo', async(req,resp) =>{
+  try{
+    let local = req.query.loc
+  let r = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${local}.json?access_token=pk.eyJ1IjoiYW1hemV0Y2MiLCJhIjoiY2t1c3Bydm9qMDV3cTJubXAxbTBwc3prOCJ9.RyiEOThe0WLUnbybjWoVgw`
+  )
+  resp.send(r.data);
+  }catch(e){
+    resp.send(e)
+  }
+ 
+})
+
+
 
 //tabela Usuário
 
