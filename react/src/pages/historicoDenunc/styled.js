@@ -234,7 +234,8 @@ padding-right: 4em;;
     }
 
     .titulo-conteudohd{
-        font-size: 1.3em;
+        font-size: 1em;
+        height: 1.5em;
     }
 
     .registros-denuncias-hd{
@@ -254,6 +255,13 @@ padding-right: 4em;;
 
 
 
+}
+
+@media(max-width:1440px){
+    .denuc{
+        height: 76vh;
+        width: 90vw;
+    }
 }
 
 `
