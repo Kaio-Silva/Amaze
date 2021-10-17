@@ -6,6 +6,30 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/geo3', async (req,resp) =>{
+  try{
+    let local = req.query.loc;
+
+    let r = axios.get(`http://api.positionstack.com/v1/forward?access_key=3c0358c3ade4a59b726080b049749a66&query=${local}`)
+    resp.send(r.data)
+  }catch(e){
+    resp.send(e.ToString())
+  }
+})
+
+
+app.get('/geo2', async (req,resp) =>{
+  try{
+    let local = req.query.loc;
+
+    let r = await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${local}&key=1b24fbfccdb648dca469fd5b6ac9e6a6`)
+    resp.send(r.data)
+  }catch(e){
+
+  }
+})
+
+
 
 
 app.get('/geo', async(req,resp) =>{
