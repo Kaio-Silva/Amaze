@@ -6,19 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/geo3', async (req,resp) =>{
-  try{
-    let local = req.query.loc;
-
-    let r = axios.get(`http://api.positionstack.com/v1/forward?access_key=3c0358c3ade4a59b726080b049749a66&query=${local}`)
-    resp.send(r.data)
-  }catch(e){
-    resp.send(e.ToString())
-  }
-})
-
-
-app.get('/geo2', async (req,resp) =>{
+app.get('/geo', async (req,resp) =>{
   try{
     let local = req.query.loc;
 
@@ -28,22 +16,6 @@ app.get('/geo2', async (req,resp) =>{
 
   }
 })
-
-
-
-
-app.get('/geo', async(req,resp) =>{
-  try{
-    let local = req.query.loc
-  let r = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${local}.json?access_token=pk.eyJ1IjoiYW1hemV0Y2MiLCJhIjoiY2t1c3Bydm9qMDV3cTJubXAxbTBwc3prOCJ9.RyiEOThe0WLUnbybjWoVgw`
-  )
-  resp.send(r.data);
-  }catch(e){
-    resp.send(e)
-  }
- 
-})
-
 
 
 //tabela Usuário
