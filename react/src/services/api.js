@@ -5,8 +5,14 @@ const api = axios.create({
 
 
 export default class Api {
+
+    async Geocoding(){
+        let i = await api.get('/geo2')
+        return i.data;
+    }
+
    
-    async InserirUSU(usuario,email,telefone,senha,ativo){
+    async InserirUSU(usuario,email,regiao,telefone,senha,ativo){
         let i = await api.post('/usuario',{nm_usuario:usuario,ds_email:email, nr_telefone:telefone,ds_regiao:regiao,ds_senha:senha,bt_ativo: ativo});
         return i.data;
      }

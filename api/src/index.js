@@ -6,16 +6,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/geo', async (req,resp) =>{
+
+app.get('/geo2', async (req,resp) =>{
   try{
     let local = req.query.loc;
 
     let r = await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${local}&key=1b24fbfccdb648dca469fd5b6ac9e6a6`)
-    resp.send(r.data)
+    resp.send(r.data.results)
   }catch(e){
 
   }
 })
+
+
 
 
 //tabela Usuário
