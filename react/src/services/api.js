@@ -7,7 +7,7 @@ const api = axios.create({
 export default class Api {
 
     async Geocoding(){
-        let i = await api.get('/geo2')
+        let i = api.get('/geo2')
         return i.data;
     }
 
