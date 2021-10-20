@@ -10,11 +10,11 @@ const api = new Api();
 
 function BuscarRegioes(props) {
 const[cordinates,SetCordinates] = useState([])
-
+const[cord,SetCord] = useState([1,2,3,4,5])
   async function geo(){
     let r = api.Geocoding()
     SetCordinates(r)
-    console.log(cordinates)
+    console.log(cord)
   }
   
   return (
