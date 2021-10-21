@@ -10,15 +10,13 @@ const api = new Api();
 
 function BuscarRegioes(props) {
 const[cordinates,setCordinates] = useState([])
-const[cord,setCord] = useState([1,2,3,4,5])
 
+const[ola,setOla] = useState('Rua Julio Silvino')
 
-let loc = 'Rua Julio Silvino'
   async function geo(){
-    let r = api.Geocoding(loc);
-    setCordinates(r)
-    console.log(r) 
-    console.log(cordinates)
+    let r = await api.Geocoding(ola);
+    console.log(r[0].geometry)
+    setCordinates(r[0].geometry)
   }
   
   return (
