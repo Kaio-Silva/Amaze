@@ -257,12 +257,12 @@ padding-right: 4em;;
 
 }
 
-@media(max-width:1440px){
+/*@media(max-width:1440px){
     .denuc{
         height: 76vh;
         width: 90vw;
     }
-}
+}*/
 
 `
 
