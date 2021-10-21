@@ -9,12 +9,16 @@ import Api from '../../services/api';
 const api = new Api();
 
 function BuscarRegioes(props) {
-const[cordinates,SetCordinates] = useState([])
-const[cord,SetCord] = useState([1,2,3,4,5])
+const[cordinates,setCordinates] = useState([])
+const[cord,setCord] = useState([1,2,3,4,5])
+
+
+let loc = 'Rua Julio Silvino'
   async function geo(){
-    let r = api.Geocoding()
-    SetCordinates(r)
-    console.log(cord)
+    let r = api.Geocoding(loc);
+    setCordinates(r)
+    console.log(r) 
+    console.log(cordinates)
   }
   
   return (
