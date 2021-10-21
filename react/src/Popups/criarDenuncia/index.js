@@ -8,7 +8,10 @@ const api = new Api()
 
 export default function P4(props){
   const[cordinates,setCordinates] = useState([])
-  const[loc,setLoc] = useState('Rua Julio Silvino')
+  const[bairro,setBairro] = useState('')
+  const[ocorrencia,setOcorrencia] = useState('')
+  const[loc,setLoc] = useState('')
+  
 
   async function geo(){
     let r = await api.Geocoding(loc);
@@ -21,9 +24,11 @@ export default function P4(props){
     }
 
     setCordinates(insert)
-    console.log(cordinates)
-
+    console.log(bairro)
+    console.log(loc)
+    console.log(ocorrencia)
   }
+  
     return(props.value) ?(
         <Container>
           <div className="abox">
@@ -38,19 +43,19 @@ export default function P4(props){
                    <div className="titulo-form">Criar Denúncia</div>
 
                    <div className="inputs">
-                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%"/>
+                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%">{cordinates.latitute}</Padrao>
                   </div> 
 
                    <div className="inputs">
-                      <Padrao className="ajustarInput" placeholder="Digite o nome da rua" cor="verde"tamanho="100%"/>
+                      <Padrao onChange={ e => setLoc(e.target.value)} className="ajustarInput" placeholder="Digite o nome da rua" cor="verde"tamanho="100%"/>
                   </div> 
 
                   <div className="inputs">
-                      <Padrao className="ajustarInput" placeholder="Digite o nome do bairro" cor="verde"tamanho="100%"/>
+                      <Padrao onChange={ e => setBairro(e.target.value)} className="ajustarInput" placeholder="Digite o nome do bairro" cor="verde"tamanho="100%"/>
                   </div> 
 
                   <div className="inputs">
-                      <Textarea  placeholder="Descreva a ocorrência" cor="verde"tamanho="100%"/>
+                      <Textarea onChange={ e => setOcorrencia(e.target.value)}  placeholder="Descreva a ocorrência" cor="verde"tamanho="100%"/>
                   </div> 
 
              </div>
