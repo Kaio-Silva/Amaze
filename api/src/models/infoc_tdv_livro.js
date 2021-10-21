@@ -1,58 +1,70 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_amz_tbdenuncia extends Model {
+export default class infoc_tdv_livro extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_denuncia: {
+    id_livro: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
-      type: DataTypes.INTEGER,
+    nm_livro: {
+      type: DataTypes.STRING(250),
       allowNull: true
     },
-    ds_longitude: {
+    ds_descricao: {
+      type: DataTypes.STRING(250),
+      allowNull: true
+    },
+    vl_de: {
       type: DataTypes.DECIMAL(10,0),
       allowNull: true
     },
-    ds_latitude: {
+    vl_para: {
       type: DataTypes.DECIMAL(10,0),
       allowNull: true
     },
-    dt_denuncia: {
+    dt_lancamento: {
       type: DataTypes.DATE,
       allowNull: true
     },
-    ds_ocorrencia: {
-      type: DataTypes.STRING(255),
+    ds_autora: {
+      type: DataTypes.STRING(150),
       allowNull: true
     },
-    qtd_reporte_recebido: {
+    ds_editora: {
+      type: DataTypes.STRING(150),
+      allowNull: true
+    },
+    id_genero: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_genero',
+        key: 'id_genero'
+      }
+    },
+    bt_disponivel: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    ds_rua: {
-      type: DataTypes.STRING(255),
+    ds_imagen: {
+      type: DataTypes.STRING(500),
       allowNull: true
     },
-    ds_bairro: {
-      type: DataTypes.STRING(255),
+    ds_brochura: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    qtd_avaliacao: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_tipo_denuncia: {
-      type: DataTypes.STRING(255),
+    ds_promocao: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_amz_tbdenuncia',
+    tableName: 'infoc_tdv_livro',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +72,18 @@ export default class infob_amz_tbdenuncia extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_denuncia" },
+          { name: "id_livro" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_genero",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_genero" },
         ]
       },
     ]
   });
-  return infob_amz_tbdenuncia;
+  return infoc_tdv_livro;
   }
 }

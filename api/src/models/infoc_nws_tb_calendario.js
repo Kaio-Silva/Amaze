@@ -1,34 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_rank extends Model {
+export default class infoc_nws_tb_calendario extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_rank: {
+    id_calendario: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
+    id_evento: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_produto',
-        key: 'id_produto'
+        model: 'infoc_nws_tb_evento',
+        key: 'id_evento'
       }
     },
-    qtd_clique: {
-      type: DataTypes.DECIMAL(6,2),
-      allowNull: false
-    },
-    dt_clique: {
+    dt_evento: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_rank',
+    tableName: 'infoc_nws_tb_calendario',
     timestamps: false,
     indexes: [
       {
@@ -36,18 +32,18 @@ export default class infoa_enl_rank extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_rank" },
+          { name: "id_calendario" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_evento",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_evento" },
         ]
       },
     ]
   });
-  return infoa_enl_rank;
+  return infoc_nws_tb_calendario;
   }
 }

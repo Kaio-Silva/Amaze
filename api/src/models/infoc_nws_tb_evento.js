@@ -1,58 +1,74 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_amz_tbdenuncia extends Model {
+export default class infoc_nws_tb_evento extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_denuncia: {
+    id_evento: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_categoria: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_nws_tb_categoria',
+        key: 'id_categoria'
+      }
+    },
+    nm_evento: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_longitude: {
-      type: DataTypes.DECIMAL(10,0),
+    ds_duracao: {
+      type: DataTypes.TIME,
       allowNull: true
     },
-    ds_latitude: {
-      type: DataTypes.DECIMAL(10,0),
+    ds_classificacao: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: true
     },
-    dt_denuncia: {
+    vl_ingresso: {
+      type: DataTypes.DECIMAL(15,2),
+      allowNull: true
+    },
+    ds_local: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    dt_min: {
       type: DataTypes.DATE,
       allowNull: true
     },
-    ds_ocorrencia: {
+    dt_max: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    ds_elenco: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    qtd_reporte_recebido: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_rua: {
+    ds_evento: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_bairro: {
+    img_capa: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    qtd_avaliacao: {
-      type: DataTypes.INTEGER,
+    img_fundo: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_tipo_denuncia: {
+    img_sec: {
       type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_amz_tbdenuncia',
+    tableName: 'infoc_nws_tb_evento',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +76,18 @@ export default class infob_amz_tbdenuncia extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_denuncia" },
+          { name: "id_evento" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_categoria",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_categoria" },
         ]
       },
     ]
   });
-  return infob_amz_tbdenuncia;
+  return infoc_nws_tb_evento;
   }
 }

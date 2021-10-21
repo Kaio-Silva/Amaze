@@ -12,10 +12,22 @@ export default class infoa_enl_produto extends Model {
     },
     id_categoria: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_categoria',
+        key: 'id_categoria'
+      }
     },
     id_usuario: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
+      }
+    },
+    ds_imagem: {
+      type: DataTypes.STRING(5000),
       allowNull: false
     },
     nm_produto: {

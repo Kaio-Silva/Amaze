@@ -1,22 +1,22 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_categoria extends Model {
+export default class infoc_tdv_genero extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_categoria: {
+    id_genero: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_categoria: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+    ds_genero: {
+      type: DataTypes.STRING(150),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_categoria',
+    tableName: 'infoc_tdv_genero',
     timestamps: false,
     indexes: [
       {
@@ -24,11 +24,11 @@ export default class infoa_enl_categoria extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_categoria" },
+          { name: "id_genero" },
         ]
       },
     ]
   });
-  return infoa_enl_categoria;
+  return infoc_tdv_genero;
   }
 }

@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_vendas extends Model {
+export default class infoc_tct_chat extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_vendas: {
+    id_chat: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,23 +12,31 @@ export default class infoa_sti_vendas extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tct_cliente',
+        key: 'id_cliente'
+      }
     },
-    id_produto: {
+    id_administrador: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_tct_administrador',
+        key: 'id_administrador'
+      }
+    },
+    ds_mensagem: {
+      type: DataTypes.STRING(150),
       allowNull: true
     },
-    ds_codigo: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    dt_venda: {
+    dt_mensagem: {
       type: DataTypes.DATE,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_vendas',
+    tableName: 'infoc_tct_chat',
     timestamps: false,
     indexes: [
       {
@@ -36,7 +44,7 @@ export default class infoa_sti_vendas extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_vendas" },
+          { name: "id_chat" },
         ]
       },
       {
@@ -47,14 +55,14 @@ export default class infoa_sti_vendas extends Model {
         ]
       },
       {
-        name: "id_produto",
+        name: "id_administrador",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_administrador" },
         ]
       },
     ]
   });
-  return infoa_sti_vendas;
+  return infoc_tct_chat;
   }
 }

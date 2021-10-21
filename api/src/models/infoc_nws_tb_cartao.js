@@ -1,58 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_amz_tbdenuncia extends Model {
+export default class infoc_nws_tb_cartao extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_denuncia: {
+    id_cartao: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_venda: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_nws_tb_venda',
+        key: 'id_venda'
+      }
     },
-    ds_longitude: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    ds_latitude: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    dt_denuncia: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    ds_ocorrencia: {
+    nr_cartao: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    qtd_reporte_recebido: {
+    ds_cvc: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    ds_rua: {
+    dt_vencimento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    ds_cpf: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_bairro: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    qtd_avaliacao: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_tipo_denuncia: {
+    nm_titular: {
       type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_amz_tbdenuncia',
+    tableName: 'infoc_nws_tb_cartao',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +48,18 @@ export default class infob_amz_tbdenuncia extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_denuncia" },
+          { name: "id_cartao" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_venda",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_venda" },
         ]
       },
     ]
   });
-  return infob_amz_tbdenuncia;
+  return infoc_nws_tb_cartao;
   }
 }

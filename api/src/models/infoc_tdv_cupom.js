@@ -1,22 +1,26 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_categoria extends Model {
+export default class infoc_tdv_cupom extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_categoria: {
+    id_cupom: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_categoria: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+    dt_duracao: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    vl_porcentagem: {
+      type: DataTypes.DECIMAL(10,0),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_categoria',
+    tableName: 'infoc_tdv_cupom',
     timestamps: false,
     indexes: [
       {
@@ -24,11 +28,11 @@ export default class infoa_enl_categoria extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_categoria" },
+          { name: "id_cupom" },
         ]
       },
     ]
   });
-  return infoa_enl_categoria;
+  return infoc_tdv_cupom;
   }
 }

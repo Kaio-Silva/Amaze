@@ -1,26 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_dtn_tb_favoritos extends Model {
+export default class infoc_atn_tb_chat extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_fav: {
+    id_chat: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
+    id_sala: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    id_cliente: {
-      type: DataTypes.INTEGER,
+    ds_mensagem: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    dt_mensagem: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    tp_enviado_por: {
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_dtn_tb_favoritos',
+    tableName: 'infoc_atn_tb_chat',
     timestamps: false,
     indexes: [
       {
@@ -28,25 +36,18 @@ export default class infoa_dtn_tb_favoritos extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_fav" },
+          { name: "id_chat" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_sala",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
-        ]
-      },
-      {
-        name: "id_cliente",
-        using: "BTREE",
-        fields: [
-          { name: "id_cliente" },
+          { name: "id_sala" },
         ]
       },
     ]
   });
-  return infoa_dtn_tb_favoritos;
+  return infoc_atn_tb_chat;
   }
 }

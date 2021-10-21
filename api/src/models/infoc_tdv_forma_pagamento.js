@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_venda extends Model {
+export default class infoc_tdv_forma_pagamento extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_venda: {
+    id_forma_pagamento: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,51 +12,39 @@ export default class infod_ssc_venda extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    id_endereco_entrega: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_entrega: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_frete: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    nm_destinatario: {
-      type: DataTypes.STRING(500),
-      allowNull: true
-    },
-    tp_forma_pagamento: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    dt_venda: {
-      type: DataTypes.DATEONLY,
-      allowNull: true
-    },
-    ds_pagamento: {
-      type: DataTypes.STRING(500),
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_cliente',
+        key: 'id_cliente'
+      }
     },
     nr_cartao: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    qtd_parcelas: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_codigo_seguranca: {
       type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    nm_titular_cartao: {
+      type: DataTypes.STRING(50),
+      allowNull: true
+    },
+    nm_sobrenome_cartao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    dt_vencimento: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    nr_parcelas: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    ds_cvv: {
+      type: DataTypes.INTEGER,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_venda',
+    tableName: 'infoc_tdv_forma_pagamento',
     timestamps: false,
     indexes: [
       {
@@ -64,7 +52,7 @@ export default class infod_ssc_venda extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_venda" },
+          { name: "id_forma_pagamento" },
         ]
       },
       {
@@ -74,15 +62,8 @@ export default class infod_ssc_venda extends Model {
           { name: "id_cliente" },
         ]
       },
-      {
-        name: "id_endereco_entrega",
-        using: "BTREE",
-        fields: [
-          { name: "id_endereco_entrega" },
-        ]
-      },
     ]
   });
-  return infod_ssc_venda;
+  return infoc_tdv_forma_pagamento;
   }
 }

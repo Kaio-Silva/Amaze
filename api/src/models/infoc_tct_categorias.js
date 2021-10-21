@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_categoria extends Model {
+export default class infoc_tct_categorias extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_categoria: {
@@ -11,12 +11,12 @@ export default class infoa_enl_categoria extends Model {
       primaryKey: true
     },
     nm_categoria: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+      type: DataTypes.STRING(40),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_categoria',
+    tableName: 'infoc_tct_categorias',
     timestamps: false,
     indexes: [
       {
@@ -29,6 +29,6 @@ export default class infoa_enl_categoria extends Model {
       },
     ]
   });
-  return infoa_enl_categoria;
+  return infoc_tct_categorias;
   }
 }

@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_dtn_tb_endereco extends Model {
+export default class infoc_tdv_endereco extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_endereco: {
@@ -12,35 +12,27 @@ export default class infoa_dtn_tb_endereco extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_cliente',
+        key: 'id_cliente'
+      }
+    },
+    nm_rua: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_cidade: {
-      type: DataTypes.STRING(200),
-      allowNull: false
-    },
-    ds_uf: {
-      type: DataTypes.STRING(5),
-      allowNull: false
-    },
     ds_cep: {
-      type: DataTypes.STRING(10),
-      allowNull: false
+      type: DataTypes.STRING(16),
+      allowNull: true
     },
-    ds_logradouro: {
-      type: DataTypes.STRING(200),
-      allowNull: false
-    },
-    nr_numero: {
+    ds_numero: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_complemento: {
-      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_dtn_tb_endereco',
+    tableName: 'infoc_tdv_endereco',
     timestamps: false,
     indexes: [
       {
@@ -60,6 +52,6 @@ export default class infoa_dtn_tb_endereco extends Model {
       },
     ]
   });
-  return infoa_dtn_tb_endereco;
+  return infoc_tdv_endereco;
   }
 }

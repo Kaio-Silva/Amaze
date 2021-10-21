@@ -1,38 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_endereco extends Model {
+export default class infob_apn_tb_user extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_endereco: {
+    ID_USER: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    ds_endereco: {
-      type: DataTypes.STRING(255),
+    NM_USER: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    nr_endereco: {
-      type: DataTypes.INTEGER,
+    NM_SOBRENOME: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_cep: {
-      type: DataTypes.STRING(255),
+    DS_EMAIL: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    nm_cidade: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    ds_complemeno: {
-      type: DataTypes.STRING(255),
+    DS_SENHA: {
+      type: DataTypes.STRING(32),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_endereco',
+    tableName: 'infob_apn_tb_user',
     timestamps: false,
     indexes: [
       {
@@ -40,11 +36,11 @@ export default class infod_ssc_endereco extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_endereco" },
+          { name: "ID_USER" },
         ]
       },
     ]
   });
-  return infod_ssc_endereco;
+  return infob_apn_tb_user;
   }
 }

@@ -1,22 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_venda_produto extends Model {
+export default class infoc_nws_tb_venda extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_venda_produto: {
+    id_venda: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_vendas: {
+    id_usuario: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_nws_tb_usuario',
+        key: 'id_usuario'
+      }
+    },
+    ds_situacao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    tp_pagamento: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_venda_produto',
+    tableName: 'infoc_nws_tb_venda',
     timestamps: false,
     indexes: [
       {
@@ -24,18 +36,18 @@ export default class infoa_sti_venda_produto extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_venda_produto" },
+          { name: "id_venda" },
         ]
       },
       {
-        name: "id_vendas",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
-          { name: "id_vendas" },
+          { name: "id_usuario" },
         ]
       },
     ]
   });
-  return infoa_sti_venda_produto;
+  return infoc_nws_tb_venda;
   }
 }

@@ -25,10 +25,6 @@ export default class infob_amz_tbreporte_denuncia extends Model {
     ds_motivo_reporte: {
       type: DataTypes.STRING(255),
       allowNull: true
-    },
-    ds_confirmado: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
     }
   }, {
     sequelize,

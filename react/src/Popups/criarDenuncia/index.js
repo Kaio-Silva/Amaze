@@ -1,10 +1,29 @@
 import { Container } from './styled'
 import Logo from '../../components/commom/logo';
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
+import { useState } from 'react';
+import Api from '../../services/api'
 
+const api = new Api()
 
-export default function p4(props){
-    
+export default function P4(props){
+  const[cordinates,setCordinates] = useState([])
+  const[loc,setLoc] = useState('Rua Julio Silvino')
+
+  async function geo(){
+    let r = await api.Geocoding(loc);
+
+    let insert= 
+      {
+       Latitude: r[0].geometry.lat,
+       longitude: r[0].geometry.lng
+     
+    }
+
+    setCordinates(insert)
+    console.log(cordinates)
+
+  }
     return(props.value) ?(
         <Container>
           <div className="abox">
@@ -53,7 +72,7 @@ export default function p4(props){
 
 
                 <div className="botao">
-                    <button>Concretizar Denúncia</button>
+                    <button onClick={geo}>Concretizar Denúncia</button>
                 </div>
 
 

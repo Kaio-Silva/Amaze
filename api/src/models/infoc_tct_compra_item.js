@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_pedido_compra_e_venda extends Model {
+export default class infoc_tct_compra_item extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_pedido_compra_e_venda: {
+    id_pedido: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,31 +12,23 @@ export default class infoa_enl_pedido_compra_e_venda extends Model {
     },
     id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_produto',
+        model: 'infoc_tct_produto',
         key: 'id_produto'
       }
     },
-    id_pedido: {
+    id_compra: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_pedido',
-        key: 'id_pedido'
+        model: 'infoc_tct_compra',
+        key: 'id_compra'
       }
-    },
-    qtd_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    vl_pedido_compra_e_venda: {
-      type: DataTypes.DECIMAL(6,2),
-      allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_pedido_compra_e_venda',
+    tableName: 'infoc_tct_compra_item',
     timestamps: false,
     indexes: [
       {
@@ -44,7 +36,7 @@ export default class infoa_enl_pedido_compra_e_venda extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_pedido_compra_e_venda" },
+          { name: "id_pedido" },
         ]
       },
       {
@@ -55,14 +47,14 @@ export default class infoa_enl_pedido_compra_e_venda extends Model {
         ]
       },
       {
-        name: "id_pedido",
+        name: "id_compra",
         using: "BTREE",
         fields: [
-          { name: "id_pedido" },
+          { name: "id_compra" },
         ]
       },
     ]
   });
-  return infoa_enl_pedido_compra_e_venda;
+  return infoc_tct_compra_item;
   }
 }

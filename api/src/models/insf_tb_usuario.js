@@ -1,37 +1,38 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_cliente extends Model {
+export default class insf_tb_usuario extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cliente: {
+    id_usuario: {
+      autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_cliente: {
-      type: DataTypes.STRING(200),
+    nm_usuario: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_cpf: {
-      type: DataTypes.STRING(200),
+    ds_email: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_celular: {
-      type: DataTypes.STRING(200),
+    ds_codigo_rec: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_senha: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    id_endereco: {
-      type: DataTypes.INTEGER,
+    dt_inclusao: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_cliente',
+    tableName: 'insf_tb_usuario',
     timestamps: false,
     indexes: [
       {
@@ -39,18 +40,11 @@ export default class infoa_sti_cliente extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_cliente" },
-        ]
-      },
-      {
-        name: "id_endereco",
-        using: "BTREE",
-        fields: [
-          { name: "id_endereco" },
+          { name: "id_usuario" },
         ]
       },
     ]
   });
-  return infoa_sti_cliente;
+  return insf_tb_usuario;
   }
 }

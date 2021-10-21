@@ -1,38 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_endereco extends Model {
+export default class infoc_atn_tb_empresa extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_endereco: {
+    id_empresa: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    ds_cep: {
+    nm_nome: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_endereco: {
+    nr_cnpj: {
+      type: DataTypes.DOUBLE,
+      allowNull: true
+    },
+    nm_ramo: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
-    nr_endereco: {
-      type: DataTypes.INTEGER,
+    nr_telefone: {
+      type: DataTypes.DOUBLE,
       allowNull: true
     },
-    ds_complemento: {
+    ds_estado_cidade: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_cidade: {
+    ds_email: {
       type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_senha: {
+      type: DataTypes.DOUBLE,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_endereco',
+    tableName: 'infoc_atn_tb_empresa',
     timestamps: false,
     indexes: [
       {
@@ -40,11 +48,11 @@ export default class infoa_sti_endereco extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_endereco" },
+          { name: "id_empresa" },
         ]
       },
     ]
   });
-  return infoa_sti_endereco;
+  return infoc_atn_tb_empresa;
   }
 }

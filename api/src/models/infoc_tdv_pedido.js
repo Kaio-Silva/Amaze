@@ -1,42 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_pedido_compra_e_venda extends Model {
+export default class infoc_tdv_pedido extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_pedido_compra_e_venda: {
+    id_pedido: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
+    id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_produto',
-        key: 'id_produto'
+        model: 'infoc_tdv_cliente',
+        key: 'id_cliente'
       }
     },
-    id_pedido: {
+    id_cupom: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_pedido',
-        key: 'id_pedido'
+        model: 'infoc_tdv_cupom',
+        key: 'id_cupom'
       }
     },
-    qtd_produto: {
+    nr_pedido: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    vl_pedido_compra_e_venda: {
-      type: DataTypes.DECIMAL(6,2),
-      allowNull: false
+    dt_pedido: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_pedido_compra_e_venda',
+    tableName: 'infoc_tdv_pedido',
     timestamps: false,
     indexes: [
       {
@@ -44,25 +44,25 @@ export default class infoa_enl_pedido_compra_e_venda extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_pedido_compra_e_venda" },
-        ]
-      },
-      {
-        name: "id_produto",
-        using: "BTREE",
-        fields: [
-          { name: "id_produto" },
-        ]
-      },
-      {
-        name: "id_pedido",
-        using: "BTREE",
-        fields: [
           { name: "id_pedido" },
+        ]
+      },
+      {
+        name: "id_cliente",
+        using: "BTREE",
+        fields: [
+          { name: "id_cliente" },
+        ]
+      },
+      {
+        name: "id_cupom",
+        using: "BTREE",
+        fields: [
+          { name: "id_cupom" },
         ]
       },
     ]
   });
-  return infoa_enl_pedido_compra_e_venda;
+  return infoc_tdv_pedido;
   }
 }

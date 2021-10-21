@@ -1,42 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_pedido_compra_e_venda extends Model {
+export default class infoa_gab_entrega extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_pedido_compra_e_venda: {
+    id_entrega: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
+    id_endereco: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'infoa_enl_produto',
-        key: 'id_produto'
+        model: 'infoa_gab_endereco',
+        key: 'id_endereco'
       }
     },
-    id_pedido: {
+    ds_situacao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    dt_saida: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    dt_entrega: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    id_venda_item: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_pedido',
-        key: 'id_pedido'
+        model: 'infoa_gab_venda_item',
+        key: 'id_venda_item'
       }
-    },
-    qtd_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    vl_pedido_compra_e_venda: {
-      type: DataTypes.DECIMAL(6,2),
-      allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_pedido_compra_e_venda',
+    tableName: 'infoa_gab_entrega',
     timestamps: false,
     indexes: [
       {
@@ -44,25 +48,25 @@ export default class infoa_enl_pedido_compra_e_venda extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_pedido_compra_e_venda" },
+          { name: "id_entrega" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_endereco",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_endereco" },
         ]
       },
       {
-        name: "id_pedido",
+        name: "id_venda_item",
         using: "BTREE",
         fields: [
-          { name: "id_pedido" },
+          { name: "id_venda_item" },
         ]
       },
     ]
   });
-  return infoa_enl_pedido_compra_e_venda;
+  return infoa_gab_entrega;
   }
 }

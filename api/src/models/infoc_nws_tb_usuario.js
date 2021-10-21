@@ -1,58 +1,54 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_amz_tbdenuncia extends Model {
+export default class infoc_nws_tb_usuario extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_denuncia: {
+    id_usuario: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_longitude: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    ds_latitude: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    dt_denuncia: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    ds_ocorrencia: {
+    nm_usuario: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    qtd_reporte_recebido: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_rua: {
+    ds_email: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_bairro: {
+    ds_username: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    qtd_avaliacao: {
+    ds_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_senha: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    dt_nascimento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    ds_codigo: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    ds_tipo_denuncia: {
+    bt_adm: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    img_perfil: {
       type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_amz_tbdenuncia',
+    tableName: 'infoc_nws_tb_usuario',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +56,11 @@ export default class infob_amz_tbdenuncia extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_denuncia" },
-        ]
-      },
-      {
-        name: "id_usuario",
-        using: "BTREE",
-        fields: [
           { name: "id_usuario" },
         ]
       },
     ]
   });
-  return infob_amz_tbdenuncia;
+  return infoc_nws_tb_usuario;
   }
 }

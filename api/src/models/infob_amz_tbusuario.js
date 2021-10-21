@@ -22,6 +22,10 @@ export default class infob_amz_tbusuario extends Model {
       type: DataTypes.STRING(255),
       allowNull: true
     },
+    ds_regiao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     ds_senha: {
       type: DataTypes.STRING(255),
       allowNull: true

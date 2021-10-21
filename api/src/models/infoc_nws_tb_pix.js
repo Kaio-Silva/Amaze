@@ -1,34 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_rank extends Model {
+export default class infoc_nws_tb_pix extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_rank: {
+    id_pix: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
+    id_venda: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_produto',
-        key: 'id_produto'
+        model: 'infoc_nws_tb_venda',
+        key: 'id_venda'
       }
     },
-    qtd_clique: {
-      type: DataTypes.DECIMAL(6,2),
-      allowNull: false
-    },
-    dt_clique: {
-      type: DataTypes.DATE,
-      allowNull: false
+    nr_pix: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_rank',
+    tableName: 'infoc_nws_tb_pix',
     timestamps: false,
     indexes: [
       {
@@ -36,18 +32,18 @@ export default class infoa_enl_rank extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_rank" },
+          { name: "id_pix" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_venda",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_venda" },
         ]
       },
     ]
   });
-  return infoa_enl_rank;
+  return infoc_nws_tb_pix;
   }
 }

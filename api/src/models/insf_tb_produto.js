@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_produto extends Model {
+export default class insf_tb_produto extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_produto: {
@@ -11,32 +11,32 @@ export default class infod_ssc_produto extends Model {
       primaryKey: true
     },
     nm_produto: {
-      type: DataTypes.STRING(50),
-      allowNull: true
-    },
-    vl_produto: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    nm_categoria: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_produto: {
-      type: DataTypes.STRING(500),
+      type: DataTypes.STRING(800),
       allowNull: true
     },
-    ds_avaliacao: {
-      type: DataTypes.STRING(500),
+    vl_preco: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: true
     },
-    ds_imagem: {
-      type: DataTypes.STRING(255),
+    img_produto: {
+      type: DataTypes.STRING(400),
+      allowNull: true
+    },
+    dt_lancamento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    bt_ativo: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_produto',
+    tableName: 'insf_tb_produto',
     timestamps: false,
     indexes: [
       {
@@ -49,6 +49,6 @@ export default class infod_ssc_produto extends Model {
       },
     ]
   });
-  return infod_ssc_produto;
+  return insf_tb_produto;
   }
 }

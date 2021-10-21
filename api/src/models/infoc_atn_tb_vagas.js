@@ -1,50 +1,58 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_produto extends Model {
+export default class infoc_atn_tb_vagas extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_produto: {
+    id_vaga: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_produto: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    ds_codigo_interno: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    id_categoria: {
+    id_empresa: {
       type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    ds_profissao: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_descricao: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    vl_valor: {
-      type: DataTypes.DECIMAL(15,2),
+    ds_qualificacao: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    nr_estoque_minimo: {
+    ds_local_trabalho: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_salario_de: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    nr_estoque_maximo: {
+    ds_salario_a: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    nr_estoque_atual: {
-      type: DataTypes.INTEGER,
+    ds_tipo_contratacao: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_beneficios: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_hora_trabalho: {
+      type: DataTypes.TIME,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_produto',
+    tableName: 'infoc_atn_tb_vagas',
     timestamps: false,
     indexes: [
       {
@@ -52,18 +60,18 @@ export default class infoa_sti_produto extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_vaga" },
         ]
       },
       {
-        name: "id_categoria",
+        name: "id_empresa",
         using: "BTREE",
         fields: [
-          { name: "id_categoria" },
+          { name: "id_empresa" },
         ]
       },
     ]
   });
-  return infoa_sti_produto;
+  return infoc_atn_tb_vagas;
   }
 }

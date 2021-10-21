@@ -1,51 +1,54 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_cliente extends Model {
+export default class infoc_tct_compra extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cliente: {
+    id_compra: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
+    id_cliente: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_tct_cliente',
+        key: 'id_cliente'
+      }
+    },
     id_endereco: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tct_endereco',
+        key: 'id_endereco'
+      }
     },
-    nm_cliente: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    ds_cpf: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    dt_nascimento: {
-      type: DataTypes.DATEONLY,
-      allowNull: true
-    },
-    nr_telefone: {
-      type: DataTypes.STRING(15),
-      allowNull: true
-    },
-    ds_email: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    ds_senha: {
+    ds_nota_fiscal: {
       type: DataTypes.STRING(50),
+      allowNull: true
+    },
+    ds_forma_pagamento: {
+      type: DataTypes.STRING(40),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_cliente',
+    tableName: 'infoc_tct_compra',
     timestamps: false,
     indexes: [
       {
         name: "PRIMARY",
         unique: true,
+        using: "BTREE",
+        fields: [
+          { name: "id_compra" },
+        ]
+      },
+      {
+        name: "id_cliente",
         using: "BTREE",
         fields: [
           { name: "id_cliente" },
@@ -60,6 +63,6 @@ export default class infod_ssc_cliente extends Model {
       },
     ]
   });
-  return infod_ssc_cliente;
+  return infoc_tct_compra;
   }
 }
