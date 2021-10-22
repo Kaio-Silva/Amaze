@@ -11,8 +11,15 @@ export default function P4(props){
   const[bairro,setBairro] = useState('')
   const[ocorrencia,setOcorrencia] = useState('')
   const[loc,setLoc] = useState('')
-  
+  const[tipo,setTipo] = useState('')
+ 
 
+  async function Tipagem(){
+    let a = await (document.querySelector('input[name=actmnt]:checked').value)
+    setTipo(a)
+  }
+  
+ 
   async function geo(){
     let r = await api.Geocoding(loc);
 
@@ -24,10 +31,14 @@ export default function P4(props){
     }
 
     setCordinates(insert)
-    console.log(bairro)
-    console.log(loc)
-    console.log(ocorrencia)
+    Tipagem()
+    
+    console.log(cordinates.Latitude)
+    
   }
+
+  let lat = cordinates.Latitude
+  let lng = cordinates.Longitude
   
     return(props.value) ?(
         <Container>
@@ -43,7 +54,7 @@ export default function P4(props){
                    <div className="titulo-form">Criar Denúncia</div>
 
                    <div className="inputs">
-                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%">{cordinates.latitute}</Padrao>
+                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%">{lat,lng}</Padrao>
                   </div> 
 
                    <div className="inputs">

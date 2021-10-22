@@ -11,7 +11,7 @@ import Denunc from "../../../Popups/localdenuncs"
 
 export default function Mapa(){
   const[pop,setPop]= useState(false);
-  const [denu, SetDenu] = useState(false);
+  const [denu, setDenu] = useState(false);
   const [loc, setLoc] = useState({});
   
 
@@ -95,7 +95,7 @@ export default function Mapa(){
             pin.addListener("click", () => {
               map.panTo(pin.getPosition());
               setLoc(loc);
-              setPop(true);
+              setDenu(true);
            });
 
        pin.setPosition(loc);
@@ -111,7 +111,7 @@ export default function Mapa(){
             <div id="map"></div>
             <button onClick={ () => setPop(true)} className="ButtonMap"/>      
             <Comp value={pop} func={setPop} loc={loc} />    
-            <Denunc bool={denu} func={SetDenu}  />
+            <Denunc bool={denu} func={setDenu}  />
         </Container>
     ) 
     
