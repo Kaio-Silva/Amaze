@@ -172,6 +172,7 @@ app.post('/denuncia', async(req,resp) =>{
      let latitude = req.body.ds_latitude;
      let data = req.body.dt_denuncia;
      let ocorrencia = req.body.ds_ocorrencia;
+     let reporte = req.body.qtd_reporte_recebido;
      let rua = req.body.ds_rua;
      let bairro = req.body.ds_bairro;
      let avaliacao = req.body.qtd_avaliacao;
@@ -183,14 +184,13 @@ app.post('/denuncia', async(req,resp) =>{
       ds_latitude: latitude,
       dt_denuncia: data,
       ds_ocorrencia: ocorrencia, 
+      qtd_reporte_recebido:reporte,
       ds_rua: rua,
       ds_bairro: bairro,
       qtd_avaliacao: avaliacao,
       ds_tipo_denuncia:tipo
     }
 
-    let oi = 12;
-    console.log(isNaN(oi))
 
      let inserting = await db.infob_amz_tbdenuncia.create(inserir);
      resp.send(inserting)

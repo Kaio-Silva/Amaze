@@ -47,11 +47,11 @@ export default class Api {
     /////////////////////////////////////////////////////////////////////////////
 
 
-    async inserirDENU(idusu,longitude,latitude,data,ocorrencia,rua,bairro,avaliacao,tipo){
+    async inserirDENU(idusu,longitude,latitude,data,ocorrencia,rua,bairro,avaliacao,tipo,reporte){
         let i = await api.post('/denuncia',{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia,ds_rua:rua,ds_bairro:bairro,qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
         return i.data;
     }
-
+    
 
     async listarDENUpoUsu(id){
         let i = await api.get(`/denuncia/${id}`);

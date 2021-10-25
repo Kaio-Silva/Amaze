@@ -12,7 +12,10 @@ export default function P4(props){
   const[ocorrencia,setOcorrencia] = useState('')
   const[loc,setLoc] = useState('')
   const[tipo,setTipo] = useState('')
+  const[avaliacao,setAvaliacao] = useState(0)
  
+
+
 
   async function Tipagem(){
     let a = await (document.querySelector('input[name=actmnt]:checked').value)
@@ -33,7 +36,11 @@ export default function P4(props){
     setCordinates(insert)
     Tipagem()
     
-    console.log(cordinates.Latitude)
+    console.log(cordinates)
+    console.log(loc)
+    console.log(bairro)
+    console.log(tipo)
+    console.log(ocorrencia)
     
   }
 
