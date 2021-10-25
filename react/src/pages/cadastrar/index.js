@@ -22,8 +22,19 @@ function Cadastrar(props) {
    const [senha,setSenha] = useState('')
    const [concluir,setConcluir] = useState([])
 
+
+   console.log(nome);
+   console.log(email);
+   console.log(telefone);
+   console.log(regiao);
+   console.log(senha);
+   console.log(concluir);
+
+
+
    async function Inserir(){
       let a = await api.InserirUSU(nome, email, telefone, regiao, senha, concluir)
+      setConcluir(a);
    }
 
   return (
@@ -53,7 +64,9 @@ function Cadastrar(props) {
                     <Padrao onChange={ e => setSenha(e.target.value)} className="padrao"  placeholder="Insira seu senha" tamanho="100%" />
                  </div>          
                   <div className="mae-botao">
-                      <Link className="link" to="/Login"><Button className="ajustarBotao" onClick={Inserir}  cor=""> Concluir Cadastro </Button></Link>
+                      {/* <Link className="link" to="/Login"> */}
+                         <Button className="ajustarBotao" onClick={Inserir}  cor=""> Concluir Cadastro </Button>
+                         {/* </Link> */}
                   </div>
               </div>
             </div>
