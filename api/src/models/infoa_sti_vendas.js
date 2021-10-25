@@ -1,42 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_atn_tb_sala extends Model {
+export default class infoa_sti_vendas extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_sala: {
+    id_vendas: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_sala: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    bt_ativa: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    id_empresa: {
+    id_cliente: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_empresa',
-        key: 'id_empresa'
+        model: 'infoa_sti_cliente',
+        key: 'id_cliente'
       }
     },
-    id_pessoal: {
+    id_produto: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_pessoal',
-        key: 'id_pessoal'
+        model: 'infoa_sti_produto',
+        key: 'id_produto'
       }
+    },
+    ds_codigo: {
+      type: DataTypes.STRING(10),
+      allowNull: true
+    },
+    dt_vendas: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_atn_tb_sala',
+    tableName: 'infoa_sti_vendas',
     timestamps: false,
     indexes: [
       {
@@ -44,25 +44,25 @@ export default class infoc_atn_tb_sala extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_sala" },
+          { name: "id_vendas" },
         ]
       },
       {
-        name: "id_empresa",
+        name: "id_cliente",
         using: "BTREE",
         fields: [
-          { name: "id_empresa" },
+          { name: "id_cliente" },
         ]
       },
       {
-        name: "id_pessoal",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_pessoal" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infoc_atn_tb_sala;
+  return infoa_sti_vendas;
   }
 }

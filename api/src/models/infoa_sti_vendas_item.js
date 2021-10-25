@@ -1,38 +1,26 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_atn_tb_chat extends Model {
+export default class infoa_sti_vendas_item extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_chat: {
+    id_vendas_item: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_sala: {
+    id_vendas: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_sala',
-        key: 'id_sala'
+        model: 'infoa_sti_vendas',
+        key: 'id_vendas'
       }
-    },
-    ds_mensagem: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    dt_mensagem: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    tp_enviado_por: {
-      type: DataTypes.STRING(100),
-      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_atn_tb_chat',
+    tableName: 'infoa_sti_vendas_item',
     timestamps: false,
     indexes: [
       {
@@ -40,18 +28,18 @@ export default class infoc_atn_tb_chat extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_chat" },
+          { name: "id_vendas_item" },
         ]
       },
       {
-        name: "id_sala",
+        name: "id_vendas",
         using: "BTREE",
         fields: [
-          { name: "id_sala" },
+          { name: "id_vendas" },
         ]
       },
     ]
   });
-  return infoc_atn_tb_chat;
+  return infoa_sti_vendas_item;
   }
 }

@@ -1,42 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_atn_tb_sala extends Model {
+export default class infoa_dtn_tb_avaliacao extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_sala: {
+    id_avaliacao: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_sala: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    bt_ativa: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    id_empresa: {
+    id_produto: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_empresa',
-        key: 'id_empresa'
+        model: 'infoa_dtn_tb_produto',
+        key: 'id_produto'
       }
     },
-    id_pessoal: {
+    id_cliente: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_pessoal',
-        key: 'id_pessoal'
+        model: 'infoa_dtn_tb_cliente',
+        key: 'id_cliente'
       }
     }
   }, {
     sequelize,
-    tableName: 'infoc_atn_tb_sala',
+    tableName: 'infoa_dtn_tb_avaliacao',
     timestamps: false,
     indexes: [
       {
@@ -44,25 +36,25 @@ export default class infoc_atn_tb_sala extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_sala" },
+          { name: "id_avaliacao" },
         ]
       },
       {
-        name: "id_empresa",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_empresa" },
+          { name: "id_produto" },
         ]
       },
       {
-        name: "id_pessoal",
+        name: "id_cliente",
         using: "BTREE",
         fields: [
-          { name: "id_pessoal" },
+          { name: "id_cliente" },
         ]
       },
     ]
   });
-  return infoc_atn_tb_sala;
+  return infoa_dtn_tb_avaliacao;
   }
 }

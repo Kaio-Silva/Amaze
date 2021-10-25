@@ -1,58 +1,54 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_amz_tbdenuncia extends Model {
+export default class infod_ssc_pedido extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_denuncia: {
+    id_pedido: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_venda: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infob_amz_tbusuario',
-        key: 'id_usuario'
+        model: 'infod_ssc_venda',
+        key: 'id_venda'
       }
     },
-    ds_longitude: {
+    id_item: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_item',
+        key: 'id_item'
+      }
+    },
+    vl_pedido: {
       type: DataTypes.DECIMAL(10,0),
       allowNull: true
     },
-    ds_latitude: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    dt_denuncia: {
+    dt_pedido: {
       type: DataTypes.DATE,
       allowNull: true
     },
-    ds_ocorrencia: {
-      type: DataTypes.STRING(255),
+    ds_entregue: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    ds_rua: {
-      type: DataTypes.STRING(255),
+    ds_acaminho: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    ds_bairro: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    qtd_avaliacao: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_tipo_denuncia: {
-      type: DataTypes.STRING(255),
+    ds_preparando: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_amz_tbdenuncia',
+    tableName: 'infod_ssc_pedido',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +56,25 @@ export default class infob_amz_tbdenuncia extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_denuncia" },
+          { name: "id_pedido" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_item",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_item" },
+        ]
+      },
+      {
+        name: "id_venda",
+        using: "BTREE",
+        fields: [
+          { name: "id_venda" },
         ]
       },
     ]
   });
-  return infob_amz_tbdenuncia;
+  return infod_ssc_pedido;
   }
 }

@@ -1,58 +1,50 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_amz_tbdenuncia extends Model {
+export default class infod_ssc_cliente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_denuncia: {
+    id_cliente: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_endereco: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infob_amz_tbusuario',
-        key: 'id_usuario'
+        model: 'infod_ssc_endereco',
+        key: 'id_endereco'
       }
     },
-    ds_longitude: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    ds_latitude: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
-    dt_denuncia: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    ds_ocorrencia: {
+    nm_cliente: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_rua: {
+    ds_cpf: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_bairro: {
+    dt_nascimento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    nr_telefone: {
+      type: DataTypes.STRING(15),
+      allowNull: true
+    },
+    ds_email: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    qtd_avaliacao: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_tipo_denuncia: {
-      type: DataTypes.STRING(255),
+    ds_senha: {
+      type: DataTypes.STRING(50),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_amz_tbdenuncia',
+    tableName: 'infod_ssc_cliente',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +52,18 @@ export default class infob_amz_tbdenuncia extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_denuncia" },
+          { name: "id_cliente" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_endereco",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_endereco" },
         ]
       },
     ]
   });
-  return infob_amz_tbdenuncia;
+  return infod_ssc_cliente;
   }
 }

@@ -1,38 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_atn_tb_chat extends Model {
+export default class infod_ssc_item extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_chat: {
+    id_item: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_sala: {
+    id_produto: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_sala',
-        key: 'id_sala'
+        model: 'infod_ssc_produto',
+        key: 'id_produto'
       }
     },
-    ds_mensagem: {
-      type: DataTypes.STRING(255),
+    vl_item: {
+      type: DataTypes.DECIMAL(10,0),
       allowNull: true
     },
-    dt_mensagem: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    tp_enviado_por: {
-      type: DataTypes.STRING(100),
+    qtd_produto: {
+      type: DataTypes.INTEGER,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_atn_tb_chat',
+    tableName: 'infod_ssc_item',
     timestamps: false,
     indexes: [
       {
@@ -40,18 +36,18 @@ export default class infoc_atn_tb_chat extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_chat" },
+          { name: "id_item" },
         ]
       },
       {
-        name: "id_sala",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_sala" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infoc_atn_tb_chat;
+  return infod_ssc_item;
   }
 }

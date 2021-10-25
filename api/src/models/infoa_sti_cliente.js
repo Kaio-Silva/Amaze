@@ -1,62 +1,54 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_atn_tb_vagas extends Model {
+export default class infoa_sti_cliente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_vaga: {
+    id_cliente: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_empresa: {
+    nm_nome: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    nm_sobrenome: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_sexo: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_cpf: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    dt_nascimento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    ds_email: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_senha: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    id_endereco: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_empresa',
-        key: 'id_empresa'
+        model: 'infoa_sti_endereco',
+        key: 'id_endereco'
       }
-    },
-    ds_profissao: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_descricao: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_qualificacao: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_local_trabalho: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_salario_de: {
-      type: DataTypes.DECIMAL(10,2),
-      allowNull: true
-    },
-    ds_salario_a: {
-      type: DataTypes.DECIMAL(10,2),
-      allowNull: true
-    },
-    ds_tipo_contratacao: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_beneficios: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_hora_trabalho: {
-      type: DataTypes.TIME,
-      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_atn_tb_vagas',
+    tableName: 'infoa_sti_cliente',
     timestamps: false,
     indexes: [
       {
@@ -64,18 +56,18 @@ export default class infoc_atn_tb_vagas extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_vaga" },
+          { name: "id_cliente" },
         ]
       },
       {
-        name: "id_empresa",
+        name: "id_endereco",
         using: "BTREE",
         fields: [
-          { name: "id_empresa" },
+          { name: "id_endereco" },
         ]
       },
     ]
   });
-  return infoc_atn_tb_vagas;
+  return infoa_sti_cliente;
   }
 }

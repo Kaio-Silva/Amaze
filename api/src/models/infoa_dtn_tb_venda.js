@@ -1,38 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_atn_tb_chat extends Model {
+export default class infoa_dtn_tb_venda extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_chat: {
+    id_venda: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_sala: {
+    id_cliente: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_atn_tb_sala',
-        key: 'id_sala'
+        model: 'infoa_dtn_tb_cliente',
+        key: 'id_cliente'
       }
     },
-    ds_mensagem: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    dt_mensagem: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    tp_enviado_por: {
+    ds_nota_fiscal: {
       type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    tp_pagamento: {
+      type: DataTypes.STRING(150),
+      allowNull: true
+    },
+    qtd_parcelas: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    bt_presente: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    dt_venda: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_atn_tb_chat',
+    tableName: 'infoa_dtn_tb_venda',
     timestamps: false,
     indexes: [
       {
@@ -40,18 +48,18 @@ export default class infoc_atn_tb_chat extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_chat" },
+          { name: "id_venda" },
         ]
       },
       {
-        name: "id_sala",
+        name: "id_cliente",
         using: "BTREE",
         fields: [
-          { name: "id_sala" },
+          { name: "id_cliente" },
         ]
       },
     ]
   });
-  return infoc_atn_tb_chat;
+  return infoa_dtn_tb_venda;
   }
 }
