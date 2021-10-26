@@ -30,12 +30,12 @@ export default class infoa_gab_entrega extends Model {
       type: DataTypes.DATE,
       allowNull: true
     },
-    id_venda_item: {
+    id_venda: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoa_gab_venda_item',
-        key: 'id_venda_item'
+        model: 'infoa_gab_venda',
+        key: 'id_venda'
       }
     }
   }, {
@@ -59,10 +59,10 @@ export default class infoa_gab_entrega extends Model {
         ]
       },
       {
-        name: "id_venda_item",
+        name: "id_venda",
         using: "BTREE",
         fields: [
-          { name: "id_venda_item" },
+          { name: "id_venda" },
         ]
       },
     ]

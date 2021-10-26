@@ -70,11 +70,6 @@ export default function P4(props){
                    <div className="titulo-form">Criar Denúncia</div>
 
                    <div className="inputs">
-                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%">{cordinates.latitute}</Padrao>
-
-                  </div> 
-
-                   <div className="inputs">
                       <Padrao onChange={ e => setLoc(e.target.value)} className="ajustarInput" placeholder="Digite o nome da rua" cor="verde"tamanho="100%"/>
                   </div> 
 

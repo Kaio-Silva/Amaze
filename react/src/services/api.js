@@ -50,8 +50,6 @@ export default class Api {
 
     async inserirDENU(idusu,longitude,latitude,data,ocorrencia,qtdreporte,rua,bairro,avaliacao,tipo){
         let i = await api.post('/denuncia',{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia, qtd_reporte_recebido:qtdreporte, ds_rua:rua, ds_bairro:bairro, qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
-        console.log('service: '+longitude)
-        console.log('service: '+latitude)
         return i.data;
     }
     
