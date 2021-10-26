@@ -10,14 +10,13 @@ export default function Contatenos(props){
     const [email,setEmail] = useState('')
     const [telefone,setTelefone] = useState('')
     const [mensagem,setMensagem] = useState('')
-    const [enviar,setEnviar] = useState([])
+  
 
     console.log(nome);
     console.log(email);
     console.log(telefone);
     console.log(mensagem);
-    console.log(enviar);
- 
+    
     return(
         <Container>
             
