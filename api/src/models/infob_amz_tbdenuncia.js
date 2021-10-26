@@ -19,11 +19,11 @@ export default class infob_amz_tbdenuncia extends Model {
       }
     },
     ds_longitude: {
-      type: DataTypes.DECIMAL(10,0),
+      type: DataTypes.DECIMAL(15,15),
       allowNull: true
     },
     ds_latitude: {
-      type: DataTypes.DECIMAL(10,0),
+      type: DataTypes.DECIMAL(15,15),
       allowNull: true
     },
     dt_denuncia: {

@@ -7,45 +7,54 @@ import Api from '../../services/api'
 const api = new Api()
 
 export default function P4(props){
-  const[cordinates,setCordinates] = useState([])
-  const[bairro,setBairro] = useState('')
-  const[ocorrencia,setOcorrencia] = useState('')
-  const[loc,setLoc] = useState('')
-  const[tipo,setTipo] = useState('')
-  const[avaliacao,setAvaliacao] = useState(0)
- 
-
-
-
-  async function Tipagem(){
-    let a = await (document.querySelector('input[name=actmnt]:checked').value)
-    setTipo(a)
-  }
+    const[cordinates,setCordinates] = useState([])
+    const[bairro,setBairro] = useState('')
+    const[ocorrencia,setOcorrencia] = useState('')
+    const[loc,setLoc] = useState('')
+    const[tipo,setTipo] = useState('')
+    const[avaliacao,setAvaliacao] = useState(9)
+    const[id,setId] = useState(2)
+    const[qtdreporte,seQtdReporte] = useState(12)
+    let data = new Date();
   
- 
+    let lat = cordinates.Latitude
+    let lng = cordinates.Longitude
+
+    async function Inserir(){
+        let r = await api.inserirDENU(id,lat,lng,data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo)
+    }
+
+
+    async function Tipagem(){
+        let a = await (document.querySelector('input[name=actmnt]:checked').value)
+        setTipo(a)
+      }
+      
+
   async function geo(){
     let r = await api.Geocoding(loc);
 
     let insert= 
       {
        Latitude: r[0].geometry.lat,
-       longitude: r[0].geometry.lng
+       Longitude: r[0].geometry.lng
      
     }
 
     setCordinates(insert)
     Tipagem()
-    
+    Inserir()
+    console.log(lat)
+    console.log(lng)
     console.log(cordinates)
-    console.log(loc)
     console.log(bairro)
-    console.log(tipo)
+    console.log(loc)
     console.log(ocorrencia)
-    
+    console.log(tipo)
+    console.log(avaliacao)
+    console.log(id)
+    console.log(qtdreporte)
   }
-
-  let lat = cordinates.Latitude
-  let lng = cordinates.Longitude
   
     return(props.value) ?(
         <Container>
@@ -61,7 +70,7 @@ export default function P4(props){
                    <div className="titulo-form">Criar Denúncia</div>
 
                    <div className="inputs">
-                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%">{lat,lng}</Padrao>
+                      <Padrao className="ajustarInput" placeholder="Longitude e Latidude" cor="verde"tamanho="100%">{cordinates.latitute}</Padrao>
                   </div> 
 
                    <div className="inputs">

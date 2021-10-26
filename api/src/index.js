@@ -31,7 +31,7 @@ app.post('/usuario', async(req,resp) =>{
       let email = req.body.ds_email;
       let telefone = req.body.nr_telefone;
       let senha = req.body.ds_senha;
-      let ativo = false;
+      let ativo = true;
       
 
       let arrouba = email.includes('@')
