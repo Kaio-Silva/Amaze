@@ -39,6 +39,12 @@ import _infob_apn_tb_adm from  "./infob_apn_tb_adm.js";
 import _infob_apn_tb_adocao from  "./infob_apn_tb_adocao.js";
 import _infob_apn_tb_pet from  "./infob_apn_tb_pet.js";
 import _infob_apn_tb_user from  "./infob_apn_tb_user.js";
+import _infob_hdm_cadastro from  "./infob_hdm_cadastro.js";
+import _infob_hdm_chat_denuncias from  "./infob_hdm_chat_denuncias.js";
+import _infob_hdm_denuncia from  "./infob_hdm_denuncia.js";
+import _infob_hdm_esqueci_senha from  "./infob_hdm_esqueci_senha.js";
+import _infob_hdm_login from  "./infob_hdm_login.js";
+import _infob_hdm_mapa from  "./infob_hdm_mapa.js";
 import _infob_mw_ator from  "./infob_mw_ator.js";
 import _infob_mw_comentario from  "./infob_mw_comentario.js";
 import _infob_mw_filme from  "./infob_mw_filme.js";
@@ -164,6 +170,12 @@ export default function initModels(sequelize) {
   var infob_apn_tb_adocao = _infob_apn_tb_adocao.init(sequelize, DataTypes);
   var infob_apn_tb_pet = _infob_apn_tb_pet.init(sequelize, DataTypes);
   var infob_apn_tb_user = _infob_apn_tb_user.init(sequelize, DataTypes);
+  var infob_hdm_cadastro = _infob_hdm_cadastro.init(sequelize, DataTypes);
+  var infob_hdm_chat_denuncias = _infob_hdm_chat_denuncias.init(sequelize, DataTypes);
+  var infob_hdm_denuncia = _infob_hdm_denuncia.init(sequelize, DataTypes);
+  var infob_hdm_esqueci_senha = _infob_hdm_esqueci_senha.init(sequelize, DataTypes);
+  var infob_hdm_login = _infob_hdm_login.init(sequelize, DataTypes);
+  var infob_hdm_mapa = _infob_hdm_mapa.init(sequelize, DataTypes);
   var infob_mw_ator = _infob_mw_ator.init(sequelize, DataTypes);
   var infob_mw_comentario = _infob_mw_comentario.init(sequelize, DataTypes);
   var infob_mw_filme = _infob_mw_filme.init(sequelize, DataTypes);
@@ -303,10 +315,10 @@ export default function initModels(sequelize) {
   infoa_gab_usuario.hasMany(infoa_gab_endereco, { as: "infoa_gab_enderecos", foreignKey: "id_usuario"});
   infoa_gab_venda.belongsTo(infoa_gab_usuario, { as: "id_usuario_infoa_gab_usuario", foreignKey: "id_usuario"});
   infoa_gab_usuario.hasMany(infoa_gab_venda, { as: "infoa_gab_vendas", foreignKey: "id_usuario"});
+  infoa_gab_entrega.belongsTo(infoa_gab_venda, { as: "id_venda_infoa_gab_venda", foreignKey: "id_venda"});
+  infoa_gab_venda.hasMany(infoa_gab_entrega, { as: "infoa_gab_entregas", foreignKey: "id_venda"});
   infoa_gab_venda_item.belongsTo(infoa_gab_venda, { as: "id_venda_infoa_gab_venda", foreignKey: "id_venda"});
   infoa_gab_venda.hasMany(infoa_gab_venda_item, { as: "infoa_gab_venda_items", foreignKey: "id_venda"});
-  infoa_gab_entrega.belongsTo(infoa_gab_venda_item, { as: "id_venda_item_infoa_gab_venda_item", foreignKey: "id_venda_item"});
-  infoa_gab_venda_item.hasMany(infoa_gab_entrega, { as: "infoa_gab_entregas", foreignKey: "id_venda_item"});
   infoa_sti_produto.belongsTo(infoa_sti_categoria, { as: "id_categoria_infoa_sti_categorium", foreignKey: "id_categoria"});
   infoa_sti_categoria.hasMany(infoa_sti_produto, { as: "infoa_sti_produtos", foreignKey: "id_categoria"});
   infoa_sti_vendas.belongsTo(infoa_sti_cliente, { as: "id_cliente_infoa_sti_cliente", foreignKey: "id_cliente"});
@@ -466,6 +478,12 @@ export default function initModels(sequelize) {
     infob_apn_tb_adocao,
     infob_apn_tb_pet,
     infob_apn_tb_user,
+    infob_hdm_cadastro,
+    infob_hdm_chat_denuncias,
+    infob_hdm_denuncia,
+    infob_hdm_esqueci_senha,
+    infob_hdm_login,
+    infob_hdm_mapa,
     infob_mw_ator,
     infob_mw_comentario,
     infob_mw_filme,

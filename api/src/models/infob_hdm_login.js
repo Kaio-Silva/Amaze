@@ -1,34 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tdv_cupom extends Model {
+export default class infob_hdm_login extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cupom: {
+    id_HDM_login: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    dt_duracao: {
-      type: DataTypes.DATE,
+    nm_HDM_nome: {
+      type: DataTypes.STRING(500),
       allowNull: true
     },
-    vl_porcentagem: {
-      type: DataTypes.DECIMAL(10,0),
+    nr_senha: {
+      type: DataTypes.STRING(50),
       allowNull: true
     },
-    ds_regra: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    ds_nome: {
-      type: DataTypes.STRING(200),
+    bt_HDM_entrar: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tdv_cupom',
+    tableName: 'infob_hdm_login',
     timestamps: false,
     indexes: [
       {
@@ -36,11 +32,11 @@ export default class infoc_tdv_cupom extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_cupom" },
+          { name: "id_HDM_login" },
         ]
       },
     ]
   });
-  return infoc_tdv_cupom;
+  return infob_hdm_login;
   }
 }

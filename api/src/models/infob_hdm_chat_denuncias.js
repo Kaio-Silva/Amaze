@@ -1,34 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tdv_cupom extends Model {
+export default class infob_hdm_chat_denuncias extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cupom: {
+    id_HDM_chat_denuncias: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    dt_duracao: {
-      type: DataTypes.DATE,
+    ds_HDM_texto: {
+      type: DataTypes.STRING(500),
       allowNull: true
     },
-    vl_porcentagem: {
-      type: DataTypes.DECIMAL(10,0),
+    bt_HDM_enviar: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    ds_regra: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
-    ds_nome: {
+    ds_HDM_localizacao_atual: {
       type: DataTypes.STRING(200),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tdv_cupom',
+    tableName: 'infob_hdm_chat_denuncias',
     timestamps: false,
     indexes: [
       {
@@ -36,11 +32,11 @@ export default class infoc_tdv_cupom extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_cupom" },
+          { name: "id_HDM_chat_denuncias" },
         ]
       },
     ]
   });
-  return infoc_tdv_cupom;
+  return infob_hdm_chat_denuncias;
   }
 }
