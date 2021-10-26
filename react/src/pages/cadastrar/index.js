@@ -18,7 +18,6 @@ function Cadastrar(props) {
    const [nome,setNome] = useState('')
    const [email,setEmail] = useState('')
    const [telefone,setTelefone] = useState('')
-   const [regiao,setRegiao] = useState('')
    const [senha,setSenha] = useState('')
    const [concluir,setConcluir] = useState([])
 
@@ -26,14 +25,12 @@ function Cadastrar(props) {
    console.log(nome);
    console.log(email);
    console.log(telefone);
-   console.log(regiao);
    console.log(senha);
    console.log(concluir);
-
-
-
+   
+   
    async function Inserir(){
-      let a = await api.InserirUSU(nome, email, telefone, regiao, senha, concluir)
+      let a = await api.InserirUSU(nome, email, telefone, senha, concluir)
       setConcluir(a);
    }
 
@@ -54,10 +51,6 @@ function Cadastrar(props) {
                  <div className="Inputs">                        
                     <div className="Titulo">Telefone</div>
                     <Padrao onChange={ e => setTelefone(e.target.value)} className="padrao" placeholder="Insira seu telefone" tamanho="100%" />
-                 </div>
-                 <div className="Inputs">                        
-                    <div className="Titulo">Região</div>
-                    <Padrao onChange={ e => setRegiao(e.target.value)} className="padrao"  placeholder="Insira sua região" tamanho="100%" />
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Senha</div>
