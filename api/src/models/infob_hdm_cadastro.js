@@ -1,46 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tdv_cliente extends Model {
+export default class infob_hdm_cadastro extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cliente: {
+    id_HDM_cadastro: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_cliente: {
-      type: DataTypes.STRING(255),
+    nm_HDM_nome: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_cpf: {
-      type: DataTypes.STRING(15),
+    nm_HDM_sobrenome: {
+      type: DataTypes.STRING(300),
       allowNull: true
     },
-    ds_email: {
-      type: DataTypes.STRING(250),
+    dt_HDM_data_nascimento: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     },
-    nr_contato: {
-      type: DataTypes.STRING(15),
+    nr_HDM_celular: {
+      type: DataTypes.DECIMAL(10,0),
       allowNull: true
     },
-    ds_senha: {
+    nm_HDM_email: {
+      type: DataTypes.STRING(300),
+      allowNull: true
+    },
+    nm_HDM_senha: {
       type: DataTypes.STRING(50),
       allowNull: true
     },
-    dt_nascimento: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    ds_codigo_rec: {
-      type: DataTypes.STRING(200),
+    bt_HDM_entrar: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tdv_cliente',
+    tableName: 'infob_hdm_cadastro',
     timestamps: false,
     indexes: [
       {
@@ -48,11 +48,11 @@ export default class infoc_tdv_cliente extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_cliente" },
+          { name: "id_HDM_cadastro" },
         ]
       },
     ]
   });
-  return infoc_tdv_cliente;
+  return infob_hdm_cadastro;
   }
 }

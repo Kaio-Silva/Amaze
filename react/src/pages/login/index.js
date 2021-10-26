@@ -3,8 +3,21 @@ import { Link } from 'react-router-dom';
 import Logo from '../../components/commom/logo'
 import { Padrao } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes.js';
+import { useState } from 'react';
 
 function Login (props){
+
+   const [email,setEmail] = useState('')
+   const [senha,setSenha] = useState('')
+   const [esqueceuSenha,setEsqueceuSenha]= useState('')
+   const [login,setLogin] = useState([])
+
+
+   console.log(email);
+   console.log(esqueceuSenha);
+   console.log(senha);
+   console.log(login);
+   
     return(
         <Container>
             <Logo ambos="false" direction="column" cor="black" titulo="" tamanho="medio"/>
@@ -18,11 +31,11 @@ function Login (props){
                     <div className="FormLogin">
                         <div className="Inputs">                        
                             <div className="Titulo">Email</div>
-                            <Padrao className="Padrao" placeholder="Insira seu email" tamanho="100%"/>
+                            <Padrao onChange={ e => setEmail(e.target.value)} className="Padrao" placeholder="Insira seu email" tamanho="100%"/>
                         </div>
                         <div className="Inputs">                        
                             <div className="Titulo">Senha</div>
-                            <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha" tamanho="100%"/>
+                            <Padrao onChange={ e => setSenha(e.target.value)} className="senha" placeholder="Insira seu login" type="password" Type="senha" tamanho="100%"/>
                         </div>
                         <div className="alinhandoLinks">
                             <Link className="link" to="/EsqueceuSenha"> Esqueceu a Senha? </Link>

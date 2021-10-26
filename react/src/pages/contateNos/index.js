@@ -3,8 +3,20 @@ import { Link } from 'react-router-dom';
 import Logo from '../../components/commom/logo'
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes';
+import { useState } from 'react';
 
 export default function Contatenos(props){
+    const [nome,setNome] = useState('')
+    const [email,setEmail] = useState('')
+    const [telefone,setTelefone] = useState('')
+    const [mensagem,setMensagem] = useState('')
+  
+
+    console.log(nome);
+    console.log(email);
+    console.log(telefone);
+    console.log(mensagem);
+    
     return(
         <Container>
             
@@ -14,15 +26,16 @@ export default function Contatenos(props){
                     <div className="TituloLogin"> Contate-nos </div>
                     <div className="FormLogin" >
                         <div className="Inputs">                        
-                            <Padrao  placeholder="Nome" tamanho="100%" cor="verde"/> 
-                            <div className="AlinhandoInputs">             
-                                <Padrao  className="input" placeholder="E-mail" cor="verde"/>
-                                <Padrao className="input" placeholder="Telefone" cor="verde"/> 
+                            <Padrao  onChange={ e => setNome(e.target.value)} className="padrao"  placeholder="Nome" tamanho="100%" cor="verde"/> 
+                            <div className="AlinhandoInputs"> 
+                                        
+                                <Padrao onChange={ e => setEmail(e.target.value)} className="padrao" className="input" placeholder="E-mail" cor="verde"/>
+                                <Padrao onChange={ e => setTelefone(e.target.value)} className="padrao"className="input" placeholder="Telefone" cor="verde"/> 
                             </div>                     
-                            <Textarea className="TextArea" placeholder="Mensagem" tamanho="100%" cor="verde"/>
+                            <Textarea onChange={ e => setMensagem(e.target.value)}  className="TextArea" placeholder="Mensagem" tamanho="100%" cor="verde"/>
                         </div>
                         <div className='botao'>
-                        <Link  to="/"><Button className="ajustarBotao" tamanho="medio" cor="0FA882"> Enviar </Button></Link>
+                        <Link  to="/"><Button className="ajustarBotao"  tamanho="medio" cor="0FA882"> Enviar </Button></Link>
                         </div>
                     </div>
                 </div>
