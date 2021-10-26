@@ -2,7 +2,6 @@ import React from 'react'
 
 import Logo from '../../components/commom/logo/index.js';
 import { Button } from '../../components/styled/botoes';
-import { Link } from 'react-router-dom';
 
 import { Padrao } from '../../components/styled/inputs.js';
 

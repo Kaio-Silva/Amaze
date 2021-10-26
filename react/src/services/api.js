@@ -14,7 +14,6 @@ export default class Api {
    
     async InserirUSU(usuario,email,telefone,senha,ativo){
         let i = await api.post('/usuario',{nm_usuario:usuario,ds_email:email, nr_telefone:telefone,ds_senha:senha,bt_ativo: ativo});
-        console.log(i.data)
         return i.data;
      }
 

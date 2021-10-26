@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 85vh;
     background-image: url('/assets/images/Frame 77 (1).png');
     background-size: 100% 100%;
 
 
-
+    .ajustarLogo{
+        width: 100%;
+    }
 
     .link{
         font-family: regular;
@@ -35,8 +41,8 @@ const Container = styled.div`
 
 
     .cadastro-inputs{
-        width: 37%;
-        height: 85%;
+        width: 100%;
+        height: 100%;
         margin:0em;
         background-color:#fff;
         padding: 1em 2em;
@@ -44,6 +50,7 @@ const Container = styled.div`
     }
 
    .Inputs{
+       width: 25em;
        margin-bottom: 0.8em;
    }
 
@@ -188,10 +195,11 @@ const Container = styled.div`
         }
 
         .cadastro-inputs{
-            height: 86%;
+            height: 100%;
         }
 
         .Inputs{
+            width: 30em;
             margin-bottom: 1.2em;
         }
 

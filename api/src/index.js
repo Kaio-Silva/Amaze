@@ -53,7 +53,9 @@ app.post('/usuario', async(req,resp) =>{
        if(telefone.length < 14 || telefone.length >14)
        return resp.send({erro:'O número de telefone está inválido'})
     
-      
+      if(telefone === null || senha === null || email === null || usuario === null)
+      return resp.send({erro:'Você não pode inserir um campo vazio'})
+
        let inserir={
           nm_usuario:usuario,
           ds_email:email,
