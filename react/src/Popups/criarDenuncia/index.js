@@ -21,7 +21,7 @@ export default function P4(props){
     let lng = cordinates.Longitude
 
     async function Inserir(){
-        let r = await api.inserirDENU(id,lat,lng,data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo)
+        let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo)
     }
 
 
@@ -44,8 +44,6 @@ export default function P4(props){
     setCordinates(insert)
     Tipagem()
     Inserir()
-    console.log(lat)
-    console.log(lng)
     console.log(cordinates)
     console.log(bairro)
     console.log(loc)
