@@ -48,7 +48,7 @@ app.post('/usuario', async(req,resp) =>{
        return resp.send({erro:'O email Precisa de no mínimo 12 caracteres'})
 
        if(senha.length < 5)
-       return resp.send({erro:'A senha precisa ter no mínimo 10 caracteres'})
+       return resp.send({erro:'A senha precisa ter no mínimo 5 caracteres'})
 
        if(telefone.length < 14 || telefone.length >14)
        return resp.send({erro:'O número de telefone está inválido'})
@@ -74,18 +74,22 @@ app.post('/usuario', async(req,resp) =>{
 
 
 // Verificar se o usuário já tem uma conta para efetuar login
-app.get('/usuario',async (req,resp) =>{
-let senha = req.query.senha;
-let email = req.query.email;
+app.post('/login',async (req,resp) =>{
+  try{
+    let senha = req.body.senha;
+    let email = req.body.email;
 
-    try{
-         let consulta = await db.infob_amz_tbusuario.findAll({
-           where:{ds_senha:senha, ds_email:email}
-         });
-         resp.send(consulta)
-    }catch(e){
-        resp.send(e.toString())
-    }
+      let consulta = await db.infob_amz_tbusuario.findOne(
+      {
+          where:{
+            ds_senha: senha, 
+            ds_email: email
+          }
+      });
+      resp.send(consulta)
+  }catch(e){
+      resp.send(e.toString())
+  }
 })
 
 

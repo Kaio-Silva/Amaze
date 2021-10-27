@@ -19,7 +19,7 @@ export default class Api {
 
 
      async USULogin(senha,email){
-         let i = await api.get('/usuario',(senha,email));
+         let i = await api.post('/login',(senha,email));
          return i.data;
      }
     

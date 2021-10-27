@@ -3,20 +3,32 @@ import { Link } from 'react-router-dom';
 import Logo from '../../components/commom/logo'
 import { Padrao } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes.js';
-import { useState } from 'react';
+import { useState} from 'react';
+import Api from '../../services/api.js';
+import { useHistory } from 'react-router';
+
+const api = new Api()
+
+
 
 function Login (props){
 
-   const [email,setEmail] = useState('')
-   const [senha,setSenha] = useState('')
-   const [esqueceuSenha,setEsqueceuSenha]= useState('')
-   const [login,setLogin] = useState([])
+   const [email, setEmail] = useState('')
+   const [senha, setSenha] = useState('')
 
+   const nav = useHistory();
+   
 
-   console.log(email);
-   console.log(esqueceuSenha);
-   console.log(senha);
-   console.log(login);
+   const Inserir = async () => {
+
+        let r = await api.USULogin(senha, email)
+
+        if( r.erro ){
+            nav.push('/Login')
+        } else{
+            nav.push('/')
+        }
+    }
    
     return(
         <Container>
@@ -41,7 +53,9 @@ function Login (props){
                             <Link className="link" to="/EsqueceuSenha"> Esqueceu a Senha? </Link>
                             <Link className="link" to="/cadastro"> Cadastre-se </Link>
                         </div> 
-                        <Link  to="/"><Button className="ajustarBotao" tamanho="grande" cor="verde"> Log in </Button></Link>
+                        {/* <Link  to="/"> */}
+                            <Button onClick={Inserir} className="ajustarBotao" tamanho="grande" cor="verde"> Log in </Button>
+                        {/* </Link> */}
                     </div>
                 </div>
             </div>
