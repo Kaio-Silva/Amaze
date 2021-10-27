@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Container } from './styled'
 
 export default function Logo(props){
-    console.log('logo'+props.home)
     return(    
         <Container cor={props.cor} direction={props.direction} titulo={props.titulo} tamanho={props.tamanho} ambos={props.ambos} tela={props.tela}>
            <Link className="link" to={props.home === "true" ? "/adm" : "/"} ><img  className="img-logohd" src="/assets/Images/BussolaVerde.png" alt=""/></Link>
