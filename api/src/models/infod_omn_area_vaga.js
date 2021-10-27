@@ -1,26 +1,22 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_hdm_mapa extends Model {
+export default class infod_omn_area_vaga extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_HDM_mapa: {
+    id_area_vaga: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_HDM_endereco: {
-      type: DataTypes.STRING(500),
-      allowNull: true
-    },
-    nr_HDM_cep: {
-      type: DataTypes.DECIMAL(10,0),
+    nm_area_vaga: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_hdm_mapa',
+    tableName: 'infod_omn_area_vaga',
     timestamps: false,
     indexes: [
       {
@@ -28,11 +24,11 @@ export default class infob_hdm_mapa extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_HDM_mapa" },
+          { name: "id_area_vaga" },
         ]
       },
     ]
   });
-  return infob_hdm_mapa;
+  return infod_omn_area_vaga;
   }
 }

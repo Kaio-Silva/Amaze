@@ -1,58 +1,54 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_produto extends Model {
+export default class infoc_tcc_cliente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_produto: {
+    id_cliente: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    img_produto: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    nm_produto: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_codigo_interno: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    id_categoria: {
+    id_endereco: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoa_sti_categoria',
-        key: 'id_categoria'
+        model: 'infoc_tcc_endereco',
+        key: 'id_endereco'
       }
     },
-    ds_descricao: {
+    nm_cliente: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    vl_valor: {
-      type: DataTypes.DECIMAL(15,2),
+    dt_nascimento: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     },
-    nr_estoque_minimo: {
-      type: DataTypes.INTEGER,
+    nr_celular: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_estoque_maximo: {
-      type: DataTypes.INTEGER,
+    ds_email: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_estoque_atual: {
+    ds_genero: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    nr_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    qtd_compra: {
       type: DataTypes.INTEGER,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_produto',
+    tableName: 'infoc_tcc_cliente',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +56,18 @@ export default class infoa_sti_produto extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_cliente" },
         ]
       },
       {
-        name: "id_categoria",
+        name: "id_endereco",
         using: "BTREE",
         fields: [
-          { name: "id_categoria" },
+          { name: "id_endereco" },
         ]
       },
     ]
   });
-  return infoa_sti_produto;
+  return infoc_tcc_cliente;
   }
 }

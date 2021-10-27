@@ -1,58 +1,58 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_produto extends Model {
+export default class infod_omn_candidato extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_produto: {
+    id_candidato: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    img_produto: {
+    nm_candidato: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_produto: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_codigo_interno: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    id_categoria: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_categoria',
-        key: 'id_categoria'
-      }
-    },
-    ds_descricao: {
+    ds_email: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    vl_valor: {
-      type: DataTypes.DECIMAL(15,2),
+    ds_senha: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_estoque_minimo: {
-      type: DataTypes.INTEGER,
+    ds_sexo: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_estoque_maximo: {
-      type: DataTypes.INTEGER,
+    ds_nacionalidade: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_estoque_atual: {
+    ds_telefone: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    dt_nascimento: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    ds_estado_civil: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_localidade: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    id_curriculo: {
       type: DataTypes.INTEGER,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_produto',
+    tableName: 'infod_omn_candidato',
     timestamps: false,
     indexes: [
       {
@@ -60,18 +60,18 @@ export default class infoa_sti_produto extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_candidato" },
         ]
       },
       {
-        name: "id_categoria",
+        name: "id_curriculo",
         using: "BTREE",
         fields: [
-          { name: "id_categoria" },
+          { name: "id_curriculo" },
         ]
       },
     ]
   });
-  return infoa_sti_produto;
+  return infod_omn_candidato;
   }
 }

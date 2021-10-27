@@ -1,16 +1,16 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_amz_tbusuario extends Model {
+export default class infod_omn_empresa extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_usuario: {
+    id_empresa: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_usuario: {
+    nm_empresa: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
@@ -18,21 +18,29 @@ export default class infob_amz_tbusuario extends Model {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_telefone: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
     ds_senha: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    bt_ativo: {
-      type: DataTypes.BOOLEAN,
+    ds_cnpj: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_localidade: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_area_atuacao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_porte: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_amz_tbusuario',
+    tableName: 'infod_omn_empresa',
     timestamps: false,
     indexes: [
       {
@@ -40,11 +48,11 @@ export default class infob_amz_tbusuario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_empresa" },
         ]
       },
     ]
   });
-  return infob_amz_tbusuario;
+  return infod_omn_empresa;
   }
 }
