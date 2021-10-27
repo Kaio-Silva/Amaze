@@ -1,24 +1,21 @@
 import React, { useState } from 'react'
-
 import { Padrao } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes'
-
 import { Container } from './styled.js';
 import Cabecalho from '../../components/commom/cabecalho/index.js';
 import Api from '../../services/api';
+
+
 const api = new Api();
 
 function BuscarRegioes(props) {
-const[cordinates,setCordinates] = useState([])
+  const[email,setEmail] = useState('')
 
-const[ola,setOla] = useState('Rua Julio Silvino')
 
-  async function geo(){
-    let r = await api.Geocoding(ola);
-    console.log(r[0].geometry)
-    setCordinates(r[0].geometry)
-  }
-  
+//   async function Inserir(){
+//     await api.Recuperar(email)
+//  }
+
   return (
     <div className="container">
       <Cabecalho cor="black" titulo="block" input="" home="" contatenos="" buscar="" criar="" login="usar" historico="" cadastrar="usar" loginp="usar" cadastrop="usar" />
@@ -28,10 +25,10 @@ const[ola,setOla] = useState('Rua Julio Silvino')
           <hr/>
           <div className="alinharDesc">
             <div className="descricao"> Insira seu email para podermos te enviar uma notifiação para você receber a sua senha </div>
-            <Padrao className="ajustarInput" placeholder="Insira seu email" />
+            <Padrao onChange={ e => setEmail(e.target.value) } className="ajustarInput" placeholder="Insira seu email" />
           </div>  
           <hr/>
-          <div className="Botao"><Button onClick={geo}> Enviar </Button></div>
+          <div className="Botao"><Button onClick={''}> Enviar </Button></div>
         </div>
       </Container>
     </div>
