@@ -1,7 +1,7 @@
 import { Container } from './styled'
 import Logo from '../../components/commom/logo';
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Api from '../../services/api'
 
 const api = new Api()
@@ -17,42 +17,45 @@ export default function P4(props){
     const[qtdreporte,seQtdReporte] = useState(12)
     let data = new Date();
   
-    let lat = cordinates.Latitude
-    let lng = cordinates.Longitude
+
+
+    useEffect(() => {
+        async function loadGeoloc() {
+            try {
+                let r = await api.Geocoding(loc);
+                
+                let insert = {
+                    Latitude: r[0].geometry.lat,
+                    Longitude: r[0].geometry.lng
+                }
+               
+                setCordinates(insert);
+            } catch (e) {
+                
+                setCordinates({
+                    Latitude: 23.34234,
+                    Longitude: 23.34234
+                });
+            }
+        }
+        loadGeoloc();
+    }, [loc])
+
+
 
     async function Inserir(){
         let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo)
+        console.log(r);
+        alert(r);
     }
 
+    
 
-    async function Tipagem(){
-        let a = await (document.querySelector('input[name=actmnt]:checked').value)
-        setTipo(a)
-      }
+    function Tipagem(e){
+        setTipo(e.target.value)
+    }
       
 
-  async function geo(){
-    let r = await api.Geocoding(loc);
-
-    let insert= 
-      {
-       Latitude: r[0].geometry.lat,
-       Longitude: r[0].geometry.lng
-     
-    }
-
-    setCordinates(insert)
-    Tipagem()
-    Inserir()
-    console.log(cordinates)
-    console.log(bairro)
-    console.log(loc)
-    console.log(ocorrencia)
-    console.log(tipo)
-    console.log(avaliacao)
-    console.log(id)
-    console.log(qtdreporte)
-  }
   
     return(props.value) ?(
         <Container>
@@ -68,7 +71,7 @@ export default function P4(props){
                    <div className="titulo-form">Criar Denúncia</div>
 
                    <div className="inputs">
-                      <Padrao onChange={ e => setLoc(e.target.value)} className="ajustarInput" placeholder="Digite o nome da rua" cor="verde"tamanho="100%"/>
+                      <Padrao onBlur={ e => setLoc(e.target.value)} className="ajustarInput" placeholder="Digite o nome da rua" cor="verde"tamanho="100%"/>
                   </div> 
 
                   <div className="inputs">
@@ -83,22 +86,22 @@ export default function P4(props){
 
              <div className="checks">
                  <div className="l1">
-                   <label> <input className="ty" name="actmnt" type="radio" value="Latrocínio" /> Latrocínio  </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Homicídio" />Homicídio </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Sequestro" />Sequestro </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Latrocínio" onChange={Tipagem} /> Latrocínio  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Homicídio" onChange={Tipagem} />Homicídio </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Sequestro" onChange={Tipagem} />Sequestro </label>
                 </div>
 
 
                 <div className="l2">
-                   <label> <input className="ty" name="actmnt" type="radio" value="Furto" />Furto </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" />Feminicídio </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" /> Trafico  </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Estupro" />Estupro </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Furto" onChange={Tipagem} />Furto </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" onChange={Tipagem} />Feminicídio </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" onChange={Tipagem} /> Trafico  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Estupro" onChange={Tipagem} />Estupro </label>
                 </div>
 
 
                 <div className="botao">
-                    <button onClick={geo}>Concretizar Denúncia</button>
+                    <button onClick={Inserir}>Concretizar Denúncia</button>
                 </div>
 
 
