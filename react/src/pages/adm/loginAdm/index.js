@@ -3,8 +3,30 @@ import { Link } from 'react-router-dom';
 import Logo from '../../../components/commom/logo'
 import { Padrao } from '../../../components/styled/inputs.js';
 import { Button } from '../../../components/styled/botoes';
+import { useState} from 'react';
+import Api from '../../services/api.js';
+import { useHistory } from 'react-router';
 
-export default function LoginAdm(props){
+const api = new Api()
+
+function Login (props){
+
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+ 
+    const nav = useHistory();
+    
+ 
+    const Inserir = async () => {
+ 
+         let r = await api.USULogin(senha, email)
+ 
+         if( r.erro ){
+             nav.push('/Login')
+         } else{
+             nav.push('/')
+         }
+     }
     return(
         <Container>
             <Logo ambos="false" direction="column" cor="white" titulo="" tamanho="medio"/>
@@ -18,16 +40,19 @@ export default function LoginAdm(props){
                     <div className="FormLogin">
                         <div className="Inputs">                        
                             <div className="Titulo">Email</div>
-                            <Padrao placeholder="Insira seu email"/>
+                            <Padrao onChange={ e => setEmail(e.target.value)} placeholder="Insira seu email"/>
                         </div>
                         <div className="Inputs">                        
                             <div className="Titulo">Senha</div>
-                            <Padrao className="senha" placeholder="Insira seu login" type="password" Type="senha"/>
+                            <Padrao onChange={ e => setSenha(e.target.value)} className="senha" placeholder="Insira seu login" type="password" Type="senha"/>
                         </div>
-                        <Link to="/adm"><Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button></Link>
+                        {/* <Link  to="/"> */}
+                            <Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button>
+                        {/* </Link> */}
                     </div>
                 </div>
             </div>
         </Container>
     )
 }
+export {Login}
