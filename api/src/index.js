@@ -32,8 +32,9 @@ app.post('/enviar', async (req, resp) => {
     });
 
   let senha = consulta.ds_senha
+  let usuario = consulta.nm_usuario
   
-  enviarEmail(consulta.ds_email, senha)
+  enviarEmail(consulta.ds_email, senha, usuario)
 
   resp.send({ consulta });
 })

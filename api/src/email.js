@@ -11,12 +11,12 @@ const sender = nodemailer.createTransport({
 });
 
 
-async function enviarEmail(email, senha) {
+async function enviarEmail(email, senha, usuario) {
   const response = await sender.sendMail({
     from: '"TCC AMAZE" <amazetcc@gmail.com>',
     to: email, 
     subject: 'Teste',
-    html: `<p> Mensagem teste ${senha} </p>`
+    html: `<p> Olá ${usuario}, sua senha é :<b>${senha}</b> </p>`
   })
   return response;
 }
