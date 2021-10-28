@@ -13,9 +13,11 @@ function EsqueceuSenha(props) {
 
 
   async function Inserir(){
+    console.log(email)
    await api.Enviar(email)
  }
 
+ 
  
   return (
     <div className="container">

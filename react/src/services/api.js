@@ -12,8 +12,10 @@ export default class Api {
     }
 
     async Enviar(email){
-        let i = await api.post('/enviar', {ds_email: email});
+        console.log(email)
+        let i = await api.post('/enviar', {email: email});
         return i.data;
+        
      }
 
     async InserirUSU(usuario,email,telefone,senha,ativo){
