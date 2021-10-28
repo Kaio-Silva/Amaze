@@ -4,12 +4,12 @@ import Logo from '../../../components/commom/logo'
 import { Padrao } from '../../../components/styled/inputs.js';
 import { Button } from '../../../components/styled/botoes';
 import { useState} from 'react';
-import Api from '../../services/api.js';
+import Api from '../../../services/api';
 import { useHistory } from 'react-router';
 
 const api = new Api()
 
-function Login (props){
+export default function LoginAdm (props){
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -40,19 +40,18 @@ function Login (props){
                     <div className="FormLogin">
                         <div className="Inputs">                        
                             <div className="Titulo">Email</div>
-                            <Padrao onChange={ e => setEmail(e.target.value)} placeholder="Insira seu email"/>
+                            <Padrao onChange={ e => setEmail(e.target.value)} placeholder="Insira seu email" tamanho="100%" />
                         </div>
                         <div className="Inputs">                        
                             <div className="Titulo">Senha</div>
-                            <Padrao onChange={ e => setSenha(e.target.value)} className="senha" placeholder="Insira seu login" type="password" Type="senha"/>
+                            <Padrao onChange={ e => setSenha(e.target.value)} className="senha" placeholder="Insira seu login" type="password" Type="senha" tamanho="100%" />
                         </div>
-                        {/* <Link  to="/"> */}
+                        <Link  to="/adm"> 
                             <Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button>
-                        {/* </Link> */}
+                        </Link> 
                     </div>
                 </div>
             </div>
         </Container>
     )
 }
-export {Login}

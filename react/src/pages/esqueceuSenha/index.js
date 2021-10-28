@@ -16,7 +16,7 @@ function EsqueceuSenha(props) {
    await api.Enviar(email)
  }
 
-
+ 
   return (
     <div className="container">
       <Cabecalho cor="black" titulo="block" input="" home="" contatenos="" buscar="" criar="" login="usar" historico="" cadastrar="usar" loginp="usar" cadastrop="usar" />

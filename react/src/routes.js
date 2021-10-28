@@ -9,7 +9,7 @@ import { Login }  from './pages/login'
 import Denuncias from './pages/Denuncias';
 import Mapa from './pages/Mapa'
 import Adm from './pages/adm';
-import LoginAdm from './pages/adm/loginAdm';
+import LoginAdm from './pages/adm/loginAdm'
 import Error from './pages/error';
 import Criar from './components/commom/criar'
 import Contatenos from './pages/contateNos';
