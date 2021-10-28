@@ -3,6 +3,8 @@ import express from 'express'
 import cors from 'cors'
 import axios from 'axios'
 
+import enviarEmail from './email.js';
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -19,6 +21,40 @@ app.get('/geo2', async (req,resp) =>{
   }
 })
 
+app.post('/enviar', async (req, resp) => {
+  let email = req.body.email;
+
+  let consulta = await db.infob_amz_tbusuario.findOne(
+    {
+        where:{
+          ds_email: email
+        }
+    });
+
+  let senha = consulta.ds_senha
+  
+  enviarEmail(consulta.ds_email, senha)
+
+  resp.send({ consulta });
+})
+
+
+
+app.post('/contate-nos', async (req, resp) => {
+  let email = req.body.email;
+
+  
+  let consulta = await db.infob_amz_tbusuario.findOne(
+    {
+        where:{
+          ds_email: email
+        }
+    });
+
+  enviarEmail(consulta.ds_email, consulta.ds_senha)
+
+  resp.send({ status: 'ok' });
+})
 
 
 //tabela Usuário

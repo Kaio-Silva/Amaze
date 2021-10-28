@@ -8,8 +8,13 @@ import Api from '../../services/api';
 
 const api = new Api();
 
-function BuscarRegioes(props) {
+function EsqueceuSenha(props) {
   const[email,setEmail] = useState('')
+
+
+  async function Inserir(){
+   await api.Enviar(email)
+ }
 
 
   return (
@@ -24,7 +29,7 @@ function BuscarRegioes(props) {
             <Padrao onChange={ e => setEmail(e.target.value) } className="ajustarInput" placeholder="Insira seu email" />
           </div>  
           <hr/>
-          <div className="Botao"><Button onClick={''}> Enviar </Button></div>
+          <div className="Botao"><Button onClick={Inserir}> Enviar </Button></div>
         </div>
       </Container>
     </div>
@@ -32,4 +37,4 @@ function BuscarRegioes(props) {
   );
 }
 
-export default BuscarRegioes;
+export default EsqueceuSenha;
