@@ -2,7 +2,7 @@ import db from './db.js';
 import express from 'express'
 import cors from 'cors'
 import axios from 'axios'
-import enviarEmail from './email.js';
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -19,17 +19,6 @@ app.get('/geo2', async (req,resp) =>{
   }
 })
 
-
-// app.post('/enviar', async(req, resp) => {
-//   try{
-
-//     const response = await enviarEmail(req.body.para, req.body.usuario, req.body.senha);
-//     resp.send(response);
-
-//   } catch(e){
-//     resp.send(e)
-//   }
-// })
 
 
 //tabela Usuário
