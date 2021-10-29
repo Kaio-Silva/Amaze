@@ -113,12 +113,14 @@ button{
     height:1px;
     width:100%;
     background-color:rgba(0, 0, 0, 0.3);
+    margin-left: 0.9em;
 }
 
 .bloco{
     margin-top: 1.5em;
     justify-content: left;
     height: 10em;
+    width:10.8em;
 }
 
 .aval img{
@@ -155,9 +157,101 @@ button{
     margin-bottom: 2.5em;
 }
 
+@media(max-width: 501px){
 
+    .abox{
+        width:100%;
+    }
+    
+   .bloco{
+       width:20em;
+       background-color: ;
+    
+   }
+   #lado{
+       margin-left:4em
+   }
+   #lado2{
+       margin-right:2em;
+   }
+   #lado3{
+    margin-left:2em;
+   }
+
+   #lado4{
+       margin-left:2em;
+   }
+    .titulob{
+        font-size:16px;
+    }
+    .botao button{
+    
+    width: 70%;
+    
+}
+.linha{
+    display:none;
+}
+.linha2{
+    display:none;
+}
+
+.b1{
+    padding-top:2em;
+}
+#lado5{
+    margin-left:2em;
+}
+}
+
+@media(max-width: 1200px){
+    
+    .abox{
+        width:
+    }
+
+   .bloco{
+       width:20em;
+       background-color: ;
+    
+   }
+   #lado{
+       margin-left:4em
+   }
+   #lado2{
+       margin-right:2em;
+   }
+   #lado3{
+    margin-left:2em;
+   }
+
+   #lado4{
+       margin-left:2em;
+   }
+    .titulob{
+        font-size:16px;
+    }
+    .botao button{
+    
+    width: 70%;
+    
+}
+.linha{
+    display:none;
+}
+.linha2{
+    display:none;
+}
+
+.b1{
+    padding-top:2em;
+}
+#lado5{
+    margin-left:2em;
+}
+
+}
 `
-
 
 
 export { Container }

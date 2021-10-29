@@ -14,7 +14,7 @@ export default function p6(props){
               
               <div className="denuncs" id="style-2">
                 <div className="b1">
-                    <div className="bloco">
+                    <div className="bloco" id="lado">
                         <div className="titulob">Rua júlio Silvino</div>
                         <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
                         <div className="descr">Latrocínio</div>
@@ -24,12 +24,16 @@ export default function p6(props){
         
                     <div className="linha"></div>
         
-                    <div className="bloco">
+                    <div className="bloco" id="lado2">
                         <div className="titulob">Rua júlio Silvino</div>
                         <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
                         <div className="descr">Latrocínio</div>
                         <div className="date">27/10/2021</div>
-                        <div className="botao"><Link to="/Denuncia"><button>Saiba Mais</button></Link></div>
+                        <div className="botao">
+                            <Link to="/Denuncia">
+                                <button>Saiba Mais</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
         
@@ -38,7 +42,7 @@ export default function p6(props){
         
         
                 <div className="b2">
-                <div className="bloco">
+                <div className="bloco" id="lado3">
                         <div className="titulob">Rua júlio Silvino</div>
                         <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
                         <div className="descr">Latrocínio</div>
@@ -63,7 +67,7 @@ export default function p6(props){
         
         
                 <div className="b1">
-                    <div className="bloco">
+                    <div className="bloco" id="lado4">
                         <div className="titulob">Rua júlio Silvino</div>
                         <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
                         <div className="descr">Latrocínio</div>
@@ -87,7 +91,7 @@ export default function p6(props){
         
         
                 <div className="b2">
-                <div className="bloco">
+                <div className="bloco" id="lado5">
                         <div className="titulob">Rua júlio Silvino</div>
                         <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
                         <div className="descr">Latrocínio</div>
