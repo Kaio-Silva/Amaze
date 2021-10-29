@@ -22,4 +22,4 @@ async function enviarEmail(email, senha, usuario) {
 }
 
 
-export default enviarEmail;
+export default enviarEmail;  
