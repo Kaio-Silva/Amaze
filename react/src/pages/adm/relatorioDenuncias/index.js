@@ -1,41 +1,34 @@
 import { Pesquisa } from '../../../components/styled/inputs.js';
 import Card  from "../../../components/commom/Card";
 import { Container } from './styled';
+import { useState, useEffect } from 'react';
+
+import Api from "../../../services/api";
+const api = new Api()
 
 
 export default function Denuncias(props) {
+    const [denuc, setDenuc] = useState([]);
+    //lembrar de arrumar o usuario
+    async function Funcao(){
+        let f = await api.ListarDENUTotal();
+        setDenuc(f);
+    }
+
+    useEffect(()=> {
+        Funcao();
+    }, [])
+
     return (
             <Container>
                 <Pesquisa className="Pesquisar" input="usar" tamanho="medio"/>
                 <div className="baixo">
-                    <div className="alinhando">
-                        <Card autor="Kaio Silva" qtd="16" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                        <Card autor="Yudji freguês" qtd="20" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                    </div>
-
-                    <div className="alinhando">
-                        <Card autor="Thiago Viana" qtd="17" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                        <Card autor="Kaique Oliveira" qtd="19" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                    </div>
-
-                    <div className="alinhando">
-                        <Card autor="Marcos Vinicius" qtd="18" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                        <Card autor="Beatriz Santos" qtd="20" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                    </div>
-                    <div className="alinhando">
-                        <Card autor="Kaio Silva" qtd="16" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                        <Card autor="Yudji freguês" qtd="20" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                    </div>
-
-                    <div className="alinhando">
-                        <Card autor="Thiago Viana" qtd="17" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                        <Card autor="Kaique Oliveira" qtd="19" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                    </div>
-
-                    <div className="alinhando">
-                        <Card autor="Marcos Vinicius" qtd="18" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                        <Card autor="Beatriz Santos" qtd="20" desc="Fui assaltado saindo de casa, tomem cuidado area esta bem perigosa"/>
-                    </div>
+                    {denuc.map(item =>
+                        <div className="alinhando">
+                            <Card autor={item.id_usuario} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia}/>
+                            <Card autor={item.id_denuncia} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia}/>
+                        </div>
+                    )}
                 </div>
         </Container>
     )

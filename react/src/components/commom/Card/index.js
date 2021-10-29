@@ -1,9 +1,17 @@
 import { Card } from './styled';
 import Pop from "../../../Popups/popAdm"
 import { useState } from 'react';
+import Api from '../../../services/api';
+const api = new Api()
 
 export default function Denuncias(props) {
     const[trigger,SetTrigger] = useState(false)
+    //lembrar terminar o delete
+    async function cancelDenuc(id) {
+        let f = await Api.deleteDENU(id)
+        alert('removeu');
+    }
+
     return (
         <Card>
             <div onClick={() => SetTrigger(true)}>

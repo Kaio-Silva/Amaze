@@ -43,8 +43,13 @@ const Card = styled.div`
         height: 2em;
     }
 
-    .botoes:hover{
+    .botoes img:hover{
         cursor: pointer;
+    }
+
+    .botoes:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 
 
