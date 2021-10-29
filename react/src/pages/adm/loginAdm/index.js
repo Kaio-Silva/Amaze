@@ -24,7 +24,7 @@ export default function LoginAdm (props){
          if( r.erro ){
              nav.push('/Login')
          } else{
-             nav.push('/')
+             nav.push('/adm')
          }
      }
     return(
@@ -46,9 +46,9 @@ export default function LoginAdm (props){
                             <div className="Titulo">Senha</div>
                             <Padrao onChange={ e => setSenha(e.target.value)} className="senha" placeholder="Insira seu login" type="password" Type="senha" tamanho="100%" />
                         </div>
-                        <Link  to="/adm"> 
-                            <Button className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button>
-                        </Link> 
+                        {/* <Link  to="/"> */}
+                            <Button onClick={Inserir} className="ajustarBotao" tamanho="grande" cor="azul"> Log in </Button>
+                        {/* </Link> */}
                     </div>
                 </div>
             </div>
