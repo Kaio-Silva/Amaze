@@ -17,13 +17,24 @@ app.post('/inserir', async(req,resp) =>{
     
       let arrouba = email.includes('@')
 
-      let especial = senha.includes("@" || "$" || "&" || "%" || "*" || ".")
+      let especial = senha.includes("@")
+
+      let especial3 = senha.includes('$')
+
+      let especial4 = senha.includes('%')
+
+      let especial5 = senha.includes('*')
+
+      let proibido = senha.includes('#')
+
+      if(proibido === true)
+      return resp.send({erro:'Não é permitido o uso de #'})
+
+      if( (especial || especial3 || especial4 || especial5) === false)
+      return resp.send({erro: 'A senha precisa ter no mínimo um caractere especial'})
     
       if(arrouba === false)
       return resp.send({erro:'O email Precisa do caracter @'})
-
-      if(especial === false)
-      return resp.send({erro:'a senha precisar ter no mínimo 1 caractere especial'})
 
       if(email.length < 12)
        return resp.send({erro:'O email Precisa de no mínimo 12 caracteres'})
@@ -31,11 +42,18 @@ app.post('/inserir', async(req,resp) =>{
        if(senha.length < 5)
        return resp.send({erro:'A senha precisa ter no mínimo 5 caracteres'})
 
-       if(telefone.length < 14 || telefone.length >14)
+       if(isNaN(telefone) === true)
+       return resp.send({erro:'O campo telefone só aceita números'})
+
+       if(telefone.length < 11 || telefone.length >11)
        return resp.send({erro:'O número de telefone está inválido'})
     
       if(telefone === null || senha === null || email === null || usuario === null)
       return resp.send({erro:'Você não pode inserir um campo vazio'})
+
+      
+
+      console.log(o)
 
        let inserir={
           nm_usuario:usuario,
