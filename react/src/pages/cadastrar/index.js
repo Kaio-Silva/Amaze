@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useHistory } from 'react-router';
 import Logo from '../../components/commom/logo/index.js';
 import { Button } from '../../components/styled/botoes';
 
@@ -12,7 +12,6 @@ import Api from '../../services/api.js';
 const api = new Api()
 
 
-
 function Cadastrar(props) {
    const [nome,setNome] = useState('')
    const [email,setEmail] = useState('')
@@ -20,6 +19,7 @@ function Cadastrar(props) {
    const [senha,setSenha] = useState('')
    const [concluir,setConcluir] = useState([])
 
+   const navigation = useHistory();
 
    console.log(nome);
    console.log(email);
@@ -29,8 +29,15 @@ function Cadastrar(props) {
    
    
    async function Inserir(){
+
       let a = await api.InserirUSU(nome, email, telefone, senha, concluir)
       setConcluir(a);
+
+      if(a.erro){
+        alert(a.erro)
+      }else{
+         navigation.push('/')
+      }
    }
 
   return (

@@ -53,11 +53,12 @@ app.post('/inserir', async(req,resp) =>{
 
 
 // Verificar se o usuário já tem uma conta para efetuar login
-app.post('/login',async (req,resp) =>{
+app.get('/login',async (req,resp) =>{
   try{
-    let senha = req.body.senha;
-    let email = req.body.email;
-
+    let senha = req.query.ds_senha;
+    let email = req.query.ds_email;
+    console.log(senha)
+    console.log(email)
       let consulta = await db.infob_amz_tbusuario.findOne(
       {
           where:{
@@ -65,9 +66,14 @@ app.post('/login',async (req,resp) =>{
             ds_email: email
           }
       });
+
+     if(consulta == null || undefined){
+       return resp.send({erro:'Inválido'})
+     }
+
       resp.send(consulta)
   }catch(e){
-      resp.send(e.toString())
+      resp.send(e)
   }
 })
 
@@ -87,12 +93,17 @@ app.get('/total',async (req,resp) =>{
   app.get('/email',async (req,resp) =>{
 
     let email = req.query.email;
-
+     console.log(email)
     try{
-         let consulta = await db.infob_amz_tbusuario.findAll({
+         let consulta = await db.infob_amz_tbusuario.findOne({
            where:{ds_email:email}
          });
-         resp.send(consulta.id_usuario)
+
+         let object ={
+           idusu:consulta.id_usuario
+         }
+
+         resp.send(object)
     }catch(e){
         resp.send(e.toString())
     }

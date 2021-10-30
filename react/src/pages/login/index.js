@@ -20,7 +20,7 @@ function Login (props){
   
     async function Id(){
         let r = await api.USUemail(email)
-        console.log('oiee'+r)
+        console.log(r) 
         Cookies.set('Idusu',r)
         return r.data;
       }
@@ -34,8 +34,9 @@ function Login (props){
    const Inserir = async () => {
 
         let r = await api.USULogin(senha, email)
-
         if( r.erro ){
+            console.log(senha)
+            alert(r.erro)
             nav.push('/Login')
         } else{
             Id()
