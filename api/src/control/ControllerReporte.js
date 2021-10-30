@@ -7,7 +7,7 @@ const app = express.Router();
 
 
   //irá listar todos os reportes que uma denúncia recebeu
-  app.get('/ConsultaQuery', async(req,resp) =>{
+  app.get('/consultaquery', async(req,resp) =>{
     let iddenu = req.query.id;
 
     let consulta = await db.infob_amz_tbreporte_denuncia.findAll({
@@ -57,7 +57,7 @@ try{
   })
 
 
-  app.put('/Reportefalse/:id', async(req,resp) =>{
+  app.put('/false/:id', async(req,resp) =>{
     try{
       let id= req.params.id
       

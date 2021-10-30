@@ -3,7 +3,7 @@ import db from '../db.js';
 
 const app = express.Router();
 
-app.post('/denuncia', async(req,resp) =>{
+app.post('/inserir', async(req,resp) =>{
     try{
        let idusu = req.body.id_usuario;
        let longitude = req.body.ds_longitude;

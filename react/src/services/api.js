@@ -19,34 +19,40 @@ export default class Api {
      }
 
     async InserirUSU(usuario,email,telefone,senha,ativo){
-        let i = await api.post('/usuario',{nm_usuario:usuario,ds_email:email, nr_telefone:telefone,ds_senha:senha,bt_ativo: ativo});
+        let i = await api.post('/usuario/inserir',{nm_usuario:usuario,ds_email:email, nr_telefone:telefone,ds_senha:senha,bt_ativo: ativo});
         return i.data;
      }
 
 
      async USULogin(senha,email){
-         let i = await api.post('/login',(senha,email));
+         let i = await api.post('/usuario/login',(senha,email));
          return i.data;
      }
     
 
      async USUtotal(){
-         let i = await api.get('/usuariototal');
+         let i = await api.get('/usuario/total');
          return i.data;
      }
 
-    async DELETEusu(id){
-        let i = await api.delete('/usuario',(id));
+     async USUemail(email){
+        let i = await api.get(`/usuario/email?email=${email}`);
+        return i.data;
+    }
+
+    async DELETEusu(ativo){
+        let i = await api.delete(`/usuario/del?ativo=${ativo}`);
         return i.data;
     }
 
     async alterarSenhaUSU(id,senha){
        let i = await api.put(`/usuario/${id}`,{ds_senha:senha});
+       
        return i.data;
     }
 
     async deligarUSU(id,ativo){
-       let i = await api.put(`/usuarioFalse/${id}`,{bt_ativo:ativo});
+       let i = await api.put(`/usuario/usuarioFalse/${id}`,{bt_ativo:ativo});
        return i.data;
     }
 
@@ -54,28 +60,28 @@ export default class Api {
 
 
     async inserirDENU(idusu,longitude,latitude,data,ocorrencia,qtdreporte,rua,bairro,avaliacao,tipo){
-        let i = await api.post('/denuncia',{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia, qtd_reporte_recebido:qtdreporte, ds_rua:rua, ds_bairro:bairro, qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
+        let i = await api.post('/denuncia/inserir',{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia, qtd_reporte_recebido:qtdreporte, ds_rua:rua, ds_bairro:bairro, qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
         return i.data;
     }
     
 
     async listarDENUpoUsu(id){
-        let i = await api.get(`/denuncia/${id}`);
+        let i = await api.get(`/${id}`);
         return i.data;
     }
 
     async ListarDENUTotal(){
-        let i = await api.get('/denunciatotal');
+        let i = await api.get('/');
         return i.data;
     }
 
     async alterarDENU(id,idusu,longitude,latitude,data,ocorrencia,rua,bairro,avaliacao,tipo){
-        let i = await api.put(`/denuncia/${id}`,{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia,ds_rua:rua,ds_bairro:bairro,qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
+        let i = await api.put(`/denuncia/alt/${id}`,{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia,ds_rua:rua,ds_bairro:bairro,qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
         return i.data;
     }
 
     async deleteDENU(id){
-        let i = await api.delete(`/denuncia/${id}`);
+        let i = await api.delete(`/denuncia/del/${id}`);
         return i.data;
     }
 
@@ -83,26 +89,26 @@ export default class Api {
 
 
     async ListarReporteporDenu(id){
-        let i = await api.get('/ReporteDenunc',(id))
+        let i = await api.get(`/reporte/consultaquery?id=${id}`)
          return i.data;
     }
 
     async ListarReporteTOTAL(){
-        let i = await api.get('/ReporteDenuncia')
+        let i = await api.get('/reporte/total')
         return i.data;
     }
 
     async CRIARreporte(idusu,iddenu,data,motivo){
-        let i = await api.post('/ReporteDenunc',{id_usuario:idusu,id_denuncia:iddenu,dt_reporte:data,ds_motivo_reporte:motivo});
+        let i = await api.post('/reporte/inserir',{id_usuario:idusu,id_denuncia:iddenu,dt_reporte:data,ds_motivo_reporte:motivo});
         return i.data;
     }
 
     async ReporteFalse(id,confirmado){
-        let i = await api.put(`/Reportefalse${id}`,{ds_confirmado:confirmado})
+        let i = await api.put(`/reporte/false/${id}`,{ds_confirmado:confirmado})
     }
 
-    async DELETEreporte(id){
-        let i = await api.delete('/ReporteDenu',(id));
+    async DELETEreporte(){
+        let i = await api.delete(`/reporte/del?ds_confirmado=${false}`);
         return i.data;
     }
 }

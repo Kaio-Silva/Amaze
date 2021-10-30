@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import Logo from '../../components/commom/logo'
 import { Padrao } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes.js';
-import { useState} from 'react';
+import { useEffect, useState} from 'react';
 import Api from '../../services/api.js';
 import { useHistory } from 'react-router';
+import Cookies from 'js-cookie'
 
 const api = new Api()
 
@@ -15,6 +16,17 @@ function Login (props){
 
    const [email, setEmail] = useState('')
    const [senha, setSenha] = useState('')
+
+  
+    async function Id(){
+        let r = await api.USUemail(email)
+        console.log('oiee'+r)
+        Cookies.set('Idusu',r)
+        return r.data;
+      }
+   
+
+  
 
    const nav = useHistory();
    
@@ -26,6 +38,7 @@ function Login (props){
         if( r.erro ){
             nav.push('/Login')
         } else{
+            Id()
             nav.push('/')
         }
     }

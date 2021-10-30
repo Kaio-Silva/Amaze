@@ -84,6 +84,22 @@ app.get('/total',async (req,resp) =>{
   })
   
 
+  app.get('/email',async (req,resp) =>{
+
+    let email = req.query.email;
+
+    try{
+         let consulta = await db.infob_amz_tbusuario.findAll({
+           where:{ds_email:email}
+         });
+         resp.send(consulta.id_usuario)
+    }catch(e){
+        resp.send(e.toString())
+    }
+})
+
+
+
 
 
 app.delete('/del', async (req,resp) =>{
