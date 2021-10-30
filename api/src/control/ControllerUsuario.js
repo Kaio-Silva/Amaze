@@ -12,10 +12,12 @@ app.post('/inserir', async(req,resp) =>{
       let senha = req.body.ds_senha;
       let ativo = true;
       console.log(senha)
+      let oi = '1234567@'
 
+    
       let arrouba = email.includes('@')
 
-      let especial = senha.includes('#' || '@' || '$' || '&' || '%' || '*' || '.')
+      let especial = senha.includes("@" || "$" || "&" || "%" || "*" || ".")
     
       if(arrouba === false)
       return resp.send({erro:'O email Precisa do caracter @'})
@@ -56,7 +58,7 @@ app.post('/inserir', async(req,resp) =>{
 app.get('/login',async (req,resp) =>{
   try{
     let senha = req.query.ds_senha;
-    let email = req.body.ds_email;
+    let email = req.query.ds_email;
     console.log(senha)
     console.log(email)
       let consulta = await db.infob_amz_tbusuario.findOne(
@@ -68,7 +70,7 @@ app.get('/login',async (req,resp) =>{
       });
 
      if(consulta == null || undefined){
-       return resp.send({erro:'Inválido'})
+       return resp.send({erro:'Usuário ou Senha inválido'})
      }
 
       resp.send(consulta)

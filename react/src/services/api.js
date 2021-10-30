@@ -25,7 +25,7 @@ export default class Api {
 
 
      async USULogin(senha,email){
-         let i = await api.get(`/usuario/login?ds_email=${email}`,{ds_senha:senha});
+         let i = await api.get(`/usuario/login?ds_email=${email}&ds_senha=${senha}`);
          return i.data;
      }
     
