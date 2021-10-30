@@ -11,7 +11,7 @@ app.post('/inserir', async(req,resp) =>{
       let telefone = req.body.nr_telefone;
       let senha = req.body.ds_senha;
       let ativo = true;
-      
+      console.log(senha)
 
       let arrouba = email.includes('@')
 
@@ -56,7 +56,7 @@ app.post('/inserir', async(req,resp) =>{
 app.get('/login',async (req,resp) =>{
   try{
     let senha = req.query.ds_senha;
-    let email = req.query.ds_email;
+    let email = req.body.ds_email;
     console.log(senha)
     console.log(email)
       let consulta = await db.infob_amz_tbusuario.findOne(
