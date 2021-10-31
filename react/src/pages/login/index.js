@@ -20,8 +20,9 @@ function Login (props){
   
     async function Id(){
         let r = await api.USUemail(email)
-        console.log(r)
-        Cookies.set('Idusu',r, { expires: 7 })
+        let idusu = r.idusu
+        console.log(idusu)
+        Cookies.set('Idusu',idusu, { expires: 7 })
         return r.data;
       }
    

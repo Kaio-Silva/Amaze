@@ -66,7 +66,7 @@ export default class Api {
     
 
     async listarDENUpoUsu(id){
-        let i = await api.get(`/${id}`);
+        let i = await api.get(`/denuncia/${id}`);
         return i.data;
     }
 

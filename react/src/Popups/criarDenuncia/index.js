@@ -3,6 +3,7 @@ import Logo from '../../components/commom/logo';
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
 import { useEffect, useState } from 'react';
 import Api from '../../services/api'
+import Cookies from 'js-cookie'
 
 const api = new Api()
 
@@ -13,9 +14,17 @@ export default function P4(props){
     const[loc,setLoc] = useState('')
     const[tipo,setTipo] = useState('')
     const[avaliacao,setAvaliacao] = useState(9)
-    const[id,setId] = useState(2)
+    const[id,setId] = useState([])
     const[qtdreporte,seQtdReporte] = useState(12)
     let data = new Date();
+
+    useEffect(() =>{
+        let idu = Cookies.get('Idusu')
+        if(idu === null || undefined)
+        return alert('Não é possível criar uma denúncia sem criar uma conta.')
+        setId(idu)
+        console.log(idu)
+    },[])
   
 
 
@@ -46,7 +55,6 @@ export default function P4(props){
     async function Inserir(){
         let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo)
         console.log(r);
-        alert(r);
     }
 
     
