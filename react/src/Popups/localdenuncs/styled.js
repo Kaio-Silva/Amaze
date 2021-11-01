@@ -125,8 +125,7 @@ button{
 
 .aval img{
     width:4em;
-    height:auto;
-    
+    height:auto; 
 }
 
 .aval{
@@ -204,7 +203,7 @@ button{
 }
 }
 
-@media screen and (max-width: 940px) and (min-width: 501px){
+    @media screen and (max-width: 940px) and (min-width: 501px){
     .abox {width: 70%}
 }
 
