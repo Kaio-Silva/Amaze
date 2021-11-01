@@ -253,7 +253,17 @@ button{
 }
 @media(max-width: 940px){
     #lado{
-        margin-left:2em;
+        margin-left:;
+    }
+}
+@media(max-width: 375px){
+    .denuncs{
+        height:34em;
+    }
+}
+@media(max-width: 540px){
+    .denuncs{
+        height:34em;
     }
 }
 
