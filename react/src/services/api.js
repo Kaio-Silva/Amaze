@@ -59,8 +59,8 @@ export default class Api {
     /////////////////////////////////////////////////////////////////////////////
 
 
-    async inserirDENU(idusu,longitude,latitude,data,ocorrencia,qtdreporte,rua,bairro,avaliacao,tipo){
-        let i = await api.post('/denuncia/inserir',{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia, qtd_reporte_recebido:qtdreporte, ds_rua:rua, ds_bairro:bairro, qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
+    async inserirDENU(idusu,longitude,latitude,data,ocorrencia,qtdreporte,rua,bairro,avaliacao,tipo,hashh){
+        let i = await api.post('/denuncia/inserir',{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia, qtd_reporte_recebido:qtdreporte, ds_rua:rua, ds_bairro:bairro, qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo,ds_geohash:hashh});
         return i.data;
     }
     

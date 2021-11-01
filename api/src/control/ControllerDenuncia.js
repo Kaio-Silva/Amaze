@@ -15,6 +15,7 @@ app.post('/inserir', async(req,resp) =>{
        let bairro = req.body.ds_bairro;
        let avaliacao = req.body.qtd_avaliacao;
        let tipo = req.body.ds_tipo_denuncia; 
+       let hash = req.body.ds_geohash;
 
   
       let inserir = {
@@ -27,7 +28,8 @@ app.post('/inserir', async(req,resp) =>{
         ds_rua: rua,
         ds_bairro: bairro,
         qtd_avaliacao: avaliacao,
-        ds_tipo_denuncia:tipo
+        ds_tipo_denuncia:tipo,
+        ds_geohash:hash
       }
   
   
