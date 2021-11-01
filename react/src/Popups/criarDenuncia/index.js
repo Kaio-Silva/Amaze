@@ -16,6 +16,7 @@ export default function P4(props){
     const[avaliacao,setAvaliacao] = useState(9)
     const[id,setId] = useState([])
     const[qtdreporte,seQtdReporte] = useState(12)
+    const[hashh,setHash] = useState('')
     let data = new Date();
 
     useEffect(() =>{
@@ -37,6 +38,7 @@ export default function P4(props){
                 }
                
                 setCordinates(insert);
+                console.log(cordinates)
             } catch (e) {
                 
                 setCordinates({
@@ -50,19 +52,29 @@ export default function P4(props){
     
     )
 
+    useEffect(()=>{
+
+        var geohash =  require('ngeohash');
+        let hash = geohash.encode(cordinates.Latitude,cordinates.Longitude)
+        setHash(hash)
+  
+    },[cordinates])
+
 
 
     async function Inserir(){
  
         if(bairro === '' || loc === '' || ocorrencia === '' || tipo === '' )
         return alert('Todos os campos sao obrigatorios')
-          else{ 
-        let idu = Cookies.get('Idusu')
-        if(idu === undefined){
-         return alert('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
-        }else{      
-        let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo)
-        console.log(r);
+        else{ 
+            let idu = Cookies.get('Idusu')
+
+            if(idu === undefined){
+              return alert('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
+            }else{      
+                let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
+                alert('Denúncia criada com sucesso!')
+                console.log(r);
         }
      }
     }
