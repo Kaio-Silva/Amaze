@@ -1,34 +1,26 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_login extends Model {
+export default class infod_ssc_adm extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_login: {
+    id_adm: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     ds_email: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+      type: DataTypes.STRING(255),
+      allowNull: true
     },
     ds_senha: {
-      type: DataTypes.STRING(100),
-      allowNull: false
-    },
-    dt_ult_login: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    dt_registro: {
-      type: DataTypes.DATE,
-      allowNull: false
+      type: DataTypes.STRING(50),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_login',
+    tableName: 'infod_ssc_adm',
     timestamps: false,
     indexes: [
       {
@@ -36,11 +28,11 @@ export default class infoa_enl_login extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_login" },
+          { name: "id_adm" },
         ]
       },
     ]
   });
-  return infoa_enl_login;
+  return infod_ssc_adm;
   }
 }

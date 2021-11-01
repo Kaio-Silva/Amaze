@@ -1,30 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tht_compra extends Model {
+export default class infoa_sti_venda extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_compra: {
+    id_venda: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_pacote: {
+    id_endereco: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_endereco',
+        key: 'id_endereco'
+      }
+    },
+    id_produto: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_produto',
+        key: 'id_produto'
+      }
+    },
+    ds_codigo: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    id_usuario: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_aprovacao: {
-      type: DataTypes.BOOLEAN,
+    dt_venda: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tht_compra',
+    tableName: 'infoa_sti_venda',
     timestamps: false,
     indexes: [
       {
@@ -32,25 +44,25 @@ export default class infoc_tht_compra extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_compra" },
+          { name: "id_venda" },
         ]
       },
       {
-        name: "id_pacote",
+        name: "id_endereco",
         using: "BTREE",
         fields: [
-          { name: "id_pacote" },
+          { name: "id_endereco" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infoc_tht_compra;
+  return infoa_sti_venda;
   }
 }

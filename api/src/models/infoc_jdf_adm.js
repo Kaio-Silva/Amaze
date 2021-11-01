@@ -1,34 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tht_cartao extends Model {
+export default class infoc_jdf_adm extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cartao: {
+    id_adm: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nr_cartao: {
-      type: DataTypes.INTEGER,
+    nm_funncionario: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_cartao: {
-      type: DataTypes.INTEGER,
+    ds_funcao: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    mr_parcela: {
-      type: DataTypes.INTEGER,
+    ds_email: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_parcela: {
-      type: DataTypes.INTEGER,
+    ds_senhaEmail: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    nr_telefone: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tht_cartao',
+    tableName: 'infoc_jdf_adm',
     timestamps: false,
     indexes: [
       {
@@ -36,11 +44,11 @@ export default class infoc_tht_cartao extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_cartao" },
+          { name: "id_adm" },
         ]
       },
     ]
   });
-  return infoc_tht_cartao;
+  return infoc_jdf_adm;
   }
 }

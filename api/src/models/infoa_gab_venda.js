@@ -33,6 +33,14 @@ export default class infoa_gab_venda extends Model {
     ds_pagamento: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    vl_total: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    qtd_itens: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     sequelize,

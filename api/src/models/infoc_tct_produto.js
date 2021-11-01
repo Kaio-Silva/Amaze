@@ -26,10 +26,6 @@ export default class infoc_tct_produto extends Model {
       type: DataTypes.STRING(15),
       allowNull: true
     },
-    ds_setor: {
-      type: DataTypes.STRING(30),
-      allowNull: true
-    },
     ds_embalagem: {
       type: DataTypes.STRING(30),
       allowNull: true

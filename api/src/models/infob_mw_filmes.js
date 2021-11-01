@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_filme extends Model {
+export default class infob_mw_filmes extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_filme: {
@@ -49,10 +49,14 @@ export default class infob_mw_filme extends Model {
     img_capa_menor: {
       type: DataTypes.STRING(1000),
       allowNull: true
+    },
+    qtd_likes: {
+      type: DataTypes.TEXT,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_filme',
+    tableName: 'infob_mw_filmes',
     timestamps: false,
     indexes: [
       {
@@ -65,6 +69,6 @@ export default class infob_mw_filme extends Model {
       },
     ]
   });
-  return infob_mw_filme;
+  return infob_mw_filmes;
   }
 }

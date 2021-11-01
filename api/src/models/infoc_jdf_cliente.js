@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tht_usuario extends Model {
+export default class infoc_jdf_cliente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_usuario: {
+    id_cliente: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,35 +12,43 @@ export default class infoc_tht_usuario extends Model {
     },
     id_cartao: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_jdf_cartao',
+        key: 'id_cartao'
+      }
+    },
+    nm_cliente: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_usuraio: {
-      type: DataTypes.STRING(30),
-      allowNull: true
-    },
-    nm_nick: {
-      type: DataTypes.STRING(10),
+    nr_telefone: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_email: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_cpf: {
+    ds_senhaEmail: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_endereco: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    nr_endereco: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    dt_nascimento: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    ds_senha: {
-      type: DataTypes.INTEGER,
+    ds_complemento: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tht_usuario',
+    tableName: 'infoc_jdf_cliente',
     timestamps: false,
     indexes: [
       {
@@ -48,7 +56,7 @@ export default class infoc_tht_usuario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_cliente" },
         ]
       },
       {
@@ -60,6 +68,6 @@ export default class infoc_tht_usuario extends Model {
       },
     ]
   });
-  return infoc_tht_usuario;
+  return infoc_jdf_cliente;
   }
 }

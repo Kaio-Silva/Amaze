@@ -1,30 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tht_chat extends Model {
+export default class infoc_jdf_cartao extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_mensagem: {
+    id_cartao: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_nome: {
-      type: DataTypes.STRING(10),
+    nr_cartao: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_mensagem: {
-      type: DataTypes.STRING(100),
+    nm_usuario: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    dt_messagem: {
-      type: DataTypes.DATE,
+    dt_expiracao: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tht_chat',
+    tableName: 'infoc_jdf_cartao',
     timestamps: false,
     indexes: [
       {
@@ -32,11 +32,11 @@ export default class infoc_tht_chat extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_mensagem" },
+          { name: "id_cartao" },
         ]
       },
     ]
   });
-  return infoc_tht_chat;
+  return infoc_jdf_cartao;
   }
 }

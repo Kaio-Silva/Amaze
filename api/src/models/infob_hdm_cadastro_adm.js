@@ -1,34 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_apn_tb_user extends Model {
+export default class infob_hdm_cadastro_adm extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    ID_USER: {
+    id_HDM_cadastro: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    NM_USER: {
+    nm_HDM_nome: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
-    NM_SOBRENOME: {
+    nm_HDM_sobrenome: {
+      type: DataTypes.STRING(300),
+      allowNull: true
+    },
+    dt_HDM_data_nascimento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    nr_HDM_celular: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
-    DS_EMAIL: {
-      type: DataTypes.STRING(100),
+    nm_HDM_email_empresa: {
+      type: DataTypes.STRING(300),
       allowNull: true
     },
-    ds_senha: {
-      type: DataTypes.STRING(100),
+    nm_HDM_senha: {
+      type: DataTypes.STRING(50),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_apn_tb_user',
+    tableName: 'infob_hdm_cadastro_adm',
     timestamps: false,
     indexes: [
       {
@@ -36,11 +44,11 @@ export default class infob_apn_tb_user extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "ID_USER" },
+          { name: "id_HDM_cadastro" },
         ]
       },
     ]
   });
-  return infob_apn_tb_user;
+  return infob_hdm_cadastro_adm;
   }
 }

@@ -1,46 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tht_lugar extends Model {
+export default class infoc_jdf_produto extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_lugar: {
+    id_produto: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_lugar: {
-      type: DataTypes.STRING(100),
+    nm_produto: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_avaliacao: {
-      type: DataTypes.DECIMAL(10,5),
+    vl_produto: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: true
     },
-    ds_edereco: {
-      type: DataTypes.STRING(100),
+    ds_produto: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_categoria: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_imagem: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_informacao: {
-      type: DataTypes.STRING(100),
+    bt_maisVendidos: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    dt_dias: {
-      type: DataTypes.DATE,
-      allowNull: true
-    },
-    dt_horario: {
-      type: DataTypes.DATE,
+    nr_codigo: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tht_lugar',
+    tableName: 'infoc_jdf_produto',
     timestamps: false,
     indexes: [
       {
@@ -48,11 +48,11 @@ export default class infoc_tht_lugar extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_lugar" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infoc_tht_lugar;
+  return infoc_jdf_produto;
   }
 }

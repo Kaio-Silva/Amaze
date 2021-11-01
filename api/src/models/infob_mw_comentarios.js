@@ -1,42 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_vendas extends Model {
+export default class infob_mw_comentarios extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_vendas: {
+    id_cometario: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_cliente: {
+    id_filme: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_cliente',
-        key: 'id_cliente'
-      }
-    },
-    id_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_produto',
-        key: 'id_produto'
-      }
-    },
-    ds_codigo: {
-      type: DataTypes.STRING(10),
       allowNull: true
     },
-    dt_vendas: {
+    id_usuario: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    ds_mensagem: {
+      type: DataTypes.STRING(300),
+      allowNull: true
+    },
+    dt_comentario: {
       type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    ds_curtidas: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    qtd_curtidas: {
+      type: DataTypes.TEXT,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_vendas',
+    tableName: 'infob_mw_comentarios',
     timestamps: false,
     indexes: [
       {
@@ -44,25 +44,25 @@ export default class infoa_sti_vendas extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_vendas" },
+          { name: "id_cometario" },
         ]
       },
       {
-        name: "id_cliente",
+        name: "id_filme",
         using: "BTREE",
         fields: [
-          { name: "id_cliente" },
+          { name: "id_filme" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_usuario" },
         ]
       },
     ]
   });
-  return infoa_sti_vendas;
+  return infob_mw_comentarios;
   }
 }

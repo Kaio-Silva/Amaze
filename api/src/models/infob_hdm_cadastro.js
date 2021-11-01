@@ -33,10 +33,6 @@ export default class infob_hdm_cadastro extends Model {
     nm_HDM_senha: {
       type: DataTypes.STRING(50),
       allowNull: true
-    },
-    bt_HDM_entrar: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
     }
   }, {
     sequelize,

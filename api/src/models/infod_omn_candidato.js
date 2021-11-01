@@ -26,6 +26,10 @@ export default class infod_omn_candidato extends Model {
       type: DataTypes.STRING(255),
       allowNull: true
     },
+    img_candidato: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     ds_nacionalidade: {
       type: DataTypes.STRING(255),
       allowNull: true
