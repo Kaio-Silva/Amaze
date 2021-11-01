@@ -75,6 +75,7 @@ export default function P4(props){
                 let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
                 alert('Denúncia criada com sucesso!')
                 console.log(r);
+                let close = props.func(false)
         }
      }
     }
