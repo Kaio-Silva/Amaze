@@ -11,10 +11,7 @@ app.post('/inserir', async(req,resp) =>{
       let telefone = req.body.nr_telefone;
       let senha = req.body.ds_senha;
       let ativo = true;
-      console.log(senha)
-      let oi = '1234567@'
 
-    
       let arrouba = email.includes('@')
 
       let especial = senha.includes("@")
@@ -32,12 +29,12 @@ app.post('/inserir', async(req,resp) =>{
 
       if( (especial || especial3 || especial4 || especial5) === false)
       return resp.send({erro: 'A senha precisa ter no mínimo um caractere especial'})
-    
-      if(arrouba === false)
-      return resp.send({erro:'O email Precisa do caracter @'})
 
       if(email.length < 12)
        return resp.send({erro:'O email Precisa de no mínimo 12 caracteres'})
+
+       if(arrouba === false)
+       return resp.send({erro:'O email Precisa do caractere @'})
 
        if(senha.length < 5)
        return resp.send({erro:'A senha precisa ter no mínimo 5 caracteres'})
@@ -51,9 +48,6 @@ app.post('/inserir', async(req,resp) =>{
       if(telefone === null || senha === null || email === null || usuario === null)
       return resp.send({erro:'Você não pode inserir um campo vazio'})
 
-      
-
-      console.log(o)
 
        let inserir={
           nm_usuario:usuario,
