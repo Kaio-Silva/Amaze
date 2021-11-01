@@ -40,6 +40,7 @@ function Login (props){
             nav.push('/Login')
         } else{
             Id()
+            alert('Usuário Logado com sucesso.')
             nav.push('/')
         }
     }

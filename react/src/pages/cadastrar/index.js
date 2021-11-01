@@ -36,6 +36,7 @@ function Cadastrar(props) {
       if(a.erro){
         alert(a.erro)
       }else{
+         alert('Usuário criado com sucesso.')
          navigation.push('/')
       }
    }
