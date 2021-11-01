@@ -9,20 +9,21 @@ const api = new Api()
 
 
 
-export default function Paghd(props){
-  const[idusu,setIdusu] = useState([])
+export default function Paghd(){
+
+  const [idusu,setIdusu] = useState([])
 
   let id = Cookies.get('Idusu')
-   console.log(id)
 
    async function Listar(){
     let r = await api.listarDENUpoUsu(id)
-    setIdusu(r)
+    console.log(r)
+    setIdusu(r)  
   }
 
    useEffect(()=>{
-     Listar()
-   },[])
+      Listar();
+   },[idusu])
 
   
   

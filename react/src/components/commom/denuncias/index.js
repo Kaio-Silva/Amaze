@@ -4,8 +4,11 @@ import Pop from "../../../Popups/excluirDenuncia"
 import Pedit from "../../../Popups/editarDenuncia"
 
 export default function Compd(props){
+
     const [po,setPo] = useState(false)
     const [edit,SetEdit] = useState(false)
+
+
     return(
       <Container>
            <div className="descricao-conteudohdc1">{props.item.dt_denuncia}</div>
@@ -20,7 +23,7 @@ export default function Compd(props){
                <button onClick={ () => setPo(true)} className="del"> <img className="img" src="/assets/Images/Group (1).svg" alt=""/></button>
            </div>
 
-           <Pop trigger={po} setTrigger={setPo}></Pop>
+           <Pop trigger={po} id={props.item.id_denuncia} setTrigger={setPo}></Pop>
            <Pedit edit={edit} setEedit={SetEdit}></Pedit>
         </Container>
     )
