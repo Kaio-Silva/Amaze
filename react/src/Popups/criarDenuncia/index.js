@@ -20,8 +20,6 @@ export default function P4(props){
 
     useEffect(() =>{
         let idu = Cookies.get('Idusu')
-        if(idu === null || undefined)
-        return alert('Não é possível criar uma denúncia sem criar uma conta.')
         setId(idu)
         console.log(idu)
     },[])
@@ -48,13 +46,25 @@ export default function P4(props){
             }
         }
         loadGeoloc();
-    }, [loc])
+    }, [loc]
+    
+    )
 
 
 
     async function Inserir(){
+ 
+        if(bairro === '' || loc === '' || ocorrencia === '' || tipo === '' )
+        return alert('Todos os campos sao obrigatorios')
+          else{ 
+        let idu = Cookies.get('Idusu')
+        if(idu === undefined){
+         return alert('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
+        }else{      
         let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo)
         console.log(r);
+        }
+     }
     }
 
     

@@ -15,6 +15,7 @@ app.post('/inserir', async(req,resp) =>{
        let bairro = req.body.ds_bairro;
        let avaliacao = req.body.qtd_avaliacao;
        let tipo = req.body.ds_tipo_denuncia; 
+
   
       let inserir = {
         id_usuario:idusu,
