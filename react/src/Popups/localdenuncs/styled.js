@@ -164,7 +164,7 @@ button{
     
    .bloco{
        width:20em;
-       background-color: ;
+      
     
    }
    #lado{
@@ -212,7 +212,7 @@ button{
 
    .bloco{
        width:20em;
-       background-color: ;
+     
     
    }
    #lado{
@@ -251,6 +251,12 @@ button{
 }
 
 }
+@media(max-width: 940px){
+    #lado{
+        margin-left:2em;
+    }
+}
+
 `
 
 
