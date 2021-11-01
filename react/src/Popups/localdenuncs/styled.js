@@ -204,11 +204,12 @@ button{
 }
 }
 
+@media screen and (max-width: 940px) and (min-width: 501px){
+    .abox {width: 70%}
+}
+
 @media(max-width: 1200px){
-    
-    .abox{
-        width:
-    }
+
 
    .bloco{
        width:20em;
