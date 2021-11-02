@@ -4,7 +4,8 @@ import Logo from '../../components/commom/logo'
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes';
 import { useState } from 'react';
-
+import emailjs from 'emailjs-com'
+import { useRef } from 'react';
 
 export default function Contatenos(props){
     const [nome,setNome] = useState('')
@@ -17,6 +18,22 @@ export default function Contatenos(props){
     console.log(email);
     console.log(telefone);
     console.log(mensagem);
+
+    const form = useRef()
+
+    function SendMail(e){
+        console.log(e)
+        e.preventDefault();
+
+        emailjs.sendForm('service_lyber5y', 'template_b8wj9ac', form.current, 'user_KZW7Whxg6kdEPNT47G1xJ')
+          .then((result) => {
+              alert('Mensagem enviada com sucesso!')
+          }, (error) => {
+              alert(error.message)
+          });
+          form.current.reset();
+    }
+
     
     return(
         <Container>
@@ -26,17 +43,19 @@ export default function Contatenos(props){
                 <div className="ConteudoLogin">
                     <div className="TituloLogin"> Contate-nos </div>
                     <div className="FormLogin" >
-                        <div className="Inputs">                        
-                            <Padrao  onChange={ e => setNome(e.target.value)} className="padrao"  placeholder="Nome" tamanho="100%" cor="verde"/> 
+                        <div className="Inputs"> 
+                        <form ref={form}onSubmit={SendMail}>                       
+                            <Padrao className="padrao"  placeholder="Nome" tamanho="100%" cor="verde" name="name"/> 
                             <div className="AlinhandoInputs"> 
                                         
-                                <Padrao onChange={ e => setEmail(e.target.value)} className="padrao" className="input" placeholder="E-mail" cor="verde"/>
-                                <Padrao onChange={ e => setTelefone(e.target.value)} className="padrao"className="input" placeholder="Telefone" cor="verde"/> 
+                                <Padrao className="padrao" className="input" required="required" placeholder="E-mail" cor="verde" name="email"/>
+                                <Padrao className="padrao"className="input" required="required" placeholder="Telefone" cor="verde" /> 
                             </div>                     
-                            <Textarea onChange={ e => setMensagem(e.target.value)}  className="TextArea" placeholder="Mensagem" tamanho="100%" cor="verde"/>
+                            <Textarea className="TextArea" required="required" placeholder="Mensagem" tamanho="100%" cor="verde"  name="message"/>
+                            </form>
                         </div>
                         <div className='botao'>
-                        <Link  to="/"><Button className="ajustarBotao"  tamanho="medio" cor="0FA882"> Enviar </Button></Link>
+                        <Link  to="/"><Button onClick={SendMail}  className="ajustarBotao"  tamanho="medio" cor="0FA882"> Enviar </Button></Link>
                         </div>
                     </div>
                 </div>
