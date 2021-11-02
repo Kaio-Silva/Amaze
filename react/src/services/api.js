@@ -71,7 +71,7 @@ export default class Api {
     }
 
     async ListarDENUTotal(){
-        let i = await api.get('/');
+        let i = await api.get('denuncia/');
         return i.data;
     }
 

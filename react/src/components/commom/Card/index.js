@@ -23,7 +23,7 @@ export default function Denuncias(props) {
                     <button className="botoes"> <img src="/assets/Images/Aprovar3.png" alt=""/> </button>
                 </div>
              </div>
-                <Pop trigger={trigger} SetTrigger={SetTrigger}></Pop>
+                <Pop trigger={trigger} SetTrigger={SetTrigger} autor={props.autor} descricao={props.desc} ></Pop>
         </Card>
     )
 }

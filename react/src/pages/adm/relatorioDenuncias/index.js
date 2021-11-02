@@ -13,6 +13,7 @@ export default function Denuncias(props) {
     async function Funcao(){
         let f = await api.ListarDENUTotal();
         setDenuc(f);
+        console.log('oi'+f)
     }
 
     useEffect(()=> {

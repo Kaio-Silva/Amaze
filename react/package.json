@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "animate.css": "^4.1.1",
+    "emailjs-com": "^3.2.0",
     "js-cookie": "^3.0.1",
     "ngeohash": "^0.6.3",
     "react": "^17.0.2",
