@@ -6,7 +6,7 @@ import Pedit from "../../../Popups/editarDenuncia"
 export default function Compd(props){
 
     const [po,setPo] = useState(false)
-    const [edit,SetEdit] = useState(false)
+    const [edit,setEdit] = useState(false)
 
 
     return(
@@ -19,12 +19,12 @@ export default function Compd(props){
            <div className="barra-conteudohdc"></div>
            <div className="descricao-conteudohdc">{props.item.ds_rua}</div>
            <div className="alinhando-imagem">
-               <button onClick={ () => SetEdit(true)} className="edit"> <img className="img1" src="/assets/Images/Group.svg" alt=""/></button>
+               <button onClick={ () => setEdit(true)} className="edit"> <img className="img1" src="/assets/Images/Group.svg" alt=""/></button>
                <button onClick={ () => setPo(true)} className="del"> <img className="img" src="/assets/Images/Group (1).svg" alt=""/></button>
            </div>
 
            <Pop trigger={po} id={props.item.id_denuncia} setTrigger={setPo}></Pop>
-           <Pedit edit={edit} setEedit={SetEdit}></Pedit>
+           <Pedit edit={edit} id={props.item.id_denuncia} den={props.item} setEdit={setEdit}></Pedit>
         </Container>
     )
 }

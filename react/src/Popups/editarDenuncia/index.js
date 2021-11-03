@@ -1,9 +1,34 @@
+import { useState } from 'react'
 import { Container } from './styled'
 import { Padrao } from '../../components/styled/inputs.js';
 import { Textarea } from '../../components/styled/inputs.js';
 import { Botao } from '../../components/styled/botoes';
+import Api from '../../services/api'
 
-export default function p4(props){
+
+const api = new Api()
+
+export default function P4(props){
+
+    const[bairro, setBairro] = useState(props.den.ds_bairro)
+    const[ocorrencia, setOcorrencia] = useState(props.den.ds_ocorrencia)
+    const[loc, setLoc] = useState(props.den.ds_rua)
+    const[tipo, setTipo] = useState('')
+
+    function Tipagem(e){
+        setTipo(e.target.value)
+    }
+
+    async function alterar(){
+    let r = await api.alterarDENU(props.id, props.den.id_usuario, props.den.dt_denuncia, props.den.qtd_avaliacao, bairro, ocorrencia, loc, tipo) //Falta a LatLng...
+    
+    if(r.erro)
+        alert(r.erro)
+    else
+        alert("Alteração concluida")
+        props.setEdit(false)
+}
+
     return(props.edit) ?(
         <Container>
           <div className="abox">
@@ -14,7 +39,7 @@ export default function p4(props){
                      <div className="amz">Amaze</div>
                  </div>
 
-                 <div className="ld"><button onClick={() => props.setEedit(false)}><img src="/assets/images/xpreto.png" alt=""/></button></div>
+                 <div className="ld"><button onClick={ () => props.setEdit(false)}><img src="/assets/images/xpreto.png" alt=""/></button></div>
              </div>
 
 
@@ -23,37 +48,37 @@ export default function p4(props){
                    <div className="titulo-form">Editar Denúncia</div>
 
                    <div className="form1">
-                      <label><Padrao placeholder="Rua júlio silvino"/></label> 
+                      <label><Padrao onBlur={ e => setLoc(e.target.value)}  placeholder="Rua júlio silvino">{loc}</Padrao></label> 
                   </div> 
 
                   <div className="form2">
-                      <label><Padrao placeholder="Parque alto rio Bonito"/></label> 
+                      <label><Padrao onChange={ e => setBairro(e.target.value)}  placeholder="Parque alto rio Bonito">{bairro}</Padrao></label> 
                   </div> 
 
                   <div className="teext">
-                      <label><Textarea placeholder="Rua júlio silvino" className="txt"/></label> 
+                      <label><Textarea onChange={ e => setOcorrencia(e.target.value)}  placeholder="Rua júlio silvino" className="txt" >{ocorrencia}</Textarea></label> 
                   </div> 
 
              </div>
 
              <div className="checks">
                  <div className="l1">
-                   <label> <input className="ty" name="actmnt" type="radio" value="Furto" />Furto </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Latrocínio" /> Latrocínio  </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Homicídio" />Homicídio </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Sequestro" />Sequestro </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Furto" onChange={Tipagem}/>Furto </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Latrocínio" onChange={Tipagem}/> Latrocínio  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Homicídio" onChange={Tipagem}/> Homicídio </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Sequestro" onChange={Tipagem}/> Sequestro </label>
                 </div>
 
 
                 <div className="l2">
-                   <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" />Feminicídio </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" /> Tráfic  </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Estupro" />Estupro </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" onChange={Tipagem}/>Feminicídio </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" onChange={Tipagem}/> Tráfic  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Estupro" onChange={Tipagem}/>Estupro </label>
                 </div>
 
 
                 <div className="botao">
-                    <Botao className="botao">Concretizar Denúncia</Botao>
+                    <Botao onClick={alterar} className="botao">Concretizar Denúncia</Botao>
                 </div>
 
                 { props.children}

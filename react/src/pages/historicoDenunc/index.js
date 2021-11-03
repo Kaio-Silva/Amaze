@@ -17,7 +17,6 @@ export default function Paghd(){
 
    async function Listar(){
     let r = await api.listarDENUpoUsu(id)
-    console.log(r)
     setIdusu(r)  
   }
 

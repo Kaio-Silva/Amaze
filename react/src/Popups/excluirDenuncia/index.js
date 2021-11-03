@@ -9,7 +9,6 @@ export default function p3(props){
 
 
     async function remover(){
-        console.log("esse é o id: " + props.id)
         let r = await api.deleteDENU(props.id)
 
         if(r.erro)
