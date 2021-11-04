@@ -121,6 +121,7 @@ const Container = styled.div`
        display: flex;
        flex-direction: row;
        justify-content: space-between;
+       
    }
 
     .input{
@@ -174,7 +175,7 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             align-items: center;
-
+          
             border-radius: .5em;
             height: 73%;
         }
@@ -204,15 +205,18 @@ const Container = styled.div`
 
         .Inputs{
             height: 21em;
+            
         }
 
         .AlinhandoInputs{
             flex-direction: column;
             height: 6.7em;
+ 
         }
 
         .input{
             width: 100%;
+            margin: 0em 0em 1.5em 0em;
         }
         .tamanho{
             width:100%;
