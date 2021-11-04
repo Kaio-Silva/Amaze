@@ -88,7 +88,7 @@ const Container = styled.div`
 
        width: 90%;
 
-       margin: 0em 1em;
+       margin: 2em 1em;
    }
 
    .Descricao{
@@ -125,18 +125,19 @@ const Container = styled.div`
    }
 
     .input{
-        
+        margin: 1em 0em;
         width:49.2%;
     }
 
     .tamanho{
         width:25em;
     }
+
     
    .Inputs{
        display: flex;
        flex-direction: column;
-       justify-content: space-around;
+       
 
        height: 18em;
    }
