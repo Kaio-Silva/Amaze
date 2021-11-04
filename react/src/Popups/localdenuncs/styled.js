@@ -246,6 +246,7 @@ button{
 .b1{
     padding-top:2em;
 }
+
 #lado5{
     margin-left:2em;
 }

@@ -2,6 +2,8 @@ import { Container } from './styled'
 import Logo from '../../components/commom/logo';
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
 import { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import Api from '../../services/api'
 import Cookies from 'js-cookie'
 
@@ -65,15 +67,15 @@ export default function P4(props){
     async function Inserir(){
  
         if(bairro === '' || loc === '' || ocorrencia === '' || tipo === '' )
-        return alert('Todos os campos sao obrigatorios')
+        return toast.error('Todos os campos sao obrigatorios')
         else{ 
             let idu = Cookies.get('Idusu')
 
             if(idu === undefined){
-              return alert('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
+              return toast.error('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
             }else{      
                 let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
-                alert('Denúncia criada com sucesso!')
+                toast.success('Denúncia criada com sucesso!')
                 console.log(r);
                 let close = props.func(false)
         }
@@ -91,6 +93,7 @@ export default function P4(props){
     return(props.value) ?(
         <Container>
           <div className="abox">
+              <ToastContainer/>
              <div className="cabecalho">
                  <div className="logo"><Logo cor="verde" tamanho="medio"/></div>
                  <div className="ld"><button onClick={() => props.func(false)}><img src="/assets/images/Fechar 5.png" alt=""/></button></div>

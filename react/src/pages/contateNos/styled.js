@@ -25,7 +25,7 @@ const Container = styled.div`
         margin-bottom: 1em;
     }
     
-    .BoxLogin{
+    .Box{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -38,7 +38,6 @@ const Container = styled.div`
         background-color: white;
         
     }
-
 
     .ConteudoAmaze{
         display: flex;
@@ -64,7 +63,7 @@ const Container = styled.div`
         height: 70%;
     }
 
-   .DescLoginA{
+   .DescContate{
        font-family: semiBold;
        font-size: 1.2em;
        color: white;
@@ -88,7 +87,7 @@ const Container = styled.div`
 
        width: 90%;
 
-       margin: 0em 1em;
+       margin: 2em 1em;
    }
 
    .Descricao{
@@ -97,7 +96,7 @@ const Container = styled.div`
        width: 88%;
    }
    
-   .ConteudoLogin{
+   .Conteudo{
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -107,14 +106,14 @@ const Container = styled.div`
        width: 67%;
    }
 
-   .TituloLogin{
+   .Titulo{
     margin-bottom: 1.5em;
     font-family: medio;
     font-size: 1.5em;
     color: #0FA882;
    }
 
-   .FormLogin{
+   .FormContat{
        width: 85%;
    }
 
@@ -122,20 +121,23 @@ const Container = styled.div`
        display: flex;
        flex-direction: row;
        justify-content: space-between;
+       
    }
 
     .input{
+        margin: 1em 0em;
         width:49.2%;
     }
 
     .tamanho{
-        width:23em;
+        width:25em;
     }
+
     
    .Inputs{
        display: flex;
        flex-direction: column;
-       justify-content: space-around;
+       
 
        height: 18em;
    }
@@ -169,11 +171,11 @@ const Container = styled.div`
             justify-content: center;
         }
         
-        .BoxLogin{
+        .Box{
             display: flex;
             flex-direction: column;
             align-items: center;
-
+          
             border-radius: .5em;
             height: 73%;
         }
@@ -182,7 +184,7 @@ const Container = styled.div`
             display: none;
         }
 
-        .ConteudoLogin{
+        .Conteudo{
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -190,28 +192,31 @@ const Container = styled.div`
             width: 85%;
         }
 
-        .TituloLogin{
+        .Titulo{
            font-size: .9em;
            margin-bottom: 0em;
            margin-top: 2em;
         }
 
-        .FormLogin{
+        .FormContat{
             height: 5%;
             width: 100%;
         }
 
         .Inputs{
             height: 21em;
+            
         }
 
         .AlinhandoInputs{
             flex-direction: column;
             height: 6.7em;
+ 
         }
 
         .input{
             width: 100%;
+            margin: 0em 0em 1.5em 0em;
         }
         .tamanho{
             width:100%;

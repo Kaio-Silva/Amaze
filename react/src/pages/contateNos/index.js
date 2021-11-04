@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Logo from '../../components/commom/logo'
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import emailjs from 'emailjs-com'
 import { useRef } from 'react';
@@ -27,9 +29,9 @@ export default function Contatenos(props){
 
         emailjs.sendForm('service_lyber5y', 'template_b8wj9ac', form.current, 'user_KZW7Whxg6kdEPNT47G1xJ')
           .then((result) => {
-              alert('Mensagem enviada com sucesso!')
+              toast.success('Mensagem enviada com sucesso!')
           }, (error) => {
-              alert(error.message)
+              toast.error(error.message)
           });
           form.current.reset();
     }
@@ -39,6 +41,8 @@ export default function Contatenos(props){
         <Container>
             
             <div className="Logo"><Logo cor="white" titulo="none" tamanho="grande"/></div>
+
+            <ToastContainer/>
             <div className="BoxLogin">
                 <div className="ConteudoLogin">
                     <div className="TituloLogin"> Contate-nos </div>
@@ -61,7 +65,7 @@ export default function Contatenos(props){
                 </div>
                 <div className="ConteudoAmaze">
                     <div className="AlinharConteudo">    
-                        <div className="DescLoginA">Informações</div>
+                        <div className="DescContate">Informações</div>
                         <div className="Alinhar">
                             <img className="Imagem" src="/assets/images/Facebook 1.png" alt=""/>
                             <div className="Descricao"><span>Facebook:</span> Amaze </div>
