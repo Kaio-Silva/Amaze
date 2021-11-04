@@ -1,7 +1,48 @@
+import Sequelize from 'sequelize'
+import geohash from 'ngeohash'
 import express from 'express'
 import db from '../db.js';
 
+const {fn, Op} = Sequelize;
+
+
 const app = express.Router();
+
+
+app.get('/porRegiao/:geohash', async(req,resp) =>{
+  const {geohash} = req.params;
+  const r = await db.infob_amz_tbdenuncia.findAll({
+    where: {
+      'ds_geohash': geohash
+    }
+  })
+  resp.send(r);
+});
+
+app.get('/porRegiao', async(req,resp) =>{
+
+  let r = await db.infob_amz_tbdenuncia.findAll({
+    raw: true,
+    where: {
+      'ds_geohash': { [Op.ne]: null },
+      'ds_geohash': { [Op.ne]: '000000000' },
+    },
+    attributes: [
+      ['ds_geohash', 'geohash'],
+      [fn('count', 1), 'qtd']
+    ],
+    group: ['ds_geohash']
+  })
+
+  resp.send(r.map(item => { 
+    return {
+      geohash: item.geohash,
+      loc: geohash.decode(item.geohash),
+      qtd: item.qtd
+    }
+  }));
+
+});
 
 app.post('/inserir', async(req,resp) =>{
     try{

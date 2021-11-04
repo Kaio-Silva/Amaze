@@ -9,7 +9,7 @@ import Denunc from "../../../Popups/localdenuncs"
 
 
 
-export default function Mapa(){
+export default function   Mapa(){
   const[pop,setPop]= useState(false);
   const [denu, setDenu] = useState(false);
   const [loc, setLoc] = useState({});
@@ -78,7 +78,7 @@ export default function Mapa(){
     
 
     
-    loader.load().then((google) => {
+    loader.load().then(async (google) => {
       const map = new google.maps.Map(document.getElementById("map"), mapOptions)
 
       var pin = new google.maps.Marker({
@@ -87,6 +87,7 @@ export default function Mapa(){
         optimized: false,
         icon: "/assets/images/pinMap.png",
       });
+
 
 
       map.addListener('click', function(e) {

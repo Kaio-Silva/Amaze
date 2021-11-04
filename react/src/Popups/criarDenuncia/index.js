@@ -55,7 +55,7 @@ export default function P4(props){
     useEffect(()=>{
 
         var geohash =  require('ngeohash');
-        let hash = geohash.encode(cordinates.Latitude,cordinates.Longitude)
+        let hash = geohash.encode(cordinates.Latitude,cordinates.Longitude, 6)
         setHash(hash)
   
     },[cordinates])
