@@ -5,21 +5,17 @@ import { Padrao, Textarea } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useState } from 'react';
+// import { useState } from 'react';
 import emailjs from 'emailjs-com'
 import { useRef } from 'react';
 
 export default function Contatenos(props){
-    const [nome,setNome] = useState('')
-    const [email,setEmail] = useState('')
-    const [telefone,setTelefone] = useState('')
-    const [mensagem,setMensagem] = useState('')
+    // const [nome,setNome] = useState('')
+    // const [email,setEmail] = useState('')
+    // const [telefone,setTelefone] = useState('')
+    // const [mensagem,setMensagem] = useState('')
   
 
-    console.log(nome);
-    console.log(email);
-    console.log(telefone);
-    console.log(mensagem);
 
     const form = useRef()
 
@@ -52,8 +48,8 @@ export default function Contatenos(props){
                             <Padrao className="padrao"  placeholder="Nome" tamanho="100%" cor="verde" name="name"/> 
                             <div className="AlinhandoInputs"> 
                                         
-                                <Padrao className="padrao" className="input" required="required" placeholder="E-mail" cor="verde" name="email"/>
-                                <Padrao className="padrao"className="input" required="required" placeholder="Telefone" cor="verde" /> 
+                                <Padrao className="input" required="required" placeholder="E-mail" cor="verde" name="email"/>
+                                <Padrao className="input" required="required" placeholder="Telefone" cor="verde" /> 
                             </div>                     
                             <Textarea className="TextArea" required="required" placeholder="Mensagem" tamanho="100%" cor="verde"  name="message"/>
                             </form>

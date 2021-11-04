@@ -10,21 +10,20 @@ import Cookies from 'js-cookie'
 const api = new Api()
 
 export default function P4(props){
-    const[cordinates,setCordinates] = useState([])
+    const[cordinates, setCordinates] = useState([])
     const[bairro,setBairro] = useState('')
     const[ocorrencia,setOcorrencia] = useState('')
     const[loc,setLoc] = useState('')
     const[tipo,setTipo] = useState('')
-    const[avaliacao,setAvaliacao] = useState(9)
+    const[avaliacao] = useState(9)
     const[id,setId] = useState([])
-    const[qtdreporte,seQtdReporte] = useState(12)
+    const[qtdreporte] = useState(12)
     const[hashh,setHash] = useState('')
     let data = new Date();
 
     useEffect(() =>{
         let idu = Cookies.get('Idusu')
         setId(idu)
-        console.log(idu)
     },[])
   
 
@@ -40,7 +39,6 @@ export default function P4(props){
                 }
                
                 setCordinates(insert);
-                console.log(cordinates)
             } catch (e) {
                 
                 setCordinates({
@@ -77,7 +75,7 @@ export default function P4(props){
                 let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
                 toast.success('Denúncia criada com sucesso!')
                 console.log(r);
-                let close = props.func(false)
+                props.func(false)
         }
      }
     }

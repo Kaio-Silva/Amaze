@@ -13,14 +13,15 @@ export default function Paghd(){
 
   const [idusu,setIdusu] = useState([])
 
-  let id = Cookies.get('Idusu')
-
-   async function Listar(){
-    let r = await api.listarDENUpoUsu(id)
-    setIdusu(r)  
-  }
+ 
 
    useEffect(()=>{
+    let id = Cookies.get('Idusu')
+    
+    async function Listar(){
+      let r = await api.listarDENUpoUsu(id)
+      setIdusu(r)  
+    }
       Listar();
    },[idusu])
 

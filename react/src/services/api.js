@@ -105,6 +105,7 @@ export default class Api {
 
     async ReporteFalse(id,confirmado){
         let i = await api.put(`/reporte/false/${id}`,{ds_confirmado:confirmado})
+        return i.data;
     }
 
     async DELETEreporte(){
