@@ -39,10 +39,10 @@ export default function Contatenos(props){
         <Container>
             
             <div className="Logo"><Logo cor="white" titulo="none" tamanho="grande"/></div>
-            <div className="BoxLogin">
-                <div className="ConteudoLogin">
-                    <div className="TituloLogin"> Contate-nos </div>
-                    <div className="FormLogin" >
+            <div className="Box">
+                <div className="Conteudo">
+                    <div className="Titulo"> Contate-nos </div>
+                    <div className="FormContat" >
                         <div className="Inputs"> 
                         <form ref={form}onSubmit={SendMail}>                       
                             <Padrao className="padrao"  placeholder="Nome" tamanho="100%" cor="verde" name="name"/> 
@@ -61,7 +61,7 @@ export default function Contatenos(props){
                 </div>
                 <div className="ConteudoAmaze">
                     <div className="AlinharConteudo">    
-                        <div className="DescLoginA">Informações</div>
+                        <div className="DescContate">Informações</div>
                         <div className="Alinhar">
                             <img className="Imagem" src="/assets/images/Facebook 1.png" alt=""/>
                             <div className="Descricao"><span>Facebook:</span> Amaze </div>
