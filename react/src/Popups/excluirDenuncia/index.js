@@ -2,8 +2,10 @@ import { Container } from './styled'
 // import { useState } from 'react';
 
 import Api from '../../services/api';
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 const api = new Api();
+
 
 export default function p3(props){
 
@@ -12,17 +14,17 @@ export default function p3(props){
         let r = await api.deleteDENU(props.id)
 
         if(r.erro)
-            alert(r.erro)
+            toast.error(r.erro)
         else
-            alert(`A denuncia foi removida com sucesso`)
-            props.setTrigger(false)
-            
+            toast.success(`A denuncia foi removida com sucesso`)
+            props.setTrigger(false)     
     }
 
     return(props.trigger) ?(
      
      <Container>
         <div className="abox">
+            <ToastContainer/>
             <div className="cabecalho"><button onClick={() => props.setTrigger(false)}><img src="/assets/images/xpreto.png" alt=""/></button></div>
             <div className="img"><img src="/assets/images/duvida.png" alt=""/></div>
             <div className="titulo"> Deseja exluir essa denúncia? </div>

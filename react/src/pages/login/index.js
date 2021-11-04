@@ -5,6 +5,8 @@ import { Padrao } from '../../components/styled/inputs.js';
 import { Button } from '../../components/styled/botoes.js';
 import { useEffect, useState} from 'react';
 import Api from '../../services/api.js';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from 'react-router';
 import Cookies from 'js-cookie'
 
@@ -36,11 +38,11 @@ function Login (props){
 
         let r = await api.USULogin(senha, email)
         if( r.erro ){
-            alert(r.erro)
+            toast.error(r.erro)
             nav.push('/Login')
         } else{
             Id()
-            alert('Usuário Logado com sucesso.')
+            toast.success('Usuário Logado com sucesso.')
             nav.push('/')
         }
     }
@@ -48,6 +50,7 @@ function Login (props){
     return(
         <Container>
             <Logo ambos="false" direction="column" cor="black" titulo="" tamanho="medio"/>
+            <ToastContainer/>
             <div className="BoxLogin">
                 <div className="ConteudoAmaze">
                     <Logo direction="column" cor="black" titulo="" tamanho="grande"/>

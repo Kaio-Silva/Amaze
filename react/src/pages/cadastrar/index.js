@@ -2,7 +2,8 @@ import React from 'react'
 import { useHistory } from 'react-router';
 import Logo from '../../components/commom/logo/index.js';
 import { Button } from '../../components/styled/botoes';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Padrao } from '../../components/styled/inputs.js';
 
 import { Container } from './styled.js';
@@ -34,9 +35,9 @@ function Cadastrar(props) {
       setConcluir(a);
 
       if(a.erro){
-        alert(a.erro)
+        toast.error(a.erro)
       }else{
-         alert('Usuário criado com sucesso.')
+         toast.success('Usuário criado com sucesso.')
          navigation.push('/')
       }
    }
@@ -44,6 +45,7 @@ function Cadastrar(props) {
   return (
     <Container>
           <div className="ajustarLogo"><Logo cor="black" tamanho="grande"/></div>
+          <ToastContainer/>
             <div className="conteudo">
               <div className="cadastro-inputs">
                  <div className="TituloCadastro"> Cadastro </div>

@@ -39,7 +39,6 @@ const Container = styled.div`
         
     }
 
-
     .ConteudoAmaze{
         display: flex;
         flex-direction: column;

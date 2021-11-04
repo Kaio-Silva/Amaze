@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Container } from './styled'
 import { Padrao } from '../../components/styled/inputs.js';
 import { Textarea } from '../../components/styled/inputs.js';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Botao } from '../../components/styled/botoes';
 import Api from '../../services/api'
 
@@ -23,15 +25,16 @@ export default function P4(props){
     let r = await api.alterarDENU(props.id, props.den.id_usuario, props.den.dt_denuncia, props.den.qtd_avaliacao, bairro, ocorrencia, loc, tipo) //Falta a LatLng...
     
     if(r.erro)
-        alert(r.erro)
+        toast.error(r.erro)
     else
-        alert("Alteração concluida")
+        toast.success("Alteração concluida")
         props.setEdit(false)
 }
 
     return(props.edit) ?(
         <Container>
           <div className="abox">
+              <ToastContainer/>
              <div className="cabecalho">
 
                  <div className="le">
