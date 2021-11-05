@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Container = styled.div`
     display:flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     align-items:center;
 
     font-family:semiBold;
@@ -17,11 +17,18 @@ const Container = styled.div`
     background-color: rgba(107, 186, 181, 0.4);
    
     height:3em;
-    width:99%;
+    width:98%;
     
     margin-bottom:1.3em;
     margin-right:1em;
+    margin-left:.5em;
 
+    .agrupar{
+        display:flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items:center;
+    }
 
     button{
         background-color:transparent;
@@ -77,7 +84,7 @@ const Container = styled.div`
 
     @media(max-width:1350px){
        width: 70em;
-       margin-right:1em;    
+       margin-right:1em;   
     }
 
 

@@ -35,10 +35,10 @@ export default function Contatenos(props){
     
     return(
         <Container>
-            
+            <ToastContainer/>
             <div className="Logo"><Logo cor="white" titulo="none" tamanho="grande"/></div>
 
-            <ToastContainer/>
+            
             <div className="BoxLogin">
                 <div className="ConteudoLogin">
                     <div className="TituloLogin"> Contate-nos </div>

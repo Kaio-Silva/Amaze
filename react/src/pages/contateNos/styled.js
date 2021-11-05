@@ -17,6 +17,7 @@ const Container = styled.div`
 
     height: 100vh;
 
+
     .Logo {
         display: flex;
         align-items: flex-start;
@@ -25,7 +26,7 @@ const Container = styled.div`
         margin-bottom: 1em;
     }
     
-    .Box{
+    .BoxLogin{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -63,7 +64,7 @@ const Container = styled.div`
         height: 70%;
     }
 
-   .DescContate{
+   .DescLoginA{
        font-family: semiBold;
        font-size: 1.2em;
        color: white;
@@ -85,7 +86,7 @@ const Container = styled.div`
        align-items: center;
        justify-content: space-between;
 
-       width: 90%;
+       width: 92%;
 
        margin: 2em 1em;
    }
@@ -93,10 +94,11 @@ const Container = styled.div`
    .Descricao{
        display: flex;
        align-items: center;
-       width: 88%;
+       width: 100%;
+       margin-left: .5em;
    }
    
-   .Conteudo{
+   .ConteudoLogin{
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -106,14 +108,14 @@ const Container = styled.div`
        width: 67%;
    }
 
-   .Titulo{
+   .TituloLogin{
     margin-bottom: 1.5em;
     font-family: medio;
     font-size: 1.5em;
     color: #0FA882;
    }
 
-   .FormContat{
+   .FormLogin{
        width: 85%;
    }
 
@@ -137,7 +139,7 @@ const Container = styled.div`
    .Inputs{
        display: flex;
        flex-direction: column;
-       
+       justify-content: space-around;
 
        height: 18em;
    }
@@ -171,7 +173,7 @@ const Container = styled.div`
             justify-content: center;
         }
         
-        .Box{
+        .BoxLogin{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -184,7 +186,7 @@ const Container = styled.div`
             display: none;
         }
 
-        .Conteudo{
+        .ConteudoLogin{
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -192,13 +194,13 @@ const Container = styled.div`
             width: 85%;
         }
 
-        .Titulo{
+        .TituloLogin{
            font-size: .9em;
            margin-bottom: 0em;
            margin-top: 2em;
         }
 
-        .FormContat{
+        .FormLogin{
             height: 5%;
             width: 100%;
         }

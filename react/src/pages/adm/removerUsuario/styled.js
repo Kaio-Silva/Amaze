@@ -9,6 +9,8 @@ const Container = styled.div`
 
         font-family: regular;
 
+        background-color: white;
+
     .baixo {
         display: flex;
         flex-direction: column;
@@ -21,7 +23,7 @@ const Container = styled.div`
 
         padding: 4em 0em;
 
-        height: 90vh;
+        height: 89.5vh;
         min-width: 100%;
 
         overflow-y: scroll;
@@ -43,6 +45,12 @@ const Container = styled.div`
     .baixo::-webkit-scrollbar-thumb
     {
         background-color: #D9E2F3;
+    }
+
+    @media (min-width: 1440px){
+        .baixo{
+            height: 91vh;
+        }
     }
 
    

@@ -7,16 +7,14 @@ const Container = styled.div`
     align-items: center;
     font-family: regular;
     font-size: 1em;
+    height: 100vh;
 
-
-    .Pesquisar{
-        margin-top: .6em;
-    }
 
     .align{
         display: flex;
         width: 100%;
         justify-content: center;
+        background-color: white;
     }
 
     .baixo{
@@ -31,7 +29,6 @@ const Container = styled.div`
 
         width: 100%;
         height: 90.9vh;
-        overflow-y: scroll;
     }
 
 

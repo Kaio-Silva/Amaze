@@ -7,6 +7,7 @@ const Container = styled.div`
     align-items: center;
     font-family: regular;
     font-size: 1em;
+    background-color: white;
 
 
     .alinhando {
@@ -15,10 +16,6 @@ const Container = styled.div`
         justify-content: space-between;
         padding-top: 4em;
         width: 80%;
-    }
-
-    .Pesquisar{
-        margin-top: .6em;
     }
 
     .baixo{
@@ -31,7 +28,7 @@ const Container = styled.div`
         background-position: center;
 
         width: 100%;
-        height: 90.9vh;
+        height: 89.5vh;
 
         overflow-y: scroll;
     }
@@ -52,6 +49,14 @@ const Container = styled.div`
     {
         background-color: #D9E2F3;
     }
+
+
+    @media (min-width: 1440px){
+        .baixo{
+            height: 91vh;
+        }
+    }
+    
 
     @media (max-width: 1024px) {
         display: flex;
