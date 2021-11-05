@@ -45,8 +45,8 @@ const Container = styled.div`
     background-color: #2ba083;
 }
   .descricao-conteudohdc{
-     padding-right:1.5em;
-     padding-left:1.5em;
+     padding-right:1em;
+     padding-left:0.9em;
     font-size:1em;
     }
 
@@ -70,7 +70,8 @@ const Container = styled.div`
      .alinhando-imagem{
         display:flex;
         flex-direction:row;
-        margin-left:30em;
+        margin-left:20em;
+ 
     }
 
     .img1{
