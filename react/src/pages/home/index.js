@@ -6,11 +6,12 @@ import Cabecalho from '../../components/commom/cabecalho/index'
 export default function Home(props){
     return(
         <Container>
+           <Link className="link" to="/adm">ADM</Link>
             <Cabecalho cor="" titulo="block" input="" home="" contatenos="usar" contatenosp="usar" mapa="usar" criar="" login="usar" loginp="usar" historico="usar" histp="usar"/>
             <div className="AlinhandoPag">  
                 <div className="AlinhandoConteudo">
                     <div className="AgrupandoConteudo">  
-                    <img className="Imagem" src="/assets/images/Celular.png" alt=""/>                  
+                        <img className="Imagem" src="/assets/images/Celular.png" alt=""/>                  
                             <div className="Titulo"> A sua segurança é a nossa segurança </div>
                             <div className="Descricao"> Amaze tranquiliza o seu dia a dia. </div>   
                             <Link className="link" to="/cadastro"><button className="Botão"> Criar Conta </button></Link>
