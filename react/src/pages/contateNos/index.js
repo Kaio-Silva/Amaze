@@ -18,11 +18,19 @@ export default function Contatenos(props){
 
 
     const form = useRef()
+     
+
+
+     function Validar(){
+         if(document.getElementById('name').value === undefined   ||   document.getElementById('email').value === undefined   ||   document.getElementById('message').value === undefined)
+         return toast.error('Todos os campos são obrigatórios!')
+     }
+
 
     function SendMail(e){
         console.log(e)
         e.preventDefault();
-
+          Validar()
         emailjs.sendForm('service_lyber5y', 'template_b8wj9ac', form.current, 'user_KZW7Whxg6kdEPNT47G1xJ')
           .then((result) => {
               toast.success('Mensagem enviada com sucesso!')
@@ -45,13 +53,13 @@ export default function Contatenos(props){
                     <div className="FormLogin" >
                         <div className="Inputs"> 
                         <form ref={form}onSubmit={SendMail}>                       
-                            <Padrao className="padrao"  placeholder="Nome" tamanho="100%" cor="verde" name="name"/> 
+                            <Padrao className="padrao"  placeholder="Nome" tamanho="100%" cor="verde" name="name" value=""/> 
                             <div className="AlinhandoInputs"> 
                                         
-                                <Padrao className="input" required="required" placeholder="E-mail" cor="verde" name="email"/>
+                                <Padrao className="input" required="required" placeholder="E-mail" cor="verde" name="email" value="" />
                                 <Padrao className="input" required="required" placeholder="Telefone" cor="verde" /> 
                             </div>                     
-                            <Textarea className="TextArea" required="required" placeholder="Mensagem" tamanho="100%" cor="verde"  name="message"/>
+                            <Textarea className="TextArea" required="required" placeholder="Mensagem" tamanho="100%" cor="verde"  name="message" value=""/>
                             </form>
                         </div>
                         <div className='botao'>
