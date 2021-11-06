@@ -9,6 +9,7 @@ export default function Compd(props){
     const [edit,setEdit] = useState(false)
 
 
+
     return(
       <Container>
             <div className="agrupar">
@@ -24,10 +25,10 @@ export default function Compd(props){
                     <button onClick={ () => setPo(true)} className="del"> <img className="img" src="/assets/Images/Group (1).svg" alt=""/></button>
                 </div>
             </div>
-            <div>
+          
                <Pop trigger={po} id={props.item.id_denuncia} setTrigger={setPo}></Pop>
                <Pedit edit={edit} id={props.item.id_denuncia} den={props.item} setEdit={setEdit}></Pedit>
-            </div>
+            
         </Container>
     )
 }

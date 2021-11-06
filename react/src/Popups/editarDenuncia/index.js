@@ -30,7 +30,7 @@ export default function P4(props){
         toast.success("Alteração concluida")
         props.setEdit(false)
 }
-
+    
     return(props.edit) ?(
         <Container>
           <div className="abox">

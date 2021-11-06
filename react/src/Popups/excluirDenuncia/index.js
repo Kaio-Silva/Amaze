@@ -20,6 +20,7 @@ export default function p3(props){
             props.setTrigger(false)     
     }
 
+    
     return(props.trigger) ?(
      
      <Container>

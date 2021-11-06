@@ -65,18 +65,18 @@ export default function P4(props){
     async function Inserir(){
  
         if(bairro === '' || loc === '' || ocorrencia === '' || tipo === '' )
-        return toast.error('Todos os campos sao obrigatorios')
+        return toast.error('Todos os campos são obrigatórios')
         else{ 
             let idu = Cookies.get('Idusu')
 
-            if(idu === undefined){
+            if(idu === undefined || null){
               return toast.error('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
             }else{      
                 let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
-                toast.success('Denúncia criada com sucesso!')
-                console.log(r);
-                props.func(false)
+                  toast.success('Denúncia criada com sucesso!') 
+                  console.log(r)
         }
+    
      }
     }
 
