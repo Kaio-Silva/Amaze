@@ -9,7 +9,6 @@ export default function Compd(props){
     const [edit,setEdit] = useState(false)
 
 
-
     return(
       <Container>
             <div className="agrupar">
@@ -27,7 +26,7 @@ export default function Compd(props){
             </div>
           
                <Pop trigger={po} id={props.item.id_denuncia} setTrigger={setPo}></Pop>
-               <Pedit edit={edit} id={props.item.id_denuncia} den={props.item} setEdit={setEdit}></Pedit>
+               <Pedit edit={edit} id={props.item.id_denuncia} rua={props.item.ds_rua} bairro={props.item.ds_bairro} ocorrencia={props.item.ds_ocorrencia} den={props.item} setEdit={setEdit}></Pedit>
             
         </Container>
     )

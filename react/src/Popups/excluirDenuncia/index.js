@@ -9,7 +9,6 @@ const api = new Api();
 
 export default function p3(props){
 
-
     async function remover(){
         let r = await api.deleteDENU(props.id)
 

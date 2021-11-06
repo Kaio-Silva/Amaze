@@ -6,19 +6,27 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Botao } from '../../components/styled/botoes';
 import Api from '../../services/api'
-
+import Cookies from 'js-cookie'
 
 const api = new Api()
 
 export default function P4(props){
 
-    const[bairro, setBairro] = useState(props.den.ds_bairro)
-    const[ocorrencia, setOcorrencia] = useState(props.den.ds_ocorrencia)
-    const[loc, setLoc] = useState(props.den.ds_rua)
+    const[bairro, setBairro] = useState(props.bairro)
+    const[ocorrencia, setOcorrencia] = useState(props.ocorrencia)
+    const[loc, setLoc] = useState(props.rua)
     const[tipo, setTipo] = useState('')
+    console.log(bairro)
+    console.log(ocorrencia)
+    console.log(loc)
+
+    let id = Cookies.get('Idusu')
 
     function Tipagem(e){
         setTipo(e.target.value)
+    }
+    async function Listar(){
+        let r = await api.listarDENUpoUsu(id)
     }
 
     async function alterar(){
@@ -27,7 +35,8 @@ export default function P4(props){
     if(r.erro)
         toast.error(r.erro)
     else
-        toast.success("Alteração concluida")
+        toast.success("Alteração concluída")
+        Listar()
         props.setEdit(false)
 }
     
@@ -51,15 +60,15 @@ export default function P4(props){
                    <div className="titulo-form">Editar Denúncia</div>
 
                    <div className="form1">
-                      <label><Padrao onBlur={ e => setLoc(e.target.value)}  placeholder="Rua júlio silvino">{loc}</Padrao></label> 
+                      <label><Padrao onBlur={ e => setLoc(e.target.value)}  placeholder="Rua júlio silvino"></Padrao></label> 
                   </div> 
 
                   <div className="form2">
-                      <label><Padrao onChange={ e => setBairro(e.target.value)}  placeholder="Parque alto rio Bonito">{bairro}</Padrao></label> 
+                      <label><Padrao onChange={ e => setBairro(e.target.value)}  placeholder="Parque alto rio Bonito"></Padrao></label> 
                   </div> 
 
                   <div className="teext">
-                      <label><Textarea onChange={ e => setOcorrencia(e.target.value)}  placeholder="Rua júlio silvino" className="txt" >{ocorrencia}</Textarea></label> 
+                      <label><Textarea onChange={ e => setOcorrencia(e.target.value)}  placeholder="Rua júlio silvino" className="txt"></Textarea></label> 
                   </div> 
 
              </div>

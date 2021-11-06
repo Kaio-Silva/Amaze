@@ -4,6 +4,7 @@ import Cabecalho from '../../components/commom/cabecalho'
 import Cookies from 'js-cookie'
 import Api from '../../services/api'
 import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
 
 const api = new Api()
 
@@ -12,18 +13,19 @@ const api = new Api()
 export default function Paghd(){
 
   const [idusu,setIdusu] = useState([])
-
- 
-
+console.log('oi')
    useEffect(()=>{
     let id = Cookies.get('Idusu')
-    
+    if(id !== undefined || id !== null){
     async function Listar(){
       let r = await api.listarDENUpoUsu(id)
-      setIdusu(r)  
+       return setIdusu(r)  
     }
       Listar();
-   },[idusu])
+  }else{
+    return toast.error('Não é possível exibir o histórico de denúncias sem ter uma conta logada.')
+  }
+   },[])
 
   
   
