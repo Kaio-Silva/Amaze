@@ -13,13 +13,23 @@ const api = new Api()
 export default function Paghd(){
 
   const [idusu,setIdusu] = useState([])
-console.log('oi')
+
+  async function Listar(){
+    let r = await api.listarDENUpoUsu(id)
+    return setIdusu(r)  
+  }
+  let id = Cookies.get('Idusu')
+
+
    useEffect(()=>{
-    let id = Cookies.get('Idusu')
+      let id = Cookies.get('Idusu')
+
     if(id !== undefined || id !== null){
-    async function Listar(){
-      let r = await api.listarDENUpoUsu(id)
-       return setIdusu(r)  
+
+      async function Listar(){
+        let r = await api.listarDENUpoUsu(id)
+        return setIdusu(r)  
+
     }
       Listar();
   }else{
@@ -42,7 +52,7 @@ console.log('oi')
                   <div class="force-overflow"></div>
                    
                   {idusu.map((item,i)=>
-                     <Comp item={item}/>
+                     <Comp item={item} func={Listar} id={id}/>
                   )}
                    
                   </div>

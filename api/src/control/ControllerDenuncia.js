@@ -90,6 +90,7 @@ app.post('/inserir', async(req,resp) =>{
        let consulta = await db.infob_amz_tbdenuncia.findAll({
          where:{id_usuario:id}
        })
+
         
        resp.send(consulta)
   

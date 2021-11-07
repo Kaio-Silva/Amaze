@@ -75,8 +75,8 @@ export default class Api {
         return i.data;
     }
 
-    async alterarDENU(id,idusu,longitude,latitude,data,ocorrencia,rua,bairro,avaliacao,tipo){
-        let i = await api.put(`/denuncia/alt/${id}`,{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia,ds_rua:rua,ds_bairro:bairro,qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo});
+    async alterarDENU(id,idusu,longitude,latitude,data,ocorrencia,rua,bairro,avaliacao,tipo,geo){
+        let i = await api.put(`/denuncia/alt/${id}`,{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia,ds_rua:rua,ds_bairro:bairro,qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo,ds_geohash:geo});
         return i.data;
     }
 

@@ -16,28 +16,37 @@ export default function P4(props){
     const[ocorrencia, setOcorrencia] = useState(props.ocorrencia)
     const[loc, setLoc] = useState(props.rua)
     const[tipo, setTipo] = useState('')
-    console.log(bairro)
-    console.log(ocorrencia)
-    console.log(loc)
+
 
     let id = Cookies.get('Idusu')
 
     function Tipagem(e){
         setTipo(e.target.value)
     }
-    async function Listar(){
-        let r = await api.listarDENUpoUsu(id)
-    }
 
     async function alterar(){
-    let r = await api.alterarDENU(props.id, props.den.id_usuario, props.den.dt_denuncia, props.den.qtd_avaliacao, bairro, ocorrencia, loc, tipo) //Falta a LatLng...
+        console.log(props.id)
+        console.log( props.den.id_usuario)
+        console.log(props.den.ds_longitude)
+        console.log(props.den.ds_latitude)
+        console.log(props.den.dt_denuncia)
+        console.log(props.den.qtd_avaliacao)
+        console.log(bairro)
+        console.log(ocorrencia)
+        console.log(loc)
+        console.log(tipo)
+        console.log(props.den.ds_geohash)
+        
+    let r = await api.alterarDENU(props.id, props.den.id_usuario,props.den.ds_longitude,props.den.ds_latitude, props.den.dt_denuncia,ocorrencia,loc,bairro, props.den.qtd_avaliacao, tipo, props.den.ds_geohash) //Falta a LatLng...
     
     if(r.erro)
         toast.error(r.erro)
-    else
+    else{
+        console.log('pieeee')
         toast.success("Alteração concluída")
-        Listar()
-        props.setEdit(false)
+        props.function(props.id)
+        
+    }
 }
     
     return(props.edit) ?(
