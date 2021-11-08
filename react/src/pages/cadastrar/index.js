@@ -5,10 +5,10 @@ import { Button } from '../../components/styled/botoes';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Padrao } from '../../components/styled/inputs.js';
-
 import { Container } from './styled.js';
 import { useState } from 'react';
 import Api from '../../services/api.js';
+import Mask from '../../components/commom/Mask/MaskedInput'
 
 const api = new Api()
 
@@ -59,7 +59,7 @@ function Cadastrar(props) {
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Telefone</div>
-                    <Padrao onChange={ e => setTelefone(e.target.value)} className="padrao" placeholder="Insira seu telefone" tamanho="100%" />
+                    <Mask onChange={ e => setTelefone(e.target.value)} className="padrao" placeholder="Insira seu telefone" tamanho="100%" />
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Senha</div>
