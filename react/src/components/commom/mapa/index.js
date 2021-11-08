@@ -4,18 +4,29 @@ import { Container } from './styled.js'
 import { Loader } from '@googlemaps/js-api-loader';
 import Comp from "../../../Popups/criarDenuncia/index"
 import Denunc from "../../../Popups/localdenuncs"
+import Api from '../../../services/api'
+
+const api = new Api();
 
 
 
 
 
-export default function   Mapa(){
+export default function Mapa(){
   const[pop,setPop]= useState(false);
   const [denu, setDenu] = useState(false);
   const [loc, setLoc] = useState({});
+  const [denuncias,setDenuncias] = useState([])
+
+  async function Listar(){
+    let consulta = api.ListarGroup();
+    setDenuncias(consulta)
+    console.log(denuncias)
+  }
   
 
   useEffect(() => {
+    Listar()
 
     const loader = new Loader({
       apiKey: "AIzaSyDaD4hq5gjkDX1FUWpkjZQXmEYrHzTmtRk",
