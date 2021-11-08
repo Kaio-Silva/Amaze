@@ -15,7 +15,7 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: space-between;
         padding-top: 4em;
-        margin: 1em;
+        margin: 0em 3.5em;
     }
 
     .baixo{
