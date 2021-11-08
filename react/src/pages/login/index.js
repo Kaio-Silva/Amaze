@@ -43,7 +43,7 @@ function Login (props){
         } else{
             Id()
             toast.success('Usuário Logado com sucesso.')
-            nav.push('/')
+            setTimeout(() => nav.push('/'), 2000);
         }
     }
    
@@ -71,9 +71,7 @@ function Login (props){
                             <Link className="link" to="/EsqueceuSenha"> Esqueceu a Senha? </Link>
                             <Link className="link" to="/cadastro"> Cadastre-se </Link>
                         </div> 
-                        {/* <Link  to="/"> */}
                             <Button onClick={Inserir} className="ajustarBotao" tamanho="grande" cor="verde"> Log in </Button>
-                        {/* </Link> */}
                     </div>
                 </div>
             </div>
