@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Container = styled.div`
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items:center;
 
     font-family:semiBold;
@@ -28,6 +28,7 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: left;
         align-items:center;
+       
     }
 
     button{
@@ -39,38 +40,39 @@ const Container = styled.div`
 
 
     .barra-conteudohdc{
-        align-items: center;
+    align-items: center;
     width:0.1em;
-    height: 2.3em;
+    height: 3em;
     background-color: #2ba083;
 }
   .descricao-conteudohdc{
-     padding-right:1em;
-     padding-left:0.9em;
+      margin-left:1.5em;
+      text-align:left;
+    width:28em;
     font-size:1em;
     }
 
     .descricao-conteudohdc1{
-     padding-right:1.5em;
-     padding-left:1.5em;
+     width:18em;
+     text-align: center;
     }
 
     .descricao-conteudohdcc{
-     padding-right:1.5em;
-     padding-left:1.5em;
+    width:12em;
+    text-align: center;
      font-size:12.8px;
     }
 
     .descricao-conteudohdce{
-     padding-right:8em;
-     padding-left:1.5em;
+    width:8em;
+    text-align: center;
      font-size: 12.8px;
     }
 
      .alinhando-imagem{
         display:flex;
         flex-direction:row;
-        margin-left:20em;
+        width:5em;
  
     }
 
@@ -206,7 +208,7 @@ const Container = styled.div`
     .descricao-conteudohdcc{
         font-size: 0.7em;
         height: 1em;
-        width: 13em;
+        width: 1em;
         padding:0.3em;
         width:2em
     }

@@ -1,8 +1,21 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from './styled.js'
+import Api from "../../../services/api";
+const api = new Api()
 
-export default function usuario(){
+export default function Usuario(){
+    const[usuario, setUsu] = useState([]);
+
+    async function fUsuario(){
+        let f = await api.USUtotal();
+        console.log(f)
+    }
+
+    useEffect(() =>{
+        fUsuario();
+    }, [])
+
     return(
 
         <Container>

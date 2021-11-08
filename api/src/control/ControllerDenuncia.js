@@ -102,7 +102,15 @@ app.post('/inserir', async(req,resp) =>{
   // Todas as denúncias do sistema
   app.get('/', async(req,resp) =>{
     try{
-         let consulta = await db.infob_amz_tbdenuncia.findAll()
+         let consulta = await db.infob_amz_tbdenuncia.findAll({
+           include: [
+             {
+               model: db.infob_amz_tbusuario,
+               as: 'id_usuario_infob_amz_tbusuario',
+               required: true
+             }
+           ]
+         })
     
          resp.send(consulta)
     

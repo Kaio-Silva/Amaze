@@ -21,16 +21,16 @@ export default function Contatenos(props){
      
 
 
-     function Validar(){
-         if(document.getElementById('name').value === undefined   ||   document.getElementById('email').value === undefined   ||   document.getElementById('message').value === undefined)
-         return toast.error('Todos os campos são obrigatórios!')
-     }
+    //  function Validar(){
+    //      if(document.getElementById('name').value === undefined   ||   document.getElementById('email').value === undefined   ||   document.getElementById('message').value === undefined)
+    //      return toast.error('Todos os campos são obrigatórios!')
+    //  }
 
 
     function SendMail(e){
         console.log(e)
         e.preventDefault();
-          Validar()
+        //   Validar()
         emailjs.sendForm('service_lyber5y', 'template_b8wj9ac', form.current, 'user_KZW7Whxg6kdEPNT47G1xJ')
           .then((result) => {
               toast.success('Mensagem enviada com sucesso!')
