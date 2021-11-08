@@ -3,6 +3,23 @@ import db from '../db.js';
 
 const app = express.Router();
 
+
+function Map(array){
+
+  let consulta = array.map( item =>{
+    return{
+        usuario: item.nm_usuario,
+        email: item.ds_email,
+        telefone: item.nr_telefone,
+        senha: item.ds_senha,
+        ativo: item.bt_ativo
+    }
+  }) 
+  return consulta;
+
+}
+
+
 //Inserir
 app.post('/inserir', async(req,resp) =>{
     try{ 
@@ -71,8 +88,7 @@ app.get('/login',async (req,resp) =>{
   try{
     let senha = req.query.ds_senha;
     let email = req.query.ds_email;
-    console.log(senha)
-    console.log(email)
+    
       let consulta = await db.infob_amz_tbusuario.findOne(
       {
           where:{
@@ -92,11 +108,14 @@ app.get('/login',async (req,resp) =>{
 })
 
 
+
 // get TOTAL
 app.get('/total',async (req,resp) =>{
 
       try{
            let consulta = await db.infob_amz_tbusuario.findAll({ order:[['id_usuario']] });
+           consulta = Map(consulta);
+
            resp.send(consulta)
       }catch(e){
           resp.send(e.toString())
