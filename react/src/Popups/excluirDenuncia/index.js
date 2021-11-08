@@ -17,7 +17,7 @@ export default function p3(props){
         else
             toast.success(`A denuncia foi removida com sucesso`)
             props.function(props.id)    
-            props.setTrigger(false) 
+            
     }
 
     

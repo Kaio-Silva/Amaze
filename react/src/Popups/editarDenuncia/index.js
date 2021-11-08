@@ -77,7 +77,7 @@ export default function P4(props){
                   </div> 
 
                   <div className="teext">
-                      <label><Textarea onChange={ e => setOcorrencia(e.target.value)}  placeholder="Rua júlio silvino" className="txt"></Textarea></label> 
+                      <label><Textarea onChange={ e => setOcorrencia(e.target.value)}  placeholder="Descrição" className="txt"></Textarea></label> 
                   </div> 
 
              </div>
@@ -93,7 +93,7 @@ export default function P4(props){
 
                 <div className="l2">
                    <label> <input className="ty" name="actmnt" type="radio" value="Feminicídio" onChange={Tipagem}/>Feminicídio </label>
-                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" onChange={Tipagem}/> Tráfic  </label>
+                   <label> <input className="ty" name="actmnt" type="radio" value="Tráfico" onChange={Tipagem}/> Tráfico  </label>
                    <label> <input className="ty" name="actmnt" type="radio" value="Estupro" onChange={Tipagem}/>Estupro </label>
                 </div>
 
