@@ -7,7 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import { useState } from 'react';
 import emailjs from 'emailjs-com'
-import { useRef } from 'react';
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar';
 
 export default function Contatenos(props){
     // const [nome,setNome] = useState('')
@@ -18,31 +19,35 @@ export default function Contatenos(props){
 
 
     const form = useRef()
-     
+    const loading = useRef(null);
 
 
-     function Validar(){
-         if(document.getElementById('name').value === undefined   ||   document.getElementById('email').value === undefined   ||   document.getElementById('message').value === undefined)
-         return toast.error('Todos os campos são obrigatórios!')
-     }
+    //  function Validar(){
+    //      if(document.getElementById('name').value === undefined   ||   document.getElementById('email').value === undefined   ||   document.getElementById('message').value === undefined)
+    //      return toast.error('Todos os campos são obrigatórios!')
+    //  }
 
 
     function SendMail(e){
-        console.log(e)
+        loading.current.continuousStart();
+        
         e.preventDefault();
-          Validar()
+        //   Validar()
         emailjs.sendForm('service_lyber5y', 'template_b8wj9ac', form.current, 'user_KZW7Whxg6kdEPNT47G1xJ')
           .then((result) => {
               toast.success('Mensagem enviada com sucesso!')
+              
           }, (error) => {
               toast.error(error.message)
           });
           form.current.reset();
+          loading.current.complete(); 
     }
 
     
     return(
         <Container>
+            <LoadingBar color='#f11946' ref={loading} />
             <ToastContainer/>
             <div className="Logo"><Logo cor="white" titulo="none" tamanho="grande"/></div>
 

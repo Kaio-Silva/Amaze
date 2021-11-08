@@ -7,11 +7,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Botao } from '../../components/styled/botoes';
 import Api from '../../services/api'
 import Cookies from 'js-cookie'
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar'
 
 const api = new Api()
 
 export default function P4(props){
-
+    const loading = useRef(null);
     const[bairro, setBairro] = useState(props.bairro)
     const[ocorrencia, setOcorrencia] = useState(props.ocorrencia)
     const[loc, setLoc] = useState(props.rua)
@@ -25,6 +27,7 @@ export default function P4(props){
     }
 
     async function alterar(){
+        loading.current.continuousStart();
         console.log(props.id)
         console.log( props.den.id_usuario)
         console.log(props.den.ds_longitude)
@@ -45,12 +48,13 @@ export default function P4(props){
         console.log('pieeee')
         toast.success("Alteração concluída")
         props.function(props.id)
-        
+        loading.current.complete();
     }
 }
     
     return(props.edit) ?(
         <Container>
+             <LoadingBar color='#f11946' ref={loading} />
           <div className="abox">
               <ToastContainer/>
              <div className="cabecalho">

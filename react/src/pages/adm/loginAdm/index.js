@@ -6,6 +6,10 @@ import { Button } from '../../../components/styled/botoes';
 import { useState} from 'react';
 import Api from '../../../services/api';
 import { useHistory } from 'react-router';
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const api = new Api()
 
@@ -15,20 +19,26 @@ export default function LoginAdm (props){
     const [senha, setSenha] = useState('')
  
     const nav = useHistory();
-    
+    const loading = useRef(null);
  
     const Inserir = async () => {
+        loading.current.continuousStart();
  
          let r = await api.USULogin(senha, email)
  
          if( r.erro ){
-             nav.push('/Login')
+            toast.error(r.erro)
+            loading.current.complete();
+             nav.push('/loginAdm')   
          } else{
-             nav.push('/adm')
+             nav.push('/adm')    
          }
+         
      }
     return(
         <Container>
+            <ToastContainer/>
+            <LoadingBar color='#f11946' ref={loading} />
             <Logo ambos="false" direction="column" cor="white" titulo="" tamanho="medio"/>
             <div className="BoxLogin">
                 <div className="ConteudoAmaze">

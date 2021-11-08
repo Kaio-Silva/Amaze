@@ -6,10 +6,15 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import Api from '../../services/api'
 import Cookies from 'js-cookie'
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar'
+
 
 const api = new Api()
 
+
 export default function P4(props){
+    const loading = useRef(null);
     const[cordinates, setCordinates] = useState([])
     const[bairro,setBairro] = useState('')
     const[ocorrencia,setOcorrencia] = useState('')
@@ -63,7 +68,7 @@ export default function P4(props){
 
 
     async function Inserir(){
- 
+        loading.current.continuousStart();
         if(bairro === '' || loc === '' || ocorrencia === '' || tipo === '' )
         return toast.error('Todos os campos são obrigatórios')
         else{ 
@@ -71,10 +76,12 @@ export default function P4(props){
 
             if(idu === undefined || null){
               return toast.error('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
-            }else{      
+                 
+            }else{   
+               
                 let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
                   toast.success('Denúncia criada com sucesso!') 
-                  console.log(r)
+                  loading.current.complete();   
         }
     
      }
@@ -90,6 +97,7 @@ export default function P4(props){
   
     return(props.value) ?(
         <Container>
+            <LoadingBar color='#f11946' ref={loading} />
           <div className="abox">
               <ToastContainer/>
              <div className="cabecalho">

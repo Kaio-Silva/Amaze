@@ -9,6 +9,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from 'react-router';
 import Cookies from 'js-cookie'
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar'
 
 const api = new Api()
 
@@ -19,6 +21,9 @@ function Login (props){
    const [email, setEmail] = useState('')
    const [senha, setSenha] = useState('')
 
+   const nav = useHistory();
+   
+   const loading = useRef(null);
   
     async function Id(){
         let r = await api.USUemail(email)
@@ -31,24 +36,25 @@ function Login (props){
 
   
 
-   const nav = useHistory();
-   
-
+  
    const Inserir = async () => {
+   
+    loading.current.continuousStart();
 
         let r = await api.USULogin(senha, email)
         if( r.erro ){
             toast.error(r.erro)
             nav.push('/Login')
+            loading.current.complete();   
         } else{
             Id()
-            toast.success('Usuário Logado com sucesso.')
             nav.push('/')
         }
     }
    
     return(
         <Container>
+            <LoadingBar color='#f11946' ref={loading} />
             <Logo ambos="false" direction="column" cor="black" titulo="" tamanho="medio"/>
             <ToastContainer/>
             <div className="BoxLogin">
@@ -82,4 +88,3 @@ function Login (props){
 }
 
 export { Login }
-

@@ -9,6 +9,8 @@ import { Container } from './styled.js';
 import { useState } from 'react';
 import Api from '../../services/api.js';
 import Mask from '../../components/commom/Mask/MaskedInput'
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar'
 
 const api = new Api()
 
@@ -21,6 +23,7 @@ function Cadastrar(props) {
    const [concluir,setConcluir] = useState([])
 
    const navigation = useHistory();
+   const loading = useRef(null);
 
    console.log(nome);
    console.log(email);
@@ -30,20 +33,23 @@ function Cadastrar(props) {
    
    
    async function Inserir(){
+     loading.current.continuousStart();
 
       let a = await api.InserirUSU(nome, email, telefone, senha, concluir)
       setConcluir(a);
 
       if(a.erro){
         toast.error(a.erro)
+        loading.current.complete();
       }else{
          toast.success('Usuário criado com sucesso.')
-         navigation.push('/')
+         loading.current.complete();  
       }
    }
 
   return (
     <Container>
+       <LoadingBar color='#f11946' ref={loading} />
           <div className="ajustarLogo"><Logo cor="black" tamanho="grande"/></div>
           <ToastContainer/>
             <div className="conteudo">
