@@ -42,6 +42,7 @@ function Cadastrar(props) {
         toast.error(a.erro)
         loading.current.complete();
       }else{
+         setTimeout  (() => navigation.push('/'), 2000)
          toast.success('Usuário criado com sucesso.')
          loading.current.complete();  
       }

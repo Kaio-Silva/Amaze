@@ -15,12 +15,14 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: space-between;
         padding-top: 4em;
-        width: 80%;
+        margin: 0em 3.5em;
     }
 
     .baixo{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         background-color: #B8BABF;
         background-image: url("/assets/Images/DocsAzul1.png");

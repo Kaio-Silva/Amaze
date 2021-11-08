@@ -12,8 +12,8 @@ export default function Denuncias(props) {
     //lembrar de arrumar o usuario
     async function Funcao(){
         let f = await api.ListarDENUTotal();
+        console.log(f);
         setDenuc(f);
-        console.log('oi'+f)
     }
 
     useEffect(()=> {
@@ -26,8 +26,7 @@ export default function Denuncias(props) {
                 <div className="baixo">
                     {denuc.map(item =>
                         <div className="alinhando">
-                            <Card autor={item.id_usuario} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia}/>
-                            <Card autor={item.id_denuncia} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia}/>
+                            <Card autor={item.id_usuario_infob_amz_tbusuario.nm_usuario} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia}/>
                         </div>
                     )}
                 </div>
