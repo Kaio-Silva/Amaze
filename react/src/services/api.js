@@ -58,6 +58,11 @@ export default class Api {
 
     /////////////////////////////////////////////////////////////////////////////
 
+    async ListarGroup(){
+        let i = await api.get('/denuncia/porRegiao')
+        return i.data;
+    }
+
 
     async inserirDENU(idusu,longitude,latitude,data,ocorrencia,qtdreporte,rua,bairro,avaliacao,tipo,hashh){
         let i = await api.post('/denuncia/inserir',{id_usuario:idusu,ds_longitude:longitude, ds_latitude: latitude,dt_denuncia:data,ds_ocorrencia:ocorrencia, qtd_reporte_recebido:qtdreporte, ds_rua:rua, ds_bairro:bairro, qtd_avaliacao:avaliacao,ds_tipo_denuncia:tipo,ds_geohash:hashh});
@@ -71,7 +76,7 @@ export default class Api {
     }
 
     async ListarDENUTotal(){
-        let i = await api.get('denuncia/');
+        let i = await api.get('/denuncia/');
         return i.data;
     }
 
