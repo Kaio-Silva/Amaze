@@ -9,15 +9,14 @@ const api = new Api()
 
 export default function Denuncias(props) {
     const [denuc, setDenuc] = useState([]);
-    //lembrar de arrumar o usuario
-    async function Funcao(){
+
+    async function Listar(){
         let f = await api.ListarDENUTotal();
         console.log(f);
         setDenuc(f);
     }
-
     useEffect(()=> {
-        Funcao();
+        Listar();
     }, [])
 
     return (
@@ -26,7 +25,7 @@ export default function Denuncias(props) {
                 <div className="baixo">
                     {denuc.map(item =>
                         <div className="alinhando">
-                            <Card autor={item.id_usuario_infob_amz_tbusuario.nm_usuario} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia}/>
+                            <Card autor={item.id_usuario_infob_amz_tbusuario.nm_usuario} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia} id={item.id_denuncia} function={Listar}/>
                         </div>
                     )}
                 </div>
