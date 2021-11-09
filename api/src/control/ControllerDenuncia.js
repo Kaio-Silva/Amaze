@@ -9,6 +9,10 @@ const {fn, Op} = Sequelize;
 const app = express.Router();
 
 
+
+
+
+
 app.get('/porRegiao/:geohash', async(req,resp) =>{
   const {geohash} = req.params;
   const r = await db.infob_amz_tbdenuncia.findAll({

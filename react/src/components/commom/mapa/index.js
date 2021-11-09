@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from './styled.js'
 
+import ngeohash from 'ngeohash'
+
 import { Loader } from '@googlemaps/js-api-loader';
 import Comp from "../../../Popups/criarDenuncia/index"
 import Denunc from "../../../Popups/localdenuncs"
@@ -18,15 +20,15 @@ export default function Mapa(){
   const [loc, setLoc] = useState({});
   const [denuncias,setDenuncias] = useState([])
 
-  async function Listar(){
-    let consulta = api.ListarGroup();
-    setDenuncias(consulta)
-    console.log(denuncias)
-  }
+  // async function Listar(){
+  //   let consulta = api.ListarGroup();
+  //   setDenuncias(consulta)
+  //   console.log(denuncias)
+  // }
   
 
   useEffect(() => {
-    Listar()
+    //Listar()
 
     const loader = new Loader({
       apiKey: "AIzaSyDaD4hq5gjkDX1FUWpkjZQXmEYrHzTmtRk",
@@ -92,6 +94,46 @@ export default function Mapa(){
     loader.load().then(async (google) => {
       const map = new google.maps.Map(document.getElementById("map"), mapOptions)
 
+      const regioesGroup = await api.ListarGroup();
+      console.log('regioes group');
+      console.log(regioesGroup);
+
+
+      for (let item of regioesGroup) {
+        let locs =  ngeohash.decode_bbox(item.geohash);
+        console.log(locs);
+
+        const rectangle = new google.maps.Rectangle({
+          strokeColor: "blue",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "blue",
+          fillOpacity: 0.35,
+          map,
+          bounds: {
+            north: locs[2],
+            south: locs[0],
+            east: locs[3],
+            west: locs[1],
+          },
+        });
+
+
+        // let icon = '/assets/images/pinMap.png';
+        // if (item.qtd > 2)
+        //   icon = '/assets/images/risco.png'
+
+        // var regiaoPin = new google.maps.Marker({
+        //   position: {
+        //     lat: item.loc.latitude,
+        //     lng: item.loc.longitude
+        //   },
+        //   map: map,
+        //   optimized: false,
+        //   icon: icon,
+        // });
+      }
+
       var pin = new google.maps.Marker({
         position: mapOptions,
         map: map,
@@ -99,16 +141,14 @@ export default function Mapa(){
         icon: "/assets/images/pinMap.png",
       });
 
-
-
       map.addListener('click', function(e) {
         var loc = e.latLng.toJSON();
 
-            pin.addListener("click", () => {
-              map.panTo(pin.getPosition());
-              setLoc(loc);
-              setDenu(true);
-           });
+        pin.addListener("click", () => {
+          map.panTo(pin.getPosition());
+          setLoc(loc);
+          setDenu(true);
+        });
 
        pin.setPosition(loc);
 

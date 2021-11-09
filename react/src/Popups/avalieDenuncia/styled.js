@@ -57,9 +57,12 @@ button{
     margin-bottom: 1.2em;
 }
 
-.aval{
-    text-align:center;
-    margin-bottom: 1.7em;
+.star{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2em;
 }
 
 .botao button{
@@ -74,6 +77,10 @@ button{
 
 .botao{
  text-align:center
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 @media(max-width:1316px)
