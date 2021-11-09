@@ -133,9 +133,6 @@ export default function Mapa(){
             west: locs[1],
           },
         });
-
-
-         let icon = '/assets/images/pinMap.png';
          
 
          var regiaoPin = new google.maps.Marker({
@@ -145,9 +142,16 @@ export default function Mapa(){
            },
             map: map,
            optimized: false,
-           icon: icon,
+           icon:'/assets/images/pinMap.png',
          });
+
+         regiaoPin.addListener("click", () => {
+          setDenu(true);
+        });
+  
+  
       }
+
 
       var pin = new google.maps.Marker({
         position: mapOptions,
