@@ -99,15 +99,31 @@ export default function Mapa(){
       console.log(regioesGroup);
 
 
+
+
       for (let item of regioesGroup) {
         let locs =  ngeohash.decode_bbox(item.geohash);
         console.log(locs);
+        let color
+
+        if(item.qtd < 5){
+          color = '#14FF00'
+        }
+        else if(item.qtd >= 5 && item.qtd <=10){
+         color = '#FAFF00'
+        }
+        else if(item.qtd >= 11 && item.qtd <=20){
+         color = '#FFA800'
+        }
+         else if (item.qtd >= 21){
+          color = 'red'
+         }
 
         const rectangle = new google.maps.Rectangle({
-          strokeColor: "blue",
+          strokeColor: "transparent",
           strokeOpacity: 0.8,
           strokeWeight: 2,
-          fillColor: "blue",
+          fillColor: color,
           fillOpacity: 0.35,
           map,
           bounds: {
@@ -119,19 +135,18 @@ export default function Mapa(){
         });
 
 
-        // let icon = '/assets/images/pinMap.png';
-        // if (item.qtd > 2)
-        //   icon = '/assets/images/risco.png'
+         let icon = '/assets/images/pinMap.png';
+         
 
-        // var regiaoPin = new google.maps.Marker({
-        //   position: {
-        //     lat: item.loc.latitude,
-        //     lng: item.loc.longitude
-        //   },
-        //   map: map,
-        //   optimized: false,
-        //   icon: icon,
-        // });
+         var regiaoPin = new google.maps.Marker({
+           position: {
+            lat: item.loc.latitude,
+             lng: item.loc.longitude
+           },
+            map: map,
+           optimized: false,
+           icon: icon,
+         });
       }
 
       var pin = new google.maps.Marker({
