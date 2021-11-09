@@ -15,6 +15,7 @@ const api = new Api();
 
 
 export default function Mapa(){
+  const[dados,setDados] = useState([[]])
   const[pop,setPop]= useState(false);
   const [denu, setDenu] = useState(false);
   const [loc, setLoc] = useState({});
@@ -93,8 +94,16 @@ export default function Mapa(){
     
     loader.load().then(async (google) => {
       const map = new google.maps.Map(document.getElementById("map"), mapOptions)
-
       const regioesGroup = await api.ListarGroup();
+
+      async function especificRegion(geo){
+         let r = await api.ListarRua(geo);
+         setDados(r)
+         console.log(dados)
+         
+       
+      } 
+
       console.log('regioes group');
       console.log(regioesGroup);
 
@@ -102,8 +111,14 @@ export default function Mapa(){
 
 
       for (let item of regioesGroup) {
+        if(isNaN(item.geohash) === false){
+          continue
+        }
         let locs =  ngeohash.decode_bbox(item.geohash);
+        especificRegion(item.geohash)
+        console.log()
         console.log(locs);
+        
         let color
 
         if(item.qtd < 5){
@@ -147,6 +162,7 @@ export default function Mapa(){
 
          regiaoPin.addListener("click", () => {
           setDenu(true);
+          <Comp  />
         });
   
   

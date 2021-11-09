@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function p6(props){
+    
     return(props.bool) ?(
 
             <Container>
@@ -15,7 +16,7 @@ export default function p6(props){
               <div className="denuncs" id="style-2">
                 <div className="b1">
                     <div className="bloco" id="lado">
-                        <div className="titulob">Rua júlio Silvino</div>
+                        <div className="titulob">{}</div>
                         <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
                         <div className="descr">Latrocínio</div>
                         <div className="date">27/10/2021</div>

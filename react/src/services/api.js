@@ -58,6 +58,12 @@ export default class Api {
 
     /////////////////////////////////////////////////////////////////////////////
 
+    async ListarRua(geohash){
+        console.log(geohash)
+        let i = await api.get(`/denuncia/porRegiao/${geohash}`)
+        return i.data;
+    }
+
     async ListarGroup(){
         let i = await api.get('/denuncia/porRegiao')
         return i.data;
