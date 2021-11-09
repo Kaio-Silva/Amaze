@@ -200,7 +200,7 @@ const Container = styled.div`
 
     .descricao-conteudohdc1{
         font-size: 0.7em;
-        height: 1em;
+        height: 2.5em;
         width: 7em;
         padding:0.3em;
     }
@@ -208,15 +208,14 @@ const Container = styled.div`
     .descricao-conteudohdcc{
         font-size: 0.7em;
         height: 1em;
-        width: 1em;
-        padding:0.3em;
-        width:2em
+        padding: 0.5em;
+        width:9em
     }
     .descricao-conteudohdce{
         font-size: 0.7em;
         height: 1em;
-        width: 0em;
-        padding:0em;
+        width: 1em;
+        padding: 1em;
         margin-left:2.4em;
         margin-right:1.9em;
     }
