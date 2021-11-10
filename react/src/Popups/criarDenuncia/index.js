@@ -25,6 +25,7 @@ export default function P4(props){
     const[qtdreporte] = useState(12)
     const[hashh,setHash] = useState('')
     let data = new Date();
+    data.toLocaleDateString;
 
     useEffect(() =>{
         let idu = Cookies.get('Idusu')
