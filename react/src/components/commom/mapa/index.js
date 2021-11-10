@@ -21,6 +21,8 @@ export default function Mapa(){
   const [loc, setLoc] = useState({});
   const [denuncias,setDenuncias] = useState([])
 
+  
+
   // async function Listar(){
   //   let consulta = api.ListarGroup();
   //   setDenuncias(consulta)
@@ -99,25 +101,14 @@ export default function Mapa(){
       async function especificRegion(geo){
          let r = await api.ListarRua(geo);
          setDados(r)
-         console.log(dados)
-         
-       
       } 
-
-      console.log('regioes group');
-      console.log(regioesGroup);
-
-
-
+      
 
       for (let item of regioesGroup) {
         if(isNaN(item.geohash) === false){
           continue
         }
         let locs =  ngeohash.decode_bbox(item.geohash);
-        especificRegion(item.geohash)
-        console.log()
-        console.log(locs);
         
         let color
 
@@ -161,10 +152,10 @@ export default function Mapa(){
          });
 
          regiaoPin.addListener("click", () => {
+          especificRegion(item.geohash);   
           setDenu(true);
-          <Comp  />
         });
-  
+        console.log(dados)
   
       }
 
@@ -186,7 +177,7 @@ export default function Mapa(){
         });
 
        pin.setPosition(loc);
-
+       
     });
   });
 
