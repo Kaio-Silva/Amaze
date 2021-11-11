@@ -28,6 +28,7 @@ const Container = styled.div`
         flex-direction: row;
         justify-content: left;
         align-items:center;
+        
        
     }
 
