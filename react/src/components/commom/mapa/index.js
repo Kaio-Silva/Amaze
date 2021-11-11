@@ -154,8 +154,10 @@ export default function Mapa(){
          regiaoPin.addListener("click", () => {
           especificRegion(item.geohash);   
           setDenu(true);
+          console.log(dados)
         });
-        console.log(dados)
+        
+        
   
       }
 
