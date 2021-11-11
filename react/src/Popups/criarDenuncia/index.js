@@ -24,7 +24,10 @@ export default function P4(props){
     const[id,setId] = useState([])
     const[qtdreporte] = useState(12)
     const[hashh,setHash] = useState('')
-    let data = new Date();
+    let d = new Date();
+    let data =  d.toLocaleDateString();
+    console.log(data);
+    
     
 
     useEffect(() =>{
