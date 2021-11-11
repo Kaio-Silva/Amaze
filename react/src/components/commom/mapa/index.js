@@ -154,7 +154,6 @@ export default function Mapa(){
          regiaoPin.addListener("click", () => {
           especificRegion(item.geohash);   
           setDenu(true);
-          console.log(dados)
         });
         
         
@@ -191,7 +190,7 @@ export default function Mapa(){
             <div id="map"></div>
             <button onClick={ () => setPop(true)} className="ButtonMap"/>      
             <Comp value={pop} func={setPop} loc={loc} />    
-            <Denunc bool={denu} func={setDenu}  />
+            <Denunc bool={denu} func={setDenu} item={dados} />
         </Container>
     ) 
     

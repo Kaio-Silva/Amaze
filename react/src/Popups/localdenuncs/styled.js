@@ -75,18 +75,22 @@ button{
 .b1{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    
+  
+    align-items: center;
+
     height: 14em;
 }
 
-
-.b2{
-    display:flex;
+.alinhar{
+    display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
-   
+    width: 12em;
+    margin: 0em 1em;
 }
-
 
 .titulob{
     font-size:1.2em;
@@ -97,16 +101,12 @@ button{
     height:225px;
     width:0.8px;
     background-color:rgba(0, 0, 0, 0.3);
-    margin-right: 1.9em;
-    margin-left: 1.9em;
 }
 
 .linha2{
-    height:220px;
-    width:0.8px;
+    height: 0.8px;
+    width: 165px;
     background-color:rgba(0, 0, 0, 0.3);
-    margin-right: 1.9em;
-    margin-left: 1.9em;
 }
 
 .linhah{
@@ -117,6 +117,8 @@ button{
 }
 
 .bloco{
+    display: flex;
+    flex-direction: column;
     margin-top: 1.5em;
     justify-content: left;
     height: 10em;
@@ -147,7 +149,7 @@ button{
     background-color: #24BF99;
     border:none;
     color: white;
-    width: 180px;
+    width: 160px;
     height: 32px;
     border-radius: 0.5em;
 }
@@ -253,9 +255,7 @@ button{
 
 }
 @media(max-width: 940px){
-    #lado{
-        margin-left:;
-    }
+    
 }
 @media(max-width: 375px){
     .denuncs{
