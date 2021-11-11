@@ -70,7 +70,7 @@ function Cadastrar(props) {
                  </div>
                  <div className="Inputs">                        
                     <div className="Titulo">Senha</div>
-                    <Padrao onChange={ e => setSenha(e.target.value)} className="padrao"  placeholder="Insira seu senha" tamanho="100%" />
+                    <Padrao onChange={ e => setSenha(e.target.value)} className="padrao"  placeholder="Insira seu senha" tamanho="100%" type="password" />
                  </div>          
                   <div className="mae-botao">
                       {/* <Link className="link" to="/Login"> */}

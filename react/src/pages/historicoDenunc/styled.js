@@ -175,6 +175,7 @@ padding-right: 4em;;
 .denuc{
     overflow-y: auto;
     height:30em;
+
 }
 
 
