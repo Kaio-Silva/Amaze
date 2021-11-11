@@ -26,7 +26,7 @@ export default function P4(props){
     const[hashh,setHash] = useState('')
     let d = new Date();
     let data =  d.toLocaleDateString();
-    console.log(data);
+    
     
     
 
@@ -83,7 +83,7 @@ export default function P4(props){
                  
             }else{   
                
-                let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
+                let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, d,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
                   toast.success('Denúncia criada com sucesso!') 
                   loading.current.complete();   
         }

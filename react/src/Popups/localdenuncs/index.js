@@ -1,11 +1,30 @@
 import { Container } from './styled'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 export default function P6(props){
-    const[ denuncia, setDenuncia] = useState(props.item)
-    console.log(denuncia)
+    const[ denuncia, setDenuncia] = useState([{}])
+    // console.log(props.item)
+    
+    // let obj = {
+    //     rua: props.item.ds_rua,
+    //     data: props.item.dt_denuncia,
+    //     tipo: props.item.ds_tipo_denuncia,
+    //     descricao: props.item.ds_ocorrencia
+    // }
+
+    // console.log(obj)
+
+    function listar(){
+        setDenuncia(props.item)
+    }
+    
+
+    useEffect(()=>{
+     listar()
+     console.log(props.item)
+    },[props.item])
 
     return(props.bool) ?(
 
@@ -25,7 +44,14 @@ export default function P6(props){
                                         <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
                                         <div className="descr">{item.ds_tipo_denuncia}</div>
                                         <div className="date">{item.dt_denuncia}</div>
-                                        <div className="botao"><Link to="/Denuncia"><button>Saiba Mais</button></Link></div>
+                                        <div className="botao">
+                                        <Link to={{
+                                            pathname:"/Denuncia",
+                                            state: item
+                                        }}>
+                                                <button>Saiba Mais</button>
+                                            </Link>
+                                        </div>
                                         <div className="linha2"></div>
                                     </div>
                                     <div className="linha"></div>

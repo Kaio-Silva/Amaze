@@ -62,7 +62,7 @@ export default function Contatenos(props){
                             <div className="AlinhandoInputs"> 
                                         
                                 <Padrao className="input" required="required" placeholder="E-mail" cor="verde" name="email" value="" />
-                                <Padrao className="input" required="required" placeholder="Telefone" cor="verde" /> 
+                                <Padrao className="input" required="required" placeholder="Telefone" cor="verde" name="phone" value="" /> 
                             </div>                     
                             <Textarea className="TextArea" required="required" placeholder="Mensagem" tamanho="100%" cor="verde"  name="message" value=""/>
                             </form>

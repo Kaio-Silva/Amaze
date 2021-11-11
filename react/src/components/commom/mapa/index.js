@@ -20,7 +20,7 @@ export default function Mapa(){
   const [denu, setDenu] = useState(false);
   const [loc, setLoc] = useState({});
   const [denuncias,setDenuncias] = useState([])
-
+  
   
 
   // async function Listar(){
@@ -101,7 +101,9 @@ export default function Mapa(){
       async function especificRegion(geo){
          let r = await api.ListarRua(geo);
          setDados(r)
+         
       } 
+      
       
 
       for (let item of regioesGroup) {
@@ -191,7 +193,7 @@ export default function Mapa(){
             <button onClick={ () => setPop(true)} className="ButtonMap"/>      
             <Comp value={pop} func={setPop} loc={loc} />    
             <Denunc bool={denu} func={setDenu} item={dados} />
-        </Container>
+n            </Container>
     ) 
     
 }

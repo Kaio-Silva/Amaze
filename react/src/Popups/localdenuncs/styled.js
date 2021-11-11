@@ -88,7 +88,7 @@ button{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 12em;
+    width: 11.5em;
     margin: 0em 1em;
 }
 
@@ -97,24 +97,6 @@ button{
     margin-bottom:0.3em;
 }
 
-.linha{
-    height:225px;
-    width:0.8px;
-    background-color:rgba(0, 0, 0, 0.3);
-}
-
-.linha2{
-    height: 0.8px;
-    width: 165px;
-    background-color:rgba(0, 0, 0, 0.3);
-}
-
-.linhah{
-    height:1px;
-    width:100%;
-    background-color:rgba(0, 0, 0, 0.3);
-    margin-left: 0.9em;
-}
 
 .bloco{
     display: flex;
@@ -190,12 +172,7 @@ button{
     width: 70%;
     
 }
-.linha{
-    display:none;
-}
-.linha2{
-    display:none;
-}
+
 
 .b1{
     padding-top:2em;
@@ -237,12 +214,6 @@ button{
     
     width: 70%;
     
-}
-.linha{
-    display:none;
-}
-.linha2{
-    display:none;
 }
 
 .b1{
