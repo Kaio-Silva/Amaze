@@ -20,14 +20,14 @@ export default function P4(props){
     const[ocorrencia,setOcorrencia] = useState('')
     const[loc,setLoc] = useState('')
     const[tipo,setTipo] = useState('')
-    const[avaliacao] = useState(9)
+    const[avaliacao] = useState(0)
     const[id,setId] = useState([])
-    const[qtdreporte] = useState(12)
+    const[qtdreporte] = useState(0)
     const[hashh,setHash] = useState('')
     let d = new Date();
     let data =  d.toLocaleDateString();
     
-    console.log('OIE'+data)
+    console.log(data)
 
     useEffect(() =>{
         let idu = Cookies.get('Idusu')
