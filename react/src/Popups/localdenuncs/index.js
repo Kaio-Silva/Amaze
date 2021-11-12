@@ -23,7 +23,6 @@ export default function P6(props){
 
     useEffect(()=>{
      listar()
-     console.log(props.item)
     },[props.item])
 
     return(props.bool) ?(
