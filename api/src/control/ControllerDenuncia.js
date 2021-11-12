@@ -8,10 +8,7 @@ const {fn, Op} = Sequelize;
 
 const app = express.Router();
 
-
-
-
-
+let x = 'oi'
 
 app.get('/porRegiao/:geohash', async(req,resp) =>{
   const {geohash} = req.params;
