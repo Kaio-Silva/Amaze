@@ -93,17 +93,19 @@ const Container = styled.div`
     }
 
 .agrupar{
-    width:55em;
+    width:85em;
 }
+.alinhando-imagem {
+    width:30em;
+    margin-left:5em;
+
+}
+.descricao-conteudohdc{}
 
     @media(max-width:1240px){
        
         width: 99%;
 
-    .alinhando-imagem{
-        margin-left:1em;
-        width:0.1em;
-    }
 .agrupar{
     width:30em;
     
