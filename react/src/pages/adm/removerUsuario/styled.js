@@ -48,7 +48,7 @@ const Container = styled.div`
     }
 
     @media (min-width: 1440px){
-        .baixo{
+        .algo{
             height: 91vh;
         }
     }
@@ -62,7 +62,7 @@ const Container = styled.div`
             display: none;
         }
 
-        .baixo{
+        .algo{
             background-image: none;
             width: 100%;
             padding: 2em 0em;

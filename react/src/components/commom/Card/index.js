@@ -9,7 +9,6 @@ const api = new Api()
 export default function Denuncias(props) {
     const[trigger,SetTrigger] = useState(false)
     const loading = useRef(null);
-    //lembrar terminar o delete
      async function Delete() {
         loading.current.continuousStart();
          let f = await api.deleteDENU(props.id)
