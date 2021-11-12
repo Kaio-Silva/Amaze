@@ -1,11 +1,10 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'https://amazetcc.herokuapp.com/'
+    baseURL: 'http://localhost:3000/'
 })
 
-export default class Api {
 
-//teste
+export default class Api {
 
     async Geocoding(local){
         let i = await api.get(`/geo2?loc=${local}`)
