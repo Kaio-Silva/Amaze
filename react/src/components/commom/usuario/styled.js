@@ -54,6 +54,8 @@ const Container = styled.div`
 
     .imagem:hover{
         cursor: pointer;
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 
     @media(max-width: 1024px) {
