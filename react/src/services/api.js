@@ -5,6 +5,8 @@ const api = axios.create({
 
 export default class Api {
 
+//teste
+
     async Geocoding(local){
         let i = await api.get(`/geo2?loc=${local}`)
         return i.data;
