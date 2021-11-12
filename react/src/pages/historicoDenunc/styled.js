@@ -107,6 +107,7 @@ width:20em;
     display:flex;
     flex-direction: column;
     width:94.5%;
+
     height:37em;
     align-items:center;
     box-shadow: 3px 3px 15px #888888;

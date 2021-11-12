@@ -105,9 +105,11 @@ const Container = styled.div`
     @media(max-width:1240px){
        
         width: 99%;
+    
 
 .agrupar{
-    width:30em;
+    width:32em;
+    text-align: center;
     
 }
 
@@ -137,7 +139,6 @@ const Container = styled.div`
     }
     
     
-
 
 }
 @media(max-width:913px){
