@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import Cabecalho from '../../components/commom/cabecalho/index'
 
 export default function Home(props){
+     //teste
     return(
         <Container>
+           
            <Link className="link" to="/adm">ADM</Link>
             <Cabecalho cor="" titulo="block" input="" home="" contatenos="usar" contatenosp="usar" mapa="usar" criar="" login="usar" loginp="usar" historico="usar" histp="usar"/>
             <div className="AlinhandoPag">  
