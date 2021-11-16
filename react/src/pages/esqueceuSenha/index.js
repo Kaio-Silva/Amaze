@@ -22,6 +22,7 @@ function EsqueceuSenha(props) {
     console.log(email)
    await api.Enviar(email)
    toast.success('Email enviado com sucesso.')
+
   
  }
 
@@ -37,7 +38,7 @@ function EsqueceuSenha(props) {
           <div className="titulo"> Encontre sua conta </div>
           <hr/>
           <div className="alinharDesc">
-            <div className="descricao"> Insira seu email para podermos te enviar uma notifiação para você receber a sua senha </div>
+            <div className="descricao"> Insira seu email para podermos te enviar uma notificação para você receber a sua senha </div>
             <Padrao onChange={ e => setEmail(e.target.value) } className="ajustarInput" placeholder="Insira seu email" />
           </div>  
           <hr/>

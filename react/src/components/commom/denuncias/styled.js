@@ -93,7 +93,7 @@ const Container = styled.div`
     }
 
 .agrupar{
-    width:85em;
+    width:78em;
 }
 .alinhando-imagem {
     width:30em;

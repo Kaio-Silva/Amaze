@@ -91,8 +91,10 @@ margin-bottom:0.1em;
     display: flex;
     flex-direction:column;
     align-items: center;
-    padding-top: 3em;
+    padding-top: 10em;
     height:100vh;
+ 
+
 }
 
 
@@ -109,8 +111,9 @@ width:20em;
     width:94.5%;
 
     height:37em;
+    width:100em;
     align-items:center;
-    box-shadow: 3px 3px 15px #888888;
+    box-shadow: 6px 6px 15px #888888;
     
 }
 
@@ -178,6 +181,12 @@ padding-right: 4em;;
     height:30em;
 
 }
+@media(max-width:1920px){
+    #style-2::-webkit-scrollbar-track
+    .agrupar{
+        width:20em;
+    }
+}
 
 
 
@@ -242,7 +251,7 @@ padding-right: 4em;;
 
     .registros-denuncias-hd{
         width: 90%;
-        height: 76vh;
+        height: 70vh;
 
         box-shadow: 3px 3px 11px #888888;
     }
