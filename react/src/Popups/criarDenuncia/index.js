@@ -25,7 +25,7 @@ export default function P4(props){
     const[qtdreporte] = useState(0)
     const[hashh,setHash] = useState('')
     let d = new Date();
-    let data =  d.toLocaleDateString();
+    let data = d.toLocaleDateString('Pt-BR');
     
     console.log(data)
 
