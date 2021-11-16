@@ -100,8 +100,7 @@ export default function Mapa(){
 
       async function especificRegion(geo){
          let r = await api.ListarRua(geo);
-         setDados(r)
-         
+         setDados(r)  
       } 
       
       

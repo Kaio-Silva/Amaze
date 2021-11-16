@@ -5,21 +5,10 @@ import { useEffect, useState } from 'react';
 
 export default function P6(props){
     const[ denuncia, setDenuncia] = useState([{}])
-    // console.log(props.item)
-    
-    // let obj = {
-    //     rua: props.item.ds_rua,
-    //     data: props.item.dt_denuncia,
-    //     tipo: props.item.ds_tipo_denuncia,
-    //     descricao: props.item.ds_ocorrencia
-    // }
-
-    // console.log(obj)
-
+   
     function listar(){
         setDenuncia(props.item)
     }
-    
 
     useEffect(()=>{
      listar()

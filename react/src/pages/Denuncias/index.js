@@ -3,15 +3,27 @@ import Cabecalho from '../../components/commom/cabecalho';
 import { useState } from 'react';
 import Popavalie from '../../Popups/avalieDenuncia/index'
 import Popreport from '../../Popups/denunciaInvalida'
+import Api from '../../services/api.js';
+import { useEffect } from 'react';
+
+const api = new Api();
 
 function Denuncias(props) {
     const[avalie, SetAvalie] = useState(false)
     const[report,SetReport] = useState(false)
     const[espec, setEspec] = useState(props.location.state)
-    
+    const[x, setX] = useState('')
 
-   
-    console.log(espec)
+
+    useEffect(() =>{
+        async function Usu(){
+            let r = await api.GetUSU(espec.id_usuario);
+            console.log("user:" + r)
+            setX(r);
+        }
+        Usu()
+    },[])
+
     return(
         <Container >
         <Cabecalho  cor="" home="usar" contatenos="" mapa="usar" criar="" login="usar" historico="" homep="usar" loginp="usar" mapap="usar"/>
@@ -22,7 +34,7 @@ function Denuncias(props) {
                         <div className="informacoes">
                             <div className="autor A">
                                 <div className="T b">Autor: </div> 
-                                <div className="Autor c"> {espec.id_usuario} </div>
+                                <div className="Autor c"> {x} </div>
                             </div>
                             <div className="delito A"> 
                                 <div className="T b">Delito: </div>

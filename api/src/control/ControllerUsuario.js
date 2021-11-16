@@ -20,6 +20,21 @@ function Map(array){
 }
 
 
+app.get('/user', async(req, resp) =>{
+  try{
+    let id = req.query.id;
+
+    let r = await db.infob_amz_tbusuario.findOne({
+      where:{
+        id_usuario: id
+      }
+    })
+    resp.send(r.nm_usuario)
+  }catch(e){
+    resp.send(e.toString())
+  }
+})
+
 //Inserir
 app.post('/inserir', async(req,resp) =>{
     try{ 

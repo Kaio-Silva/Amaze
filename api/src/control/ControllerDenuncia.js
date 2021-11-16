@@ -8,7 +8,6 @@ const {fn, Op} = Sequelize;
 
 const app = express.Router();
 
-let x = 'oi'
 
 app.get('/porRegiao/:geohash', async(req,resp) =>{
   const {geohash} = req.params;
@@ -172,5 +171,27 @@ app.post('/inserir', async(req,resp) =>{
             }
        
       })
+
+
+      //Sistema de Avaliação
   
+      app.put('/avaliar/:id', async (req, resp) =>{
+        try{
+          let r = req.body
+
+          let r3 = await db.infob_amz_tbdenuncia.findOne({
+            where:{
+              id_denuncia: req.params.id
+            }
+          })
+          let avaliacao = (r3.qtd_avaliacao + r.qtd_avaliacao ) / 2
+
+          let r1 = await db.infob_amz_tbdenuncia.update({
+            qtd_avaliacao: avaliacao
+          }, { where:{ id_denuncia: req.params.id }})
+          resp.sendStatus(200)
+        }catch(e){
+          resp.send(e.toString())
+        }
+      })
   export default app

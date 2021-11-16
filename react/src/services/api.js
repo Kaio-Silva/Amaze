@@ -1,6 +1,6 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'https://amazetcc.herokuapp.com/'
+    baseURL: 'http://localhost:3030/'
 })
 
 
@@ -16,6 +16,11 @@ export default class Api {
         let i = await api.post('/enviar', {email: email});
         return i.data;
         
+     }
+
+     async GetUSU(id){
+         let i = await api.get(`/usuario/user?id=${id}`);
+         return i.data;
      }
 
     async InserirUSU(usuario,email,telefone,senha,ativo){
@@ -59,7 +64,6 @@ export default class Api {
     /////////////////////////////////////////////////////////////////////////////
 
     async ListarRua(geohash){
-        console.log(geohash)
         let i = await api.get(`/denuncia/porRegiao/${geohash}`)
         return i.data;
     }
