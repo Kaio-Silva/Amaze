@@ -18,7 +18,6 @@ function Denuncias(props) {
     useEffect(() =>{
         async function Usu(){
             let r = await api.GetUSU(espec.id_usuario);
-            console.log("user:" + r)
             setX(r);
         }
         Usu()
@@ -59,7 +58,7 @@ function Denuncias(props) {
                     </div>
                 </div>
             </div>
-            <Popavalie bool={avalie} func={SetAvalie}></Popavalie>
+            <Popavalie item={espec} bool={avalie} func={SetAvalie}></Popavalie>
             <Popreport bool={report} func={SetReport}></Popreport>
         </Container>
     )

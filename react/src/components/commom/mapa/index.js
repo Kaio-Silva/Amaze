@@ -19,7 +19,6 @@ export default function Mapa(){
   const[pop,setPop]= useState(false);
   const [denu, setDenu] = useState(false);
   const [loc, setLoc] = useState({});
-  const [denuncias,setDenuncias] = useState([])
 
 
   useEffect(() => {

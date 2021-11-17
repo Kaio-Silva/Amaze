@@ -11,11 +11,13 @@ position: fixed;
 top:0;
 left:0;
 font-family: regular;
+
 .abox{
     box-shadow:  0px  1px 10px  #888888;
     width:35%;
     height:100%;
     background-color: white;
+
 }
 
 
@@ -24,11 +26,10 @@ button{
     border:none;
     cursor: pointer;
 }
+
 .denuncs{
-    
-    overflow-y: auto;
-    height: 40em;
-    
+    overflow-y: scroll;
+    height: 32.9em;  
 }
 
 #style-2::-webkit-scrollbar-track

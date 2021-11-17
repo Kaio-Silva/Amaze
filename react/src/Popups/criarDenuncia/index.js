@@ -20,7 +20,7 @@ export default function P4(props){
     const[ocorrencia,setOcorrencia] = useState('')
     const[loc,setLoc] = useState('')
     const[tipo,setTipo] = useState('')
-    const[avaliacao] = useState(0)
+    const[avaliacao] = useState(1)
     const[id,setId] = useState([])
     const[qtdreporte] = useState(0)
     const[hashh,setHash] = useState('')

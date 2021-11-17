@@ -63,6 +63,11 @@ export default class Api {
 
     /////////////////////////////////////////////////////////////////////////////
 
+    async AvaliarDENU(id, avaliacao){
+        let i = await api.put(`/avaliar/${id}`,{qtd_avaliacao:avaliacao})
+        return i.data;
+    }
+
     async ListarRua(geohash){
         let i = await api.get(`/denuncia/porRegiao/${geohash}`)
         return i.data;
