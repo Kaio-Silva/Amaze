@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 export default function P6(props){
     const[ denuncia, setDenuncia] = useState([{}])
-   
+
     function listar(){
         setDenuncia(props.item)
     }

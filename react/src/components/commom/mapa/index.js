@@ -20,18 +20,9 @@ export default function Mapa(){
   const [denu, setDenu] = useState(false);
   const [loc, setLoc] = useState({});
   const [denuncias,setDenuncias] = useState([])
-  
-  
 
-  // async function Listar(){
-  //   let consulta = api.ListarGroup();
-  //   setDenuncias(consulta)
-  //   console.log(denuncias)
-  // }
-  
 
   useEffect(() => {
-    //Listar()
 
     const loader = new Loader({
       apiKey: "AIzaSyDaD4hq5gjkDX1FUWpkjZQXmEYrHzTmtRk",
@@ -156,31 +147,8 @@ export default function Mapa(){
           especificRegion(item.geohash);   
           setDenu(true);
         });
-        
-        
-  
+
       }
-
-
-      var pin = new google.maps.Marker({
-        position: mapOptions,
-        map: map,
-        optimized: false,
-        icon: "/assets/images/pinMap.png",
-      });
-
-      map.addListener('click', function(e) {
-        var loc = e.latLng.toJSON();
-
-        pin.addListener("click", () => {
-          map.panTo(pin.getPosition());
-          setLoc(loc);
-          setDenu(true);
-        });
-
-       pin.setPosition(loc);
-       
-    });
   });
 
   }, [])
@@ -188,11 +156,11 @@ export default function Mapa(){
   
     return(
         <Container> 
-            <div id="map"></div>
-            <button onClick={ () => setPop(true)} className="ButtonMap"/>      
-            <Comp value={pop} func={setPop} loc={loc} />    
-            <Denunc bool={denu} func={setDenu} item={dados} />
-n            </Container>
+              <div id="map"></div>
+              <button onClick={ () => setPop(true)} className="ButtonMap"/>      
+              <Comp value={pop} func={setPop} loc={loc} />    
+              <Denunc bool={denu} func={setDenu} item={dados} />
+         </Container>
     ) 
     
 }

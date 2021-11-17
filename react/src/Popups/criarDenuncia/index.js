@@ -25,9 +25,9 @@ export default function P4(props){
     const[qtdreporte] = useState(0)
     const[hashh,setHash] = useState('')
     let d = new Date();
-    let data = d.toLocaleDateString('Pt-BR');
     
-    console.log(data)
+    let Data = d.toLocaleDateString();
+    
 
     useEffect(() =>{
         let idu = Cookies.get('Idusu')
@@ -81,10 +81,10 @@ export default function P4(props){
               return toast.error('Não é possível criar uma denúncia sem possuir uma conta Amaze.')
                  
             }else{   
-               
-                let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
+                  let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, Data,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
                   toast.success('Denúncia criada com sucesso!') 
-                  loading.current.complete();   
+                  loading.current.complete();  
+                  
         }
     
      }
