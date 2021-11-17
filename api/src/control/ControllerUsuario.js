@@ -8,6 +8,7 @@ function Map(array){
 
   let consulta = array.map( item =>{
     return{
+        id:item.id_usuario,
         usuario: item.nm_usuario,
         email: item.ds_email,
         telefone: item.nr_telefone,
@@ -129,9 +130,8 @@ app.get('/total',async (req,resp) =>{
 
       try{
            let consulta = await db.infob_amz_tbusuario.findAll({ order:[['id_usuario']] });
-           consulta = Map(consulta);
-
-           resp.send(consulta)
+          let final = Map(consulta)
+           resp.send(final)
       }catch(e){
           resp.send(e.toString())
       }
@@ -163,7 +163,7 @@ app.get('/total',async (req,resp) =>{
 
 app.delete('/del', async (req,resp) =>{
 try{
-  let ativo = req.query.ativo;
+  let ativo = req.params.id;
  console.log(ativo)
      let del = await db.infob_amz_tbusuario.destroy({
        where:{bt_ativo: ativo}

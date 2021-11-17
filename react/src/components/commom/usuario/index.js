@@ -6,8 +6,10 @@ const api = new Api()
 
 export default function Usuario(props){
 
-    /*<div className="texto"> <span> Data: </span> {props.Data} </div>*/
-    /*<div className="texto"> <span> Cadastro: </span> {props.Cadastro} </div>*/
+    async function DeletUsu(){
+        let f = await api.DELETEusu(props.id);
+        props.function()
+    }
 
     return(
         <Container>
@@ -21,7 +23,7 @@ export default function Usuario(props){
                     <div className="texto"> <span> Reportes: </span> {props.Report} </div>
                 </div>
                 <div className="alinhandoImg">
-                    <img  className="imagem cancel" src="/assets/Images/CancelarDenuncia3.png" alt=""/> 
+                    <div onClick={DeletUsu}><img  className="imagem cancel" src="/assets/Images/CancelarDenuncia3.png" alt=""/></div>
                     <img  className="imagem" src="/assets/Images/Aprovar3.png" alt=""/> 
                 </div>
             </div>

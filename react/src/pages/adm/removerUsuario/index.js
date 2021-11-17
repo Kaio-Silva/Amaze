@@ -23,7 +23,7 @@ export default function Pagina(props) {
                 <Pesquisa className="Pesquisar" input="usar" tamanho="medio"/>
                     <div className="baixo">
                         {denuc.map(item =>
-                            <Usuario Nome={item.usuario} Data="" Telefone={item.telefone} Cadastro={item.arivo} Email={item.email} Report="8"/>
+                            <Usuario Nome={item.usuario} Telefone={item.telefone} Cadastro={item.arivo} Email={item.email} Report="8" id={item.id} func={Listar}/>
                         )}
                     </div>
             </Container>
