@@ -91,7 +91,7 @@ margin-bottom:0.1em;
     display: flex;
     flex-direction:column;
     align-items: center;
-    padding-top: 10em;
+    padding-top: 5.5em;
     height:100vh;
  
 
@@ -111,7 +111,7 @@ width:20em;
     width:94.5%;
 
     height:37em;
-    width:100em;
+   
     align-items:center;
     box-shadow: 6px 6px 15px #888888;
     
@@ -179,6 +179,7 @@ padding-right: 4em;;
 .denuc{
     overflow-y: auto;
     height:30em;
+   
 
 }
 @media(max-width:1920px){

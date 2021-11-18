@@ -96,8 +96,8 @@ const Container = styled.div`
     width:78em;
 }
 .alinhando-imagem {
-    width:30em;
-    margin-left:5em;
+    width:5em;
+    margin-left:1em;
 
 }
 .descricao-conteudohdc{}
