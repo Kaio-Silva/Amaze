@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from './styled.js'
 import Api from "../../../services/api";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const api = new Api()
 
 export default function Usuario(props){
@@ -9,11 +11,14 @@ export default function Usuario(props){
     async function DeletUsu(){
         console.log('oi')
         let f = await api.DELETEusu(props.id)
+        toast.success('aiaiaia')
         props.func()
+        
     }
 
     return(
         <Container>
+            <ToastContainer/>
             <div className="alinhandoInformacoes">
                 <div className="informacoes">
                     <div className="texto"> <span> Nome: </span> {props.Nome} </div>
