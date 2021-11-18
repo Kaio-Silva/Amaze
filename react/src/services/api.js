@@ -45,8 +45,10 @@ export default class Api {
         return i.data;
     }
 
-    async DELETEusu(ativo){
-        let i = await api.delete(`/usuario/del?ativo=${ativo}`);
+    async DELETEusu(id){
+        console.log('óieeee')
+        console.log(id)
+        let i = await api.delete(`/usuario/del/${id}`);
         return i.data;
     }
 

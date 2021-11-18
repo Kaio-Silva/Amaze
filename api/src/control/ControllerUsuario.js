@@ -161,12 +161,17 @@ app.get('/total',async (req,resp) =>{
 
 
 
-app.delete('/del', async (req,resp) =>{
+app.delete('/del/:id', async (req,resp) =>{
 try{
-  let ativo = req.params.id;
- console.log(ativo)
-     let del = await db.infob_amz_tbusuario.destroy({
-       where:{bt_ativo: ativo}
+  let id = req.params.id;
+  console.log(id)
+
+     let denu = await db.infob_amz_tbdenuncia.destroy({
+        where:{id_usuario: id}
+     })
+
+     let usu = await db.infob_amz_tbusuario.destroy({
+       where:{id_usuario: id}
       })
       resp.sendStatus(200)
     }catch(e){

@@ -10,8 +10,8 @@ export default function Pagina(props) {
 
     async function Listar(){
         let f = await api.USUtotal();
-        console.log(f);
         setDenuc(f);
+        console.log(denuc);
     }
     useEffect(()=> {
         Listar();

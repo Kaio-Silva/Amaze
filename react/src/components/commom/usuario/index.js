@@ -7,8 +7,9 @@ const api = new Api()
 export default function Usuario(props){
 
     async function DeletUsu(){
-        let f = await api.DELETEusu(props.id);
-        props.function()
+        console.log('oi')
+        let f = await api.DELETEusu(props.id)
+        props.func()
     }
 
     return(
