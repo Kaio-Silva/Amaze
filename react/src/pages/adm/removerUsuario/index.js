@@ -3,6 +3,9 @@ import { Pesquisa } from "../../../components/styled/inputs.js";
 import { Container } from "./styled";
 import { useEffect, useState } from 'react';
 import Api from "../../../services/api";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import LoadingBar from 'react-top-loading-bar'
 const api = new Api()
 
 export default function Pagina(props) {
@@ -11,7 +14,6 @@ export default function Pagina(props) {
     async function Listar(){
         let f = await api.USUtotal();
         setDenuc(f);
-        console.log(denuc);
     }
     useEffect(()=> {
         Listar();
@@ -20,6 +22,7 @@ export default function Pagina(props) {
 
     return (
             <Container>
+                <ToastContainer/>
                 <Pesquisa className="Pesquisar" input="usar" tamanho="medio"/>
                     <div className="baixo">
                         {denuc.map(item =>

@@ -47,7 +47,7 @@ export default class Api {
 
     async DELETEusu(id){
         console.log('óieeee')
-        console.log(id)
+
         let i = await api.delete(`/usuario/del/${id}`);
         return i.data;
     }
