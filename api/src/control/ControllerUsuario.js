@@ -141,7 +141,7 @@ app.get('/total',async (req,resp) =>{
   app.get('/email',async (req,resp) =>{
 
     let email = req.query.email;
-     console.log(email)
+    
     try{
          let consulta = await db.infob_amz_tbusuario.findOne({
            where:{ds_email:email}
@@ -164,7 +164,7 @@ app.get('/total',async (req,resp) =>{
 app.delete('/del/:id', async (req,resp) =>{
 try{
   let id = req.params.id;
-  console.log(id)
+  
 
      let denu = await db.infob_amz_tbdenuncia.destroy({
         where:{id_usuario: id}

@@ -62,7 +62,7 @@ try{
       let id= req.params.id
       
       let confirmado= req.body.ds_confirmado;
-      console.log(confirmado)
+      
       let alterar = await db.infob_amz_tbreporte_denuncia.update({
         ds_confirmado:confirmado
       },
