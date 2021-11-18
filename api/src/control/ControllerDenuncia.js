@@ -184,7 +184,7 @@ app.post('/inserir', async(req,resp) =>{
               id_denuncia: req.params.id
             }
           })
-          let avaliacao = (r3.qtd_avaliacao + r.qtd_avaliacao ) / 2
+          let avaliacao = ((r3.qtd_avaliacao + r.qtd_avaliacao ) / 2)
 
           let r1 = await db.infob_amz_tbdenuncia.update({
             qtd_avaliacao: avaliacao

@@ -24,10 +24,12 @@ export default function P4(props){
     const[id,setId] = useState([])
     const[qtdreporte] = useState(0)
     const[hashh,setHash] = useState('')
+    
     let d = new Date();
     
-    let Data = d.toLocaleDateString();
+    const Data = d.toISOString().substr(0, 10); //(d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear())
     
+    console.log(Data)
 
     useEffect(() =>{
         let idu = Cookies.get('Idusu')
