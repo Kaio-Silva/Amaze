@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Api from "../../../services/api";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import LoadingBar from 'react-top-loading-bar'
+
 const api = new Api()
 
 export default function Pagina(props) {
