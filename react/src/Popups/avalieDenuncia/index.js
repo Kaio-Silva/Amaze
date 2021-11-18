@@ -11,15 +11,19 @@ export default function P1(props){
      const id = props.item.id_denuncia
 
      console.log(avaliacao)
+     console.log(id)
 
     const ratingChanged = (newRating) => {
         setAvaliacao(newRating)
       };
 
     async function Avaliar(){
+        // console.log("TESTE TA FUNFANDO ?")
         let r = await api.AvaliarDENU(id,avaliacao);
         setAvaliacao(r)
     }
+
+    
 
     return(props.bool) ?(
         <Container>

@@ -23,6 +23,8 @@ function Denuncias(props) {
         Usu()
     },[])
 
+    console.log(espec.qtd_avaliacao)
+
     return(
         <Container >
         <Cabecalho  cor="" home="usar" contatenos="" mapa="usar" criar="" login="usar" historico="" homep="usar" loginp="usar" mapap="usar"/>
@@ -39,7 +41,11 @@ function Denuncias(props) {
                                 <div className="T b">Delito: </div>
                                 <div className="Delito c"> {espec.ds_tipo_denuncia} </div>
                             </div>
-                            <div className="avaliacao"> <img src="/assets/Images/aval.png" alt="" /> </div>
+                            <div className="avaliacao"> <img src={espec.qtd_avaliacao >= 1 ? "/assets/Images/ESTRELA-1.svg" : 
+                                                                                             espec.qtd_avaliacao >= 2 ? "/assets/Images/ESTRELA-2.svg" :
+                                                                                                                      espec.qtd_avaliacao >= 3 ? "/assets/Images/ESTRELA-3.svg" :
+                                                                                                                                                  espec.qtd_avaliacao >= 4 ? "/assets/Images/ESTRELA-4.svg" :
+                                                                                                                                                                             espec.qtd_avaliacao >= 5 ? "/assets/Images/ESTRELA-5.svg" : "/assets/Images/ESTRELA-0.svg"} alt="" /> </div>
                             <div className="Descricao">
                                 <div className="desc b">Descrição: </div>
                                 <div className="descricao c">

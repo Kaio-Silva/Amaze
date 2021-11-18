@@ -66,7 +66,7 @@ export default class Api {
     /////////////////////////////////////////////////////////////////////////////
 
     async AvaliarDENU(id, avaliacao){
-        let i = await api.put(`/avaliar/${id}`,{qtd_avaliacao:avaliacao})
+        let i = await api.put(`/denuncia/avaliar/${id}`,{qtd_avaliacao:avaliacao})
         return i.data;
     }
 
