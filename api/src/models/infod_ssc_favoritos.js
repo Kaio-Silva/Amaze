@@ -1,26 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_lista_item extends Model {
+export default class infod_ssc_favoritos extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_lista_item: {
+    id_favorito: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_lista: {
+    id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_cliente',
+        key: 'id_cliente'
+      }
     },
-    id_filme: {
+    id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_produto',
+        key: 'id_produto'
+      }
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_lista_item',
+    tableName: 'infod_ssc_favoritos',
     timestamps: false,
     indexes: [
       {
@@ -28,25 +36,25 @@ export default class infob_mw_lista_item extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_lista_item" },
+          { name: "id_favorito" },
         ]
       },
       {
-        name: "id_lista",
+        name: "id_cliente",
         using: "BTREE",
         fields: [
-          { name: "id_lista" },
+          { name: "id_cliente" },
         ]
       },
       {
-        name: "id_filme",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_filme" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infob_mw_lista_item;
+  return infod_ssc_favoritos;
   }
 }

@@ -55,15 +55,15 @@ export default class infoc_nws_tb_evento extends Model {
       allowNull: true
     },
     img_capa: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(1000),
       allowNull: true
     },
     img_fundo: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(1000),
       allowNull: true
     },
     img_sec: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(1000),
       allowNull: true
     },
     bt_ativo: {

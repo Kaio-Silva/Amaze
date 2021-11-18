@@ -1,38 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_venda_item extends Model {
+export default class infod_tif_usuario_comunidade extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_venda_item: {
+    id_usuario_comunidade: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_venda: {
+    id_usuario: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoa_sti_venda',
-        key: 'id_venda'
+        model: 'infod_tif_usuario',
+        key: 'id_usuario'
       }
     },
-    id_produto: {
+    id_comunidade: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoa_sti_produto',
-        key: 'id_produto'
+        model: 'infod_tif_comunidade',
+        key: 'id_comunidade'
       }
-    },
-    qtd_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_venda_item',
+    tableName: 'infod_tif_usuario_comunidade',
     timestamps: false,
     indexes: [
       {
@@ -40,25 +36,25 @@ export default class infoa_sti_venda_item extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_venda_item" },
+          { name: "id_usuario_comunidade" },
         ]
       },
       {
-        name: "id_venda",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
-          { name: "id_venda" },
+          { name: "id_usuario" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_comunidade",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_comunidade" },
         ]
       },
     ]
   });
-  return infoa_sti_venda_item;
+  return infod_tif_usuario_comunidade;
   }
 }

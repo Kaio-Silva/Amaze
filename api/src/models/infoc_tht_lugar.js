@@ -1,50 +1,50 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tct_endereco extends Model {
+export default class infoc_tht_lugar extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_endereco: {
+    id_lugar: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    ds_cep: {
-      type: DataTypes.STRING(9),
+    nm_lugar: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_estado: {
+    ds_avaliacao: {
+      type: DataTypes.DECIMAL(10,5),
+      allowNull: true
+    },
+    ds_endereco: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    ds_imagem: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_informacao: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_horario_fds: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    ds_horario_dds: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    ds_categoria: {
       type: DataTypes.STRING(50),
-      allowNull: true
-    },
-    nm_cidade: {
-      type: DataTypes.STRING(50),
-      allowNull: true
-    },
-    nm_rua: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_numero: {
-      type: DataTypes.STRING(10),
-      allowNull: true
-    },
-    ds_complemento: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    nm_ponto_referencia: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    id_cliente: {
-      type: DataTypes.INTEGER,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tct_endereco',
+    tableName: 'infoc_tht_lugar',
     timestamps: false,
     indexes: [
       {
@@ -52,11 +52,11 @@ export default class infoc_tct_endereco extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_endereco" },
+          { name: "id_lugar" },
         ]
       },
     ]
   });
-  return infoc_tct_endereco;
+  return infoc_tht_lugar;
   }
 }

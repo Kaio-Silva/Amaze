@@ -22,8 +22,16 @@ export default class infod_omn_vaga extends Model {
       type: DataTypes.INTEGER,
       allowNull: true
     },
+    nm_empresa: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     id_area_vaga: {
       type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    nm_area_vaga: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_jornada: {

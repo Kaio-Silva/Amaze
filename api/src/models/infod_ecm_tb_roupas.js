@@ -1,50 +1,50 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_gab_cartao extends Model {
+export default class infod_ecm_tb_roupas extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cartao: {
+    id_roupa: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_categoria: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'infoa_gab_usuario',
-        key: 'id_usuario'
-      }
-    },
-    ds_cv: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    nr_agencia: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    nm_titular: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_validade: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    nr_cartao: {
-      type: DataTypes.TEXT,
       allowNull: true
     },
-    ds_cpf_titular: {
-      type: DataTypes.STRING(255),
+    ds_roupa: {
+      type: DataTypes.STRING(150),
+      allowNull: false
+    },
+    vl_preco: {
+      type: DataTypes.DECIMAL(15,2),
+      allowNull: false
+    },
+    tp_roupa: {
+      type: DataTypes.STRING(60),
+      allowNull: false
+    },
+    ds_tamanho: {
+      type: DataTypes.STRING(5),
+      allowNull: false
+    },
+    bt_disponivel: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    qtd_disponivel: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    ds_cor: {
+      type: DataTypes.STRING(50),
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infoa_gab_cartao',
+    tableName: 'infod_ecm_tb_roupas',
     timestamps: false,
     indexes: [
       {
@@ -52,18 +52,18 @@ export default class infoa_gab_cartao extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_cartao" },
+          { name: "id_roupa" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_categoria",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_categoria" },
         ]
       },
     ]
   });
-  return infoa_gab_cartao;
+  return infod_ecm_tb_roupas;
   }
 }

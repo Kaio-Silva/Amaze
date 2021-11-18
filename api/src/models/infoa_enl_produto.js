@@ -43,16 +43,16 @@ export default class infoa_enl_produto extends Model {
       allowNull: false
     },
     nm_produto: {
-      type: DataTypes.STRING(16),
-      allowNull: false
+      type: DataTypes.STRING(28),
+      allowNull: true
     },
     vl_preco: {
       type: DataTypes.DECIMAL(6,2),
       allowNull: false
     },
     ds_produto: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+      type: DataTypes.STRING(300),
+      allowNull: true
     },
     bt_ativo: {
       type: DataTypes.TINYINT,

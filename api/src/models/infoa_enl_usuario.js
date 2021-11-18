@@ -19,23 +19,23 @@ export default class infoa_enl_usuario extends Model {
       allowNull: false
     },
     ds_senha: {
-      type: DataTypes.STRING(100),
-      allowNull: false
+      type: DataTypes.STRING(10),
+      allowNull: true
     },
     ds_email: {
       type: DataTypes.STRING(100),
       allowNull: false
     },
     ds_cpf: {
-      type: DataTypes.STRING(11),
-      allowNull: false
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     nr_celular: {
-      type: DataTypes.STRING(15),
-      allowNull: false
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     nr_telefone: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.INTEGER,
       allowNull: true
     },
     dt_nascimento: {
@@ -43,8 +43,8 @@ export default class infoa_enl_usuario extends Model {
       allowNull: false
     },
     ds_cep: {
-      type: DataTypes.STRING(11),
-      allowNull: false
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     nr_casa: {
       type: DataTypes.INTEGER,
@@ -80,6 +80,14 @@ export default class infoa_enl_usuario extends Model {
     },
     dt_ult_login: {
       type: DataTypes.DATE,
+      allowNull: false
+    },
+    nm_rua: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_codigo: {
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {

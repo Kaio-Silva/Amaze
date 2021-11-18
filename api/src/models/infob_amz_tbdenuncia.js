@@ -27,7 +27,7 @@ export default class infob_amz_tbdenuncia extends Model {
       allowNull: true
     },
     dt_denuncia: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_ocorrencia: {

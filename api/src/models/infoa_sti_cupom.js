@@ -1,26 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_acessos extends Model {
+export default class infoa_sti_cupom extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_acesso: {
+    id_cupom: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_tela: {
+    ds_nome_desconto: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
-    qtd_acessos: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    vl_cupom: {
+      type: DataTypes.DECIMAL(15,2),
+      allowNull: true
+    },
+    bt_ativo: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_acessos',
+    tableName: 'infoa_sti_cupom',
     timestamps: false,
     indexes: [
       {
@@ -28,11 +32,11 @@ export default class infod_tif_acessos extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_acesso" },
+          { name: "id_cupom" },
         ]
       },
     ]
   });
-  return infod_tif_acessos;
+  return infoa_sti_cupom;
   }
 }

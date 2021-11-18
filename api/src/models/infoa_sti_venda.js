@@ -33,6 +33,14 @@ export default class infoa_sti_venda extends Model {
     dt_venda: {
       type: DataTypes.DATEONLY,
       allowNull: true
+    },
+    ds_forma_pagamento: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_situacao: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     sequelize,

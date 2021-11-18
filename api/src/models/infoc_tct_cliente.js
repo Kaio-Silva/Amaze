@@ -35,7 +35,7 @@ export default class infoc_tct_cliente extends Model {
       allowNull: true
     },
     ds_senha: {
-      type: DataTypes.STRING(16),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_genero: {
@@ -52,6 +52,14 @@ export default class infoc_tct_cliente extends Model {
     },
     ds_cpf: {
       type: DataTypes.STRING(14),
+      allowNull: true
+    },
+    bt_administrador: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    ds_login: {
+      type: DataTypes.STRING(20),
       allowNull: true
     }
   }, {

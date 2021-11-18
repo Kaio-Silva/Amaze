@@ -1,26 +1,22 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_chat_mensagem extends Model {
+export default class infod_ecm_tb_categorias extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_chat_mensagem: {
+    id_categoria: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    ds_mensagem: {
+    nm_categoria: {
       type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_mensagem: {
-      type: DataTypes.DATE,
       allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_chat_mensagem',
+    tableName: 'infod_ecm_tb_categorias',
     timestamps: false,
     indexes: [
       {
@@ -28,11 +24,11 @@ export default class infod_tif_chat_mensagem extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_chat_mensagem" },
+          { name: "id_categoria" },
         ]
       },
     ]
   });
-  return infod_tif_chat_mensagem;
+  return infod_ecm_tb_categorias;
   }
 }

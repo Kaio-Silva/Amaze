@@ -1,42 +1,38 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_comentarios extends Model {
+export default class infoa_enl_visto_recentemente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_cometario: {
+    id_visto_recentemente: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_filme: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
+      }
     },
-    ds_mensagem: {
-      type: DataTypes.STRING(300),
-      allowNull: true
-    },
-    dt_comentario: {
-      type: DataTypes.DATEONLY,
-      allowNull: true
-    },
-    ds_curtidas: {
+    id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_enl_produto',
+        key: 'id_produto'
+      }
     },
-    qtd_curtidas: {
-      type: DataTypes.TEXT,
+    dt_visualizacao: {
+      type: DataTypes.DATE,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_comentarios',
+    tableName: 'infoa_enl_visto_recentemente',
     timestamps: false,
     indexes: [
       {
@@ -44,14 +40,7 @@ export default class infob_mw_comentarios extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_cometario" },
-        ]
-      },
-      {
-        name: "id_filme",
-        using: "BTREE",
-        fields: [
-          { name: "id_filme" },
+          { name: "id_visto_recentemente" },
         ]
       },
       {
@@ -61,8 +50,15 @@ export default class infob_mw_comentarios extends Model {
           { name: "id_usuario" },
         ]
       },
+      {
+        name: "id_produto",
+        using: "BTREE",
+        fields: [
+          { name: "id_produto" },
+        ]
+      },
     ]
   });
-  return infob_mw_comentarios;
+  return infoa_enl_visto_recentemente;
   }
 }

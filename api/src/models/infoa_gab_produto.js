@@ -61,6 +61,10 @@ export default class infoa_gab_produto extends Model {
     ds_plataforma: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    ds_produto: {
+      type: DataTypes.STRING(255),
+      allowNull: false
     }
   }, {
     sequelize,

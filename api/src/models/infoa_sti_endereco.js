@@ -30,10 +30,6 @@ export default class infoa_sti_endereco extends Model {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    ds_cpf: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
     ds_complemento: {
       type: DataTypes.STRING(255),
       allowNull: true

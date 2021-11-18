@@ -12,23 +12,27 @@ export default class infod_tif_comentario extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infod_tif_usuario',
+        key: 'id_usuario'
+      }
     },
     id_anime: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infod_tif_animes',
+        key: 'id_anime'
+      }
     },
     ds_comentario: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
     dt_comentario: {
       type: DataTypes.DATE,
-      allowNull: false
-    },
-    id_like: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     }
   }, {
     sequelize,

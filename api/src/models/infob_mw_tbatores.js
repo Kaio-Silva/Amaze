@@ -1,22 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_chat_usuario extends Model {
+export default class infob_mw_tbatores extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_chat_usuario: {
+    id_ator: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_filme: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
+    },
+    nm_ator: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    img_autor: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_chat_usuario',
+    tableName: 'infob_mw_tbatores',
     timestamps: false,
     indexes: [
       {
@@ -24,18 +32,18 @@ export default class infod_tif_chat_usuario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_chat_usuario" },
+          { name: "id_ator" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_filme",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_filme" },
         ]
       },
     ]
   });
-  return infod_tif_chat_usuario;
+  return infob_mw_tbatores;
   }
 }

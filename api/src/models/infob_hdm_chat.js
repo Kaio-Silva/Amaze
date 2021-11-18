@@ -10,20 +10,32 @@ export default class infob_hdm_chat extends Model {
       allowNull: false,
       primaryKey: true
     },
+    id_HDM_sala: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infob_hdm_sala',
+        key: 'id_hdm_sala'
+      }
+    },
     id_HDM_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infob_hdm_usuario',
+        key: 'id_HDM_usuario'
+      }
     },
     ds_HDM_mensagem: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_HDM_usuario: {
-      type: DataTypes.STRING(200),
-      allowNull: true
-    },
     dt_HDM_data: {
       type: DataTypes.DATE,
+      allowNull: true
+    },
+    nm_HDM_usuario: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
@@ -37,6 +49,13 @@ export default class infob_hdm_chat extends Model {
         using: "BTREE",
         fields: [
           { name: "id_HDM_chat" },
+        ]
+      },
+      {
+        name: "id_HDM_sala",
+        using: "BTREE",
+        fields: [
+          { name: "id_HDM_sala" },
         ]
       },
       {

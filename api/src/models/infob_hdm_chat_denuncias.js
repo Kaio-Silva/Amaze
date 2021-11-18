@@ -21,6 +21,14 @@ export default class infob_hdm_chat_denuncias extends Model {
     ds_HDM_localizacao_atual: {
       type: DataTypes.STRING(200),
       allowNull: true
+    },
+    nm_HDM_usuario: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    id_HDM_usuario: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,

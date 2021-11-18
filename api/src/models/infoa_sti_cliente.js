@@ -41,6 +41,10 @@ export default class infoa_sti_cliente extends Model {
     ds_senha: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    ds_codigo_rec: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
   }, {
     sequelize,

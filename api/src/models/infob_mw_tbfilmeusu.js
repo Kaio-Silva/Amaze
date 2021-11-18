@@ -1,38 +1,30 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_venda_item extends Model {
+export default class infob_mw_tbfilmeusu extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_venda_item: {
+    id_filme_usu: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_venda: {
+    id_filme: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_venda',
-        key: 'id_venda'
-      }
+      allowNull: true
     },
-    id_produto: {
+    id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_produto',
-        key: 'id_produto'
-      }
+      allowNull: true
     },
-    qtd_produto: {
-      type: DataTypes.INTEGER,
+    nm_categoria: {
+      type: DataTypes.STRING(258),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_venda_item',
+    tableName: 'infob_mw_tbfilmeusu',
     timestamps: false,
     indexes: [
       {
@@ -40,25 +32,25 @@ export default class infoa_sti_venda_item extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_venda_item" },
+          { name: "id_filme_usu" },
         ]
       },
       {
-        name: "id_venda",
+        name: "id_filme",
         using: "BTREE",
         fields: [
-          { name: "id_venda" },
+          { name: "id_filme" },
         ]
       },
       {
-        name: "id_produto",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_usuario" },
         ]
       },
     ]
   });
-  return infoa_sti_venda_item;
+  return infob_mw_tbfilmeusu;
   }
 }

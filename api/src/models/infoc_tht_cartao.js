@@ -1,26 +1,38 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_like extends Model {
+export default class infoc_tht_cartao extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_like: {
+    id_cartao: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_like: {
+    nr_cartao: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    nm_deslike: {
+    nm_cartao: {
+      type: DataTypes.STRING(60),
+      allowNull: true
+    },
+    ds_validade: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    nr_cvv: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
+    },
+    nr_parcela: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_like',
+    tableName: 'infoc_tht_cartao',
     timestamps: false,
     indexes: [
       {
@@ -28,11 +40,11 @@ export default class infod_tif_like extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_like" },
+          { name: "id_cartao" },
         ]
       },
     ]
   });
-  return infod_tif_like;
+  return infoc_tht_cartao;
   }
 }

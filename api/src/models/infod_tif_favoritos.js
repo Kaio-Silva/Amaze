@@ -1,26 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_amigos extends Model {
+export default class infod_tif_favoritos extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_amigo: {
+    id_favoritos: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario_solicitou: {
+    id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infod_tif_usuario',
+        key: 'id_usuario'
+      }
     },
-    id_usuario_aceitou: {
+    id_anime: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infod_tif_animes',
+        key: 'id_anime'
+      }
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_amigos',
+    tableName: 'infod_tif_favoritos',
     timestamps: false,
     indexes: [
       {
@@ -28,25 +36,25 @@ export default class infod_tif_amigos extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_amigo" },
+          { name: "id_favoritos" },
         ]
       },
       {
-        name: "id_usuario_solicitou",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
-          { name: "id_usuario_solicitou" },
+          { name: "id_usuario" },
         ]
       },
       {
-        name: "id_usuario_aceitou",
+        name: "id_anime",
         using: "BTREE",
         fields: [
-          { name: "id_usuario_aceitou" },
+          { name: "id_anime" },
         ]
       },
     ]
   });
-  return infod_tif_amigos;
+  return infod_tif_favoritos;
   }
 }

@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_dtn_tb_venda extends Model {
+export default class infoc_jdf_pedido extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_venda: {
+    id_pedido: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,19 +12,23 @@ export default class infoa_dtn_tb_venda extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_jdf_cliente',
+        key: 'id_cliente'
+      }
+    },
+    ds_formaPagamento: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    dt_pedido: {
-      type: DataTypes.DATEONLY,
-      allowNull: true
-    },
-    ds_situacao: {
-      type: DataTypes.STRING(100),
+    ds_status: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_dtn_tb_venda',
+    tableName: 'infoc_jdf_pedido',
     timestamps: false,
     indexes: [
       {
@@ -32,11 +36,18 @@ export default class infoa_dtn_tb_venda extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_venda" },
+          { name: "id_pedido" },
+        ]
+      },
+      {
+        name: "id_cliente",
+        using: "BTREE",
+        fields: [
+          { name: "id_cliente" },
         ]
       },
     ]
   });
-  return infoa_dtn_tb_venda;
+  return infoc_jdf_pedido;
   }
 }

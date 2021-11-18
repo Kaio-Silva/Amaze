@@ -1,66 +1,58 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_usuario extends Model {
+export default class infoa_dtb_tb_livro extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_usuario: {
+    ID_LIVRO: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_usuario: {
+    NM_LIVRO: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_sobrenome: {
+    ID_GENERO: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoa_dtb_tb_genero',
+        key: 'ID_GENERO'
+      }
+    },
+    DS_CAPA: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_username: {
+    BT_DISPONIVEL: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    VL_PRECO: {
+      type: DataTypes.DECIMAL(15,2),
+      allowNull: true
+    },
+    NM_AUTOR: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_email: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    ds_senha: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    ds_genero: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    dt_nascimento: {
+    DT_LANCAMENTO: {
       type: DataTypes.DATEONLY,
       allowNull: true
     },
-    ds_localizacao: {
-      type: DataTypes.STRING(500),
+    VL_AVALIACAO: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: true
     },
-    ds_redes_sociais: {
-      type: DataTypes.STRING(500),
-      allowNull: true
-    },
-    ds_foto: {
-      type: DataTypes.STRING(1000),
-      allowNull: true
-    },
-    ds_codigo_rec: {
+    QTD_PAGINAS: {
       type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    ds_bio: {
-      type: DataTypes.STRING(500),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_usuario',
+    tableName: 'infoa_dtb_tb_livro',
     timestamps: false,
     indexes: [
       {
@@ -68,11 +60,18 @@ export default class infob_mw_usuario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "ID_LIVRO" },
+        ]
+      },
+      {
+        name: "ID_GENERO",
+        using: "BTREE",
+        fields: [
+          { name: "ID_GENERO" },
         ]
       },
     ]
   });
-  return infob_mw_usuario;
+  return infoa_dtb_tb_livro;
   }
 }

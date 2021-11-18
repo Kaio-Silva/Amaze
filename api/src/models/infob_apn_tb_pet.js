@@ -27,7 +27,7 @@ export default class infob_apn_tb_pet extends Model {
       allowNull: true
     },
     DS_PESO: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.DECIMAL(10,2),
       allowNull: true
     },
     DT_NASCIMENTO: {

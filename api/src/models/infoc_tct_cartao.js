@@ -29,6 +29,10 @@ export default class infoc_tct_cartao extends Model {
     ds_cvv: {
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    id_cliente: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,

@@ -33,6 +33,18 @@ export default class infoc_tdv_pedido extends Model {
     dt_pedido: {
       type: DataTypes.DATE,
       allowNull: true
+    },
+    ds_situacao_ped: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    dt_lancamento: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    total: {
+      type: DataTypes.DECIMAL(10,0),
+      allowNull: true
     }
   }, {
     sequelize,
