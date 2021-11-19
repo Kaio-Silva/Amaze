@@ -29,7 +29,11 @@ export default function P6(props){
                                <div className="alinhar"> 
                                     <div className="bloco" id="lado">
                                         <div className="titulob">{item.ds_rua}</div>
-                                        <div className="aval"><img src="/assets/images/aval.png" alt=""/></div>
+                                        <div className="aval"><img src={item.qtd_avaliacao === 1 ? "/assets/Images/ESTRELA-1.svg" : 
+                                                                                             item.qtd_avaliacao === 2 ? "/assets/Images/ESTRELA-2.svg" :
+                                                                                                                      item.qtd_avaliacao === 3 ? "/assets/Images/ESTRELA-3.svg" :
+                                                                                                                                                  item.qtd_avaliacao === 4 ? "/assets/Images/ESTRELA-4.svg" :
+                                                                                                                                                                             item.qtd_avaliacao >= 5 ? "/assets/Images/ESTRELA-5.svg" : "/assets/Images/ESTRELA-0.svg"} alt="" /></div>
                                         <div className="descr">{item.ds_tipo_denuncia}</div>
                                         <div className="date">{item.dt_denuncia}</div>
                                         <div className="botao">

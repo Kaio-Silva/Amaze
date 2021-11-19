@@ -15,8 +15,6 @@ font-family: regular ;
 textarea::placeholder{
     color: #24BF99;
     text-align:left;
-    padding-top:1em;
-    padding-left:1em;
     font-family: regular;
 }
 
@@ -56,14 +54,17 @@ outline: none;
     text-align: center;
     color:#24BF99;
     font-weight: normal;
-    font-size:1.5em ;
+    font-size: 1.2em ;
     margin-bottom: 1.2em;
 }
 
 .textaa textarea{
-    text-align: center;
-    width:270px;
-    height:116px;
+    font-family: regular;
+    color: #24BF99;
+    padding-top:1em;
+    padding-left:1em;
+    width: 300px;
+    height: 116px;
     border-radius: 1em;
     text-decoration: none;
     resize: none;
