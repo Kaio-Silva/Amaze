@@ -11,7 +11,7 @@ export default function Usuario(props){
     const loading = useRef(null);
 
     async function DeletUsu(){
-        loading.current.continuosStart();
+        loading.current.staticStart()
         let f = await api.DELETEusu(props.id)
         toast.success('aiaiaia')
         props.func()
