@@ -12,10 +12,8 @@ export default class Api {
     }
 
     async Enviar(email){
-        console.log(email)
         let i = await api.post('/enviar', {email: email});
         return i.data;
-        
      }
 
      async GetUSU(id){
@@ -92,8 +90,8 @@ export default class Api {
         return i.data;
     }
 
-    async ListarDENUTotal(){
-        let i = await api.get('/denuncia/');
+    async ListarDENUTotal(pesquisa){
+        let i = await api.get(`/denuncia?filtro=${pesquisa}`);
         return i.data;
     }
 
@@ -125,8 +123,8 @@ export default class Api {
         return i.data;
     }
 
-    async ReporteFalse(id,confirmado){
-        let i = await api.put(`/reporte/false/${id}`,{ds_confirmado:confirmado})
+    async ReporteFalse(id, confirmado){
+        let i = await api.put(`/reporte/false/${id}`,{ds_confirmado: confirmado})
         return i.data;
     }
 

@@ -1,36 +1,42 @@
 import { Pesquisa } from '../../../components/styled/inputs.js';
 import Card  from "../../../components/commom/Card";
 import { Container } from './styled';
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+
 import { useState, useEffect } from 'react';
 
 import Api from "../../../services/api";
 const api = new Api()
 
 
-export default function Denuncias(props) {
+export default function Denuncias() {
     const [denuc, setDenuc] = useState([]);
+    const [pesquisa, setPesquisa] = useState('')
+
+
+    function search (event){
+        if(event.key === 'Enter'){
+            return pesquisa     
+        }
+    }
+
 
     async function Listar(){
-        let f = await api.ListarDENUTotal();
-        console.log(f);
+        let f = await api.ListarDENUTotal(pesquisa);
         setDenuc(f);
-        toast.success("Denúncia excluída com sucesso");
-
+        console.log(f)
     }
-    useEffect(()=> {
+
+    useEffect(() => {
         Listar();
-    }, [])
+    }, [denuc])
 
     return (
             <Container>
-                <ToastContainer/>
-                <Pesquisa className="Pesquisar" input="usar" tamanho="medio"/>
+                <Pesquisa onChange={ e => setPesquisa(e.target.value)} onKeyPress={search} className="Pesquisar" input="usar" tamanho="medio"/>
                 <div className="baixo">
                     {denuc.map(item =>
                         <div className="alinhando">
-                            <Card autor={item.id_usuario_infob_amz_tbusuario.nm_usuario} qtd={item.qtd_avaliacao} desc={item.ds_ocorrencia} id={item.id_denuncia} function={Listar}/>
+                            <Card autor={item.id_usuario_infob_amz_tbusuario.nm_usuario} qtd={item.qtd_avaliacao} desc={item.ds_motivo_reporte} id={item.id_denuncia} function={Listar}/>
                         </div>
                     )}
                 </div>

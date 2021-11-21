@@ -90,6 +90,10 @@ outline: none;
  margin-right: 0.8em;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .img img{
     width:3.5em;
     height:3.5em;

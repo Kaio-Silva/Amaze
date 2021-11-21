@@ -2,8 +2,14 @@ import React from 'react';
 import { Container } from './styled.js'
 import { Link } from 'react-router-dom';
 import Cabecalho from '../../components/commom/cabecalho/index'
+import Cookies from 'js-cookie'
+import { useState } from 'react'
+
 
 export default function Home(props){
+    
+   let x = Cookies.get('Idusu')
+
     return(
         <Container>
            <Link className="link" to="/adm">ADM</Link>
@@ -14,7 +20,11 @@ export default function Home(props){
                         <img className="Imagem" src="/assets/images/Celular.png" alt=""/>                  
                             <div className="Titulo"> A sua segurança é a nossa segurança </div>
                             <div className="Descricao"> Amaze tranquiliza o seu dia a dia. </div>   
+                            {x === undefined ? (
                             <Link className="link" to="/cadastro"><button className="Botão"> Criar Conta </button></Link>
+                            ) : (
+                                <Link className="link" to="/Mapa"><button className="Botão"> Ver Mapa </button></Link>
+                            )}
                     </div>
                     <img className="ImagemP1" src="/assets/images/Celular.png" alt=""/>
                 </div>

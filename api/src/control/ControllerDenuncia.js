@@ -102,16 +102,24 @@ app.post('/inserir', async(req,resp) =>{
   // Todas as denúncias do sistema
   app.get('/', async(req,resp) =>{
     try{
-         let consulta = await db.infob_amz_tbdenuncia.findAll({
-           include: [
-             {
-               model: db.infob_amz_tbusuario,
-               as: 'id_usuario_infob_amz_tbusuario',
-               required: true
-             }
-           ]
+        let pesquisa = req.query.filtro
+
+         let consulta = await db.infob_amz_tbreporte_denuncia.findAll({
+          include: [
+            {
+              model: db.infob_amz_tbusuario,
+              as: 'id_usuario_infob_amz_tbusuario',
+              required: true
+            }
+          ],
+          where: {
+            [Op.and]: [
+                { '$id_usuario_infob_amz_tbusuario.nm_usuario$': { [Op.substring]: pesquisa } },
+                { ds_confirmado: false }
+
+            ]
+        }
          })
-    
          resp.send(consulta)
     
     }catch(e){

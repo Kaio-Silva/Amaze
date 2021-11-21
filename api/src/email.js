@@ -18,7 +18,7 @@ async function enviarEmail(email, senha, usuario) {
   const response = await sender.sendMail({
     from: '"TCC AMAZE" <amazetcc@gmail.com>',
     to: email, 
-    subject: 'Teste',
+    subject: 'Recuperação de Senha',
     html: `<p> Olá ${usuario}, sua senha é :<b>${senha}</b> </p>`
   })
   return response;

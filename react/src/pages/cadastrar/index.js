@@ -11,6 +11,7 @@ import Api from '../../services/api.js';
 import Mask from '../../components/commom/Mask/MaskedInput'
 import { useRef } from 'react'
 import LoadingBar from 'react-top-loading-bar'
+import Cookies from 'js-cookie';
 
 const api = new Api()
 
@@ -25,11 +26,28 @@ function Cadastrar(props) {
    const navigation = useHistory();
    const loading = useRef(null);
 
-   console.log(nome);
-   console.log(email);
-   console.log(telefone);
-   console.log(senha);
-   console.log(concluir);
+   async function Id(){
+      let r = await api.USUemail(email)
+      let idusu = r.idusu
+      console.log(idusu)
+      Cookies.set('Idusu', idusu, { expires: 7 })
+      return r.data;
+    }
+
+   const logar = async () => {
+   
+      loading.current.continuousStart();
+  
+          let r = await api.USULogin(senha, email)
+          if( r.erro ){
+              toast.error(r.erro)
+              navigation.push('/Login')
+              loading.current.complete();   
+          } else{
+              Id()
+              setTimeout(() => navigation.push('/'), 2000);
+          }
+   }
    
    
    async function Inserir(){
@@ -46,7 +64,10 @@ function Cadastrar(props) {
          toast.success('Usuário criado com sucesso.')
          loading.current.complete();  
       }
+
+      await logar()
    }
+
 
   return (
     <Container>

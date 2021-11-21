@@ -33,6 +33,8 @@ app.get('/geo2', async (req,resp) =>{
 app.post('/enviar', async (req, resp) => {
   let email = req.body.email;
 
+  console.log("email " + email)
+
   let consulta = await db.infob_amz_tbusuario.findOne(
     {
         where:{

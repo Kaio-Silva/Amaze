@@ -3,7 +3,7 @@ import Logo from '../../components/commom/logo';
 import { Padrao, Textarea } from '../../components/styled/inputs.js';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import Api from '../../services/api'
 import Cookies from 'js-cookie'
 import { useRef } from 'react'
@@ -86,6 +86,8 @@ export default function P4(props){
                   let r = await api.inserirDENU(id, cordinates.Latitude, cordinates.Longitude, Substr,ocorrencia,qtdreporte,loc,bairro,avaliacao,tipo,hashh)
                   toast.success('Denúncia criada com sucesso!') 
                   loading.current.complete();  
+                  
+                  setTimeout(() => props.func(false), 2000);
                   
         }
     

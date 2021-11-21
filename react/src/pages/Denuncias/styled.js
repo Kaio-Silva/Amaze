@@ -23,8 +23,7 @@ const Container = styled.div`
         flex-direction: column;
         align-items: center;
         font-size: 2em;
-        border-top: solid;
-        padding: 0.4em 0em;
+        padding: 0.4em 0em 1em;
         font-family: medio
     }
 
@@ -34,7 +33,6 @@ const Container = styled.div`
         color: white;
         font-size: 1.3em;
         font-family: regular;
-        /*padding-top: 5%;*/
     }
 
     .informacoes {

@@ -19,7 +19,7 @@ export default function P6(props){
             <Container>
              <div className="abox">
                 <div className="Cabecalho">
-                    <div className="txt">Deununcias, Jardim Colonial</div>
+                    <div className="txt">Denuncias:</div>
                     <div className="x"><button onClick={() => props.func(false)}><img src="/assets/images/Fechar 5.png" alt=""/></button></div>
                 </div>
               

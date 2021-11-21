@@ -14,16 +14,12 @@ export default function P1(props){
      const id = props.item.id_denuncia
      const loading = useRef(null);
      const nav = useHistory();
-     console.log(avaliacao)
-     console.log(id)
+     
 
     const ratingChanged = (newRating) => {
         setAvaliacao(newRating)
       };
-
- 
-       
-    
+   
 
       async function Avaliar(){
 
@@ -32,11 +28,13 @@ export default function P1(props){
             let r = await api.AvaliarDENU(id,avaliacao)
             if( r.erro ){
                 toast.error(r.erro)
-                nav.push('/mapa')
-        loading.current.complete();   
+                loading.current.complete();  
+            } else{
                 toast.success('Denucia avaliada com sucesso.')
-                setTimeout(() => nav.push('/mapa'), 2000);
+                loading.current.complete();
+                setTimeout(() => props.func(false), 2000);
             }
+         
         }
        
 

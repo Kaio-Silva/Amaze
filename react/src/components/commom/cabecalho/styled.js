@@ -43,6 +43,10 @@ const Container = styled.div`
         }
     } 
   
+    .abox{
+        z-index: -30;
+    }
+
     .link{
         font-family: regular;
         font-size: 0.9em;
@@ -64,6 +68,24 @@ const Container = styled.div`
     height:4em;
     align-items: center;
     
+}
+
+.alinhar{
+    display: flex;
+    flex-direction: row;
+}
+
+.nome{
+    font-family: medio;
+    font-size: 0.9em;
+}
+
+.sair{
+    margin-left: .7em;
+}
+
+.sair:hover{
+    cursor: pointer;
 }
 
 .menubutt{

@@ -2,16 +2,37 @@ import { Container } from './styled'
 import Logo from '../logo'
 import { Link } from 'react-router-dom';
 import { Pesquisa } from '../../styled/inputs.js'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Pop from '../../../Popups/menu'
 import Criar from '../../../Popups/criarDenunc'
+import Cookies from 'js-cookie'
+import Api from '../../../services/api.js'
 
+const api = new Api();
 
 export default function Cabecalho(props){
     const [po,setPo] = useState(false)
     const [cri, SetCri] = useState(false)
+    const [x, setX] = useState('')
 
-    
+   
+
+    function sair(){
+        Cookies.remove('Idusu') 
+        setX('') 
+    }
+
+    useEffect(() =>{ 
+        let idu = Cookies.get('Idusu')
+
+        async function Usu(){
+            let r = await api.GetUSU(idu);
+            setX(r);
+        }
+         
+        Usu()
+    },[x])
+
     return(
   <Container cor={props.cor} titulo={props.titulo} tamanho={props.tamanho} input={props.input} home={props.home} contatenos={props.contatenos} 
              mapa={props.mapa} criar={props.criar} historico={props.historico} login={props.login} cadastrar={props.cadastrar} background={props.background} >
@@ -30,9 +51,18 @@ export default function Cabecalho(props){
             <Link className="link" to="/"> <div className="elements-desc-cabhd1"> Home </div> </Link>
             <Link className="link" to="/Contatenos"> <div className="elements-desc-cabhd2"> Contate-nos </div> </Link>
             <Link className="link" to="/Mapa"> <div className="elements-desc-cabhd3"> Mapa </div> </Link>
-            <div className="but"><button onClick={() =>  SetCri(true)}><div className="elements-desc-cabhd4"> Criar Denuncia </div></button></div>
+            <div className="but" ><button onClick={() =>  SetCri(true)}><div className="elements-desc-cabhd4"> Criar Denuncia </div></button></div>
             <div className="barraCabecalho"> </div>
-            <Link className="link" to="/Login"> <div className="elements-desc-cabhd6"> Log-in </div> </Link>
+            {Cookies.get('Idusu') === undefined ?(
+                <Link className="link" to="/Login"> <div className="elements-desc-cabhd6"> Log-in </div> </Link>
+            ) :(
+                <div className="alinhar">
+                    <div className="nome">{x}</div>
+                    <img onClick={sair} className="sair" src={props.cor === "white" ? "/assets/Images/Sair3.svg"
+                                                                                             : props.cor === "black" ? "/assets/Images/Sair2.svg"
+                                                                                                                     : "/assets/Images/Sair.svg"} alt=""/>
+                </div>
+            ) }
         </div>
 
     </div>

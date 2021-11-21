@@ -125,7 +125,6 @@ button{
 .date{
     margin-bottom:1.4em; 
     font-size: 13px;
-    font-weight: bold;
 }
 
 .botao button{

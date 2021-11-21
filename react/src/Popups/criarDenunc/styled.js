@@ -13,18 +13,16 @@ top:0;
 left:0;
 font-family: regular;
 color:#24BF99;
+z-index: 30;
 
-z-index: 1;
-
+.toast{
+    font-size: .6em;
+}
 
 button{
     background-color: transparent;
     border: none;
     cursor: pointer;
-}
-
-.logo > *{
-    padding-left: .5em;
 }
 
 .texto{
@@ -34,6 +32,7 @@ button{
 .ajustarTaxas{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .amz{
@@ -48,12 +47,12 @@ button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top:0.5em;
 }
 
 
 .ld{
     margin-right:1.2em;
-    margin-top: .5em;
 }
 
 
@@ -62,12 +61,11 @@ button{
     flex-direction: row;
     align-items: center;
     margin-left:1.2em;
-    
 }
 
 .ajustarInput{
-    font-size: .6em;
     padding: .8em;
+    font-size: .6em;
 }
 
 input::placeholder{
@@ -77,12 +75,12 @@ input::placeholder{
 
 
 .forms{
-    margin-left: .5em; 
+    margin-left:1.4em;  
 }
 
 .titulo-form{
     margin-top:1em;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
     font-size: 1em;
     font-family: regular;
     color: black;
@@ -90,7 +88,7 @@ input::placeholder{
 
 .inputs{ 
     width: 96%;
-    margin-bottom: .4em;
+    margin-bottom: .7em;
 }
 
 .teext textarea{
@@ -100,11 +98,14 @@ input::placeholder{
     border: 1px solid #24BF99;
     resize: none;
     font-family: regular;
+    
 }
 
 textarea::placeholder{
     color:#24BF99;
 }
+
+
 
 .teext {
     margin-bottom: 2em;
@@ -120,7 +121,7 @@ textarea::placeholder{
 }
 
 .l1 label{
-    font-size: .9em;
+    font-size: .7em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -136,7 +137,7 @@ textarea::placeholder{
 
 
 .l2 label{
-    font-size: .9em;
+    font-size: .7em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -154,7 +155,7 @@ textarea::placeholder{
 }
 
 .checks{
-    font-size: .8em;
+    margin-left:1em;
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -189,34 +190,29 @@ opacity: 1;
 }
 
 .botao button{
-    width: 200px;
-    height: 38px;
+    width:240px;
+    height:38px;
     border-radius: 1.5em;
     border:none;
     color: white;
     background-color:#24BF99;;
-    font-size: .9em;
+    font-size: .8em;
 }
 
 .botao{
     margin-top: 1em;
 }
 
-.ajustarTaxas{
-    display: flex;
-    align-items: center;
-}
-
 .taxas{
     display: flex;
     flex-direction: column;
-    margin-left: .5em ;
+    margin-left: 1em ;
 }
 
 .tituloco{
     color: black;
-    font-size: 1em;
-    margin-top: .5em;
+    font-size: .9em;
+    margin-top: 1.2em;
     margin-bottom: 0.5em;
 }
 
@@ -237,8 +233,8 @@ opacity: 1;
 
 
 .cor{
-    width:26px;
-    height: 11px;
+    width:20px;
+    height: 8px;
     background-color: red;
     border-radius: 16px;
     margin-right: 0.7em;
@@ -246,8 +242,8 @@ opacity: 1;
 
 
 .cor2{
-    width:26px;
-    height: 11px;
+    width:20px;
+    height: 8px;
     background-color: #FFA800;
     border-radius: 16px;
     margin-right: 0.7em;
@@ -255,8 +251,8 @@ opacity: 1;
 
 
 .cor3{
-    width:26px;
-    height: 11px;
+    width:20px;
+    height: 8px;
     background-color:#FAFF00;
     border-radius: 16px;
     margin-right: 0.7em;
@@ -264,8 +260,8 @@ opacity: 1;
 
 
 .cor4{
-    width:26px;
-    height: 11px;
+    width:20px;
+    height: 8px;
     background-color:#14FF00;
     border-radius: 16px;
     margin-right: 0.7em;
@@ -281,7 +277,7 @@ opacity: 1;
     display: flex;
     justify-content: flex-start;
 
-    font-size: .66em;
+    font-size: .7em;
 
     width: 9em;
     color: black;

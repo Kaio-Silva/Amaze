@@ -29,7 +29,7 @@ function Login (props){
         let r = await api.USUemail(email)
         let idusu = r.idusu
         console.log(idusu)
-        Cookies.set('Idusu',idusu, { expires: 7 })
+        Cookies.set('Idusu', idusu, { expires: 7 })
         return r.data;
       }
    
