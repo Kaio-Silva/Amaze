@@ -15,6 +15,7 @@ export default function Denuncias(props) {
 
     const confirmar = true;
 
+
      async function Delete() {
         loading.current.continuousStart();
 
@@ -27,7 +28,7 @@ export default function Denuncias(props) {
      async function Aprovar() {
         loading.current.continuousStart();
 
-         await api.ReporteFalse(props.id, confirmar)
+         await api.ReporteFalse(props.idDenunc, confirmar)
 
         toast.success("Denúncia aprovada com sucesso");
         loading.current.complete(); 

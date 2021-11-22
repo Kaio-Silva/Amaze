@@ -33,8 +33,8 @@ export default class Api {
      }
     
 
-     async USUtotal(){
-         let i = await api.get('/usuario/total');
+     async USUtotal(id){
+         let i = await api.get(`/usuario/total/${id}`);
          return i.data;
      }
 
@@ -44,8 +44,6 @@ export default class Api {
     }
 
     async DELETEusu(id){
-        console.log('óieeee')
-
         let i = await api.delete(`/usuario/del/${id}`);
         return i.data;
     }
@@ -85,8 +83,8 @@ export default class Api {
     }
     
 
-    async listarDENUpoUsu(id){
-        let i = await api.get(`/denuncia/${id}`);
+    async listarDENUpoUsu(id, pesquisa){
+        let i = await api.get(`/denuncia/${id}?filtro=${pesquisa}`);
         return i.data;
     }
 

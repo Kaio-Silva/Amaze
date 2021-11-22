@@ -8,25 +8,36 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const api = new Api()
 
-export default function Pagina(props) {
+export default function Pagina() {
     const [denuc, setDenuc] = useState([]);
+    const [pesquisa, setPesquisa] = useState('')
+    const [report, setReport] = useState(0)
+
+    function search (event){
+        if(event.key === 'Enter'){
+            return pesquisa     
+        }
+    }
 
     async function Listar(){
         let f = await api.USUtotal();
-        setDenuc(f);
+        setDenuc(f.final);
     }
+
+
     useEffect(()=> {
         Listar();
-    }, [])
+    }, [denuc])
 
+    console.log(denuc)
 
     return (
             <Container>
                 <ToastContainer/>
-                <Pesquisa className="Pesquisar" input="usar" tamanho="medio"/>
+                <Pesquisa className="Pesquisar" onChange={ e => setPesquisa(e.target.value)} onKeyPress={search}  input="usar" tamanho="medio"/>
                     <div className="baixo">
                         {denuc.map(item =>
-                            <Usuario Nome={item.usuario} Telefone={item.telefone} Cadastro={item.arivo} Email={item.email} Report="8" id={item.id} func={Listar}/>
+                            <Usuario Nome={item.usuario} Telefone={item.telefone} Cadastro={item.arivo} Email={item.email}  id={item.id} func={Listar}/>
                         )}
                     </div>
             </Container>

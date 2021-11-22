@@ -170,7 +170,11 @@ app.post('/inserir', async(req,resp) =>{
       try{
         let id = req.params.id;
       
-           let del = await db.infob_amz_tbdenuncia.destroy({
+        await db.infob_amz_tbreporte_denuncia.destroy({
+          where:{id_denuncia: id}
+         })
+
+           await db.infob_amz_tbdenuncia.destroy({
              where:{id_denuncia: id}
             })
             resp.sendStatus(200)

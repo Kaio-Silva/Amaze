@@ -10,13 +10,20 @@ const api = new Api()
 export default function Usuario(props){
     const loading = useRef(null);
 
+    let ativo = true;
+
     async function DeletUsu(){
-        loading.current.staticStart()
-        let f = await api.DELETEusu(props.id)
-        toast.success('aiaiaia')
-        props.func()
-        loading.current.complete();
-        
+        loading.current.continuousStart()
+        await api.DELETEusu(props.id)
+        toast.success('Usuário deletado com sucesso')
+        loading.current.complete();    
+    }
+
+    async function aprovar(){
+        loading.current.continuousStart()
+        await api.deligarUSU(props.id, ativo)
+        toast.success('Usuário aprovado com sucesso')
+        loading.current.complete();  
     }
 
     return(
@@ -34,7 +41,7 @@ export default function Usuario(props){
                 </div>
                 <div className="alinhandoImg">
                     <div onClick={DeletUsu}><img  className="imagem cancel" src="/assets/Images/CancelarDenuncia3.png" alt=""/></div>
-                    <img  className="imagem" src="/assets/Images/Aprovar3.png" alt=""/> 
+                    <img onClick={aprovar}  className="imagem" src="/assets/Images/Aprovar3.png" alt=""/> 
                 </div>
             </div>
         </Container>

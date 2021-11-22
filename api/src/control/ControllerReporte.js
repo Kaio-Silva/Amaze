@@ -47,6 +47,18 @@ try{
         ds_confirmado:confirmado
       }
 
+      let denuc = await db.infob_amz_tbdenuncia.findOne({
+        where:{
+          id_denuncia: iddenu
+        }
+      })
+
+      await db.infob_amz_tbusuario.update({
+        bt_ativo: false
+      },
+      {
+        where:{ id_usuario: denuc.id_usuario }
+      })
 
       let inserting = await db.infob_amz_tbreporte_denuncia.create(inserir)
       resp.send(inserting)

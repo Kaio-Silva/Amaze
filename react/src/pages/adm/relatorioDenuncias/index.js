@@ -23,12 +23,12 @@ export default function Denuncias() {
     async function Listar(){
         let f = await api.ListarDENUTotal(pesquisa);
         setDenuc(f);
-        console.log(f)
     }
 
     useEffect(() => {
         Listar();
     }, [denuc])
+
 
     return (
             <Container>
@@ -36,7 +36,7 @@ export default function Denuncias() {
                 <div className="baixo">
                     {denuc.map(item =>
                         <div className="alinhando">
-                            <Card autor={item.id_usuario_infob_amz_tbusuario.nm_usuario} qtd={item.qtd_avaliacao} desc={item.ds_motivo_reporte} id={item.id_denuncia} function={Listar}/>
+                            <Card autor={item.id_usuario_infob_amz_tbusuario.nm_usuario} qtd={item.qtd_avaliacao} desc={item.ds_motivo_reporte} id={item.id_denuncia} idDenunc={item.id_reporte_denuncia} function={Listar}/>
                         </div>
                     )}
                 </div>

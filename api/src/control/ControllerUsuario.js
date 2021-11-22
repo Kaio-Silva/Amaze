@@ -1,6 +1,9 @@
 import express from 'express'
 import db from '../db.js';
 
+import Sequelize from "sequelize";
+const { fn } = Sequelize;
+
 const app = express.Router();
 
 
@@ -81,6 +84,18 @@ app.post('/inserir', async(req,resp) =>{
       if(telefone === null || senha === null || email === null || usuario === null)
       return resp.send({erro:'Você não pode inserir um campo vazio'})
 
+     
+      let consulta = await db.infob_amz_tbusuario.findOne(
+        {
+            where:{
+              ds_senha: senha, 
+              ds_email: email
+            }
+        });
+  
+       if(consulta != undefined){
+         return resp.send({erro:'Esse usuário ja existe'})
+       }
 
        let inserir={
           nm_usuario:usuario,
@@ -126,12 +141,29 @@ app.get('/login',async (req,resp) =>{
 
 
 // get TOTAL
-app.get('/total',async (req,resp) =>{
+app.get('/total/:id',async (req,resp) =>{
 
       try{
-           let consulta = await db.infob_amz_tbusuario.findAll({ order:[['id_usuario']] });
-          let final = Map(consulta)
-           resp.send(final)
+            let id = req.params.id
+            let consulta = await db.infob_amz_tbusuario.findAll({ 
+              where:{
+                bt_ativo: false
+              },
+              order:[['id_usuario']]
+            });
+
+            let total = await db.infob_amz_tbreporte_denuncia.findAll({
+              attributes: [
+                [fn('count', 1), 'qtd']
+              ]
+            })
+
+            let final = Map(consulta)
+            console.log(total.qtd)
+            resp.send({
+              final: final,
+              total: total
+            })
       }catch(e){
           resp.send(e.toString())
       }
